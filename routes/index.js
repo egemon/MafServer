@@ -20,9 +20,8 @@ router.get('/sync', function (req, res) {
 //getGamesByFilter
 router.post('/sync', function (req, res) {
     console.log('psync post request taken!');
-    console.log('req = ', req);
     console.log('req.data = ', req.body.games);
-    LocalGameStorage.saveGameArray(req.body.games);
+    LocalGameStorage.saveGameArray(JSON.parse(req.body.games));
     var games = JSON.stringify(LocalGameStorage.getGamesByFilter('all'));
     res.send('Game Saved!');
 });
