@@ -21,9 +21,13 @@ router.get('/sync', function (req, res) {
 router.post('/sync', function (req, res) {
     console.log('psync post request taken!');
     console.log('req.data = ', req.body.games);
-    LocalGameStorage.saveGameArray(JSON.parse(req.body.games));
-    var games = JSON.stringify(LocalGameStorage.getGamesByFilter('all'));
-    res.send('Game Saved!');
+    var result = "";
+    if (LocalGameStorage.saveGameArray(JSON.parse(req.body.games))) {
+        result = 'Game Saved!';
+    } else {
+        result = 'There is no games!';
+    }
+    res.send(result);
 });
 
 
