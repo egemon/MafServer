@@ -3,7 +3,7 @@ var router = express.Router();
 var LocalGameStorage = require('../model/LocalGameStorage');
 /* GET home page. */
 router.get('/', function(req, res) {
-    res.render('../public/MafTable/MafTable.html', {title:'Ilya'});
+    res.render('../public/views/home.html', {title:'Ilya'});
 });
 
 //getGamesByFilter
