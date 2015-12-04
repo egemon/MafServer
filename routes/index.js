@@ -3,8 +3,40 @@ var router = express.Router();
 var LocalGameStorage = require('../model/LocalGameStorage');
 /* GET home page. */
 router.get('/', function(req, res) {
-    res.render('../public/views/home.html', {title:'Ilya'});
+    console.log('req.query', req.query);
+    res.render('../public/views/home.html');
 });
+router.get('/home', function(req, res) {
+    console.log('req.query', req.query);
+    res.render('../public/views/home.html');
+});
+
+router.get('/about_us', function(req, res) {
+    console.log('req.query', req.query);
+    res.render('../public/views/home.html');
+});
+
+router.get('/news', function(req, res) {
+    res.render('../public/views/news.html');
+});
+
+router.get('/members', function(req, res) {
+    res.render('../public/views/members.html');
+});
+
+router.get('/rating', function(req, res) {
+    res.render('../public/views/rating.html');
+});
+
+router.get('/hall_of_fame', function(req, res) {
+    res.render('../public/views/hall_of_fame.html');
+});
+
+router.get('/friends', function(req, res) {
+    res.render('../public/views/friends.html');
+});
+
+// ================ handlers for MafTable ================ //
 
 //getGamesByFilter
 router.get('/sync', function (req, res) {
