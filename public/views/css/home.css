@@ -1,22 +1,27 @@
-@font-face {
-    font-family: Barocco_Floral_Initial; /* Имя шрифта */
-    src: url(../fonts/Barocco_Floral_Initial.ttf); /* Путь к файлу со шрифтом */
-}
 
 *{
     padding: 0;
     margin: 0;
 }
+html, body {
+    height: 100%;
+}
 #page-container {
-    background: rgba(250,205,150,1);
-    background: -moz-radial-gradient(top, ellipse cover, rgba(250,205,150,1) 0%, rgba(43,43,43,1) 100%);
-    background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, rgba(250,205,150,1)), color-stop(100%, rgba(43,43,43,1)));
-    background: -webkit-radial-gradient(top, ellipse cover, rgba(250,205,150,1) 0%, rgba(43,43,43,1) 100%);
-    background: -o-radial-gradient(top, ellipse cover, rgba(250,205,150,1) 0%, rgba(43,43,43,1) 100%);
-    background: -ms-radial-gradient(top, ellipse cover, rgba(250,205,150,1) 0%, rgba(43,43,43,1) 100%);
-    background: radial-gradient(ellipse at top, rgba(250,205,150,1) 0%, rgba(43,43,43,1) 100%);
+    background: #b89b70;
+    background: -moz-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
+    background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #b89b70), color-stop(100%, #78553d));
+    background: -webkit-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
+    background: -o-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
+    background: -ms-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
+    background: radial-gradient(ellipse at top, #b89b70 0%, #78553d 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#facd96', endColorstr='#2b2b2b', GradientType=1 );
-    height: 768px;
+
+    background-image: url(../img/main_bg_low.jpg);
+    background-size: cover;
+
+    height: 100%;
+    margin: 0 auto;
+    /*width: 80%;*/
 }
 
 /*============== HEADER =============*/
@@ -41,8 +46,9 @@
 
 #page-title {
     font-size: 45px;
-    font-family: "Old English Text MT", "Arial", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "old_english", Georgia, 'Times New Roman', serif;
 }
+
 
 /*============ MAIN MENU ============*/
 nav {
@@ -59,7 +65,7 @@ nav {
     float: left;
     text-align: center;
     list-style: none;
-    background-color: #fff;
+    background-color: #f0dab4;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) ;
 }
 
@@ -71,7 +77,7 @@ nav {
 
     text-decoration: none;
     font-size: 20px;
-    font-weight: bold;
+    /*font-weight: bold;*/
     line-height: 60px;
-    font-family: "Barocco_Floral_Initial", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
 }
