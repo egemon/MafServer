@@ -62,7 +62,7 @@ nav {
 }
 
 .main-menu-item {
-    transition: all 1s ease;
+    transition: all 1s;
     margin: 2px;
     border-radius: 12px;
     float: left;
