@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>BakerStreet 21b Mafia Club</title>
-    <style type="text/css" media="screen">
+<!--     <style type="text/css" media="screen">
         @font-face {
             font-family: Barocco_Floral_Initial; /* Имя шрифта */
-            src: url(views/fonts/Barocco_Floral_Initial.ttf); /* Путь к файлу со шрифтом */
+            src: url(views/fonts/Barocco_Floral_Initial.ttf);  Путь к файлу со шрифтом 
         }
         @font-face {
             font-family: old_english; /* Имя шрифта */
             src: url(views/fonts/old_english.ttf); /* Путь к файлу со шрифтом */
         }
+    </style> -->
+    <style>
+        @font-face {
+                font-family: KZCorinthia; /* Имя шрифта */
+                src: url(views/fonts/KZCorinthia.ttf); /* Путь к файлу со шрифтом */
+            }
     </style>
+
     <link rel="stylesheet" type="text/css" href="views/css/home.css">
 </head>
 <body>
@@ -21,9 +28,12 @@
     <header id="header">
         <div class="page-title-container">
             <a id="page-logo-ref" href="/home">
-                <img src="views/img/main_logo_black.png" alt="BakerLogo" id="page-logo">
+                <img src="views/img/main_logo_black.png" alt="BakerLogo" id="pageLogo">
             </a>
-            <span id="page-title">"Baker Street 221b" Mafia Club</span>
+            <div id="page-title">
+                <div class="page-title-part">"Baker Street 221b"</div> 
+                <div class="page-title-part">Mafia Club</div>
+            </div>
         </div>
         <nav>
             <ul class="main-menu">
@@ -58,5 +68,14 @@
         </article>
     </main>
 </div>
+<script>
+window.onload = function () {
+    pageLogo.style.transform = 'scale(-1,1)';
+    setTimeout(function () {
+        pageLogo.style.transform = 'scale(1,1)';
+        pageLogo.style.transform = '';
+    }, 3000)
+}
+</script>
 </body>
 </html>

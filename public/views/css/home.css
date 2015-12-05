@@ -20,13 +20,16 @@ html, body {
 #page-container {
     height: 100%;
     margin: 0 auto;
+    width: 90%;
+}
+
+#page-container>* {
+    max-width: 920px; 
 }
 
 /*============== HEADER =============*/
 
 #header {
-    min-width: 50%;
-    max-width: 75%;
     margin: 10px auto;
 }
 
@@ -35,14 +38,14 @@ html, body {
     text-align: center;
 }
 
-#page-logo {
-    transition: all 1s easy;
+#pageLogo {
+    transition: all 1.5s ease;
     display: inline-block;
     width: 152px;
     height: 201px;
 }
 
-#page-logo:hover {
+#pageLogo:hover {
     transform: scale(-1,1);
 }
 
@@ -80,33 +83,40 @@ nav {
 }
 
 .main-menu-ref {
-    padding: 0 20px;
+    padding: 0 10px;
     display: inline-block;
     min-width: 82px;
     color: #000;
 
     text-decoration: none;
-    font-size: 20px;
-    line-height: 60px;
+    font-size: 30px;
+    line-height: 50px;
     font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
 }
 
 /* ==========  MAIN ==========*/
 main {
-    min-width: 50%;
-    max-width: 50%;
     margin: 10px auto;
 }
 
 article {
-    font-size: 25px;
+    font-size: 45px;
+    padding: 10px;
+    text-align: justify;
+    text-indent: 1em;
+    font-family: KZCorinthia, Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+article::first-letter {
+    font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
+    font-size: 30px;
 }
 
 article a{
     text-decoration: none;
-    color: #852929;
+    color: #250707;
+    font-style: italic;
 }
 article a:hover{
-    text-decoration: underline;
-    color: #852929;
+    transition:all 1s;
+    background-color: #852929;
 }
