@@ -3,16 +3,17 @@ var router = express.Router();
 var LocalGameStorage = require('../model/LocalGameStorage');
 /* GET home page. */
 router.get('/', function(req, res) {
-    console.log('req.query', req.query);
+    console.log('res.url', res.url);
     res.render('../public/views/home.html');
 });
 router.get('/home', function(req, res) {
-    console.log('req.query', req.query);
+    console.log('req.url', req.url);
+    req.url = req.url.substring(0, -4) + 'about_us';
     res.render('../public/views/home.html');
 });
 
 router.get('/about_us', function(req, res) {
-    console.log('req.query', req.query);
+    console.log('req.url', req.url);
     res.render('../public/views/home.html');
 });
 

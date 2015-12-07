@@ -9,21 +9,12 @@
             src: url(views/fonts/Barocco_Floral_Initial.ttf);
         }
     </style>
-<!--     <style>
-    @font-face {
-            font-family: KZCorinthia; /* Имя шрифта */
-            src: url(views/fonts/KZCorinthia.ttf); /* Путь к файлу со шрифтом */
-        }
-        </style> -->
     <style>
         @font-face {
             font-family: old_english; /* Имя шрифта */
             src: url(views/fonts/old_english.ttf); /* Путь к файлу со шрифтом */
         }
-
     </style>
-
-
     <link rel="stylesheet" type="text/css" href="views/css/home.css">
 </head>
 <body>
@@ -41,8 +32,8 @@
         </div>
         <nav>
             <ul class="main-menu">
-                <li class="main-menu-item current"><a class="main-menu-ref" id="about_us" href="/about_us" title="">О нас</a></li>
-                <li class="main-menu-item"><a class="main-menu-ref" id="news" href="/news" title="">Новости</a></li>
+                <li class="main-menu-item"><a class="main-menu-ref" id="about_us" href="/about_us" title="">О нас</a></li>
+                <li class="main-menu-item current"><a class="main-menu-ref" id="news" href="/news" title="">Новости</a></li>
                 <li class="main-menu-item"><a class="main-menu-ref" id="rating" href="/rating" title="">Рейтинг</a></li>
                 <li class="main-menu-item"><a class="main-menu-ref" id="members" href="/members" title="">Члены клуба</a></li>
                 <li class="main-menu-item"><a class="main-menu-ref" id="hall_of_fame" href="/hall_of_fame" title="">Зал Славы</a></li>
@@ -53,35 +44,30 @@
 
     <main>
         <article>
+            <title>Следующая встреча в этот вторник 8.12.2015 в 19.00</title>
             <p>
-                Клуб мафии Киевского Национального Университета им.Т. Шевченко Baker Street 221b проводит игры в течении 5 лет,
-                являясь членом Студенческой Лиги Игры Мафия (СЛИМ) Федерации Интеллектуальной Игры Мафия(ФИИМ).
+               Традиционно приглашаем Вас на <a href="https://vk.com/bs_vstrecha_162" target="_blank">встречу клуба</a> мафии Baker Street 221b!
             </p>
             <p>
-                Подарок от клуба для всех именинников - бесплатное посещение следующей встречи после Вашего дня рождения.
+               Что? - Кофе/чай/печенье, фото, захватывающие игры, новые знакомства, развитие увренности и убедительности, пледики и конечно обнимшки ;)
             </p>
             <p>
-                Коллектив организаторов желает Вам приятных и интересных игр!
+               Где? - Студенческий городок КНУ, метро "Выставочный центр", ул. Ломоносова 55, клуб "Планета".
             </p>
             <p>
-                PS: Чтобы получать приглашения на встречи и быть в курсе всех событий из жизни клуба, вступайте в <a href="https://vk.com/baker_street_mafia_club" target="_blank"> нашу группу</a>
+               Когда? - 8 декабря с 19.00 до 23.00.
             </p>
             <p>
-                Добро пожаловать в Игру!
+               Члеский взнос? - 20 грн за вечер игр
+                <img id="seal" src="views/img/seal.png" height="233" width="191" alt="seal">
+            </p>
+            <p>
+                <time pubdate datetime="2015-12-07" title="7го декабря 2015">7го декабря 2015</time>
             </p>
         </article>
     </main>
 </div>
-<script>
-window.onload = function () {
-    pageLogo.style.transform = 'scale(-1,1)';
-    setTimeout(function () {
-            pageLogo.style.transform = 'scale(1,1)';
-            pageLogo.style.transform = '';
-        }, 3000);
-    };
-</script>
-<script type="text/javascript" charset="utf-8" async defer>
+<!-- <script type="text/javascript" charset="utf-8" async defer>
 
     //задел для аджаксов
     //
@@ -95,6 +81,6 @@ window.onload = function () {
     // for (var i = 0; i < menuRefs.length; i++) {
     //     menuRefs.addEventListener('click', linkListener);
     // }
-</script>
-</body>
+</script>-->
+ </body>
 </html>
