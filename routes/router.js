@@ -1,40 +1,129 @@
 var express = require('express');
+var fs = require('fs');
 var router = express.Router();
 var LocalGameStorage = require('../model/LocalGameStorage');
-/* GET home page. */
-router.get('/', function(req, res) {
-    console.log('res.url', res.url);
-    res.render('../public/views/home.ejs');
-});
-router.get('/home', function(req, res) {
-    console.log('req.url', req.url);
-    res.render('../public/views/home.ejs');
-});
 
-router.get('/about_us', function(req, res) {
-    console.log('req.url', req.url);
-    res.render('../public/views/home.ejs');
-});
+function filterEjs(file) {
+    if (~file.indexOf('.ejs')) {
+        return file.slice(0, -4);
+    }
+}
+function filterFalse (el) {
+    return el;
+}
 
-router.get('/news', function(req, res) {
-    res.render('../public/views/news.ejs');
-});
+var PAGES = [
+    {
+        page: 'home', 
+        rus: 'О нас'
+    },
+    {
+        page: 'news',
+        rus: 'Новости'
+    },{
+        page: 'rating',
+        rus: 'Рейтинг'
+    },{
+        page: 'members',
+        rus: 'Члены клуба'
+    },{
+        page: 'hall_of_fame',
+        rus: 'Зал Славы',
+        periods: [{
+            name: 'Осень 2015',
+            players:[{
+                nick: 'Earl Gray',
+                imgName: 'earl_gray',
+                avr: 2.68,
+                gameNumber: 25,
+                faculty: 'КНУ, Институт Филологии',
+                experiance: 'Играет 3 месяца',
+                honours: [{
+                        title:'Лучший игрок Осени 2015',
+                        type: 'season',
+                        place: 1,
+                }]
+            },{
+                nick: 'Клич',
+                imgName: 'klich',
+                avr: 2.48,
+                gameNumber: 29,
+                faculty: 'КНУ, Институт Высокий технологий',
+                experiance: 'Играет 2 года',
+                honours: [{
+                        title:'Серебрянный призер Осени 2015',
+                        type: 'season',
+                        place: 2,
+                }]
+            },{
+                nick: 'Phoenix',
+                imgName: 'phoenix',
+                avr: 2.10,
+                gameNumber: 29,
+                faculty: 'КНУ, Институт Инофрмационных технологий',
+                experiance: 'Играет 9 месяцев',
+                honours: [{
+                        title:'Бронзовый призер Осени 2015',
+                        type: 'season',
+                        place: 3,
+                }]
+            }]
+        },{
+            name: 'Нобярь 2015',
+            players:[{
+                nick: 'Earl Gray',
+                imgName: 'earl_gray',
+                avr: 2.68,
+                gameNumber: 25,
+                faculty: 'КНУ, Институт Филологии',
+                experiance: 'Играет 3 месяца',
+                honours: [{
+                        title:'Лучший игрок Осени 2015',
+                        type: 'season',
+                        place: 1,
+                }]
+            },{
+                nick: 'Клич',
+                imgName: 'klich',
+                avr: 2.48,
+                gameNumber: 29,
+                faculty: 'КНУ, Институт Высокий технологий',
+                experiance: 'Играет 2 года',
+                honours: [{
+                        title:'Серебрянный призер Осени 2015',
+                        type: 'season',
+                        place: 2,
+                }]
+            },{
+                nick: 'Phoenix',
+                imgName: 'phoenix',
+                avr: 2.10,
+                gameNumber: 29,
+                faculty: 'КНУ, Институт Инофрмационных технологий',
+                experiance: 'Играет 9 месяцев',
+                honours: [{
+                        title:'Бронзовый призер Осени 2015',
+                        type: 'season',
+                        place: 3,
+                }]
+            }]
+        }]
+    }];
+console.log('pages = ', PAGES);
 
-router.get('/members', function(req, res) {
-    res.render('../public/views/members.ejs');
-});
 
-router.get('/rating', function(req, res) {
-    res.render('../public/views/rating.ejs');
-});
+// ================ handlers for get PAGES ================ //
+for (var i = 0; i < PAGES.length; i++) {
+    (function(PAGES, i){
+            console.log(PAGES[i]);
+            router.get('/' + PAGES[i].page, function(req, res) {
+                console.log('[ROUTER] get for' + PAGES[i], req.url);
+                res.render(PAGES[i].page + '.ejs', {current: i, pages: PAGES});
+            });
+        })(PAGES, i);
+};
 
-router.get('/hall_of_fame', function(req, res) {
-    res.render('../public/views/hall_of_fame.ejs');
-});
 
-router.get('/friends', function(req, res) {
-    res.render('../public/views/friends.ejs');
-});
 
 // ================ handlers for MafTable ================ //
 

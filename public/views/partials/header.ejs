@@ -10,12 +10,9 @@
     </div>
     <nav>
         <ul class="main-menu">
-            <li class="main-menu-item current"><a class="main-menu-ref" id="about_us" href="/about_us" title="">О нас</a></li>
-            <li class="main-menu-item"><a class="main-menu-ref" id="news" href="/news" title="">Новости</a></li>
-            <li class="main-menu-item"><a class="main-menu-ref" id="rating" href="/rating" title="">Рейтинг</a></li>
-            <li class="main-menu-item"><a class="main-menu-ref" id="members" href="/members" title="">Члены клуба</a></li>
-            <li class="main-menu-item"><a class="main-menu-ref" id="hall_of_fame" href="/hall_of_fame" title="">Зал Славы</a></li>
-            <li class="main-menu-item"><a class="main-menu-ref" id="friends" href="/friends" title="">Друзья</a></li>
+            <% for(var i = 0; i < pages.length; i++) { %>
+                <li class="main-menu-item <%= i == current ? 'current' : ''%>"><a class="main-menu-ref" id="<%=pages[i].page%>" href="/<%=pages[i].page%>"><%=pages[i].rus%></a></li>
+            <%}%>
         </ul>
     </nav>
 </header>

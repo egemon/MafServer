@@ -8,12 +8,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/router');
+var router = require('./routes/router');
 var users = require('./routes/users');
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'public/views'));
 app.set('view engine', 'ejs');
 
 app.use(compress());
@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/')));
 
-app.use('/', routes);
+app.use('/', router);
 // app.use('/users', users);
 
 app.engine('html', require('ejs').renderFile);
