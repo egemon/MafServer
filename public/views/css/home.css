@@ -141,3 +141,74 @@ article p:last-child {
     bottom: 90px;
     right: 50px;
 }
+
+/* ============== HALL OF FAME =======*/
+.player-logo {
+    width: 150px;
+    height: 200px;
+    float: left;
+    margin-right: 5px;
+    border-radius: 90px/100px;
+    border-width: 2px;
+    border-style: ridge;
+    transition: all 1.5s ease;
+}
+
+.player-logo:hover {
+    transform: scale(-1,1);
+}
+
+#top-players {
+    text-align: center;
+}
+
+.top-title {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    font-family: "KZCorinthia", Georgia, 'Times New Roman', serif;
+    border-bottom: 1px dashed;
+    border-top: 1px dashed;
+}
+
+#top1-player>.player-logo {
+    border-color: #FFD700;
+}
+
+#top2-player>.player-logo {
+    border-color: #C0C0C0;
+}
+
+#top3-player>.player-logo {
+    border-color: #cd7f32;
+}
+
+.player {
+    display: inline-block;
+    vertical-align: top;
+    width: 350px;
+    height: 200px;
+    margin: 10px;
+    text-overflow: ellipsis;
+    font-family: "KZCorinthia", Georgia, 'Times New Roman', serif;
+    font-size: 11px;
+}
+
+.player-nick {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.honours {
+    background: black;
+    /*height: 46px;*/
+    float: left;
+    width: 191px;
+}
+.honour {
+    width: 50px;
+    /*height: 50px;*/
+    float: left;
+    background-color: silver;
+    border-radius: 50px;
+}
