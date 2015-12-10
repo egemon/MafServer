@@ -122,7 +122,10 @@ for (var i = 0; i < PAGES.length; i++) {
             });
         })(PAGES, i);
 };
-
+router.get('/', function(req, res) {
+    console.log('[ROUTER] get for', req.url);
+    res.render('home.ejs', {current: 0, pages: PAGES});
+});
 
 
 // ================ handlers for MafTable ================ //
