@@ -8,109 +8,15 @@
     <% include partials/header %>
     <main>
         <div class="top-block">
-            <title class="top-title">Осень 2015</title>
             <div id="top-players">
-                <div class="player" id="top1-player">
-                    <!-- <a href="/players/earl_gray"> -->
-                        <img class="player-logo" src="../data-base/players/img/earl_gray.jpg" alt="Erl Gray">
-                    <!-- </a> -->
-                    <p class="player-nick">Эрл Грей</p>
-                    <p class="player-results">2.68 средний бал (25 игр) </p>
-                    <p class="player-faculty">КНУ, Институт Филологии</p>
-                    <p class="player-exp">Играет 3 месяца</p>
-                    <div class="honours">
-                        <div title="Лучший игрок ОСЕНИ 2015" class="season-1 honour"></div>
-                        <div title="Лучший игрок ноября 2015" class="month-3 honour"></div>
+                <%for(var j = 0; j < players.length; j++) { %>
+                <%var player = players[j]%>
+                    <div class="player" id="top<%=j+1%>-player">
+                        <% include partials/player %>
                     </div>
-                </div>
-                <div class="player" id="top2-player">
-                    <!-- <a href="/players/klich"> -->
-                        <img class="player-logo" src="../data-base/players/img/klich.jpg" alt="klich">
-                    <!-- </a> -->
-                    <p class="player-nick">Клич</p>
-                    <p class="player-results">2.48 средний бал (29 игр) </p>
-                    <p class="player-faculty">КНУ, Институт Высоких Технологий</p>
-                    <p class="player-exp">Играет 2 года</p>
-                    <div class="honours">
-                        <div title="Лучший игрок ОСЕНИ 2015" class="season-1 honour"></div>
-                        <div title="Лучший игрок ноября 2015" class="month-3 honour"></div>
-                    </div>
-                </div>
-                <div class="player" id="top3-player">
-                    <!-- <a href="/players/Phoenix"> -->
-                        <img class="player-logo" src="../data-base/players/img/Phoenix.jpg" alt="Erl Gray">
-                    <!-- </a> -->
-                    <p class="player-nick">Феникс</p>
-                    <p class="player-results">2.10 средний бал (29 игр) </p>
-                    <p class="player-faculty">КНУ, Факультет Информационных технологий</p>
-                    <p class="player-exp">Играет 9 месяцев</p>
-                    <div class="honours">
-                        <div title="Лучший игрок ОСЕНИ 2015" class="season-1 honour"></div>
-                        <div title="Лучший игрок ноября 2015" class="month-3 honour"></div>
-                    </div>
-                </div>
+                <%}%>
             </div>
-        </div>
-        <div class="top-block">
-            <title class="top-title">Нобярь 2015</title>
-            <div id="top-players">
-                <div class="player" id="top1-player">
-                    <!-- <a href="/players/Phoenix"> -->
-                        <img class="player-logo" src="../data-base/players/img/Phoenix.jpg" alt="Erl Gray">
-                    <!-- </a> -->
-                    <p class="player-nick">Феникс</p>
-                    <p class="player-results">3.00 средний бал (11 игр) </p>
-                    <p class="player-faculty">КНУ, Факультет Информационных технологий</p>
-                    <p class="player-exp">Играет 9 месяцев</p>
-                    <div class="honours">
-                        <div title="Лучший игрок ОСЕНИ 2015" class="season-1 honour"></div>
-                        <div title="Лучший игрок ноября 2015" class="month-3 honour"></div>
-                    </div>
-                </div>
-                <div class="player" id="top2-player">
-                    <!-- <a href="/players/stone_cold"> -->
-                        <img class="player-logo" src="../data-base/players/img/stone_cold.jpg" alt="Erl Gray">
-                    <!-- </a> -->
-                    <p class="player-nick">Stone Cold</p>
-                    <p class="player-results">2.62 средний бал (13 игр) </p>
-                    <p class="player-faculty">КНУ, Мех-Мат</p>
-                    <p class="player-exp">Играет 3 года</p>
-                    <div class="honours">
-                        <div title="Лучший игрок ОСЕНИ 2015" class="season-1 honour"></div>
-                        <div title="Лучший игрок ноября 2015" class="month-3 honour"></div>
-                    </div>
-                </div>
-                <div class="player" id="top3-player">
-                    <!-- <a href="/players/alister"> -->
-                        <img class="player-logo" src="../data-base/players/img/alister.jpg" alt="Erl Gray">
-                    <!-- </a> -->
-                    <p class="player-nick">Алистер</p>
-                    <p class="player-results">2.50 средний бал (12 игр) </p>
-                    <p class="player-faculty">КНУ</p>
-                    <p class="player-exp">Играет 3 месяца</p>
-                    <div class="honours">
-                        <div title="Лучший игрок ОСЕНИ 2015" class="season-1 honour"></div>
-                        <div title="Лучший игрок ноября 2015" class="month-3 honour"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
 </div>
-<!-- <script type="text/javascript" charset="utf-8" async defer>
-
-    //задел для аджаксов
-    //
-    // var menuItems = document.getElementsByClassName('main-menu-item');
-    // menuItems[0].classList.add('current');
-    // var menuRefs = document.getElementsByClassName('main-menu-ref');
-    // function linkListener (e) {
-    //     e.preventDefault();
-    //     console.log(e);
-    // }
-    // for (var i = 0; i < menuRefs.length; i++) {
-    //     menuRefs.addEventListener('click', linkListener);
-    // }
-</script>-->
- </body>
+</body>
 </html>

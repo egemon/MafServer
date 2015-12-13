@@ -16,3 +16,9 @@
         </ul>
     </nav>
 </header>
+
+<!-- create variables for template -->
+<%for (var key in pages[current]) {
+    this[key] = pages[current][key];
+}
+%>

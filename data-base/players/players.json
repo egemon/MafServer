@@ -1,0 +1,46 @@
+[{
+    "nick": "Earl Gray",
+    "imgName": "earl_gray",
+    "birthday": "31.03.1992",
+    "name": "Илья Лукьянов",
+    "presents": ["кружка", "футблока"],
+    "memberLevel": 1,
+    "skillLevel": 12,
+    "faculty": "КНУ, Институт Филологии",
+    "experiance": "Играет 3 месяца",
+    "honours": [{
+        "title":"Лучший игрок Осени 2015",
+        "type": "season",
+        "place": 1
+    }]
+},{
+    "nick": "Клич",
+    "imgName": "klich",
+    "birthday": "31.03.1992",
+    "name": "Илья Лукьянов",
+    "presents": ["кружка", "футблока"],
+    "memberLevel": 1,
+    "skillLevel": 12,
+    "faculty": "КНУ, Институт Высокий технологий",
+    "experiance": "Играет 2 года",
+    "honours": [{
+        "title":"Серебрянный призер Осени 2015",
+        "type": "season",
+        "place": 2
+    }]
+},{
+    "nick": "Phoenix",
+    "imgName": "phoenix",
+    "birthday": "31.03.1992",
+    "name": "Илья Лукьянов",
+    "presents": ["кружка", "футблока"],
+    "memberLevel": 0,
+    "skillLevel": 12,
+    "faculty": "КНУ, Институт Инофрмационных технологий",
+    "experiance": "Играет 9 месяцев",
+    "honours": [{
+        "title":"Бронзовый призер Осени 2015",
+        "type": "season",
+        "place": 3
+    }]
+}]
