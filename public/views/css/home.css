@@ -143,7 +143,8 @@ article p:last-child {
 }
 
 /* ============== HALL OF FAME =======*/
-.player-logo {
+.player-logo,
+.photo-logo {
     width: 150px;
     height: 200px;
     float: left;
@@ -183,7 +184,8 @@ article p:last-child {
     border-color: #cd7f32;
 }
 
-.player {
+.player,
+.photo {
     display: inline-block;
     vertical-align: top;
     width: 350px;
@@ -194,7 +196,9 @@ article p:last-child {
     font-size: 11px;
 }
 
-.player-nick {
+.player-nick,
+.photo-title,
+.photo-date {
     font-weight: bold;
     font-size: 13px;
 }
@@ -211,4 +215,9 @@ article p:last-child {
     float: left;
     background-color: silver;
     border-radius: 50px;
+}
+
+/* ============= PHOTOS =============*/
+.photo-logo {
+	height: auto;
 }

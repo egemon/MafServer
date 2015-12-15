@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head %>
+</head>
+<body>
+<div id="page-container">
+    <% include partials/header %>
+    <main>
+		<%for(var i = 0; i < pages[current].photos.length; i++) {
+			var photo = pages[current].photos[i]	
+		%>
+    		<% include partials/photo %>
+		<%}%>
+	</main>
+</div>
+</body>
+</html>
