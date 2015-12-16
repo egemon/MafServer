@@ -3,6 +3,7 @@ var fs = require('fs');
 var router = express.Router();
 var LocalGameStorage = require('../model/LocalGameStorage');
 var photos = require('../data-base/photos.json');
+var contacts = require('../data-base/contacts.json');
 console.log('photos', photos);
 function filterEjs(file) {
     if (~file.indexOf('.ejs')) {
@@ -22,6 +23,11 @@ var PAGES = [
         page: 'photos', 
         rus: 'Фото',
         photos: photos
+    },
+    {
+        page: 'contacts', 
+        rus: 'Контакты',
+        contacts: contacts
     },
     {        
         page: 'news',
