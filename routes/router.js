@@ -17,22 +17,10 @@ function byHonourLevel (player1, player2) {
 
 
 
-var PAGES = [
-    {
+var PAGES = [{
         page: 'home',
         rus: 'О нас'
-    },
-    {
-        page: 'photos', 
-        rus: 'Фото',
-        photos: photos
-    },
-    {
-        page: 'contacts', 
-        rus: 'Контакты',
-        contacts: contacts
-    },
-    {        
+    },{        
         page: 'news',
         rus: 'Новости'
     },{
@@ -46,6 +34,14 @@ var PAGES = [
         page: 'hall_of_fame',
         rus: 'Зал Славы',
         periods: periodsOfFame
+    },{
+        page: 'photos', 
+        rus: 'Фото',
+        photos: photos
+    },{
+        page: 'contacts', 
+        rus: 'Контакты',
+        contacts: contacts
     }];
 
 // ================ handlers for get PAGES ================ //
