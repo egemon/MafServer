@@ -1,0 +1,46 @@
+{
+	"head": {
+		"name": "Зайцев Егор",
+		"nick": "Заяц",
+		"faculty": "faculty",
+		"experiance": "experiance",
+		"phones": {
+			"MTC": "+380508197302",
+			"life": "+380633618375"
+		},
+		"vk": ""
+	},
+	"rating": {
+		"name": "Злата",
+		"nick": "Зло",
+		"faculty": "faculty",
+		"experiance": "experiance",
+		"phones": {
+			"MTC": "+380508197302",
+			"life": "+380633618375"
+		},
+		"vk": ""
+	},
+	"admin": {
+		"name": "Иван Кармазин",
+		"nick": "Johny",
+		"faculty": "faculty",
+		"experiance": "experiance",
+		"phones": {
+			"MTC": "+380508197302",
+			"life": "+380633618375"
+		},
+		"vk": ""
+	},
+	"marketing": {
+		"name": "Иванна Улибина",
+		"nick": "50",
+		"faculty": "faculty",
+		"experiance": "experiance",
+		"phones": {
+			"MTC": "+380508197302",
+			"life": "+380633618375"
+		},
+		"vk": ""
+	}
+}

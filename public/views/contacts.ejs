@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head %>
+</head>
+<body>
+<div id="page-container">
+    <% include partials/header %>
+    <main>
+		<%for(var position in pages[current].contacts) {
+			var contact = pages[current].contacts[position]	
+		%>
+    		<% include partials/contact %>
+		<%}%>
+	</main>
+</div>
+</body>
+</html>
