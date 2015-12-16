@@ -4,19 +4,22 @@ var router = express.Router();
 var LocalGameStorage = require('../model/LocalGameStorage');
 var photos = require('../data-base/photos.json');
 var contacts = require('../data-base/contacts.json');
-console.log('photos', photos);
-function filterEjs(file) {
-    if (~file.indexOf('.ejs')) {
-        return file.slice(0, -4);
-    }
+var periodsOfFame = require('../data-base/hall_of_fame/hall_of_fame.json');
+var players = require('../data-base/players/players.json');
+
+// ============ HELPERS ==============
+function isMember(player) {
+    return player.memberLevel > 0;
 }
-function filterFalse (el) {
-    return el;
+function byHonourLevel (player1, player2) {
+    return player1.honours.length > player2.honours.length;
 }
+
+
 
 var PAGES = [
     {
-        page: 'home', 
+        page: 'home',
         rus: 'О нас'
     },
     {
@@ -37,92 +40,13 @@ var PAGES = [
         rus: 'Рейтинг'
     },{
         page: 'members',
-        rus: 'Члены клуба'
+        rus: 'Члены клуба',
+        players: players.filter(isMember).sort(byHonourLevel)
     },{
         page: 'hall_of_fame',
         rus: 'Зал Славы',
-        periods: [{
-            name: 'Осень 2015',
-            players:[{
-                nick: 'Earl Gray',
-                imgName: 'earl_gray',
-                avr: 2.68,
-                gameNumber: 25,
-                faculty: 'КНУ, Институт Филологии',
-                experiance: 'Играет 3 месяца',
-                honours: [{
-                        title:'Лучший игрок Осени 2015',
-                        type: 'season',
-                        place: 1,
-                }]
-            },{
-                nick: 'Клич',
-                imgName: 'klich',
-                avr: 2.48,
-                gameNumber: 29,
-                faculty: 'КНУ, Институт Высокий технологий',
-                experiance: 'Играет 2 года',
-                honours: [{
-                        title:'Серебрянный призер Осени 2015',
-                        type: 'season',
-                        place: 2,
-                }]
-            },{
-                nick: 'Phoenix',
-                imgName: 'phoenix',
-                avr: 2.10,
-                gameNumber: 29,
-                faculty: 'КНУ, Институт Инофрмационных технологий',
-                experiance: 'Играет 9 месяцев',
-                honours: [{
-                        title:'Бронзовый призер Осени 2015',
-                        type: 'season',
-                        place: 3,
-                }]
-            }]
-        },{
-            name: 'Нобярь 2015',
-            players:[{
-                nick: 'Earl Gray',
-                imgName: 'earl_gray',
-                avr: 2.68,
-                gameNumber: 25,
-                faculty: 'КНУ, Институт Филологии',
-                experiance: 'Играет 3 месяца',
-                honours: [{
-                        title:'Лучший игрок Осени 2015',
-                        type: 'season',
-                        place: 1,
-                }]
-            },{
-                nick: 'Клич',
-                imgName: 'klich',
-                avr: 2.48,
-                gameNumber: 29,
-                faculty: 'КНУ, Институт Высокий технологий',
-                experiance: 'Играет 2 года',
-                honours: [{
-                        title:'Серебрянный призер Осени 2015',
-                        type: 'season',
-                        place: 2,
-                }]
-            },{
-                nick: 'Phoenix',
-                imgName: 'phoenix',
-                avr: 2.10,
-                gameNumber: 29,
-                faculty: 'КНУ, Институт Инофрмационных технологий',
-                experiance: 'Играет 9 месяцев',
-                honours: [{
-                        title:'Бронзовый призер Осени 2015',
-                        type: 'season',
-                        place: 3,
-                }]
-            }]
-        }]
+        periods: periodsOfFame
     }];
-console.log('pages = ', PAGES);
-
 
 // ================ handlers for get PAGES ================ //
 for (var i = 0; i < PAGES.length; i++) {
@@ -133,7 +57,8 @@ for (var i = 0; i < PAGES.length; i++) {
                 res.render(PAGES[i].page + '.ejs', {current: i, pages: PAGES});
             });
         })(PAGES, i);
-};
+}
+
 router.get('/', function(req, res) {
     console.log('[ROUTER] get for', req.url);
     res.render('home.ejs', {current: 0, pages: PAGES});

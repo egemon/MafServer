@@ -1,8 +1,10 @@
 <!-- <a href="/players/earl_gray"> -->
-    <img class="player-logo" src="../data-base/players/img/<%=player.imgName%>.jpg" alt="<%=player.nick%>">
+    <img class="player-logo" src="../data-base/players/img/<%=player.nick.replace(/\s+/g, '')%>.jpg" alt="<%=player.nick%>">
 <!-- </a> -->
 <p class="player-nick"><%=player.nick%></p>
-<p class="player-results"><%=player.avr + ' средний бал '%><%='(' + player.gameNumber + ' игр)'%></p>
+<%if(player.avr) {%>
+    <p class="player-results"><%=player.avr + ' средний бал '%><%='(' + player.gameNumber + ' игр)'%></p>
+<%}%>
 <p class="player-faculty"><%=player.faculty%></p>
 <p class="player-exp"><%=player.experiance%></p>
 <div class="honours">

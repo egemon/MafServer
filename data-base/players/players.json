@@ -1,0 +1,169 @@
+[
+{
+    "nick": "Merlin",
+    "vk": "https://vk.com/egemon",
+    "birthday": "31.03.1992",
+    "name": "Илья Лукьянов",
+    "presents": ["повязка"],
+    "memberLevel": 3,
+    "faculty": "КНУ, Мех-Мат",
+    "experiance": "Играет 5 лет",
+    "honours": []
+},{
+    "nick": "Джек-Пот",
+    "vk": "https://vk.com/x_jack_pot_x",
+    "birthday": "7.10.1992",
+    "name": "Оля Лукьянова",
+    "presents": ["футболка"],
+    "memberLevel": 3,
+    "faculty": "КНУ, Экономический факультет",
+    "experiance": "Играет 5 лет",
+    "honours": []
+},{
+    "nick": "Морковка",
+    "vk": "https://vk.com/kay__g",
+    "birthday": "29.09.1993",
+    "name": "Екатерина Твердохлеб",
+    "presents": [],
+    "memberLevel": 4,
+    "faculty": "КНУ, Экономический Факультет",
+    "experiance": "Играет 4 года",
+    "honours": []
+},{
+    "nick": "50",
+    "vk": "https://vk.com/memmy",
+    "birthday": "5.04.1994",
+    "name": "Иванна Улыбина",
+    "presents": [],
+    "memberLevel": 3,
+    "faculty": "КНУ, Исторический Факультет",
+    "experiance": "Играет 3 года",
+    "honours": []
+},{
+    "nick": "Заяц",
+    "vk": "https://vk.com/egor.zaitsev",
+    "birthday": "19.03.1995",
+    "name": "Егор Зайцев",
+    "presents": [],
+    "memberLevel": 3,
+    "faculty": "КНУ, Геологический Факультет",
+    "experiance": "Играет 3 года",
+    "honours": []
+},{
+    "nick": "Johny",
+    "vk": "https://vk.com/id32393088",
+    "birthday": "8.08.1995",
+    "name": "Иван Кармазин",
+    "presents": ["кружка"],
+    "memberLevel": 3,
+    "faculty": "КНУ, Мех-Мат",
+    "experiance": "Играет 3 года",
+    "honours": []
+},{
+    "nick": "Pacman",
+    "vk": "https://vk.com/kovtanyuk_oleg",
+    "birthday": "13.12.1992",
+    "name": "Олег Ковтанюк",
+    "presents": ["кружка"],
+    "memberLevel": 1,
+    "faculty": "КПИ, ХТФ",
+    "experiance": "Играет 3 года",
+    "honours": []
+},{
+    "nick": "Snoopy",
+    "vk": "https://vk.com/snoopy_ua",
+    "birthday": "31.12.1992",
+    "name": "Макс Сорока",
+    "presents": ["кружка"],
+    "memberLevel": 1,
+    "faculty": "КПИ, ИХФ",
+    "experiance": "Играет 3 года",
+    "honours": []
+},{
+    "nick": "Рейнджер",
+    "vk": "https://vk.com/lubomyr95",
+    "birthday": "26.06.1995",
+    "name": "Ярослав Чепурний",
+    "presents": ["кружка"],
+    "memberLevel": 1,
+    "faculty": "КПИ",
+    "experiance": "Играет 3 года",
+    "honours": []
+},{
+    "nick": "Борман",
+    "vk": "https://vk.com/keepbleeding",
+    "birthday": "19.08.1993",
+    "name": "Богдан Гаврилишин",
+    "presents": ["кружка", "футболка", "маска", "плед"],
+    "memberLevel": 1,
+    "faculty": "КНУ, РФФ",
+    "experiance": "Играет 3 года",
+    "honours": []
+},{
+    "nick": "Мой Господин",
+    "vk": "https://vk.com/utvenko",
+    "birthday": "8.06.1993",
+    "name": "Андрей Утвенко",
+    "presents": ["кружка"],
+    "memberLevel": 1,
+    "faculty": "КНУ, РФФ",
+    "experiance": "Играет 3 года",
+    "honours": []
+},{
+    "nick": "Клич",
+    "vk": "https://vk.com/egemon",
+    "birthday": "31.03.1992",
+    "name": "Илья Лукьянов",
+    "presents": ["кружка", "футблока"],
+    "memberLevel": 1,
+    "faculty": "КНУ, Институт Высокий технологий",
+    "experiance": "Играет 2 года",
+    "honours": [{
+        "title":"Серебрянный призер Осени 2015",
+        "type": "season",
+        "place": 2
+    }]
+},{
+    "nick": "Earl Gray",
+    "vk": "https://vk.com/egemon",
+    "birthday": "31.03.1992",
+    "name": "?",
+    "presents": ["кружка", "футблока"],
+    "memberLevel": 1,
+    "faculty": "КНУ, Институт Филологии",
+    "experiance": "Играет 3 месяца",
+    "honours": [{
+        "title":"Лучший игрок Осени 2015",
+        "type": "season",
+        "place": 1
+    }]
+},{
+    "nick": "Баффет",
+    "vk": "https://vk.com/egemon",
+    "birthday": "31.03.1992",
+    "name": "Анна Шумей",
+    "presents": ["кружка", "футблока"],
+    "memberLevel": 1,
+    "faculty": "КНУ, Институт Инофрмационных технологий",
+    "experiance": "Играет 9 месяцев",
+    "honours": [{
+        "title":"Бронзовый призер Осени 2015",
+        "type": "season",
+        "place": 3
+    }]
+},{
+    "nick": "Phoenix",
+    "vk": "https://vk.com/egemon",
+    "birthday": "31.03.1992",
+    "name": "Илья Лукьянов",
+    "presents": ["кружка", "футблока"],
+    "memberLevel": 1,
+    "faculty": "КНУ, Институт Инофрмационных технологий",
+    "experiance": "Играет 9 месяцев",
+    "honours": [{
+        "title":"Бронзовый призер Осени 2015",
+        "type": "season",
+        "place": 3
+    }]
+}
+]
