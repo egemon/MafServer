@@ -171,6 +171,10 @@ article p:last-child {
     border-top: 1px dashed;
 }
 
+#top0-player>.player-logo {
+    border-color: #000;
+}
+
 #top1-player>.player-logo {
     border-color: #FFD700;
 }

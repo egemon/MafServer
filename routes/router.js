@@ -5,9 +5,17 @@ var LocalGameStorage = require('../model/LocalGameStorage');
 var periodsOfFame = require('../data-base/hall_of_fame/hall_of_fame.json');
 var players = require('../data-base/players/players.json');
 
+
+// ============ HELPERS ==============
 function isMember(player) {
     return player.memberLevel > 0;
 }
+function byHonourLevel (player1, player2) {
+    return player1.honours.length > player2.honours.length;
+}
+
+
+
 var PAGES = [
     {
         page: 'home',
@@ -22,7 +30,7 @@ var PAGES = [
     },{
         page: 'members',
         rus: 'Члены клуба',
-        players: players.filter(isMember)
+        players: players.filter(isMember).sort(byHonourLevel)
     },{
         page: 'hall_of_fame',
         rus: 'Зал Славы',
