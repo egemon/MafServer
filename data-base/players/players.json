@@ -30,6 +30,30 @@
     "experiance": "Играет 4 года",
     "honours": []
 },{
+    "nick": "Заяц",
+    "vk": "https://vk.com/egor.zaitsev",
+    "birthday": "19.03.1994",
+    "name": "Егор Зайцев",
+    "presents": ["кружка"],
+    "memberLevel": 3,
+    "faculty": "КНУ, Геологический факультет",
+    "experiance": "Играет 3 года",
+    "phone": "+380637563792",
+    "position": "Президент клуба",
+    "honours": []
+},{
+    "nick": "Зло",
+    "vk": "https://vk.com/id32834155",
+    "birthday": "4.10.1994",
+    "phone": "+380978655635",
+    "name": "Злата Михальчук",
+    "presents": ["маска"],
+    "position": "Рейтинг-менеджер",
+    "memberLevel": 3,
+    "faculty": "КНУ, Факультет психологии",
+    "experiance": "Играет 6 месяцев",
+    "honours": []
+},{
     "nick": "50",
     "vk": "https://vk.com/memmy",
     "birthday": "5.04.1994",
@@ -38,18 +62,11 @@
     "memberLevel": 3,
     "faculty": "КНУ, Исторический Факультет",
     "experiance": "Играет 3 года",
+    "phone": "+380508197302",
+    "position": "Администратор группы",
     "honours": []
 },{
-    "nick": "Заяц",
-    "vk": "https://vk.com/egor.zaitsev",
-    "birthday": "19.03.1995",
-    "name": "Егор Зайцев",
-    "presents": [],
-    "memberLevel": 3,
-    "faculty": "КНУ, Геологический Факультет",
-    "experiance": "Играет 3 года",
-    "honours": []
-},{
+
     "nick": "Johny",
     "vk": "https://vk.com/id32393088",
     "birthday": "8.08.1995",
@@ -58,6 +75,8 @@
     "memberLevel": 3,
     "faculty": "КНУ, Мех-Мат",
     "experiance": "Играет 3 года",
+    "phone": "+380937032241",
+    "position": "Администратор встреч",
     "honours": []
 },{
     "nick": "Pacman",
@@ -165,5 +184,6 @@
         "type": "season",
         "place": 3
     }]
+
 }
 ]

@@ -1,0 +1,48 @@
+<article>
+    <title><%=data.number%>ая встреча. Ждем Вас!</title>
+    <p>
+       Традиционно приглашаем Вас на <a href="https://vk.com/bs_vstrecha_<%=data.number%>" target="_blank">встречу клуба</a> мафии Baker Street 221b!
+    </p>
+    <p>
+       Что? - <%=data.what%>
+    </p>
+    <p>
+      Где? -
+      <a href="https://goo.gl/oFev5u">
+       <%=data.where%>
+      </a>
+    </p>
+    <p id="when">
+       Когда? -
+    </p>
+    <p>
+       Члеский взнос? - <%=data.price%> за вечер игр
+        <img id="seal" src="public/views/img/seal.png" height="233" width="191" alt="seal">
+    </p>
+    <p>
+        <time id="postDate" pubdate datetime="2015-12-07" title="7го декабря 2015"></time>
+    </p>
+</article>
+<script type="text/javascript" charset="utf-8" async defer>
+var str = (new Date('<%=data.when%>')).toLocaleString('ru', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    weekday: 'long',
+    hour: "numeric",
+    minute:"numeric"
+});
+str = str.charAt(0).toUpperCase() + str.slice(1);
+when.innerHTML += str;
+
+str = (new Date('<%=data.postDate%>')).toLocaleString('ru', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  weekday: 'long',
+});
+
+str = str.charAt(0).toUpperCase() + str.slice(1);
+postDate.innerHTML = str;
+
+</script>

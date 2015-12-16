@@ -1,7 +1,7 @@
-[{"name": "Осень 2015",
+[
+{"name": "Осень 2015",
     "players":[{
         "nick": "Earl Gray",
-        "imgName": "earl_gray",
         "avr": 2.68,
         "gameNumber": 25,
         "faculty": "КНУ, Институт Филологии",
@@ -13,7 +13,6 @@
         }]
     },{
         "nick": "Клич",
-        "imgName": "klich",
         "avr": 2.48,
         "gameNumber": 29,
         "faculty": "КНУ, Институт Высокий технологий",
@@ -25,7 +24,6 @@
         }]
     },{
         "nick": "Phoenix",
-        "imgName": "phoenix",
         "avr": 2.10,
         "gameNumber": 29,
         "faculty": "КНУ, Институт Инофрмационных технологий",
@@ -36,4 +34,5 @@
             "place": 3
         }]
     }]
-}]
+}
+]

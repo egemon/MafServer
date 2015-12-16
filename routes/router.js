@@ -6,27 +6,39 @@ var photos = require('../data-base/photos.json');
 var contacts = require('../data-base/contacts.json');
 var periodsOfFame = require('../data-base/hall_of_fame/hall_of_fame.json');
 var players = require('../data-base/players/players.json');
+var meetingDefaults = require('../data-base/news/defaults.json');
 
 // ============ HELPERS ==============
 function isMember(player) {
     return player.memberLevel > 0;
 }
-function byHonourLevel (player1, player2) {
+function isOrg (player) {
+    return player.memberLevel > 2;
+}
+
+function byOrgLevel (player1, player2 ) {
     return player1.honours.length > player2.honours.length;
 }
 
+function byHonourLevel (player1, player2) {
+    return player1.memberLevel > player2.memberLevel;
+}
 
-
+var meetingData = meetingDefaults;
+meetingData.when = '2015-12-22T17:00';
+meetingData.number = 163;
+meetingData.postDate = '2015-12-16';
 var PAGES = [{
         page: 'home',
         rus: 'О нас'
-    },{        
+    },{
         page: 'news',
-        rus: 'Новости'
+        rus: 'Новости',
+        data: meetingData
     },{
-        page: 'rating',
-        rus: 'Рейтинг'
-    },{
+    //     page: 'rating',
+    //     rus: 'Рейтинг'
+    // },{
         page: 'members',
         rus: 'Члены клуба',
         players: players.filter(isMember).sort(byHonourLevel)
@@ -35,13 +47,13 @@ var PAGES = [{
         rus: 'Зал Славы',
         periods: periodsOfFame
     },{
-        page: 'photos', 
+        page: 'photos',
         rus: 'Фото',
         photos: photos
     },{
-        page: 'contacts', 
+        page: 'contacts',
         rus: 'Контакты',
-        contacts: contacts
+        contacts: players.filter(isOrg)
     }];
 
 // ================ handlers for get PAGES ================ //

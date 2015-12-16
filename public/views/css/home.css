@@ -225,10 +225,12 @@ article p:last-child {
 
 /* ============= PHOTOS =============*/
 .photo-logo {
-	height: auto;
+	height: 200px;
+    width: auto;
+    border-color: black;
 }
 
 .photo {
-	height: 150px;
-	width: 200px;
+    height: auto;
+    width: auto;
 }
