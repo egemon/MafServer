@@ -200,7 +200,10 @@ article p:last-child {
     font-size: 11px;
 }
 
-
+.player a,
+.photo a {
+    display: inline-block;
+}
 
 .player-nick,
 .photo-title,
