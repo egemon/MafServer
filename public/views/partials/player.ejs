@@ -1,6 +1,6 @@
-<!-- <a href="/players/earl_gray"> -->
+<a href="<%=player.vk%>">
     <img class="player-logo" src="../data-base/players/img/<%=player.nick.replace(/\s+/g, '')%>.jpg" alt="<%=player.nick%>">
-<!-- </a> -->
+</a>
 <p class="player-nick"><%=player.nick%></p>
 <%if(player.avr) {%>
     <p class="player-results"><%=player.avr + ' средний бал '%><%='(' + player.gameNumber + ' игр)'%></p>

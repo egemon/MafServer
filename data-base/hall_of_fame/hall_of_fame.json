@@ -2,36 +2,42 @@
 {"name": "Осень 2015",
     "players":[{
         "nick": "Earl Gray",
-        "avr": 2.68,
-        "gameNumber": 25,
         "faculty": "КНУ, Институт Филологии",
         "experiance": "Играет 3 месяца",
         "honours": [{
             "title":"Лучший игрок Осени 2015",
-            "type": "season",
-            "place": 1
+            "year": 2015,
+            "periodType": "season",
+            "period": 4,
+            "place": 1,
+            "avr": 2.68,
+            "gameNumber": 25
         }]
     },{
         "nick": "Клич",
-        "avr": 2.48,
-        "gameNumber": 29,
         "faculty": "КНУ, Институт Высокий технологий",
         "experiance": "Играет 2 года",
         "honours": [{
             "title":"Серебрянный призер Осени 2015",
-            "type": "season",
-            "place": 2
+            "year": 2015,
+            "periodType": "season",
+            "period": 4,
+            "place": 2,
+            "avr": 2.48,
+            "gameNumber": 29
         }]
     },{
         "nick": "Phoenix",
-        "avr": 2.10,
-        "gameNumber": 29,
         "faculty": "КНУ, Институт Инофрмационных технологий",
         "experiance": "Играет 9 месяцев",
         "honours": [{
             "title":"Бронзовый призер Осени 2015",
-            "type": "season",
-            "place": 3
+            "year": 2015,
+            "periodType": "season",
+            "period": 4,
+            "place": 3,
+            "avr": 2.10,
+            "gameNumber": 29
         }]
     }]
 }

@@ -24,6 +24,17 @@ function byHonourLevel (player1, player2) {
     return player1.memberLevel > player2.memberLevel;
 }
 
+function derivePlayersByPeriodType (players) {
+    var result = {
+        year: [],
+        season: [],
+        month: []
+    };
+    for (var i = 0; i < players.length; i++) {
+
+    }
+}
+
 var meetingData = meetingDefaults;
 meetingData.when = '2015-12-22T17:00';
 meetingData.number = 163;
