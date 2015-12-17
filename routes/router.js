@@ -7,6 +7,10 @@ var contacts = require('../data-base/contacts.json');
 var periodsOfFame = require('../data-base/hall_of_fame/hall_of_fame.json');
 var players = require('../data-base/players/players.json');
 var meetingDefaults = require('../data-base/news/defaults.json');
+var famePlayers = periodsOfFame.players;
+
+periodsOfFame = sortFamePlayers(famePlayers);
+
 
 // ============ HELPERS ==============
 function isMember(player) {
@@ -22,6 +26,23 @@ function byOrgLevel (player1, player2 ) {
 
 function byHonourLevel (player1, player2) {
     return player1.memberLevel > player2.memberLevel;
+}
+
+function sortFamePlayers (players) {
+    for (var i = 0; i < players.length; i++) {
+
+    }
+}
+
+function derivePlayersByPeriodType (players) {
+    var result = {
+        year: [],
+        season: [],
+        month: []
+    };
+    for (var i = 0; i < players.length; i++) {
+
+    }
 }
 
 var meetingData = meetingDefaults;
