@@ -1,4 +1,6 @@
+<%if (player.vk) {%>
 <a href="<%=player.vk%>">
+<%}%>
     <img class="player-logo" src="../data-base/players/img/<%=player.nick.replace(/\s+/g, '')%>.jpg" alt="<%=player.nick%>">
 </a>
 <p class="player-nick"><%=player.nick%></p>
