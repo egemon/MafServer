@@ -138,9 +138,13 @@
     "faculty": "КНУ, Институт Высокий технологий",
     "experiance": "Играет 2 года",
     "honours": [{
-        "title":"Серебрянный призер Осени 2015",
-        "type": "season",
-        "place": 2
+            "title":"Серебрянный призер Осени 2015",
+            "year": 2015,
+            "periodType": "season",
+            "period": 4,
+            "place": 2,
+            "avr": 2.48,
+            "gameNumber": 29
     }]
 },{
     "nick": "Earl Gray",
@@ -153,8 +157,12 @@
     "experiance": "Играет 3 месяца",
     "honours": [{
         "title":"Лучший игрок Осени 2015",
-        "type": "season",
-        "place": 1
+        "year": 2015,
+        "period": 4, 
+        "periodType": "season",
+        "place": 1,
+        "avr": 2.68,
+        "gameNumber": 25
     }]
 },{
     "nick": "Баффет",
@@ -165,11 +173,7 @@
     "memberLevel": 1,
     "faculty": "КНУ, Институт Инофрмационных технологий",
     "experiance": "Играет 9 месяцев",
-    "honours": [{
-        "title":"Бронзовый призер Осени 2015",
-        "type": "season",
-        "place": 3
-    }]
+    "honours": []
 },{
     "nick": "Phoenix",
     "vk": "",
@@ -181,9 +185,12 @@
     "experiance": "Играет 9 месяцев",
     "honours": [{
         "title":"Бронзовый призер Осени 2015",
-        "type": "season",
-        "place": 3
+        "year": 2015,
+        "periodType": "season",
+        "period": 4,
+        "place": 3,
+        "avr": 2.10,
+        "gameNumber": 29
     }]
-
 }
 ]

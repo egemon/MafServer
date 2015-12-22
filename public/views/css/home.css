@@ -172,19 +172,19 @@ article p:last-child {
     border-top: 1px dashed;
 }
 
-#top0-player>.player-logo {
+#top0-player .player-logo {
     border-color: #000;
 }
 
-#top1-player>.player-logo {
+#top1-player .player-logo {
     border-color: #FFD700;
 }
 
-#top2-player>.player-logo {
+#top2-player .player-logo {
     border-color: #C0C0C0;
 }
 
-#top3-player>.player-logo {
+#top3-player .player-logo {
     border-color: #cd7f32;
 }
 
