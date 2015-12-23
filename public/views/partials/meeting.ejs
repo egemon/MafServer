@@ -12,7 +12,7 @@
        <%=data.where%>
       </a>
     </p>
-    <p id="when">
+    <p id="when<%=i%>">
        Когда? -
     </p>
     <p>
@@ -20,7 +20,7 @@
         <img id="seal" src="public/views/img/seal.png" height="233" width="191" alt="seal">
     </p>
     <p>
-        <time id="postDate" pubdate datetime="2015-12-07" title="7го декабря 2015"></time>
+        <time id="postDate<%=i%>" pubdate datetime="2015-12-07" title="7го декабря 2015"></time>
     </p>
 </article>
 <script type="text/javascript" charset="utf-8" async defer>
@@ -33,7 +33,7 @@ var str = (new Date('<%=data.when%>')).toLocaleString('ru', {
     minute:"numeric"
 });
 str = str.charAt(0).toUpperCase() + str.slice(1);
-when.innerHTML += str;
+when<%=i%>.innerHTML += str;
 
 str = (new Date('<%=data.postDate%>')).toLocaleString('ru', {
   year: 'numeric',
@@ -43,6 +43,6 @@ str = (new Date('<%=data.postDate%>')).toLocaleString('ru', {
 });
 
 str = str.charAt(0).toUpperCase() + str.slice(1);
-postDate.innerHTML = str;
+postDate<%=i%>.innerHTML = str;
 
 </script>

@@ -7,7 +7,10 @@
 <div id="page-container">
     <% include partials/header %>
     <main>
+    	<%for(var i = 0; i < news.length; i++) {
+    		var data = news[i];%>
         <% include partials/meeting %>
+        <%}%>
     </main>
 </div>
 </body>

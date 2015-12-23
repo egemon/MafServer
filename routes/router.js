@@ -1,29 +1,16 @@
 var express = require('express');
 var fs = require('fs');
 var router = express.Router();
+
 var LocalGameStorage = require('../model/LocalGameStorage');
+
 var photos = require('../data-base/photos.json');
-var contacts = require('../data-base/contacts.json');
-var periodsOfFame = require('../data-base/hall_of_fame/hall_of_fame.json');
 var players = require('../data-base/players/players.json');
-var meetingDefaults = require('../data-base/news/defaults.json');
+var meetings = require('../data-base/news/meetings.json');
 
-// ============ HELPERS ==============
-function isMember(player) {
-    return player.memberLevel > 0;
-}
-function isOrg (player) {
-    return player.memberLevel > 2;
-}
-
-function byOrgLevel (player1, player2 ) {
-    return player1.honours.length > player2.honours.length;
-}
-
-function byHonourLevel (player1, player2) {
-    return player1.memberLevel > player2.memberLevel;
-}
-
+var periodHelper = require('../helpers/famePeriods');
+var playerHelper = require('../helpers/players');
+var meetingHelper = require('../helpers/meetings');
 function derivePlayersByPeriodType (players) {
     var result = {
         year: [],
@@ -35,28 +22,24 @@ function derivePlayersByPeriodType (players) {
     }
 }
 
-var meetingData = meetingDefaults;
-meetingData.when = '2015-12-22T17:00';
-meetingData.number = 163;
-meetingData.postDate = '2015-12-16';
 var PAGES = [{
         page: 'home',
         rus: 'О нас'
     },{
         page: 'news',
         rus: 'Новости',
-        data: meetingData
+        news: meetingHelper.getMeetings(meetings) 
     },{
     //     page: 'rating',
     //     rus: 'Рейтинг'
     // },{
         page: 'members',
         rus: 'Члены клуба',
-        players: players.filter(isMember).sort(byHonourLevel)
+        players:  playerHelper.getMembers(players)
     },{
         page: 'hall_of_fame',
         rus: 'Зал Славы',
-        periods: periodsOfFame
+        periods: periodHelper.createFrom(players)
     },{
         page: 'photos',
         rus: 'Фото',
@@ -64,13 +47,12 @@ var PAGES = [{
     },{
         page: 'contacts',
         rus: 'Контакты',
-        contacts: players.filter(isOrg)
+        contacts: playerHelper.getOrgs(players)
     }];
 
 // ================ handlers for get PAGES ================ //
 for (var i = 0; i < PAGES.length; i++) {
     (function(PAGES, i){
-            console.log(PAGES[i]);
             router.get('/' + PAGES[i].page, function(req, res) {
                 console.log('[ROUTER] get for' + PAGES[i], req.url);
                 res.render(PAGES[i].page + '.ejs', {current: i, pages: PAGES});
