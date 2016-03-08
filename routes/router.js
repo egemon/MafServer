@@ -21,6 +21,7 @@ var rating = RatingBase.calculateRating(LocalGameStorage.getGamesByFilter({
 console.log('rating = ', rating);
 
 function getPlayersFromBase (ratingObject) {
+    console.log('ROUTER getPlayersFromBase() ratingObject', ratingObject);
     var playerArray = [];
     var player = {};
     for (var i = 0; i < ratingObject.length; i++) {
@@ -31,8 +32,8 @@ function getPlayersFromBase (ratingObject) {
     }
     return playerArray;
 }
-var rating = getPlayersFromBase(rating);
-console.log('rating = ', rating);
+// var rating = getPlayersFromBase(rating);
+// console.log('rating = ', rating);
 var PAGES = [{
         page: 'home',
         rus: 'О нас'
