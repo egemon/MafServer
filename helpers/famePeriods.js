@@ -26,12 +26,13 @@ function createHonours (players) {
                 avr: honour.avr,
                 gameNumber: honour.gameNumber,
                 faculty: player.faculty,
+                vk: player.vk,
                 experiance: player.experiance,
                 honours: player.honours || []
                 //other stuffn
             });
-        };
-    };
+        }
+    }
     return honours;
 }
 
@@ -42,7 +43,7 @@ function createPeriods (honours) {
     var honour = {};
     for (var i = 0; i < honours.length; i++) {
         honour = honours[i];
-        periodTitle = createPeriodTitle(honours[i]); 
+        periodTitle = createPeriodTitle(honours[i]);
         period = periods[periodTitle];
         if (!period) {
             period = periods[periodTitle] = {
@@ -76,7 +77,7 @@ function createPeriodTitle (honour) {
 
 function byPeriod (period1, period2) {
     return (period1.year - period2.year) ||
-        (period1.periodType === "year") || 
+        (period1.periodType === "year") ||
         (period1.priority - period2.priority)
 }
 
