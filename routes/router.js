@@ -103,6 +103,26 @@ router.post('/sync', function (req, res) {
     res.send(result);
 });
 
+// ================ handlers for Login ================ //
 
+var maftableUrl = '/maftable';
+router.get(maftableUrl, function (req,res) {
+    res.render('../MafTable/MafTable.html');
+});
 
+router.post('/login', function (req, res) {
+    console.log('password = ', req.body);
+    console.log('password = ', req.body.password);
+    console.log('user = ', req.body.user);
+
+    var user = req.body.user;
+    var password = req.body.password;
+
+    if (user === 'Egor' && password === 'Egor' ) {
+        res.send(maftableUrl);
+    } else {
+        console.log('res', res);
+        res.send('Не правильный пароль!');
+    }
+});
 module.exports = router;
