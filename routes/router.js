@@ -3,6 +3,7 @@ var fs = require('fs');
 var router = express.Router();
 
 var LocalGameStorage = require('../model/LocalGameStorage');
+var RatingBase = require('../model/RatingBase');
 
 var photos = require('../data-base/photos.json');
 var players = require('../data-base/players/players.json');
@@ -11,28 +12,39 @@ var meetings = require('../data-base/news/meetings.json');
 var periodHelper = require('../helpers/famePeriods');
 var playerHelper = require('../helpers/players');
 var meetingHelper = require('../helpers/meetings');
-function derivePlayersByPeriodType (players) {
-    var result = {
-        year: [],
-        season: [],
-        month: []
-    };
-    for (var i = 0; i < players.length; i++) {
 
+var rating = RatingBase.calculateRating(LocalGameStorage.getGamesByFilter({
+    periodType: "month",
+    period: 9
+}));
+
+console.log('rating = ', rating);
+
+function getPlayersFromBase (ratingObject) {
+    var playerArray = [];
+    var player = {};
+    for (var i = 0; i < ratingObject.length; i++) {
+        player = playerHelper.getPlayerByNick(players, ratingObject[i].name) || {};
+        player.avr = ratingObject[i].sum / ratingObject[i].gameNumber;
+        player.gameNumber = ratingObject[i].gameNumber;
+        playerArray.push(player);
     }
+    return playerArray;
 }
-
+var rating = getPlayersFromBase(rating);
+console.log('rating = ', rating);
 var PAGES = [{
         page: 'home',
         rus: 'О нас'
     },{
         page: 'news',
         rus: 'Новости',
-        news: meetingHelper.getMeetings(meetings) 
+        news: meetingHelper.getMeetings(meetings)
     },{
-    //     page: 'rating',
-    //     rus: 'Рейтинг'
-    // },{
+        page: 'rating',
+        rus: 'Рейтинг',
+        players: rating
+    },{
         page: 'members',
         rus: 'Члены клуба',
         players:  playerHelper.getMembers(players)
@@ -49,22 +61,20 @@ var PAGES = [{
         rus: 'Контакты',
         contacts: playerHelper.getOrgs(players)
     }];
-
 // ================ handlers for get PAGES ================ //
 for (var i = 0; i < PAGES.length; i++) {
     (function(PAGES, i){
-            router.get('/' + PAGES[i].page, function(req, res) {
-                console.log('[ROUTER] get for' + PAGES[i], req.url);
-                res.render(PAGES[i].page + '.ejs', {current: i, pages: PAGES});
-            });
-        })(PAGES, i);
+        router.get('/' + PAGES[i].page, function(req, res) {
+            console.log('[ROUTER] get for' + PAGES[i], req.url);
+            res.render(PAGES[i].page + '.ejs', {current: i, pages: PAGES});
+        });
+    })(PAGES, i);
 }
 
 router.get('/', function(req, res) {
     console.log('[ROUTER] get for', req.url);
     res.render('home.ejs', {current: 0, pages: PAGES});
 });
-
 
 // ================ handlers for MafTable ================ //
 

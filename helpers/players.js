@@ -22,7 +22,15 @@ function getMembers (players) {
 	return players.filter(isMember).sort(byHonourLevel);
 }
 
+function getPlayerByNick (players, nick) {
+    for (var i = 0; i < players.length; i++) {
+        if (players[i].nick == nick) {
+            return players[i];
+        }
+    }
+}
 module.exports = {
 	getOrgs: getOrgs,
-	getMembers: getMembers
-}
+	getMembers: getMembers,
+    getPlayerByNick: getPlayerByNick
+};

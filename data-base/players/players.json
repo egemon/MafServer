@@ -5,7 +5,9 @@
     "birthday": "31.03.1992",
     "name": "Илья Лукьянов",
     "presents": ["повязка"],
-    "memberLevel": 3,
+    "phone": "+380508197302",
+    "position": "Экс-президент клуба",
+    "memberLevel": 4,
     "faculty": "КНУ, Мех-Мат",
     "experiance": "Играет 5 лет",
     "honours": []
@@ -15,7 +17,9 @@
     "birthday": "7.10.1992",
     "name": "Оля Лукьянова",
     "presents": ["футболка"],
-    "memberLevel": 3,
+    "phone": "+380666667885",
+    "position": "Экс-организатор клуба",
+    "memberLevel": 4,
     "faculty": "КНУ, Экономический факультет",
     "experiance": "Играет 5 лет",
     "honours": []
@@ -24,6 +28,7 @@
     "vk": "https://vk.com/kay__g",
     "birthday": "29.09.1993",
     "name": "Екатерина Твердохлеб",
+    "position": "Экс-организатор клуба",
     "presents": [],
     "memberLevel": 4,
     "faculty": "КНУ, Экономический Факультет",
@@ -130,12 +135,12 @@
     "honours": []
 },{
     "nick": "Клич",
-    "vk": "",
+    "vk": "https://vk.com/id19111965",
     "birthday": "31.03.1992",
     "name": "Илья Лукьянов",
     "presents": ["кружка", "футблока"],
     "memberLevel": 1,
-    "faculty": "КНУ, Институт Высокий технологий",
+    "faculty": "КНУ, РФФ",
     "experiance": "Играет 2 года",
     "honours": [{
             "title":"Серебрянный призер Осени 2015",
@@ -148,17 +153,17 @@
     }]
 },{
     "nick": "Earl Gray",
-    "vk": "",
-    "birthday": "31.03.1992",
-    "name": "?",
-    "presents": ["кружка", "футблока"],
+    "vk": "https://vk.com/gavri_lavigne",
+    "birthday": "10.01.1997",
+    "name": "Игорь Гаврилюк",
+    "presents": ["маска"],
     "memberLevel": 1,
     "faculty": "КНУ, Институт Филологии",
     "experiance": "Играет 3 месяца",
     "honours": [{
         "title":"Лучший игрок Осени 2015",
         "year": 2015,
-        "period": 4, 
+        "period": 4,
         "periodType": "season",
         "place": 1,
         "avr": 2.68,
