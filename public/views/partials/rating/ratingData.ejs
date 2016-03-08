@@ -1,23 +1,28 @@
-<table class="table table-bordered table-striped" id="ratingTable">
+<table class="table table-bordered table-striped" id="ratingTable" border='1'>
   <thead>
     <tr>
-      <th>Avatar</th>
-      <th>Name</th>
-      <th>Overall</th>
-      <th># of games</th>
-      <th>Average</th>
-      <th>Best from Players</th>
-      <th>Best from Refferee</th>
+      <th>Фото</th>
+      <th>Ник</th>
+      <th>Сумма</th>
+      <th>Игр</th>
+      <th>Среднее</th>
+      <th>Лучшие от игроков</th>
+      <th>Лучшие от Судей</th>
     </tr>
   </thead>
   <tbody>
   <% for (var i = 0; i < players.length; i++) { %>
     <tr id="players[i].name">
-      <td id="players[i].avatar"><img class="playerAvatarInRating" src="data-base/players/img/<%=players[i].name%>.jpg" alt=""></td>
+      <td id="players[i].avatar">
+        <img class="playerAvatarInRating"
+        onerror="this.src='public/views/img/main_logo_black2.png'"
+        src="data-base/players/img/<%=players[i].name%>.jpg"
+        alt="">
+      </td>
       <td id="players[i].name_name"><%=players[i].name%></td>
       <td id="players[i].name_sum"><%=players[i].sum%></td>
       <td id="players[i].name_gameNumber"><%=players[i].gameNumber%></td>
-      <td id="players[i].name_average"><%=players[i].sum / players[i].gameNumber%></td>
+      <td id="players[i].name_average"><%=Math.round( players[i].sum/players[i].gameNumber*100)/100%></td>
       <td id="players[i].name_bp"><%=players[i].BP%></td>
       <td id="players[i].name_br"><%=players[i].BR%></td>
     </tr>
