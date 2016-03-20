@@ -22,26 +22,3 @@
       С уважением, команда организаторов.
     </p>
 </article>
-<script type="text/javascript" charset="utf-8" async defer>
-var str = (new Date('<%=data.when%>')).toLocaleString('ru', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    weekday: 'long',
-    hour: "numeric",
-    minute:"numeric"
-});
-str = str.charAt(0).toUpperCase() + str.slice(1);
-when<%=i%>.innerHTML += str;
-
-str = (new Date('<%=data.postDate%>')).toLocaleString('ru', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-  weekday: 'long',
-});
-
-str = str.charAt(0).toUpperCase() + str.slice(1);
-postDate<%=i%>.innerHTML = str;
-
-</script>

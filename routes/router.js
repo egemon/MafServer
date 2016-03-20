@@ -63,18 +63,22 @@ var PAGES = [{
         contacts: playerHelper.getOrgs(players)
     }];
 // ================ handlers for get PAGES ================ //
-for (var i = 0; i < PAGES.length; i++) {
-    (function(PAGES, i){
-        router.get('/' + PAGES[i].page, function(req, res) {
-            console.log('[ROUTER] get for' + PAGES[i], req.url);
-            res.render(PAGES[i].page + '.ejs', {current: i, pages: PAGES});
-        });
-    })(PAGES, i);
-}
+// for (var i = 0; i < PAGES.length; i++) {
+//     (function(PAGES, i){
+//         router.get('/' + PAGES[i].page, function(req, res) {
+//             console.log('[ROUTER] get for' + PAGES[i], req.url);
+//             res.render(PAGES[i].page + '.ejs', {current: i, pages: PAGES});
+//         });
+//     })(PAGES, i);
+// }
 
 router.get('/', function(req, res) {
     console.log('[ROUTER] get for', req.url);
     res.render('home.ejs', {current: 0, pages: PAGES});
+});
+
+router.get('/news', function(req, res) {
+    res.send(meetingHelper.getMeetings(meetings));
 });
 
 // ================ handlers for MafTable ================ //
