@@ -35,50 +35,64 @@ function getPlayersFromBase (ratingObject) {
 // var rating = getPlayersFromBase(rating);
 // console.log('rating = ', rating);
 var PAGES = [{
-        page: 'home',
+        url: 'home',
         rus: 'О нас'
     },{
-        page: 'news',
+        url: 'news',
         rus: 'Новости',
         news: meetingHelper.getMeetings(meetings)
     },{
-        page: 'rating',
+        url: 'rating',
         rus: 'Рейтинг',
         players: rating
     },{
-        page: 'members',
+        url: 'members',
         rus: 'Члены клуба',
         players:  playerHelper.getMembers(players)
     },{
-        page: 'hall_of_fame',
+        url: 'hall_of_fame',
         rus: 'Зал Славы',
         periods: periodHelper.createFrom(players)
     },{
-        page: 'photos',
+        url: 'photos',
         rus: 'Фото',
         photos: photos
     },{
-        page: 'contacts',
+        url: 'contacts',
         rus: 'Контакты',
         contacts: playerHelper.getOrgs(players)
     }];
 // ================ handlers for get PAGES ================ //
-// for (var i = 0; i < PAGES.length; i++) {
-//     (function(PAGES, i){
-//         router.get('/' + PAGES[i].page, function(req, res) {
-//             console.log('[ROUTER] get for' + PAGES[i], req.url);
-//             res.render(PAGES[i].page + '.ejs', {current: i, pages: PAGES});
-//         });
-//     })(PAGES, i);
-// }
+for (var i = 0; i < PAGES.length; i++) {
+    (function(PAGES, i){
+        var page = PAGES[i];
+
+        // old API
+        router.get('/' + page.url, function(req, res) {
+            console.log('[ROUTER] get for' + page, req.url);
+            res.render(page.url + '.ejs', {current: i, pages: PAGES});
+        });
+
+        // new API
+        router.post('/' + page.url, function(req, res) {
+            console.log('[ROUTER] post for' + page, req.url);
+            for (var key in page) {
+                if (key === 'url' || key === 'rus') {
+                    continue;
+                }
+
+            //assume we have only one field with data
+            res.send(page[key]);
+            }
+
+        });
+
+    })(PAGES, i);
+}
 
 router.get('/', function(req, res) {
     console.log('[ROUTER] get for', req.url);
     res.render('home.ejs', {current: 0, pages: PAGES});
-});
-
-router.get('/news', function(req, res) {
-    res.send(meetingHelper.getMeetings(meetings));
 });
 
 // ================ handlers for MafTable ================ //

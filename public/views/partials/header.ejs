@@ -11,7 +11,7 @@
     <nav>
         <ul class="main-menu">
             <% for(var i = 0; i < pages.length; i++) { %>
-                <li class="main-menu-item <%= i == current ? 'current' : ''%>"><a class="main-menu-ref" id="<%=pages[i].page%>" href="/<%=pages[i].page%>"><%=pages[i].rus%></a></li>
+                <li class="main-menu-item <%= i == current ? 'current' : ''%>"><a class="main-menu-ref" id="<%=pages[i].url%>" href="/<%=pages[i].url%>"><%=pages[i].rus%></a></li>
             <%}%>
         </ul>
     </nav>
