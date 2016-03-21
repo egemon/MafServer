@@ -19,7 +19,11 @@ function getOrgs (players) {
 }
 
 function getMembers (players) {
-	return players.filter(isMember).sort(byHonourLevel);
+	return players.filter(isMember).sort(byHonourLevel).map(function(player, i) {
+        player.img = player.nick.replace(/\s+/g, '');
+        console.log('player', JSON.stringify(player));
+        return player;
+    });
 }
 
 function getPlayerByNick (players, nick) {

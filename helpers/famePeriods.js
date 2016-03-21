@@ -28,7 +28,8 @@ function createHonours (players) {
                 faculty: player.faculty,
                 vk: player.vk,
                 experiance: player.experiance,
-                honours: player.honours || []
+                honours: player.honours || [],
+                img: player.nick.replace(/\s+/g, '')
                 //other stuffn
             });
         }
