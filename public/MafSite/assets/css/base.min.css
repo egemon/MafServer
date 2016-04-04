@@ -1,0 +1,325 @@
+@font-face {
+    font-family: 'Barocco_Floral_Initial';
+    src: url(../fonts/Barocco_Floral_Initial.ttf);
+}
+@font-face {
+    font-family: 'old_english';
+    src: url(../fonts/old_english.ttf);
+}
+
+@font-face {
+    font-family: 'MainTextFont';
+    src: url(../fonts/Nexa.otf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    background: #b89b70;
+    background: -moz-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
+    background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #b89b70), color-stop(100%, #78553d));
+    background: -webkit-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
+    background: -o-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
+    background: -ms-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
+    background: radial-gradient(ellipse at top, #b89b70 0%, #78553d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#facd96', endColorstr='#2b2b2b', GradientType=1 );
+
+    background-image: url(../img/main_bg_low.jpg);
+    /*background-size: cover;*/
+}
+#page-container {
+    height: 100%;
+    margin: 0 auto;
+    width: 90%;
+}
+
+#page-container>* {
+    max-width: 1135px;
+}
+
+/*============== HEADER =============*/
+
+#header {
+    margin: 10px auto;
+}
+
+/*===== Page-title-container ====*/
+.page-title-container {
+    text-align: center;
+}
+
+#pageLogo {
+    transition: all 1.5s ease;
+    display: inline-block;
+    width: 152px;
+    height: 201px;
+}
+
+#pageLogo:hover {
+    transform: scale(-1,1);
+}
+
+#page-title {
+    font-size: 45px;
+    font-family: "old_english", Georgia, 'Times New Roman', serif;
+}
+
+
+/*============ MAIN MENU ============*/
+nav {
+    text-align: center;
+}
+.main-menu {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.main-menu-item {
+    transition: all 1s;
+    margin: 2px;
+    border-radius: 12px;
+    float: left;
+    text-align: center;
+    list-style: none;
+    background-color: #f0dab4;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) ;
+}
+
+.main-menu-item.current,
+.main-menu-item:hover {
+    box-shadow: 1px 1px 8px rgb(0, 0, 0);
+    position: relative;
+    bottom: 1px;
+    left: 1px;
+    background-color: rgb(217, 185, 128);
+}
+
+.main-menu-ref {
+    padding: 0 10px;
+    display: inline-block;
+    min-width: 82px;
+    color: #000;
+
+    text-decoration: none;
+    font-size: 23px;
+    line-height: 50px;
+    font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
+}
+
+/* ==========  MAIN ==========*/
+main {
+    margin: 10px auto;
+}
+
+article {
+    font-size: 27px;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    text-indent: 1em;
+    font-family: MainTextFont, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    border: 1px dashed;
+    /*cursor: url(../img/cursor.png), auto;*/
+}
+article::first-letter {
+    font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
+    font-size: 30px;
+}
+
+article a{
+    text-decoration: none;
+    color: #250707;
+    font-style: italic;
+    font-weight: bold;
+}
+article a:hover{
+    transition:all 1s;
+    background-color: #852929;
+}
+
+/*=============== NEWS ===============*/
+article p:last-child {
+    text-align: right;
+}
+#seal{
+    float: right;
+    width: 155px;
+    height: 173px;
+    position: relative;
+    bottom: 90px;
+    right: 50px;
+}
+
+/* ============== HALL OF FAME =======*/
+.player-logo,
+.photo-logo {
+    width: 150px;
+    height: 200px;
+    float: left;
+    margin-right: 5px;
+    border-radius: 90px/100px;
+    border-width: 2px;
+    border-style: ridge;
+    transition: all 1.5s ease;
+}
+
+.player-logo:hover,
+.photo-logo:hover {
+    transform: scale(-1,1);
+}
+
+#top-players {
+    text-align: center;
+}
+
+.top-title {
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    font-family: "MainTextFont", Georgia, 'Times New Roman', serif;
+    border-bottom: 1px dashed;
+    border-top: 1px dashed;
+}
+
+#top0-player .player-logo {
+    border-color: #000;
+}
+
+#top1-player .player-logo {
+    border-color: #FFD700;
+}
+
+#top2-player .player-logo {
+    border-color: #C0C0C0;
+}
+
+#top3-player .player-logo {
+    border-color: #cd7f32;
+}
+
+.player,
+.photo {
+    display: inline-block;
+    vertical-align: top;
+    width: 350px;
+    height: 200px;
+    margin: 10px;
+    text-overflow: ellipsis;
+    font-family: "MainTextFont", Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+}
+
+.player a,
+.photo a {
+    float: left;
+}
+
+.player-nick,
+.photo-title,
+.photo-date {
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.honours {
+    background: black;
+    /*height: 46px;*/
+    float: left;
+    width: 191px;
+}
+.honour {
+    width: 50px;
+    /*height: 50px;*/
+    float: left;
+    background-color: silver;
+    border-radius: 50px;
+}
+
+/* ============= PHOTOS =============*/
+.photo-logo {
+    height: 200px;
+    width: auto;
+    border-color: black;
+}
+
+.photo {
+    height: auto;
+    width: auto;
+}
+
+/*=========== RATING ==========*/
+.playerAvatarInRating {
+    width: 90px;
+    height: 120px;
+    border-radius: 75px;
+    margin: 5px 10px 5px 10px;
+}
+
+table {
+    width: 1135px;
+}
+td,th {
+    padding: 5px;
+    text-align: center;
+    font-size: 25px;
+    word-wrap: break-word;
+}
+
+.form-button {
+    transition: all 1s;
+    display: block;
+    margin: 5px;
+    padding: 2px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #f0dab4;
+    cursor: pointer;
+}
+
+.form-button.current,
+.form-button:hover {
+    position: relative;
+    bottom: 1px;
+    left: 1px;
+    background-color: rgb(217, 185, 128);
+}
+
+.form-input {
+    margin: 5px;
+    padding: 2px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #f0dab4;
+}
+
+#authform {
+    transition: all 1s;
+}
+
+#authform.ng-hide {
+    opacity: 0;
+}
+
+.rating-row.ng-enter, .rating-row.ng-move {
+    -webkit-transition:1s linear all;
+    -moz-transition:1s linear all;
+    -o-transition:1s linear all;
+    transition:1s linear all;
+    opacity: 0;
+}
+
+.rating-row.ng-enter.ng-enter-active,
+.rating-row.ng-move.ng-move-active {
+    opacity:1;
+}
+
+.animating-started {
+    transition:1s linear all;
+    transform: scale(-1,1);
+}
+
+.player-logo[vk^="http"]{
+    cursor: pointer;
+}

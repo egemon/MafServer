@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="base" ng-strict-di>
+<head>
+    <meta charset="UTF-8">
+    <title>BakerStreet 221b Mafia Club</title>
+    <link rel="stylesheet" type="text/css" href="public/MafSite/assets/css/base.min.css">
+</head>
+<body id="page-container" ng-controller="baseCtrl">
+    <header id="header">
+        <div class="page-title-container">
+            <a id="page-logo-ref" ui-sref="{{'/' + PAGES[0].url}}" ng-click="setPage(PAGES[0].url)">
+                <img src="public/MafSite/assets/img/main_logo.png" alt="BakerLogo" id="pageLogo" ng-class="logoClass" >
+            </a>
+            <div id="page-title">
+                <div class="page-title-part">"Baker Street 221b"</div>
+                <div class="page-title-part">Mafia Club</div>
+            </div>
+        </div>
+        <nav>
+            <ul class="main-menu">
+                <li class="main-menu-item" ng-repeat="(i, thisPage) in PAGES" ng-class="{current:thisPage.url == page}">
+                    <a class="main-menu-ref" ui-sref="{{'/' + thisPage.url}}" ng-click="setPage(thisPage.url)">
+                        {{thisPage.name}}
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main ui-view>
+    </main>
+
+
+    <script src="public/MafSite/assets/js/main.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
