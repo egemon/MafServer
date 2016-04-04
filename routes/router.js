@@ -68,10 +68,10 @@ for (var i = 0; i < PAGES.length; i++) {
         var page = PAGES[i];
 
         // old API
-        router.get('/' + page.url, function(req, res) {
-            console.log('[ROUTER] get for' + page, req.url);
-            res.render(page.url + '.ejs', {current: i, pages: PAGES});
-        });
+        // router.get('/' + page.url, function(req, res) {
+        //     console.log('[ROUTER] get for' + page, req.url);
+        //     res.render(page.url + '.ejs', {current: i, pages: PAGES});
+        // });
 
         // new API
         router.post('/' + page.url, function(req, res) {
@@ -90,10 +90,16 @@ for (var i = 0; i < PAGES.length; i++) {
     })(PAGES, i);
 }
 
-router.get('/', function(req, res) {
+// router.get('/', function(req, res) {
+//     console.log('[ROUTER] get for', req.url);
+//     res.render('home.ejs', {current: 0, pages: PAGES});
+// });
+
+router.get('/*', function(req, res) {
     console.log('[ROUTER] get for', req.url);
-    res.render('home.ejs', {current: 0, pages: PAGES});
+    res.render('../MafSite/assets/base.html');
 });
+
 
 // ================ handlers for MafTable ================ //
 
