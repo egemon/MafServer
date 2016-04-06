@@ -61,6 +61,14 @@ var PAGES = [{
         url: 'contacts',
         rus: 'Контакты',
         contacts: playerHelper.getOrgs(players)
+    },{
+        url: 'protocols',
+        rus: 'Бланки',
+        data: 'Smth protocols'
+    },{
+        url: 'admin',
+        rus: 'База',
+        data: 'Smth admin'
     }];
 // ================ handlers for get PAGES ================ //
 for (var i = 0; i < PAGES.length; i++) {
@@ -142,11 +150,21 @@ router.post('/login', function (req, res) {
     var user = req.body.user;
     var password = req.body.password;
 
-    if (user === 'Egor' && password === 'Egor' ) {
-        res.send(maftableUrl);
-    } else {
-        console.log('res', res);
-        res.send('Не правильный пароль!');
-    }
+    var result = authentificate(players, user, password);
+    res.send(JSON.stringify(result));
+
 });
+
+
+
+function authentificate (players, user, password) {
+    player = playerHelper.getPlayerByNick(players, user);
+    if (player && player.password === password) {
+        return player;
+    } else {
+        return {
+            errorText: 'Вы еще не зарегистрированы или указан неправильный пароль!'
+        };
+    }
+}
 module.exports = router;

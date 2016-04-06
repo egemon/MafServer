@@ -8,7 +8,7 @@
 <body id="page-container" ng-controller="baseCtrl">
     <header id="header">
         <div class="page-title-container">
-            <a id="page-logo-ref" ui-sref="{{'/' + PAGES[0].url}}" ng-click="setPage(PAGES[0].url)">
+            <a id="page-logo-ref" ui-sref="{{'/' + PAGES[0].url}}" ng-click="setPage(PAGES[0])">
                 <img src="public/MafSite/assets/img/main_logo.png" alt="BakerLogo" id="pageLogo" ng-class="logoClass" >
             </a>
             <div id="page-title">
@@ -18,8 +18,8 @@
         </div>
         <nav>
             <ul class="main-menu">
-                <li class="main-menu-item" ng-repeat="(i, thisPage) in PAGES" ng-class="{current:thisPage.url == page}">
-                    <a class="main-menu-ref" ui-sref="{{'/' + thisPage.url}}" ng-click="setPage(thisPage.url)">
+                <li class="main-menu-item" ng-repeat="(i, thisPage) in PAGES" ng-class="{current:thisPage == page}" ng-show="user.data.memberLevel >= thisPage.needMemberLevel">
+                    <a class="main-menu-ref" ui-sref="{{'/' + thisPage.url}}" ng-click="setPage(thisPage)">
                         {{thisPage.name}}
                     </a>
                 </li>

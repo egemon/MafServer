@@ -16,7 +16,7 @@
     padding: 0;
     margin: 0;
 }
-html, body {
+html {
     background: #b89b70;
     background: -moz-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
     background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #b89b70), color-stop(100%, #78553d));
@@ -25,9 +25,13 @@ html, body {
     background: -ms-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
     background: radial-gradient(ellipse at top, #b89b70 0%, #78553d 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#facd96', endColorstr='#2b2b2b', GradientType=1 );
-
     background-image: url(../img/main_bg_low.jpg);
-    /*background-size: cover;*/
+    background-size: cover;
+    height: 100%;
+}
+body {
+    height: 100%;
+
 }
 #page-container {
     height: 100%;
