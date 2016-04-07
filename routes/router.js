@@ -63,13 +63,19 @@ var PAGES = [{
         contacts: playerHelper.getOrgs(players)
     },{
         url: 'protocols',
-        rus: 'Бланки',
-        data: 'Smth protocols'
+        rus: 'Бланки'
+
     },{
         url: 'admin',
         rus: 'База',
+        needMemberLevel: 3,
         data: 'Smth admin'
     }];
+var DEFAULT_FIELDS = {
+    url: true,
+    rus: true,
+    needMemberLevel: true
+};
 // ================ handlers for get PAGES ================ //
 for (var i = 0; i < PAGES.length; i++) {
     (function(PAGES, i){
@@ -85,7 +91,7 @@ for (var i = 0; i < PAGES.length; i++) {
         router.post('/' + page.url, function(req, res) {
             console.log('[ROUTER] post for' + page, req.url);
             for (var key in page) {
-                if (key === 'url' || key === 'rus') {
+                if (key in DEFAULT_FIELDS) {
                     continue;
                 }
 
@@ -127,7 +133,7 @@ router.post('/sync', function (req, res) {
     console.log('psync post request taken!');
     console.log('req.data = ', req.body.games);
     var result = "";
-    if (LocalGameStorage.saveGameArray(JSON.parse(req.body.games))) {
+    if (LocalGameStorage.saveGameArray(req.body.games)) {
         result = 'Game Saved!';
     } else {
         result = 'There is no games!';
