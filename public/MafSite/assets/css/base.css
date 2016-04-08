@@ -7535,11 +7535,16 @@ article p:last-child {
 #ratingTable {
     width: 1135px;
 }
-#ratingTable td,th {
+#ratingTable td,
+#ratingTable th {
     padding: 5px;
+    font-size: 25px;
+}
+
+td,
+th {
     text-align: center;
     vertical-align: middle;
-    font-size: 25px;
     word-wrap: break-word;
 }
 

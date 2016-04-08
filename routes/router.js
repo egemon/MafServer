@@ -2,23 +2,22 @@ var express = require('express');
 var fs = require('fs');
 var router = express.Router();
 
+var PLAYERS_PATH = './data-base/players/players.json';
 var LocalGameStorage = require('../model/LocalGameStorage');
 var RatingBase = require('../model/RatingBase');
 
-var photos = require('../data-base/photos.json');
-var players = require('../data-base/players/players.json');
-var meetings = require('../data-base/news/meetings.json');
+var dataBase = {
+    players: require('.' + PLAYERS_PATH),
+    photos: require('../data-base/photos.json'),
+    meetings: require('../data-base/news/meetings.json')
+};
+refreshPlayerInfo();
+
+fs.watch(PLAYERS_PATH, refreshPlayerInfo);
 
 var periodHelper = require('../helpers/famePeriods');
 var playerHelper = require('../helpers/players');
 var meetingHelper = require('../helpers/meetings');
-
-var rating = RatingBase.calculateRating(LocalGameStorage.getGamesByFilter({
-    periodType: "month",
-    period: 9
-}));
-
-console.log('rating = ', rating);
 
 function getPlayersFromBase (ratingObject) {
     console.log('ROUTER getPlayersFromBase() ratingObject', ratingObject);
@@ -40,27 +39,32 @@ var PAGES = [{
     },{
         url: 'news',
         rus: 'Новости',
-        data: meetingHelper.getMeetings(meetings)
+        getData: meetingHelper.getMeetings.bind(this, dataBase.meetings)
     },{
         url: 'rating',
         rus: 'Рейтинг',
-        data: rating
+        getData: RatingBase.calculateRating.bind(RatingBase, LocalGameStorage.getGamesByFilter({
+                periodType: "month",
+                period: 9
+            }))
     },{
         url: 'members',
         rus: 'Члены клуба',
-        data:  playerHelper.getMembers(players)
+        getData:  playerHelper.getMembers.bind(this, dataBase.players)
     },{
         url: 'hall_of_fame',
         rus: 'Зал Славы',
-        data: periodHelper.createFrom(players)
+        getData: periodHelper.createFrom.bind(this, dataBase.players)
     },{
         url: 'photos',
         rus: 'Фото',
-        data: photos
+        getData: function () {
+            return dataBase.photos;
+        }
     },{
         url: 'contacts',
         rus: 'Контакты',
-        data: playerHelper.getOrgs(players)
+        getData: playerHelper.getOrgs.bind(this, dataBase.players)
     },{
         url: 'protocols',
         rus: 'Бланки',
@@ -68,14 +72,17 @@ var PAGES = [{
     },{
         url: 'players',
         rus: 'Игроки',
-        data: players,
+        getData:  function () {
+            return  dataBase.players;
+        },
         needMemberLevel: 3
     }];
 
+
+
 // ================ handlers for get PAGES ================ //
 for (var i = 0; i < PAGES.length; i++) {
-    (function(PAGES, i){
-        var page = PAGES[i];
+    (function(i){
 
         // old API
         // router.get('/' + page.url, function(req, res) {
@@ -84,24 +91,25 @@ for (var i = 0; i < PAGES.length; i++) {
         // });
 
         // new API
-        router.post('/' + page.url, function(req, res) {
-            console.log('[ROUTER] post for' + page, req.url);
-            if (page.needMemberLevel) {
+        router.post('/' + PAGES[i].url, function(req, res) {
+            console.log('[ROUTER] post for', req.url);
+
+            if (PAGES[i].needMemberLevel) {
                 var password = req.body.password;
                 var user = req.body.user;
-                var player = authentificate(players, user, password);
-                if (player.memberLevel >= page.needMemberLevel) {
-                    res.send(page.data);
+                var player = authentificate(dataBase.players, user, password);
+                if (player.memberLevel >= PAGES[i].needMemberLevel) {
+                    res.send(PAGES[i].getData());
                 } else {
                     res.send(JSON.stringify({
                        errorText: 'Эта страничка доступна только для администраторов!'
                     }));
                 }
             } else {
-                res.send(page.data);
+                res.send(PAGES[i].getData());
             }
         });
-    })(PAGES, i);
+    })(i);
 }
 
 // router.get('/', function(req, res) {
@@ -151,7 +159,7 @@ router.post('/login', function (req, res) {
     var user = req.body.user;
     var password = req.body.password;
 
-    var player = authentificate(players, user, password);
+    var player = authentificate(dataBase.players, user, password);
 
     if (player) {
         res.send(JSON.stringify(player));
@@ -162,9 +170,20 @@ router.post('/login', function (req, res) {
     }
 });
 
+function refreshPlayerInfo () {
+    fs.readFile(PLAYERS_PATH, function (err, data) {
+        if (err) {
+            console.log('Error!!! ', err);
+        } else {
+            console.log('data = ', data);
+            dataBase.players = JSON.parse(data);
+        }
+    });
+}
 
 
 function authentificate (players, user, password) {
+    console.log('players', players);
     player = playerHelper.getPlayerByNick(players, user);
     if (player && player.password === password) {
         return player;

@@ -1,4 +1,4 @@
-angular.module('base', ['ui.router', 'server', 'ngAnimate', 'templates', 'ProtocolApp'],
+angular.module('base', ['ui.router', 'server', 'ngAnimate', 'templates', 'ProtocolApp','ngCookies'],
   ['CONFIG', 'club','PAGES', '$stateProvider', '$urlRouterProvider',
   function(CONFIG, club, PAGES, $stateProvider, $urlRouterProvider) {
     CONFIG.BASE_SERVER_URL = club.BASE_SERVER_URL = location.origin + '/';
@@ -33,10 +33,10 @@ $templateCache.put("pages/home.html","<article>\n    <p>\n        Клуб ма�
 $templateCache.put("pages/members.html","<div class=\"top-block\">\n    <div id=\"top-players\">\n        <div ng-repeat=\"(i, player) in members\" class=\"player\" id=\"top0-player\" ng-include=\"\'pages/partials/player.html\'\">\n        </div>\n    </div>\n</div>\n");
 $templateCache.put("pages/news.html","<article ng-repeat=\"(i, new) in news\">\n    <title>{{new.number}}ая встреча. Ждем Вас!</title>\n    <p>\n       Традиционно приглашаем Вас на <a href=\"https://vk.com/bs_vstrecha_{{new.number}}\" target=\"_blank\">встречу клуба</a> мафии Baker Street 221b!\n    </p>\n    <p>\n       Что? - {{new.what}}\n    </p>\n    <p>\n      Где? -\n      <a href=\"https://goo.gl/oFev5u\">\n       {{new.where}}\n      </a>\n    </p>\n    <p id=\"when{{i}}\">\n       Когда? - {{new.when | date}}\n    </p>\n    <p>\n       Члеский взнос? - {{new.price}} за вечер игр\n    </p>\n    <p>\n      С уважением, команда организаторов.\n    </p>\n</article>");
 $templateCache.put("pages/photos.html","<div class=\"photo\" ng-repeat=\"(i, photo) in photos\">\n    <a href=\"{{photo.href}}\" title=\"{{photo.title}}\" target=\"_blank\">\n        <img class=\"photo-logo\"\n        onerror=\"this.src=\'../img/main_logo_black2.png\'; this.onerror=\'\'\"\n        ng-src=\"{{photo.src}}\"\n        alt=\"{{photo.title}}\"\n        >\n    </a>\n    <p class=\"photo-title\">{{photo.title}}</p>\n    <p class=\"photo-date\">{{photo.date}}</p>\n</div>");
-$templateCache.put("pages/players.html","{{data}}");
+$templateCache.put("pages/players.html","<table>\n    <thead>\n        <tr>\n            <th ng-repeat=\"(field, value) in players[0]\">{{::field}}</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr ng-repeat=\"(i, player) in players\">\n            <td ng-repeat=\"(key, value) in player\">\n                {{::value}}\n            </td>\n        </tr>\n    </tbody>\n</table>");
 $templateCache.put("pages/protocols.html","<protocol></protocol>");
 $templateCache.put("pages/rating.html","<login-form ng-include=\"\'pages/partials/loginForm.html\'\"></login-form>\n<table class=\"table table-bordered\" id=\"ratingTable\" border=\'1\'>\n  <thead>\n    <tr>\n      <th>Фото</th>\n      <th>Ник</th>\n      <th>Сумма</th>\n      <th>Игр</th>\n      <th>Среднее</th>\n      <th>Лучшие от игроков</th>\n      <th>Лучшие от Судей</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr class=\"rating-row\" id=\"{{player.name}}\" ng-repeat=\"(i, player) in rating\">\n      <td id=\"{{player.avatar}}\">\n        <img class=\"playerAvatarInRating\"\n        onerror=\"this.src=\'public/MafSite/assets/img/main_logo.png\'; this.onerror=\'\'\"\n        ng-src=\"data-base/players/img/{{player.name}}.jpg\"\n        alt=\"\">\n      </td>\n      <td>{{player.name}}</td>\n      <td>{{player.sum}}</td>\n      <td>{{player.gameNumber}}</td>\n      <td>{{player.sum / player.gameNumber | number:2}}</td>\n      <td>{{player.BP}}</td>\n      <td>{{player.BR}}</td>\n    </tr>\n  </tbody>\n</table>\n<script src=\"../js/plain/rating.js\" type=\"text/javascript\" charset=\"utf-8\"></script>\n");
-$templateCache.put("pages/partials/loginForm.html","<div ng-hide=\"user.data.name\">\n    <button class=\"form-button\" id=\'showLogin\' ng-click=\"isOrg = !isOrg\">Я орг</button>\n    <div id=\"authform\" ng-show=\"isOrg == true\">\n        <input class=\"form-input\" id=\"user\" type=\"text\" placeholder=\"Ник\" ng-model=\"user.data.nick\">\n        <input class=\"form-input\" id=\"password\" type=\"password\" placeholder=\"Пароль\" ng-model=\"user.data.password\">\n        <button id=\"authButton\" class=\"form-button\" ng-click=\"login()\">Войти</button>\n    </div>\n</div>");
+$templateCache.put("pages/partials/loginForm.html","<div>\n    <button class=\"form-button\" id=\'showLogin\' ng-click=\"isOrg = !isOrg\">Логин</button>\n    <div id=\"authform\" ng-show=\"isOrg == true\">\n        <input class=\"form-input\" id=\"user\" type=\"text\" placeholder=\"Ник\" ng-model=\"user.data.nick\">\n        <input class=\"form-input\" id=\"password\" type=\"password\" placeholder=\"Пароль\" ng-model=\"user.data.password\">\n        <button\n            id=\"authButton\"\n            class=\"form-button\"\n            ng-click=\"login(user)\">\n            Войти\n        </button>\n    </div>\n</div>");
 $templateCache.put("pages/partials/player.html","<img\n    class=\"player-logo\"\n    ng-src=\"data-base/players/img/{{player.img}}.jpg\"\n    alt=\"{{player.nick}}\"\n    ng-click=\"openNewTab(player.vk)\"\n    vk={{player.vk}}\n>\n<div class=\"player-text-container\">\n    <p class=\"player-nick\">{{player.nick}}</p>\n    <p class=\"player-faculty\">{{player.name}}</p>\n    <p class=\"player-results\" ng-show=\"player.avr\">{{player.avr + \' средний бал \'}}{{\'(\' + player.gameNumber + \' игр)\'}}</p>\n    <p class=\"player-faculty\">{{player.position}}</p>\n    <p class=\"player-faculty\">{{player.faculty}}</p>\n    <p class=\"player-exp\">{{player.experiance}}</p>\n    <p class=\"player-faculty\" ng-show=\"player.position\">{{player.phone}}</p>\n    <div class=\"honours\">\n        <div\n        ng-repeat=\"(j, honour) in player.honours\"\n        title=\"{{honour.title}}\"\n        class=\"{{honour.type}}-{{honour.place}} honour\"\n        ></div>\n    </div>\n</div>\n");}]);
 angular.module('config')
 .constant('CONFIG', {
@@ -91,7 +91,8 @@ angular.module('base')
     needMemberLevel: 3
 }]);
 angular.module('base')
-.controller('baseCtrl', ['PAGES', '$scope', 'serverService', '$timeout', '$window', '$location',
+.controller('baseCtrl',
+['PAGES', '$scope', 'serverService', '$timeout', '$window', '$location',
 function(PAGES, $scope, serverService, $timeout, $window, $location) {
 
     animateLogo();
@@ -102,15 +103,14 @@ function(PAGES, $scope, serverService, $timeout, $window, $location) {
     $scope.PAGES = PAGES;
     $scope.isOrg = false;
     $scope.user = serverService.player;
-    console.log('$scope.user.memberLevel', $scope.user.memberLevel);
 
     $scope.login = login;
     $scope.setPage = setPage;
     $scope.openNewTab =  openNewTab;
 
     // ===== public methods
-    function login () {
-        serverService.$_login();
+    function login (user) {
+        serverService.$_login(user);
     }
 
     function setPage (page) {
@@ -140,7 +140,8 @@ function(PAGES, $scope, serverService, $timeout, $window, $location) {
 
     function fetchDataFor (page, needMemberLevel) {
         console.log('[base.controller] fetchDataFor()', arguments);
-        return serverService.$_fetchData(page.url, needMemberLevel).catch(handleError.bind(this, page));
+        return serverService.$_fetchData(page.url, needMemberLevel)
+            .catch(handleError.bind(this, page));
     }
 
     function handleData (page, response) {
@@ -177,7 +178,8 @@ function(PAGES, $scope, serverService, $timeout, $window, $location) {
 
 }]);
 angular.module('server')
-.service('serverService', ['$http', 'CONFIG', function serverService ($http, CONFIG) {
+.service('serverService', ['$http', 'CONFIG', '$cookies',
+    function serverService ($http, CONFIG, $cookies) {
 
     this.player = {
         data: {
@@ -192,7 +194,9 @@ angular.module('server')
             "experiance": ""
         }
     };
+    this.player.data = $cookies.getObject('player-data') || this.player.data;
 
+    console.log('this.player.data', this.player.data);
     serverService.prototype.$_fetchData = function(pageUrl, needMemberLevel) {
         console.log('[server.service] $_fetchData()', arguments);
         return $http.post(CONFIG.BASE_SERVER_URL + pageUrl,
@@ -205,11 +209,13 @@ angular.module('server')
 
     serverService.prototype.$_login = function() {
         console.log('[server.service] $_login()', arguments);
+        console.log('this.player.data', this.player.data);
         return $http.post(CONFIG.BASE_SERVER_URL + CONFIG.LOGIN_URL, {
-            user: this.player.data.nick,
-            password: this.player.data.password
-        }).catch(failCallback.bind(this))
-        .then(handleLogin.bind(this));
+                user: this.player.data.nick,
+                password: this.player.data.password
+            })
+            .catch(failCallback.bind(this))
+            .then(handleLogin.bind(this));
     };
 
     // ========== PRIVATE METHODS
@@ -228,6 +234,7 @@ angular.module('server')
             alert(data.errorText);
         } else {
             this.player.data = data;
+            $cookies.putObject('player-data', this.player.data);
         }
     }
 }]);
