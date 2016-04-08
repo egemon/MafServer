@@ -14,6 +14,7 @@
     "honours": []
 },{
     "nick": "Джек-Пот",
+    "password": "Джек-Пот",
     "vk": "https://vk.com/x_jack_pot_x",
     "birthday": "7.10.1992",
     "name": "Оля Лукьянова",
@@ -26,6 +27,7 @@
     "honours": []
 },{
     "nick": "Морковка",
+    "password": "Морковка",
     "vk": "https://vk.com/kay__g",
     "birthday": "29.09.1993",
     "name": "Екатерина Твердохлеб",
@@ -37,6 +39,7 @@
     "honours": []
 },{
     "nick": "Заяц",
+    "password": "Заяц",
     "vk": "https://vk.com/egor.zaitsev",
     "birthday": "19.03.1994",
     "name": "Егор Зайцев",
@@ -49,6 +52,7 @@
     "honours": []
 },{
     "nick": "Зло",
+    "password": "Зло",
     "vk": "https://vk.com/id32834155",
     "birthday": "4.10.1994",
     "phone": "+380978655635",
@@ -61,6 +65,7 @@
     "honours": []
 },{
     "nick": "50",
+    "password": "50",
     "vk": "https://vk.com/memmy",
     "birthday": "5.04.1994",
     "name": "Иванна Улыбина",
@@ -74,6 +79,7 @@
 },{
 
     "nick": "Johny",
+    "password": "Johny",
     "vk": "https://vk.com/id32393088",
     "birthday": "8.08.1995",
     "name": "Иван Кармазин",
@@ -86,6 +92,7 @@
     "honours": []
 },{
     "nick": "Pacman",
+    "password": "Pacman",
     "vk": "https://vk.com/kovtanyuk_oleg",
     "birthday": "13.12.1992",
     "name": "Олег Ковтанюк",
@@ -96,6 +103,7 @@
     "honours": []
 },{
     "nick": "Snoopy",
+    "password": "Snoopy",
     "vk": "https://vk.com/snoopy_ua",
     "birthday": "31.12.1992",
     "name": "Макс Сорока",
@@ -106,6 +114,7 @@
     "honours": []
 },{
     "nick": "Рейнджер",
+    "password": "Рейнджер",
     "vk": "https://vk.com/lubomyr95",
     "birthday": "26.06.1995",
     "name": "Ярослав Чепурний",
@@ -116,6 +125,7 @@
     "honours": []
 },{
     "nick": "Борман",
+    "password": "Борман",
     "vk": "https://vk.com/keepbleeding",
     "birthday": "19.08.1993",
     "name": "Богдан Гаврилишин",
@@ -126,6 +136,7 @@
     "honours": []
 },{
     "nick": "Мой Господин",
+    "password":  "Мой Господин",
     "vk": "https://vk.com/utvenko",
     "birthday": "8.06.1993",
     "name": "Андрей Утвенко",
@@ -136,6 +147,7 @@
     "honours": []
 },{
     "nick": "Клич",
+    "password": "Клич",
     "vk": "https://vk.com/id19111965",
     "birthday": "31.03.1992",
     "name": "Илья Лукьянов",
@@ -154,6 +166,7 @@
     }]
 },{
     "nick": "Earl Gray",
+    "password": "Earl Gray",
     "vk": "https://vk.com/id31217960",
     "birthday": "10.01.1997",
     "name": "Игорь Гаврилюк",
@@ -172,6 +185,7 @@
     }]
 },{
     "nick": "Баффет",
+    "password": "Баффет",
     "vk": "",
     "birthday": "31.03.1992",
     "name": "Анна Шумей",
@@ -182,6 +196,7 @@
     "honours": []
 },{
     "nick": "Phoenix",
+    "password": "Phoenix",
     "vk": "",
     "birthday": "31.03.1992",
     "name": "Илья Лукьянов",
