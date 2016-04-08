@@ -95,9 +95,8 @@ for (var i = 0; i < PAGES.length; i++) {
             console.log('[ROUTER] post for', req.url);
 
             if (PAGES[i].needMemberLevel) {
-                var password = req.body.password;
-                var user = req.body.user;
-                var player = authentificate(dataBase.players, user, password);
+
+                var player = authentificate(dataBase.players, req);
                 if (player.memberLevel >= PAGES[i].needMemberLevel) {
                     res.send(PAGES[i].getData());
                 } else {
@@ -156,16 +155,25 @@ router.post('/login', function (req, res) {
     console.log('password = ', req.body.password);
     console.log('user = ', req.body.user);
 
-    var user = req.body.user;
-    var password = req.body.password;
-
-    var player = authentificate(dataBase.players, user, password);
+    var player = authentificate(dataBase.players, req);
 
     if (player) {
         res.send(JSON.stringify(player));
     } else {
         res.send(JSON.stringify({
             errorText: 'Вы еще не зарегистрированы или указан неправильный пароль!'
+        }));
+    }
+});
+
+// ================ handler for changing DB
+router.post('/setplayers', function(req, res) {
+    var player = authentificate(dataBase.players, req);
+    if (player) {
+        fs.writeFile(PLAYERS_PATH, JSON.stringify(req.body.players, null, 4));
+    } else {
+        res.send(JSON.stringify({
+            errorText: 'Недостаточно прав для этого действия!'
         }));
     }
 });
@@ -182,7 +190,9 @@ function refreshPlayerInfo () {
 }
 
 
-function authentificate (players, user, password) {
+function authentificate (players, req) {
+    var password = req.body.password;
+    var user = req.body.user;
     console.log('players', players);
     player = playerHelper.getPlayerByNick(players, user);
     if (player && player.password === password) {

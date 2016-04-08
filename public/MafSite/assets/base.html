@@ -5,7 +5,7 @@
     <title>BakerStreet 221b Mafia Club</title>
     <link rel="stylesheet" type="text/css" href="public/MafSite/assets/css/base.min.css">
 </head>
-<body id="page-container" ng-controller="baseCtrl">
+<body id="page-container" ng-controller="baseCtrl" ng-click="blurFocus($event)">
     <header id="header">
         <div class="page-title-container">
             <a id="page-logo-ref" ui-sref="{{'/' + PAGES[0].url}}" ng-click="setPage(PAGES[0])">

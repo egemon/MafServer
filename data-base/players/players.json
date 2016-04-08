@@ -1,233 +1,287 @@
 [
-{
-    "nick": "Merlin",
-    "password": "armatura",
-    "vk": "https://vk.com/egemon",
-    "birthday": "31.03.1992",
-    "name": "Илья Лукьянов",
-    "presents": ["повязка"],
-    "phone": "+380508197302",
-    "position": "Экс-президент клуба",
-    "memberLevel": 4,
-    "faculty": "КНУ, Мех-Мат",
-    "experiance": "Играет 5 лет",
-    "honours": []
-},{
-    "nick": "Джек-Пот",
-    "password": "Джек-Пот",
-    "vk": "https://vk.com/x_jack_pot_x",
-    "birthday": "7.10.1992",
-    "name": "Оля Лукьянова",
-    "presents": ["футболка"],
-    "phone": "+380666667885",
-    "position": "Экс-организатор клуба",
-    "memberLevel": 4,
-    "faculty": "КНУ, Экономический факультет",
-    "experiance": "Играет 5 лет",
-    "honours": []
-},{
-    "nick": "Морковка",
-    "password": "Морковка",
-    "vk": "https://vk.com/kay__g",
-    "birthday": "29.09.1993",
-    "name": "Екатерина Твердохлеб",
-    "presents": [],
-    "phone": "+380666667885",
-    "position": "Экс-организатор клуба",
-    "memberLevel": 4,
-    "faculty": "КНУ, Экономический Факультет",
-    "experiance": "Играет 4 года",
-    "honours": []
-},{
-    "nick": "Заяц",
-    "password": "Заяц",
-    "vk": "https://vk.com/egor.zaitsev",
-    "birthday": "19.03.1994",
-    "name": "Егор Зайцев",
-    "presents": ["кружка"],
-    "phone": "+380637563792",
-    "position": "Президент клуба",
-    "memberLevel": 3,
-    "faculty": "КНУ, Геологический факультет",
-    "experiance": "Играет 3 года",
-    "honours": []
-},{
-    "nick": "Зло",
-    "password": "Зло",
-    "vk": "https://vk.com/id32834155",
-    "birthday": "4.10.1994",
-    "name": "Злата Михальчук",
-    "presents": ["маска"],
-    "phone": "+380978655635",
-    "position": "Рейтинг-менеджер",
-    "memberLevel": 3,
-    "faculty": "КНУ, Факультет психологии",
-    "experiance": "Играет 2 года",
-    "honours": []
-},{
-    "nick": "50",
-    "password": "50",
-    "vk": "https://vk.com/memmy",
-    "birthday": "5.04.1994",
-    "name": "Иванна Улыбина",
-    "presents": [],
-    "phone": "+380508197302",
-    "position": "Администратор группы",
-    "memberLevel": 3,
-    "faculty": "КНУ, Исторический Факультет",
-    "experiance": "Играет 3 года",
-    "honours": []
-},{
-
-    "nick": "Johny",
-    "password": "Johny",
-    "vk": "https://vk.com/id32393088",
-    "birthday": "8.08.1995",
-    "name": "Иван Кармазин",
-    "presents": ["кружка"],
-    "phone": "+380937032241",
-    "position": "Администратор встреч",
-    "memberLevel": 3,
-    "faculty": "КНУ, Мех-Мат",
-    "experiance": "Играет 3 года",
-    "honours": []
-},{
-    "nick": "Pacman",
-    "password": "Pacman",
-    "vk": "https://vk.com/kovtanyuk_oleg",
-    "birthday": "13.12.1992",
-    "name": "Олег Ковтанюк",
-    "presents": ["кружка"],
-    "phone": "",
-    "position": "игрок",
-    "memberLevel": 1,
-    "faculty": "КПИ, ХТФ",
-    "experiance": "Играет 3 года",
-    "honours": []
-},{
-    "nick": "Snoopy",
-    "password": "Snoopy",
-    "vk": "https://vk.com/snoopy_ua",
-    "birthday": "31.12.1992",
-    "name": "Макс Сорока",
-    "presents": ["кружка"],
-    "phone": "",
-    "position": "игрок",
-    "memberLevel": 1,
-    "faculty": "КПИ, ИХФ",
-    "experiance": "Играет 3 года",
-    "honours": []
-},{
-    "nick": "Рейнджер",
-    "password": "Рейнджер",
-    "vk": "https://vk.com/lubomyr95",
-    "birthday": "26.06.1995",
-    "name": "Ярослав Чепурний",
-    "presents": ["кружка"],
-    "phone": "",
-    "position": "игрок",
-    "memberLevel": 1,
-    "faculty": "КПИ",
-    "experiance": "Играет 3 года",
-    "honours": []
-},{
-    "nick": "Борман",
-    "password": "Борман",
-    "vk": "https://vk.com/keepbleeding",
-    "birthday": "19.08.1993",
-    "name": "Богдан Гаврилишин",
-    "presents": ["кружка", "футболка", "маска", "плед"],
-    "phone": "",
-    "position": "игрок",
-    "memberLevel": 1,
-    "faculty": "КНУ, РФФ",
-    "experiance": "Играет 3 года",
-    "honours": []
-},{
-    "nick": "Мой Господин",
-    "password":  "Мой Господин",
-    "vk": "https://vk.com/utvenko",
-    "birthday": "8.06.1993",
-    "name": "Андрей Утвенко",
-    "presents": ["кружка"],
-    "phone": "",
-    "position": "игрок",
-    "memberLevel": 1,
-    "faculty": "КНУ, РФФ",
-    "experiance": "Играет 3 года",
-    "honours": []
-},{
-    "nick": "Клич",
-    "password": "Клич",
-    "vk": "https://vk.com/id19111965",
-    "birthday": "31.03.1992",
-    "name": "Илья Лукьянов",
-    "presents": ["кружка", "футблока"],
-    "phone": "",
-    "position": "игрок",
-    "memberLevel": 1,
-    "faculty": "КНУ, РФФ",
-    "experiance": "Играет 2 года",
-    "honours": [{
-            "year": 2015,
-            "periodType": "season",
-            "period": 4,
-            "place": 2,
-            "avr": 2.48,
-            "gameNumber": 29
-    }]
-},{
-    "nick": "Earl Gray",
-    "password": "Earl Gray",
-    "vk": "https://vk.com/id31217960",
-    "birthday": "10.01.1997",
-    "name": "Игорь Гаврилюк",
-    "presents": ["маска"],
-    "phone": "",
-    "position": "игрок",
-    "memberLevel": 1,
-    "faculty": "КНУ, Институт Филологии",
-    "experiance": "Играет 3 месяца",
-    "honours": [{
-        "year": 2015,
-        "period": 4,
-        "periodType": "season",
-        "place": 1,
-        "avr": 2.68,
-        "gameNumber": 25
-    }]
-},{
-    "nick": "Баффет",
-    "password": "Баффет",
-    "vk": "",
-    "birthday": "31.03.1992",
-    "name": "Анна Шумей",
-    "presents": ["кружка", "футблока"],
-    "phone": "",
-    "position": "игрок",
-    "memberLevel": 1,
-    "faculty": "КНУ, Институт Инофрмационных технологий",
-    "experiance": "Играет 9 месяцев",
-    "honours": []
-},{
-    "nick": "Phoenix",
-    "password": "Phoenix",
-    "vk": "",
-    "birthday": "31.03.1992",
-    "name": "Илья Лукьянов",
-    "presents": ["кружка", "футблока"],
-    "phone": "",
-    "position": "игрок",
-    "memberLevel": 1,
-    "faculty": "КНУ, Институт Инофрмационных технологий",
-    "experiance": "Играет 9 месяцев",
-    "honours": [{
-        "year": 2015,
-        "periodType": "season",
-        "period": 4,
-        "place": 3,
-        "avr": 2.10,
-        "gameNumber": 29
-    }]
-}
+    {
+        "nick": "Merlin",
+        "password": "armatura",
+        "vk": "https://vk.com/egemon",
+        "birthday": "31.03.1992",
+        "name": "Илья Лукьянов",
+        "presents": [
+            "повязка"
+        ],
+        "phone": "+380508197302",
+        "position": "Экс-президент клуба",
+        "memberLevel": 4,
+        "faculty": "КНУ, Мех-Мат",
+        "experiance": "Играет 5 лет",
+        "honours": []
+    },
+    {
+        "nick": "Джек-Пот",
+        "password": "Джек-Пот",
+        "vk": "https://vk.com/x_jack_pot_x",
+        "birthday": "7.10.1992",
+        "name": "Оля Лукьянова",
+        "presents": [
+            "футболка"
+        ],
+        "phone": "+380666667885",
+        "position": "Экс-организатор клуба",
+        "memberLevel": 4,
+        "faculty": "КНУ, Экономический факультет",
+        "experiance": "Играет 5 лет",
+        "honours": []
+    },
+    {
+        "nick": "Морковка",
+        "password": "Морковка",
+        "vk": "https://vk.com/kay__g",
+        "birthday": "29.09.1993",
+        "name": "Екатерина Твердохлеб",
+        "presents": [],
+        "phone": "+380666667885",
+        "position": "Экс-организатор клуба",
+        "memberLevel": 4,
+        "faculty": "КНУ, Экономический Факультет",
+        "experiance": "Играет 4 года",
+        "honours": []
+    },
+    {
+        "nick": "Заяц",
+        "password": "Заяц",
+        "vk": "https://vk.com/egor.zaitsev",
+        "birthday": "19.03.1994",
+        "name": "Егор Зайцев",
+        "presents": [
+            "кружка"
+        ],
+        "phone": "+380637563792",
+        "position": "Президент клуба",
+        "memberLevel": 3,
+        "faculty": "КНУ, Геологический факультет",
+        "experiance": "Играет 3 года",
+        "honours": []
+    },
+    {
+        "nick": "Зло",
+        "password": "Зло",
+        "vk": "https://vk.com/id32834155",
+        "birthday": "4.10.1994",
+        "name": "Злата Михальчук",
+        "presents": [
+            "маска"
+        ],
+        "phone": "+380978655635",
+        "position": "Рейтинг-менеджер",
+        "memberLevel": 3,
+        "faculty": "КНУ, Факультет психологии",
+        "experiance": "Играет 2 года",
+        "honours": []
+    },
+    {
+        "nick": "50",
+        "password": "50",
+        "vk": "https://vk.com/memmy",
+        "birthday": "5.04.1994",
+        "name": "Иванна Улыбина",
+        "presents": [],
+        "phone": "+380508197302",
+        "position": "Администратор группы",
+        "memberLevel": 3,
+        "faculty": "КНУ, Исторический Факультет",
+        "experiance": "Играет 3 года",
+        "honours": []
+    },
+    {
+        "nick": "Johny",
+        "password": "Johny",
+        "vk": "https://vk.com/id32393088",
+        "birthday": "8.08.1995",
+        "name": "Иван Кармазин",
+        "presents": [
+            "кружка"
+        ],
+        "phone": "+380937032241",
+        "position": "Администратор встреч",
+        "memberLevel": 3,
+        "faculty": "КНУ, Мех-Мат",
+        "experiance": "Играет 3 года",
+        "honours": []
+    },
+    {
+        "nick": "Pacman",
+        "password": "Pacman",
+        "vk": "https://vk.com/kovtanyuk_oleg",
+        "birthday": "13.12.1992",
+        "name": "Олег Ковтанюк",
+        "presents": [
+            "кружка"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КПИ, ХТФ",
+        "experiance": "Играет 3 года",
+        "honours": []
+    },
+    {
+        "nick": "Snoopy",
+        "password": "Snoopy",
+        "vk": "https://vk.com/snoopy_ua",
+        "birthday": "31.12.1992",
+        "name": "Макс Сорока",
+        "presents": [
+            "кружка"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КПИ, ИХФ",
+        "experiance": "Играет 3 года",
+        "honours": []
+    },
+    {
+        "nick": "Рейнджер",
+        "password": "Рейнджер",
+        "vk": "https://vk.com/lubomyr95",
+        "birthday": "26.06.1995",
+        "name": "Ярослав Чепурний",
+        "presents": [
+            "кружка"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КПИ",
+        "experiance": "Играет 3 года",
+        "honours": []
+    },
+    {
+        "nick": "Борман",
+        "password": "Борман",
+        "vk": "https://vk.com/keepbleeding",
+        "birthday": "19.08.1993",
+        "name": "Богдан Гаврилишин",
+        "presents": [
+            "кружка",
+            "футболка",
+            "маска",
+            "плед"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КНУ, РФФ",
+        "experiance": "Играет 3 года",
+        "honours": []
+    },
+    {
+        "nick": "Мой Господин",
+        "password": "Мой Господин",
+        "vk": "https://vk.com/utvenko",
+        "birthday": "8.06.1993",
+        "name": "Андрей Утвенко",
+        "presents": [
+            "кружка"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КНУ, РФФ",
+        "experiance": "Играет 3 года",
+        "honours": []
+    },
+    {
+        "nick": "Клич",
+        "password": "Клич",
+        "vk": "https://vk.com/id19111965",
+        "birthday": "31.03.1992",
+        "name": "Илья Лукьянов",
+        "presents": [
+            "кружка",
+            "футблока"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КНУ, РФФ",
+        "experiance": "Играет 2 года",
+        "honours": [
+            {
+                "year": 2015,
+                "periodType": "season",
+                "period": 4,
+                "place": 2,
+                "avr": 2.48,
+                "gameNumber": 29
+            }
+        ]
+    },
+    {
+        "nick": "Earl Gray",
+        "password": "Earl",
+        "vk": "https://vk.com/id31217960",
+        "birthday": "10.01.1997",
+        "name": "Игорь Гаврилюк",
+        "presents": [
+            "маска"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КНУ, Институт Филологии",
+        "experiance": "Играет 3 месяца",
+        "honours": [
+            {
+                "year": 2015,
+                "period": 4,
+                "periodType": "season",
+                "place": 1,
+                "avr": 2.68,
+                "gameNumber": 25
+            }
+        ]
+    },
+    {
+        "nick": "Баффет",
+        "password": "Баффет",
+        "vk": "",
+        "birthday": "31.03.1992",
+        "name": "Анна Шумей",
+        "presents": [
+            "кружка",
+            "футблока"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КНУ, Институт Инофрмационных технологий",
+        "experiance": "Играет 9 месяцев",
+        "honours": []
+    },
+    {
+        "nick": "Phoenix",
+        "password": "Phoenix",
+        "vk": "",
+        "birthday": "31.03.1992",
+        "name": "Ярослав Щербак",
+        "presents": [
+            "кружка",
+            "футблока"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КНУ, Институт Инофрмационных технологий",
+        "experiance": "Играет 9 месяцев",
+        "honours": [
+            {
+                "year": 2015,
+                "periodType": "season",
+                "period": 4,
+                "place": 3,
+                "avr": 2.1,
+                "gameNumber": 29
+            }
+        ]
+    }
 ]
