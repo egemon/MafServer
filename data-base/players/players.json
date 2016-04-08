@@ -169,7 +169,6 @@
     "faculty": "КНУ, РФФ",
     "experiance": "Играет 2 года",
     "honours": [{
-            "title":"Серебрянный призер Осени 2015",
             "year": 2015,
             "periodType": "season",
             "period": 4,
@@ -190,7 +189,6 @@
     "faculty": "КНУ, Институт Филологии",
     "experiance": "Играет 3 месяца",
     "honours": [{
-        "title":"Лучший игрок Осени 2015",
         "year": 2015,
         "period": 4,
         "periodType": "season",
@@ -224,7 +222,6 @@
     "faculty": "КНУ, Институт Инофрмационных технологий",
     "experiance": "Играет 9 месяцев",
     "honours": [{
-        "title":"Бронзовый призер Осени 2015",
         "year": 2015,
         "periodType": "season",
         "period": 4,
