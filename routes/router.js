@@ -40,42 +40,38 @@ var PAGES = [{
     },{
         url: 'news',
         rus: 'Новости',
-        news: meetingHelper.getMeetings(meetings)
+        data: meetingHelper.getMeetings(meetings)
     },{
         url: 'rating',
         rus: 'Рейтинг',
-        players: rating
+        data: rating
     },{
         url: 'members',
         rus: 'Члены клуба',
-        players:  playerHelper.getMembers(players)
+        data:  playerHelper.getMembers(players)
     },{
         url: 'hall_of_fame',
         rus: 'Зал Славы',
-        periods: periodHelper.createFrom(players)
+        data: periodHelper.createFrom(players)
     },{
         url: 'photos',
         rus: 'Фото',
-        photos: photos
+        data: photos
     },{
         url: 'contacts',
         rus: 'Контакты',
-        contacts: playerHelper.getOrgs(players)
+        data: playerHelper.getOrgs(players)
     },{
         url: 'protocols',
-        rus: 'Бланки'
-
+        rus: 'Бланки',
+        needMemberLevel: 3
     },{
-        url: 'admin',
-        rus: 'База',
-        needMemberLevel: 3,
-        data: 'Smth admin'
+        url: 'players',
+        rus: 'Игроки',
+        data: players,
+        needMemberLevel: 3
     }];
-var DEFAULT_FIELDS = {
-    url: true,
-    rus: true,
-    needMemberLevel: true
-};
+
 // ================ handlers for get PAGES ================ //
 for (var i = 0; i < PAGES.length; i++) {
     (function(PAGES, i){
@@ -90,17 +86,21 @@ for (var i = 0; i < PAGES.length; i++) {
         // new API
         router.post('/' + page.url, function(req, res) {
             console.log('[ROUTER] post for' + page, req.url);
-            for (var key in page) {
-                if (key in DEFAULT_FIELDS) {
-                    continue;
+            if (page.needMemberLevel) {
+                var password = req.body.password;
+                var user = req.body.user;
+                var player = authentificate(players, user, password);
+                if (player.memberLevel >= page.needMemberLevel) {
+                    res.send(page.data);
+                } else {
+                    res.send(JSON.stringify({
+                       errorText: 'Эта страничка доступна только для администраторов!'
+                    }));
                 }
-
-            //assume we have only one field with data
-            res.send(page[key]);
+            } else {
+                res.send(page.data);
             }
-
         });
-
     })(PAGES, i);
 }
 
@@ -128,7 +128,7 @@ router.get('/sync', function (req, res) {
     res.send(games);
 });
 
-//getGamesByFilter
+//saveGamesByFilter
 router.post('/sync', function (req, res) {
     console.log('psync post request taken!');
     console.log('req.data = ', req.body.games);
@@ -143,11 +143,6 @@ router.post('/sync', function (req, res) {
 
 // ================ handlers for Login ================ //
 
-var maftableUrl = '/maftable';
-router.get(maftableUrl, function (req,res) {
-    res.render('../MafTable/MafTable.html');
-});
-
 router.post('/login', function (req, res) {
     console.log('password = ', req.body);
     console.log('password = ', req.body.password);
@@ -156,9 +151,15 @@ router.post('/login', function (req, res) {
     var user = req.body.user;
     var password = req.body.password;
 
-    var result = authentificate(players, user, password);
-    res.send(JSON.stringify(result));
+    var player = authentificate(players, user, password);
 
+    if (player) {
+        res.send(JSON.stringify(player));
+    } else {
+        res.send(JSON.stringify({
+            errorText: 'Вы еще не зарегистрированы или указан неправильный пароль!'
+        }));
+    }
 });
 
 
@@ -168,9 +169,7 @@ function authentificate (players, user, password) {
     if (player && player.password === password) {
         return player;
     } else {
-        return {
-            errorText: 'Вы еще не зарегистрированы или указан неправильный пароль!'
-        };
+        return false;
     }
 }
 module.exports = router;
