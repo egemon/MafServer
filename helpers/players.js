@@ -15,15 +15,17 @@ function byHonourLevel (player1, player2) {
 
 
 function getOrgs (players) {
-	return players.filter(isOrg).sort(byOrgLevel);
+	return players.filter(isOrg).sort(byOrgLevel).map(addImgSrc);
 }
 
 function getMembers (players) {
-	return players.filter(isMember).sort(byHonourLevel).map(function(player, i) {
-        player.img = player.nick.replace(/\s+/g, '');
-        console.log('player', JSON.stringify(player));
-        return player;
-    });
+	return players.filter(isMember).sort(byHonourLevel).map(addImgSrc);
+}
+
+function addImgSrc (player, i) {
+    player.img = player.nick.replace(/\s+/g, '');
+    console.log('player', JSON.stringify(player));
+    return player;
 }
 
 function getPlayerByNick (players, nick) {
