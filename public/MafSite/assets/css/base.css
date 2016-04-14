@@ -7317,13 +7317,18 @@ body {
 /*===== Page-title-container ====*/
 .page-title-container {
     text-align: center;
+    overflow: hidden;
+}
+
+#page-logo-ref {
+    float: left;
 }
 
 #pageLogo {
     transition: all 1.5s ease;
     display: inline-block;
-    width: 152px;
-    height: 201px;
+    width: 60px;
+    height: 80px;
 }
 
 #pageLogo:hover {
@@ -7331,7 +7336,10 @@ body {
 }
 
 #page-title {
-    font-size: 45px;
+    float: left;
+    line-height: 80px;
+    margin-left: 10px;
+    font-size: 55px;
     font-family: "old_english", Georgia, 'Times New Roman', serif;
 }
 
@@ -7366,14 +7374,13 @@ nav {
 }
 
 .main-menu-ref {
-    padding: 0 10px;
+    padding: 0 6px;
     display: inline-block;
     min-width: 82px;
     color: #000;
-
     text-decoration: none;
-    font-size: 23px;
-    line-height: 50px;
+    font-size: 17px;
+    line-height: 40px;
     font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
 }
 
@@ -7552,7 +7559,7 @@ button {
     text-align: center;
     background-color: #f0dab4;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 10px;
 }
 
 .form-button.current,
@@ -7571,12 +7578,18 @@ button {
     background-color: #f0dab4;
 }
 
+
+/* ================ LOGIN ==========*/
 #authform {
     transition: all 1s;
 }
 
 #authform.ng-hide {
     opacity: 0;
+}
+
+login-form {
+    float: right;
 }
 
 .rating-row.ng-enter, .rating-row.ng-move {
@@ -7655,4 +7668,21 @@ a:focus, a:hover {
 table,
 td {
     height: 100%;
+}
+
+.players-table {
+    margin-left: -5%;
+}
+
+input.ng-invalid {
+    border: 1px solid red;
+}
+
+.hint {
+    display: none;
+}
+
+input.ng-invalid+
+.hint {
+    display: block;
 }

@@ -1,3 +1,6 @@
+var fs = require('fs');
+var PLAYERS_PATH = './data-base/players/players.json';
+
 function isMember(player) {
     return player.memberLevel > 0;
 }
@@ -35,8 +38,35 @@ function getPlayerByNick (players, nick) {
         }
     }
 }
+
+
+function getPlayerFields () {
+    var playerFields = [
+        "nick",
+        "password",
+        "vk",
+        "birthday",
+        "name",
+        "presents",
+        "phone",
+        "position",
+        "memberLevel",
+        "faculty",
+        "experiance",
+        "honours"
+    ];
+
+    try {
+        playerFields = JSON.parse(fs.readFileSync('./data-base/players/player-fields.json', 'utf8'));
+    } catch(e) {
+        console.error('Error with reading players-fields', e);
+    }
+    return playerFields;
+}
+
 module.exports = {
 	getOrgs: getOrgs,
 	getMembers: getMembers,
-    getPlayerByNick: getPlayerByNick
+    getPlayerByNick: getPlayerByNick,
+    getPlayerFields: getPlayerFields
 };

@@ -3,7 +3,7 @@
         "nick": "Merlin",
         "password": "armatura",
         "vk": "https://vk.com/egemon",
-        "birthday": "31.03.1992",
+        "birthday": "1992-03-31",
         "name": "Илья Лукьянов",
         "presents": [
             "повязка"
@@ -19,7 +19,7 @@
         "nick": "Джек-Пот",
         "password": "Джек-Пот",
         "vk": "https://vk.com/x_jack_pot_x",
-        "birthday": "7.10.1992",
+        "birthday": "1992-10-07",
         "name": "Оля Лукьянова",
         "presents": [
             "футболка"
@@ -35,7 +35,7 @@
         "nick": "Морковка",
         "password": "Морковка",
         "vk": "https://vk.com/kay__g",
-        "birthday": "29.09.1993",
+        "birthday": "1993-09-29",
         "name": "Екатерина Твердохлеб",
         "presents": [],
         "phone": "+380666667885",
@@ -49,7 +49,7 @@
         "nick": "Заяц",
         "password": "Заяц",
         "vk": "https://vk.com/egor.zaitsev",
-        "birthday": "19.03.1994",
+        "birthday": "1994-03-19",
         "name": "Егор Зайцев",
         "presents": [
             "кружка"
@@ -65,7 +65,7 @@
         "nick": "Зло",
         "password": "Зло",
         "vk": "https://vk.com/id32834155",
-        "birthday": "4.10.1994",
+        "birthday": "1994-10-04",
         "name": "Злата Михальчук",
         "presents": [
             "маска"
@@ -81,7 +81,7 @@
         "nick": "50",
         "password": "50",
         "vk": "https://vk.com/memmy",
-        "birthday": "5.04.1994",
+        "birthday": "1994-04-05",
         "name": "Иванна Улыбина",
         "presents": [],
         "phone": "+380508197302",
@@ -95,7 +95,7 @@
         "nick": "Johny",
         "password": "Johny",
         "vk": "https://vk.com/id32393088",
-        "birthday": "8.08.1995",
+        "birthday": "1995-08-08",
         "name": "Иван Кармазин",
         "presents": [
             "кружка"
@@ -111,7 +111,7 @@
         "nick": "Pacman",
         "password": "Pacman",
         "vk": "https://vk.com/kovtanyuk_oleg",
-        "birthday": "13.12.1992",
+        "birthday": "1992-12-13",
         "name": "Олег Ковтанюк",
         "presents": [
             "кружка"
@@ -127,7 +127,7 @@
         "nick": "Snoopy",
         "password": "Snoopy",
         "vk": "https://vk.com/snoopy_ua",
-        "birthday": "31.12.1992",
+        "birthday": "1992-12-31",
         "name": "Макс Сорока",
         "presents": [
             "кружка"
@@ -143,7 +143,7 @@
         "nick": "Рейнджер",
         "password": "Рейнджер",
         "vk": "https://vk.com/lubomyr95",
-        "birthday": "26.06.1995",
+        "birthday": "1995-06-26",
         "name": "Ярослав Чепурний",
         "presents": [
             "кружка"
@@ -159,7 +159,7 @@
         "nick": "Борман",
         "password": "Борман",
         "vk": "https://vk.com/keepbleeding",
-        "birthday": "19.08.1993",
+        "birthday": "1993-08-19",
         "name": "Богдан Гаврилишин",
         "presents": [
             "кружка",
@@ -178,7 +178,7 @@
         "nick": "Мой Господин",
         "password": "Мой Господин",
         "vk": "https://vk.com/utvenko",
-        "birthday": "8.06.1993",
+        "birthday": "1993-06-08",
         "name": "Андрей Утвенко",
         "presents": [
             "кружка"
@@ -194,7 +194,7 @@
         "nick": "Клич",
         "password": "Клич",
         "vk": "https://vk.com/id19111965",
-        "birthday": "31.03.1992",
+        "birthday": "1992-03-31",
         "name": "Илья Лукьянов",
         "presents": [
             "кружка",
@@ -220,7 +220,7 @@
         "nick": "Earl Gray",
         "password": "Earl",
         "vk": "https://vk.com/id31217960",
-        "birthday": "10.01.1997",
+        "birthday": "1997-01-10",
         "name": "Игорь Гаврилюк",
         "presents": [
             "маска"
@@ -245,7 +245,7 @@
         "nick": "Баффет",
         "password": "Баффет",
         "vk": "",
-        "birthday": "31.03.1992",
+        "birthday": "1992-03-31",
         "name": "Анна Шумей",
         "presents": [
             "кружка",
@@ -262,7 +262,7 @@
         "nick": "Phoenix",
         "password": "Phoenix",
         "vk": "",
-        "birthday": "31.03.1992",
+        "birthday": "1992-03-31",
         "name": "Ярослав Щербак",
         "presents": [
             "кружка",
@@ -271,7 +271,7 @@
         "phone": "",
         "position": "игрок",
         "memberLevel": 1,
-        "faculty": "КНУ, Институт Инофрмационных технологий",
+        "faculty": "КНУ, Институт Информационных технологий",
         "experiance": "Играет 9 месяцев",
         "honours": [
             {

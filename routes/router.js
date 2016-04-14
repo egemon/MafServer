@@ -73,7 +73,10 @@ var PAGES = [{
         url: 'players',
         rus: 'Игроки',
         getData:  function () {
-            return  dataBase.players;
+            return {
+                data: dataBase.players,
+                fields: playerHelper.getPlayerFields()
+            };
         },
         needMemberLevel: 3
     }];
@@ -151,7 +154,6 @@ router.post('/sync', function (req, res) {
 // ================ handlers for Login ================ //
 
 router.post('/login', function (req, res) {
-    console.log('password = ', req.body);
     console.log('password = ', req.body.password);
     console.log('user = ', req.body.user);
 
@@ -193,8 +195,9 @@ function refreshPlayerInfo () {
 function authentificate (players, req) {
     var password = req.body.password;
     var user = req.body.user;
-    console.log('players', players);
+    console.log('[router] authentificate() password, user = ', password, user);
     player = playerHelper.getPlayerByNick(players, user);
+    console.log('[router] authentificate() player = ', player);
     if (player && player.password === password) {
         return player;
     } else {
