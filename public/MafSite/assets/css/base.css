@@ -7529,16 +7529,17 @@ article p:last-child {
 
 /*=========== RATING ==========*/
 .playerAvatarInRating {
-    width: 90px;
-    height: 120px;
-    border-radius: 75px;
-    margin: 5px 10px 5px 10px;
+    width: 30px;
+    height: 40px;
+    border-radius: 25px;
+    margin: 3x 0px;
 }
 
 #ratingTable td,
 #ratingTable th {
-    padding: 5px;
+    padding: 0px;
     font-size: 25px;
+    vertical-align: middle;
 }
 
 td,
@@ -7685,4 +7686,9 @@ input.ng-invalid {
 input.ng-invalid+
 .hint {
     display: block;
+}
+
+.remove-present-button,
+.add-present-button {
+    display: inline-block;
 }

@@ -170,9 +170,16 @@ router.post('/login', function (req, res) {
 
 // ================ handler for changing DB
 router.post('/setplayers', function(req, res) {
+    console.log('[router] /setplayers ');
     var player = authentificate(dataBase.players, req);
     if (player) {
-        fs.writeFile(PLAYERS_PATH, JSON.stringify(req.body.players, null, 4));
+        fs.writeFile(PLAYERS_PATH, JSON.stringify(req.body.players, null, 4), 'utf8', function function_name(err) {
+            if (err) {
+                res.send({errorText: err});
+            } else {
+                res.send({succesText: 'Игры сохранены!'});
+            }
+        });
     } else {
         res.send(JSON.stringify({
             errorText: 'Недостаточно прав для этого действия!'
@@ -181,12 +188,20 @@ router.post('/setplayers', function(req, res) {
 });
 
 function refreshPlayerInfo () {
+    console.log('[router] refreshPlayerInfo()', arguments);
+
     fs.readFile(PLAYERS_PATH, function (err, data) {
         if (err) {
             console.log('Error!!! ', err);
         } else {
             console.log('data = ', data);
-            dataBase.players = JSON.parse(data);
+            try {
+                JSON.parse(data);
+                dataBase.players = JSON.parse(data);
+            } catch(e){
+                console.error('[router] refreshPlayerInfo readFile error', e);
+            }
+
         }
     });
 }
