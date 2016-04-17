@@ -44,7 +44,9 @@ var PAGES = [{
         url: 'rating',
         rus: 'Рейтинг',
         getData: function (body) {
-
+            if (!Object.keys(body).length) {
+                body = '';
+            }
             // filterObject = {
             //     gameId: "MT_2015-09-21_1_Baker Street",
             //     periodType: "month" || "year" || "season",
@@ -58,7 +60,7 @@ var PAGES = [{
             };
 
             console.log('[router] getData(rating)', arguments);
-            return RatingBase.calculateRating.call(RatingBase, LocalGameStorage.getGamesByFilter(body.data || defaultFilter));
+            return RatingBase.calculateRating.call(RatingBase, LocalGameStorage.getGamesByFilter(body || defaultFilter));
         }
     },{
         url: 'members',
