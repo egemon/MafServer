@@ -43,10 +43,23 @@ var PAGES = [{
     },{
         url: 'rating',
         rus: 'Рейтинг',
-        getData: RatingBase.calculateRating.bind(RatingBase, LocalGameStorage.getGamesByFilter({
-                periodType: "month",
-                period: 9
-            }))
+        getData: function (body) {
+
+            // filterObject = {
+            //     gameId: "MT_2015-09-21_1_Baker Street",
+            //     periodType: "month" || "year" || "season",
+            //     period: "1" || "2015" || "4",
+            //     playerNick: "Merlin"
+            // }
+            var defaultFilter = {
+                    periodType: "month",
+                    period: 9,
+                    year: 2015
+            };
+
+            console.log('[router] getData(rating)', arguments);
+            return RatingBase.calculateRating.call(RatingBase, LocalGameStorage.getGamesByFilter(body.data || defaultFilter));
+        }
     },{
         url: 'members',
         rus: 'Члены клуба',
@@ -99,16 +112,16 @@ for (var i = 0; i < PAGES.length; i++) {
 
             if (PAGES[i].needMemberLevel) {
 
-                var player = authentificate(dataBase.players, req);
+                var player = authentificate(dataBase.players, req.body.credentials);
                 if (player.memberLevel >= PAGES[i].needMemberLevel) {
-                    res.send(PAGES[i].getData());
+                    res.send(PAGES[i].getData(req.body));
                 } else {
                     res.send(JSON.stringify({
                        errorText: 'Эта страничка доступна только для администраторов!'
                     }));
                 }
             } else {
-                res.send(PAGES[i].getData());
+                res.send(PAGES[i].getData(req.body));
             }
         });
     })(i);
@@ -207,9 +220,9 @@ function refreshPlayerInfo () {
 }
 
 
-function authentificate (players, req) {
-    var password = req.body.password;
-    var user = req.body.user;
+function authentificate (players, credentials) {
+    var password = credentials.password;
+    var user = credentials.user;
     console.log('[router] authentificate() password, user = ', password, user);
     player = playerHelper.getPlayerByNick(players, user);
     console.log('[router] authentificate() player = ', player);
