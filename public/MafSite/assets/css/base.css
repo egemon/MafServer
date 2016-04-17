@@ -7579,7 +7579,10 @@ button {
     background-color: #f0dab4;
 }
 
-
+.rating-select,
+.show-rating-button {
+    float: left;
+}
 /* ================ LOGIN ==========*/
 #authform {
     transition: all 1s;
