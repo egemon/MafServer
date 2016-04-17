@@ -167,10 +167,10 @@ router.post('/sync', function (req, res) {
 // ================ handlers for Login ================ //
 
 router.post('/login', function (req, res) {
-    console.log('password = ', req.body.password);
-    console.log('user = ', req.body.user);
+    console.log('password = ', req.body.credentials.password);
+    console.log('user = ', req.body.credentials.user);
 
-    var player = authentificate(dataBase.players, req);
+    var player = authentificate(dataBase.players, req.body.credentials);
 
     if (player) {
         res.send(JSON.stringify(player));
@@ -184,7 +184,7 @@ router.post('/login', function (req, res) {
 // ================ handler for changing DB
 router.post('/setplayers', function(req, res) {
     console.log('[router] /setplayers ');
-    var player = authentificate(dataBase.players, req);
+    var player = authentificate(dataBase.players, req.body.credentials);
     if (player) {
         fs.writeFile(PLAYERS_PATH, JSON.stringify(req.body.players, null, 4), 'utf8', function function_name(err) {
             if (err) {
