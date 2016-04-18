@@ -1,4 +1,6 @@
 var defaults = require('../data-base/news/defaults.json');
+var meetingFields = require('../data-base/news/meetingFields.json');
+
 
 function applyDefaults (meetings) {
 	var meeting = {};
@@ -29,6 +31,11 @@ function sortMeetings (meetings) {
 function getMeetings(meetings) {
 	return sortMeetings(applyDefaults(meetings));
 }
+
+function getMeetingFields() {
+	return meetingFields;
+}
 module.exports = {
-	getMeetings: getMeetings
+	getMeetings: getMeetings,
+	getMeetingFields: getMeetingFields
 };

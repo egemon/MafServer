@@ -35,8 +35,9 @@ try {
     angular.module('templates', []);
 }
 
-angular.module("templates").run(["$templateCache", function($templateCache) {$templateCache.put("base.html","<!DOCTYPE html>\n<html lang=\"en\" ng-app=\"base\" ng-strict-di>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>BakerStreet 221b Mafia Club</title>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"public/MafSite/assets/css/base.min.css\">\n</head>\n<body id=\"page-container\" ng-controller=\"baseCtrl\" ng-click=\"blurFocus($event)\">\n    <header id=\"header\">\n        <div class=\"page-title-container\">\n            <a id=\"page-logo-ref\" ui-sref=\"{{\'/\' + PAGES[0].url}}\" ng-click=\"setPage(PAGES[0])\">\n                <img src=\"public/MafSite/assets/img/main_logo.png\" alt=\"BakerLogo\" id=\"pageLogo\" ng-class=\"logoClass\" >\n            </a>\n            <div id=\"page-title\">\n                \"Baker Street 221b\" Mafia Club\n            </div>\n        <login-form ng-include=\"\'pages/partials/loginForm.html\'\"></login-form>\n        </div>\n        <nav>\n            <ul class=\"main-menu\">\n                <li class=\"main-menu-item\" ng-repeat=\"(i, thisPage) in PAGES\" ng-class=\"{current:thisPage == page}\" ng-show=\"user.data.memberLevel >= thisPage.needMemberLevel\">\n                    <a class=\"main-menu-ref\" ui-sref=\"{{\'/\' + thisPage.url}}\" ng-click=\"setPage(thisPage)\">\n                        {{thisPage.name}}\n                    </a>\n                </li>\n            </ul>\n        </nav>\n    </header>\n    <main ui-view id=\"view\">\n    </main>\n\n\n    <script src=\"public/MafSite/assets/js/main.min.js\" type=\"text/javascript\" charset=\"utf-8\"></script>\n</body>\n</html>");
+angular.module("templates").run(["$templateCache", function($templateCache) {$templateCache.put("base.html","<!DOCTYPE html>\n<html lang=\"en\" ng-app=\"base\" ng-strict-di>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>BakerStreet 221b Mafia Club</title>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"public/MafSite/assets/css/base.min.css\">\n</head>\n<body id=\"page-container\" ng-controller=\"baseCtrl\">\n    <header id=\"header\">\n        <div class=\"page-title-container\">\n            <a id=\"page-logo-ref\" ui-sref=\"{{\'/\' + PAGES[0].url}}\" ng-click=\"setPage(PAGES[0])\">\n                <img src=\"public/MafSite/assets/img/main_logo.png\" alt=\"BakerLogo\" id=\"pageLogo\" ng-class=\"logoClass\" >\n            </a>\n            <div id=\"page-title\">\n                \"Baker Street 221b\" Mafia Club\n            </div>\n        <login-form ng-include=\"\'pages/partials/loginForm.html\'\"></login-form>\n        </div>\n        <nav>\n            <ul class=\"main-menu\">\n                <li class=\"main-menu-item\" ng-repeat=\"(i, thisPage) in PAGES\" ng-class=\"{current:thisPage == page}\" ng-show=\"user.data.memberLevel >= thisPage.needMemberLevel\">\n                    <a class=\"main-menu-ref\" ui-sref=\"{{\'/\' + thisPage.url}}\" ng-click=\"setPage(thisPage)\">\n                        {{thisPage.name}}\n                    </a>\n                </li>\n            </ul>\n        </nav>\n    </header>\n    <main ui-view id=\"view\">\n    </main>\n\n\n    <script src=\"public/MafSite/assets/js/main.min.js\" type=\"text/javascript\" charset=\"utf-8\"></script>\n</body>\n</html>");
 $templateCache.put("pages/contacts.html","<div\n    class=\"player\"\n    id=\"top0-player\"\n    ng-repeat=\"(i, player) in contacts\"\n    ng-include=\"\'pages/partials/player.html\'\">\n</div>");
+$templateCache.put("pages/contents.html","<contents\n    contents=\"contents\"\n></contents>");
 $templateCache.put("pages/error.html","Error!\n<%err%>");
 $templateCache.put("pages/hall_of_fame.html","<div class=\"top-block\">\n    <div ng-repeat=\"(i, period) in hall_of_fame\">\n        <title class=\"top-title\">{{period.title}}</title>\n        <div id=\"top-players\">\n            <div ng-repeat=\"(j, player) in period.honours\" class=\"player\" id=\"top{{j+1}}-player\" ng-include=\"\'pages/partials/player.html\'\">\n            </div>\n        </div>\n    </div>\n</div>\n");
 $templateCache.put("pages/home.html","<article class=\"about_us_article\">\n    <p>\n        Клуб мафии Киевского Национального Университета им.Т. Шевченко Baker Street 221b проводит игры в течении 5 лет,\n        являясь членом Студенческой Лиги Игры Мафия (СЛИМ) Федерации Интеллектуальной Игры Мафия(ФИИМ).\n    </p>\n    <p>\n        Подарок от клуба для всех именинников - бесплатное посещение следующей встречи после Вашего дня рождения.\n    </p>\n    <p>\n        Коллектив организаторов желает Вам приятных и интересных игр!\n    </p>\n    <p>\n        PS: Чтобы получать приглашения на встречи и быть в курсе всех событий из жизни клуба, вступайте в <a href=\"https://vk.com/baker_street_mafia_club\" target=\"_blank\"> нашу группу</a>\n    </p>\n    <p>\n        Добро пожаловать в Игру!\n    </p>\n</article>\n");
@@ -46,8 +47,9 @@ $templateCache.put("pages/photos.html","<div class=\"photo\" ng-repeat=\"(i, pho
 $templateCache.put("pages/players.html","<players players=\"players\">\n\n</players>");
 $templateCache.put("pages/protocols.html","<protocol></protocol>");
 $templateCache.put("pages/rating.html","<rating\n  page=\"page\"\n  fetch-data-for=\"fetchDataFor\"\n  ></rating>\n<table class=\"table table-bordered\" id=\"ratingTable\" border=\'1\'>\n  <thead>\n    <tr>\n      <th>Фото</th>\n      <th>Ник</th>\n      <th>Сумма</th>\n      <th>Игр</th>\n      <th>Среднее</th>\n      <th>Лучшие от игроков</th>\n      <th>Лучшие от Судей</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr class=\"rating-row\" id=\"{{player.nick}}\" ng-repeat=\"(i, player) in rating\">\n      <td id=\"{{player.avatar}}\">\n        <img class=\"playerAvatarInRating\"\n        onerror=\"this.src=\'public/MafSite/assets/img/main_logo.png\'; this.onerror=\'\'\"\n        ng-src=\"data-base/players/img/{{player.nick}}.jpg\"\n        alt=\"\">\n      </td>\n      <td>{{player.nick}}</td>\n      <td>{{player.sum}}</td>\n      <td>{{player.gameNumber}}</td>\n      <td>{{player.sum / player.gameNumber | number:2}}</td>\n      <td>{{player.BP}}</td>\n      <td>{{player.BR}}</td>\n    </tr>\n  </tbody>\n</table>\n<script src=\"../js/plain/rating.js\" type=\"text/javascript\" charset=\"utf-8\"></script>\n");
+$templateCache.put("pages/directives/contents.html","<table>\n    <thead>\n        <tr>\n            <th ng-repeat=\"(i, key) in contents.fields\">{{::key}}</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr ng-repeat=\"(j, meeting) in contents.data\">\n            <td ng-repeat=\"(k, key) in contents.fields\">\n                <div\n                ng-click=\"startEdit($event, meeting)\"\n                >\n                {{::meeting[key]}}\n                </div>\n            </td>\n            <td>\n                <button class=\"remove-present-button\" ng-click=\"removeItem(contents.data, meeting)\">-</button>\n            </td>\n        </tr>\n        <tr>\n           <td ng-repeat=\"(k, key) in contents.fields\">\n                <input type=\"text\" ng-model=\"newEvent[key]\">\n            </td>\n            <td>\n                <button class=\"remove-present-button\" ng-click=\"addItem(contents.data, meeting)\">-</button>\n            </td>\n        </tr>\n    </tbody>\n</table>");
 $templateCache.put("pages/directives/new-player.html","<td ng-repeat=\"(i, key) in fields\">\n<input\n    type=\"{{::inputTypes[key]}}\"\n    key=\"{{::key}}\"\n    ng-if=\"key !== \'presents\' && key !== \'honours\'\"\n    ng-model=\"newPlayer.data[key]\"\n>\n</input>\n<div class=\"hint\">\n    Данные некорректны! Проверьте.\n</div>\n\n\n<!-- presents container -->\n<div\n    ng-if=\"key ===\'presents\'\"\n    class=\"player-presents-container\"\n    data=\"{{::newPlayer.data.presents}}\"\n>\n    <!-- player-continer in repeate -->\n    <div\n        class=\'present-container\'\n        ng-repeat=\"(j, present) in newPlayer.data.presents track by $index \"\n    >\n        <span\n            data={{::present}}\n            key=\"presents\"\n            iterator=\"{{::j}}\"\n            ng-click=\"startEdit({$event: $event, player: newPlayer.data})\"\n        >\n            {{::present}}\n        </span>\n        <button class=\"remove-present-button\" ng-click=\"removeItem({items: newPlayer.data.presents, item: present})\">-</button>\n    </div>\n\n    <!--  new present container-->\n    <div>\n        <input type=\"text\" ng-model=\"newPresent\">\n        <button\n            class=\"add-present-button\"\n            ng-click=\"addPresent({presents: newPlayer.data.presents, present: newPresent}); newPresent = \'\'\"\n        >+</button>\n    </div>\n</div>\n\n\n<div ng-if=\"key ===\'honours\'\" ng-repeat=\"(j, honour) in player[key] track by $index\">\n    <div  ng-repeat=\"(Key, honour) in honour\">\n        <span class=\"player-honour-key\">\n            {{::Key}} :\n        </span>\n        <span class=\"player-honour-value\">\n            {{::honour}}\n        </span>\n    </div>\n</div>\n</td>\n<td>\n    <button id=\"add-player-button\" ng-click=\"addPlayer({player: newPlayer.data})\">+</button>\n</td>");
-$templateCache.put("pages/directives/players.html","<table class=\"table players-table table-hover\">\n    <thead>\n        <tr>\n            <th ng-repeat=\"(j, field) in players.fields\">{{::field}}</th>\n        </tr>\n    </thead>\n    <tbody ng-init=\"addBlurListener()\">\n        <tr ng-repeat=\"(i, player) in players.data\" ng-include=\"\'pages/partials/player-tr.html\'\">\n        </tr>\n        <tr>\n            <tr new-player\n                add-present=\"addPresent(presents, present)\"\n                fields=\"players.fields\"\n                add-player=\"addNewPlayer(player)\"\n                start-edit=\"startEdit($event, player)\"\n                remove-item=\"removeItem(items, item)\"\n            ></tr>\n        </tr>\n    </tbody>\n</table>\n<button ng-click=\"setPlayers(players.data)\">Изменить данные</button>");
+$templateCache.put("pages/directives/players.html","<table class=\"table players-table table-hover\">\n    <thead>\n        <tr>\n            <th ng-repeat=\"(j, field) in players.fields\">{{::field}}</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr ng-repeat=\"(i, player) in players.data\" ng-include=\"\'pages/partials/player-tr.html\'\">\n        </tr>\n        <tr>\n            <tr new-player\n                add-present=\"addPresent(presents, present)\"\n                fields=\"players.fields\"\n                add-player=\"addNewPlayer(player)\"\n                start-edit=\"startEdit($event, player)\"\n                remove-item=\"removeItem(items, item)\"\n            ></tr>\n        </tr>\n    </tbody>\n</table>\n<button ng-click=\"setPlayers(players.data)\">Изменить данные</button>");
 $templateCache.put("pages/directives/rating.html","<select\n    class=\"rating-select\"\n    ng-model=\"ratingCtr.periodType\">\n    <option\n        ng-repeat=\"(periodType, val) in ratingCtr.filterFields\"\n        value=\"{{::periodType}}\"\n        >\n        {{::val.name}}\n    </option>\n</select>\n<select\n    class=\"rating-select\"\n    ng-model=\"ratingCtr.period\"\n    ng-show=\"ratingCtr.periodType !== \'year\'\"\n    ng-options=\"item as item.name for item in ratingCtr.filterFields[ratingCtr.periodType].value track by item.value\"\n    >\n</select>\n<select\n    class=\"rating-select\"\n    ng-model=\"ratingCtr.year\"\n    ng-options=\"item as item.name for item in ratingCtr.filterFields.year.value track by item.value\"\n    >\n</select>\n<button class=\"show-rating-button\" ng-click=\"ratingCtr.getRating()\">Показать рейтинг</button>");
 $templateCache.put("pages/partials/loginForm.html","<div>\n    <button class=\"form-button\" id=\'showLogin\' ng-click=\"loginActive = !loginActive\">{{loginActive ? \'Скрыть\' : \'Логин\'}}</button>\n    <div id=\"authform\" ng-show=\"loginActive\">\n        <input class=\"form-input\" id=\"user\" type=\"text\" placeholder=\"Ник\" ng-model=\"user.data.nick\">\n        <input class=\"form-input\" id=\"password\" type=\"password\" placeholder=\"Пароль\" ng-model=\"user.data.password\">\n        <button\n            id=\"authButton\"\n            class=\"form-button\"\n            ng-click=\"login(user); loginActive = false;\">\n            Войти\n        </button>\n    </div>\n</div>");
 $templateCache.put("pages/partials/player-tr.html","<td ng-repeat=\"(j, key) in players.fields\" >\n<div\n    class=\"player-input\"\n    key=\"{{::key}}\"\n    ng-if=\"key !== \'presents\' && key !== \'honours\'\"\n    ng-click=\"startEdit($event, player, playersCtr.inputTypes[key])\"\n    date = \"{{::key == \'birthday\' ? (player[key] | date:\'yyyy-MM-dd\') : \'\'}}\"\n>\n    {{::key == \'birthday\' ? (player[key] | date) : player[key]}}\n</div>\n<div class=\"hint\">\n    Данные некорректны! Проверьте.\n</div>\n\n<!-- presents container -->\n<div\n    class=\"player-presents-container\"\n    ng-if=\"key ===\'presents\'\"\n    data=\"{{::player.presents}}\"\n>\n    <!-- player-continer in repeate -->\n    <div\n        class = \"present-container\"\n        ng-repeat=\"(j, present) in player[key] track by $index \"\n    >\n        <span\n            data={{::present}}\n            key=\"presents\"\n            iterator=\"{{::j}}\"\n            ng-click=\"startEdit($event, player)\"\n        >\n            {{::present}}\n        </span>\n        <button class=\"remove-present-button\" ng-click=\"removeItem(player.presents, present)\">-</button>\n    </div>\n    <div>\n        <input\n            class=\"new-present-input\"\n            type=\"text\"\n            ng-model=\"newPresent\">\n        <button\n            class=\"add-present-button\"\n            ng-click=\"addPresent(player.presents, newPresent); newPresent = \'\'\"\n        >+</button>\n    </div>\n</div>\n\n<div\n    ng-if=\"key ===\'honours\'\"\n    ng-repeat=\"(j, honour) in player.honours track by $index\"\n>\n    <div\n        class=\"honour-container\"\n        ng-repeat=\"(clue, val) in honour\"\n    >\n        <span class=\"player-honour-key\">\n            {{::clue}} :\n        </span>\n        <span\n            class=\"player-honour-value\"\n            key=\"{{::key}}\"\n            clue=\"{{::clue}}\"\n            iterator=\"{{::j}}\"\n            ng-click=\"startEdit($event, player)\"\n        >\n            {{::val}}\n        </span>\n    </div>\n\n</div>\n</td>\n<td>\n    <button class=\"remove-player-button\" ng-click=\"removeItem(players.data, player)\">-</button>\n</td>\n");
@@ -190,6 +192,11 @@ angular.module('base')
     name: 'Игроки',
     needData: true,
     needMemberLevel: 3
+},{
+    url: 'contents',
+    name: 'Контент',
+    needData: true,
+    needMemberLevel: 3
 }]);
 angular.module('base')
 .controller('baseCtrl',
@@ -274,6 +281,10 @@ function(PAGES, $scope, serverService, $timeout, $window, $location) {
         }
     }
 }]);
+angular.module('base').controller('contentsCtrl', ['$scope', 'CONFIG',
+function($scope, CONFIG) {
+
+}]);
 angular.module('base').controller('newPlayerCtrl', ['$scope', 'CONFIG',
 function($scope, CONFIG) {
 
@@ -286,109 +297,20 @@ function($scope, CONFIG) {
 }]);
 angular.module('base')
 .controller('playersCtrl',
-['$scope', 'CONFIG', 'serverService', 'dateFilter',
-function($scope, CONFIG, serverService, dateFilter) {
+['$scope', 'CONFIG', 'editService','serverService', 'dateFilter',
+function($scope, CONFIG, editService,  serverService, dateFilter) {
 
     this.inputTypes = CONFIG.inputTypes;
 
-    var editableField = null;
-    var editablePlayer = null;
 
-    $scope.startEdit =  startEdit;
-    $scope.blurFocus =  blurFocus;
-    $scope.addPresent =  addPresent;
-
-    $scope.setPlayers =  setPlayers;
-    $scope.addBlurListener =  addBlurListener;
-    $scope.addNewPlayer =  addNewPlayer;
-    $scope.removeItem =  removeItem;
-
-
-    function handleEnter(event) {
-        if(event.which === 13) {
-            blurFocus(event);
-        }
-    }
-
-    function addPresent (presents, newPresent) {
-        console.log('[players.controller] addPresents()', arguments);
-        presents.push(newPresent);
-    }
-
-    function startEdit($event, player, type) {
-        console.log('[players.controller] startEdit()', arguments);
-        type = type || 'text';
-        var currentTarget = angular.element($event.toElement);
-        console.log('currentTarget', currentTarget);
-        if (currentTarget.attr('autofocus') === '') {
-            return;
-        }
-        blurFocus($event);
-        editableField = angular.element($event.toElement);
-        console.log('editableField', editableField);
-        var value = editableField.html().trim();
-
-        if (type === 'date') {
-            value = editableField.attr('date');
-        }
-        console.log('value', value);
-        var input = angular.element('<input type="' + type + '" value="'+value+'" autofocus>');
-        input.bind("keydown keypress", handleEnter);
-        editablePlayer = player;
-        editableField.html('');
-        editableField.append(input);
-    }
-
-    function blurFocus($event) {
-        console.log('blurFocus', arguments);
-        var currentTarget = angular.element($event.toElement);
-        if (currentTarget.attr('autofocus') === '') {
-            return;
-        }
-        if (editableField && !angular.equals(editableField, currentTarget)) {
-            stopEdit();
-        }
-    }
-
-    function stopEdit () {
-        console.log('stopEdit()', arguments);
-
-        var input = editableField.find('input');
-        input.unbind("keydown keypress", handleEnter);
-        var newVal = input.val();
-
-
-        if (input.attr('type') === 'date') {
-            editableField.attr('date', newVal);
-            newVal = dateFilter(newVal);
-        }
-
-        editableField.html(newVal);
-
-        var key = editableField.attr('key');
-        var iterator = editableField.attr('iterator');
-        var clue = editableField.attr('clue');
-        console.log('iterator = ', iterator);
-        if (iterator) {
-            if (clue) {
-                editablePlayer[key][iterator][clue] = newVal;
-            } else {
-                editablePlayer[key][iterator] = newVal;
-            }
-        } else {
-            editablePlayer[key] = newVal;
-        }
-
-        editableField = null;
-        editablePlayer = null;
-    }
+    $scope.setPlayers = setPlayers;
+    $scope.addNewPlayer = addNewPlayer;
+    $scope.removeItem = removeItem;
+    $scope.addPresent = addPresent;
+    $scope.startEdit = editService.startEdit;
 
     function setPlayers(players) {
         serverService.setPlayers(players);
-    }
-
-    function addBlurListener () {
-        angular.element(document).on('click', blurFocus);
     }
 
     function addNewPlayer (user) {
@@ -404,11 +326,15 @@ function($scope, CONFIG, serverService, dateFilter) {
         players.splice(i,1);
     }
 
-
     function _emptyUser(user) {
         for(var key in user){
             user[key] = "";
         }
+    }
+
+    function addPresent (presents, newPresent) {
+        console.log('[edit.service] addPresents()', arguments);
+        presents.push(newPresent);
     }
 
 }]);
@@ -459,6 +385,18 @@ function($scope, CONFIG) {
     }
 
 }]);
+angular.module('base').directive('contents', function(){
+
+    return {
+        scope: {
+            contents:"="
+        },
+        controller: "contentsCtrl as contentsCtr",
+        restrict: 'E',
+        templateUrl: 'pages/directives/contents.html'
+    };
+});
+
 angular.module('base').directive('newPlayer', function(){
 
     return {
@@ -500,6 +438,99 @@ angular.module('base').directive('rating', function(){
     };
 });
 
+angular.module('server')
+.service('editService', ['$http', 'CONFIG', 'dateFilter',
+function editService ($http, CONFIG, dateFilter) {
+
+    var editableField = null;
+    var editablePlayer = null;
+
+
+    angular.element(document).on('click', blurFocus);
+
+    function handleEnter(event) {
+        if(event.which === 13) {
+            blurFocus(event);
+        }
+    }
+
+    function startEdit($event, player, type) {
+        console.log('[edit.service] startEdit()', arguments);
+
+        type = type || 'text';
+        var currentTarget = angular.element($event.toElement);
+        console.log('currentTarget', currentTarget);
+        if (currentTarget.attr('autofocus') === '') {
+            return;
+        }
+        blurFocus($event);
+        editableField = angular.element($event.toElement);
+        console.log('editableField', editableField);
+        var value = editableField.html().trim();
+
+        if (type === 'date') {
+            value = editableField.attr('date');
+        }
+        console.log('value', value);
+        var input = angular.element('<input type="' + type + '" value="'+value+'" autofocus>');
+        input.bind("keydown keypress", handleEnter);
+        editablePlayer = player;
+        editableField.html('');
+        editableField.append(input);
+    }
+
+    function blurFocus($event) {
+        console.log('[edit.service] blurFocus', arguments);
+
+        var currentTarget = angular.element($event.toElement);
+        if (currentTarget.attr('autofocus') === '') {
+            return;
+        }
+        if (editableField && !angular.equals(editableField, currentTarget)) {
+            stopEdit();
+        }
+    }
+
+    function stopEdit () {
+        console.log('[edit.service] stopEdit()', arguments);
+
+        var input = editableField.find('input');
+        input.unbind("keydown keypress", handleEnter);
+        var newVal = input.val();
+
+
+        if (input.attr('type') === 'date') {
+            editableField.attr('date', newVal);
+            newVal = dateFilter(newVal);
+        }
+
+        editableField.html(newVal);
+
+        var key = editableField.attr('key');
+        var iterator = editableField.attr('iterator');
+        var clue = editableField.attr('clue');
+        console.log('iterator = ', iterator);
+        if (iterator) {
+            if (clue) {
+                editablePlayer[key][iterator][clue] = newVal;
+            } else {
+                editablePlayer[key][iterator] = newVal;
+            }
+        } else {
+            editablePlayer[key] = newVal;
+        }
+
+        editableField = null;
+        editablePlayer = null;
+    }
+
+
+    return {
+        startEdit:  startEdit,
+        blurFocus:  blurFocus
+    };
+
+}]);
 angular.module('server')
 .service('serverService', ['$http', 'CONFIG', '$cookies',
     function serverService ($http, CONFIG, $cookies) {

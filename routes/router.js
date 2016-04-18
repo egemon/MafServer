@@ -74,6 +74,16 @@ var PAGES = [{
             };
         },
         needMemberLevel: 3
+    },{
+        url: 'contents',
+        rus: 'Контент',
+        getData:  function () {
+            return {
+                data: dataBase.getNews(),
+                fields: dataBase.getMeetingFields()
+            };
+        },
+        needMemberLevel: 3
     }];
 
 

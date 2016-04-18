@@ -101,5 +101,6 @@ module.exports = {
     getOrgs: getOrgs,
     getPlayerFields: getPlayerFields,
     authentificate: playerHelper.authentificate.bind(this, dataBase.players),
+    getMeetingFields: meetingHelper.getMeetingFields
 };
 
