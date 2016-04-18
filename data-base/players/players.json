@@ -106,6 +106,19 @@
         "faculty": "КНУ, Мех-Мат",
         "experiance": "Играет 3 года",
         "honours": []
+    },{
+        "nick": "Аксолотль",
+        "password": "Аксолотль",
+        "vk": "https://vk.com/qwertyuiopasdnmxct",
+        "birthday": "1997-06-25",
+        "name": "Викотрия Гурин",
+        "presents": [],
+        "phone": "+380937032241",
+        "position": "Администратор группы",
+        "memberLevel": 3,
+        "faculty": "КНУ, Институт Биологии",
+        "experiance": "Играет 1 год",
+        "honours": []
     },
     {
         "nick": "Pacman",
