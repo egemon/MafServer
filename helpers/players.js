@@ -39,6 +39,17 @@ function getPlayerByNick (players, nick) {
     }
 }
 
+function authentificate (players, credentials) {
+    var password = credentials.password;
+    var user = credentials.user;
+    player = getPlayerByNick(players, user);
+    if (player && player.password === password) {
+        return player;
+    } else {
+        return false;
+    }
+}
+
 
 function getPlayerFields () {
     var playerFields = [
@@ -68,5 +79,6 @@ module.exports = {
 	getOrgs: getOrgs,
 	getMembers: getMembers,
     getPlayerByNick: getPlayerByNick,
-    getPlayerFields: getPlayerFields
+    getPlayerFields: getPlayerFields,
+    authentificate: authentificate
 };
