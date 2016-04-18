@@ -7406,7 +7406,8 @@ article {
     /*cursor: url(../img/cursor.png), auto;*/
 }
 
-article::first-letter {
+.about_us_article::first-letter,
+.entry::first-letter {
     font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
     font-size: 30px;
 }
@@ -7426,6 +7427,10 @@ article a:hover {
 /*=============== NEWS ===============*/
 article p:last-child {
     text-align: right;
+}
+
+.article-title {
+    display: block;
 }
 
 #seal {

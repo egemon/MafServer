@@ -7400,11 +7400,11 @@ article {
     border: 1px dashed;
     /*cursor: url(../img/cursor.png), auto;*/
 }
-article::first-letter {
+.about_us_article::first-letter,
+.entry::first-letter {
     font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
     font-size: 30px;
 }
-
 article a{
     text-decoration: none;
     color: #250707;
@@ -7420,6 +7420,10 @@ article a:hover{
 article p:last-child {
     text-align: right;
 }
+.article-title {
+    display: block;
+}
+
 #seal{
     float: right;
     width: 155px;
