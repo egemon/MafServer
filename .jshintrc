@@ -1,0 +1,21 @@
+{
+    "noarg": true,
+    "noempty": true,
+    "eqeqeq": false,
+    "bitwise": true,
+    "strict": false,
+    "undef": true,
+    "unused": true,
+    "curly": true,
+    "browser": true,
+    "indent": 4,
+    "maxerr": 150,
+    "loopfunc": true,
+    "devel": true,
+    "maxlen": 120,
+    "globals" : {
+        "require": true,
+        "angular": true,
+        "module": true
+    }
+}
