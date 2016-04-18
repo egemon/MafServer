@@ -2,18 +2,24 @@ var express = require('express');
 var fs = require('fs');
 var router = express.Router();
 
-var PLAYERS_PATH = './data-base/players/players.json';
+var PATHS = {
+    players: './data-base/players/players.json',
+    photos: './data-base/photos.json',
+    meetings: './data-base/news/meetings.json'
+};
+
+
 var LocalGameStorage = require('../model/LocalGameStorage');
 var RatingBase = require('../model/RatingBase');
 
 var dataBase = {
-    players: require('.' + PLAYERS_PATH),
-    photos: require('../data-base/photos.json'),
-    meetings: require('../data-base/news/meetings.json')
+    players: require('.' + PATHS.players),
+    photos: require('.' + PATHS.photos),
+    meetings: require('.' + PATHS.meetings)
 };
-refreshPlayerInfo();
+refreshInfoFor('all');
+initializeWatching('all');
 
-fs.watch(PLAYERS_PATH, refreshPlayerInfo);
 
 var periodHelper = require('../helpers/famePeriods');
 var playerHelper = require('../helpers/players');
@@ -39,7 +45,10 @@ var PAGES = [{
     },{
         url: 'news',
         rus: 'Новости',
-        getData: meetingHelper.getMeetings.bind(this, dataBase.meetings)
+        getData: function () {
+            var news = meetingHelper.getMeetings.bind(this, dataBase.meetings);
+            return news;
+        }
     },{
         url: 'rating',
         rus: 'Рейтинг',
@@ -67,11 +76,17 @@ var PAGES = [{
     },{
         url: 'members',
         rus: 'Члены клуба',
-        getData:  playerHelper.getMembers.bind(this, dataBase.players)
+        getData:  function () {
+            var members = playerHelper.getMembers(dataBase.players);
+            return members;
+        }
     },{
         url: 'hall_of_fame',
         rus: 'Зал Славы',
-        getData: periodHelper.createFrom.bind(this, dataBase.players)
+        getData: function () {
+            var HallOfFame = periodHelper.createFrom(dataBase.players);
+            return HallOfFame;
+        }
     },{
         url: 'photos',
         rus: 'Фото',
@@ -81,7 +96,13 @@ var PAGES = [{
     },{
         url: 'contacts',
         rus: 'Контакты',
-        getData: playerHelper.getOrgs.bind(this, dataBase.players)
+        getData: function () {
+            var orgs = playerHelper.getOrgs(dataBase.players);
+            console.log('[router] getData(contacts) dataBase.players = ', dataBase.players);
+            console.log('[router] getData(contacts) orgs = ', orgs);
+            return orgs;
+        }
+
     },{
         url: 'protocols',
         rus: 'Бланки',
@@ -190,11 +211,11 @@ router.post('/setplayers', function(req, res) {
     console.log('[router] /setplayers ');
     var player = authentificate(dataBase.players, req.body.credentials);
     if (player) {
-        fs.writeFile(PLAYERS_PATH, JSON.stringify(req.body.players, null, 4), 'utf8', function function_name(err) {
+        fs.writeFile(PATHS.players, JSON.stringify(req.body.players, null, 4), 'utf8', function function_name(err) {
             if (err) {
                 res.send({errorText: err});
             } else {
-                res.send({succesText: 'Игры сохранены!'});
+                res.send({succesText: 'Данные сохранены!'});
             }
         });
     } else {
@@ -204,23 +225,41 @@ router.post('/setplayers', function(req, res) {
     }
 });
 
-function refreshPlayerInfo () {
-    console.log('[router] refreshPlayerInfo()', arguments);
 
-    fs.readFile(PLAYERS_PATH, function (err, data) {
-        if (err) {
-            console.log('Error!!! ', err);
-        } else {
-            console.log('data = ', data);
-            try {
-                JSON.parse(data);
-                dataBase.players = JSON.parse(data);
-            } catch(e){
-                console.error('[router] refreshPlayerInfo readFile error', e);
-            }
-
+function initializeWatching(field) {
+    console.log('[router] initializeWatching()', arguments);
+    if (field ==='all') {
+        for(var key in dataBase){
+            initializeWatching(key);
         }
-    });
+    } else {
+        console.log('[router] initializeWatching()', field, PATHS[field]);
+        fs.watch(PATHS[field], refreshInfoFor.bind(this, field));
+    }
+}
+
+function refreshInfoFor (field) {
+    console.log('[router] refreshInfoFor()', arguments);
+    if (field === 'all') {
+        for(var key in dataBase){
+            refreshInfoFor(key);
+        }
+    } else {
+        fs.readFile(PATHS[field], function (err, data) {
+            if (err) {
+                console.log('Error!!! ', err);
+            } else {
+                try {
+                    JSON.parse(data);
+                    dataBase[field] = JSON.parse(data);
+                    console.log('[router] refreshInfoFor() dataBase.'+field+' = ', dataBase[field]);
+                } catch(e){
+                    console.error('[router] refreshInfoFor() readFile error', e);
+                }
+            }
+        });
+    }
+
 }
 
 
