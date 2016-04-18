@@ -7275,10 +7275,11 @@ button.close {
     src: url(../fonts/old_english.ttf);
 }
 
-@font-face {
+/*@font-face {
     font-family: 'MainTextFont';
     src: url(../fonts/Nexa.otf);
-}
+}*/
+
 
 *{
     padding: 0;
@@ -7300,6 +7301,7 @@ html {
 body {
     height: 100%;
     color: #000;
+    font-family: "Comic Sans MS", cursive;
 }
 #page-container {
     height: 100%;
@@ -7390,12 +7392,11 @@ main {
 }
 
 article {
-    font-size: 27px;
+    font-size: 19px;
     margin: 10px;
     padding: 10px;
     text-align: justify;
     text-indent: 1em;
-    font-family: MainTextFont, Arial, "Helvetica Neue", Helvetica, sans-serif;
     border: 1px dashed;
     /*cursor: url(../img/cursor.png), auto;*/
 }
@@ -7456,8 +7457,7 @@ article p:last-child {
 .top-title {
     display: block;
     text-align: center;
-    font-size: 35px;
-    font-family: "MainTextFont", Georgia, 'Times New Roman', serif;
+    font-size: 30px;
     border-bottom: 1px dashed;
     border-top: 1px dashed;
 }
@@ -7485,8 +7485,7 @@ article p:last-child {
     width: 350px;
     margin: 10px;
     text-overflow: ellipsis;
-    font-family: "MainTextFont", Georgia, 'Times New Roman', serif;
-    font-size: 21px;
+    font-size: 12px;
 }
 
 .player a,
@@ -7538,7 +7537,7 @@ article p:last-child {
 #ratingTable td,
 #ratingTable th {
     padding: 0px;
-    font-size: 25px;
+    font-size: 19px;
     vertical-align: middle;
 }
 
@@ -7582,6 +7581,9 @@ button {
 .rating-select,
 .show-rating-button {
     float: left;
+    font-size: 15px;
+    padding: 5px;
+    line-height: 22px;
 }
 /* ================ LOGIN ==========*/
 #authform {

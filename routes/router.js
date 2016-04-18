@@ -47,16 +47,18 @@ var PAGES = [{
             if (!Object.keys(body).length) {
                 body = '';
             }
+
             // filterObject = {
             //     gameId: "MT_2015-09-21_1_Baker Street",
             //     periodType: "month" || "year" || "season",
             //     period: "1" || "2015" || "4",
             //     playerNick: "Merlin"
             // }
+            var today = new Date();
             var defaultFilter = {
-                    periodType: "month",
-                    period: 9,
-                    year: 2015
+                periodType: "month",
+                period: +today.toISOString().split('T')[0].split('-')[1],
+                year: today.getUTCFullYear()
             };
 
             console.log('[router] getData(rating)', arguments);
