@@ -1,5 +1,4 @@
 var fs = require('fs');
-var PLAYERS_PATH = './data-base/players/players.json';
 
 function isMember(player) {
     return player.memberLevel > 0;
@@ -25,7 +24,7 @@ function getMembers (players) {
 	return players.filter(isMember).sort(byHonourLevel).map(addImgSrc);
 }
 
-function addImgSrc (player, i) {
+function addImgSrc (player) {
     player.img = player.nick.replace(/\s+/g, '');
     console.log('player', JSON.stringify(player));
     return player;
@@ -40,9 +39,10 @@ function getPlayerByNick (players, nick) {
 }
 
 function authentificate (players, credentials) {
+    console.log('[playerHelper] authentificate() ', arguments);
     var password = credentials.password;
-    var user = credentials.user;
-    player = getPlayerByNick(players, user);
+    var user = credentials.nick;
+    var player = getPlayerByNick(players, user);
     if (player && player.password === password) {
         return player;
     } else {

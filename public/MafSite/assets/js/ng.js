@@ -568,7 +568,6 @@ angular.module('server')
 
         if (needMemberLevel) {
             data = data || {};
-            addCredentials(data, this.player.data);
         }
 
         return $http.post(CONFIG.BASE_SERVER_URL + page.url, data)
@@ -595,7 +594,6 @@ angular.module('server')
             field: field,
             data: items
         };
-        addCredentials(data, this.player.data);
 
         return $http.post(CONFIG.BASE_SERVER_URL + CONFIG.SET_URL, data)
             .catch(failCallback.bind(this))
@@ -622,8 +620,6 @@ angular.module('server')
         }
     }
 
-
-
     function handleData (page, response) {
         console.log('[base.controller] handleData()', arguments);
 
@@ -644,13 +640,6 @@ angular.module('server')
                 .css('visibility', 'visible');
             return response.data;
         }
-    }
-
-    function addCredentials(data, player) {
-        data.credentials = {
-            user: player.nick,
-            password: player.password
-        };
     }
 }]);
 

@@ -96,8 +96,8 @@ for (var i = 0; i < PAGES.length; i++) {
             console.log('[ROUTER] post for', req.url);
 
             if (PAGES[i].needMemberLevel) {
-
-                var player = dataBase.authentificate(req.body.credentials);
+                console.log('req.cookies[player-data]', JSON.parse(req.cookies['player-data']));
+                var player = dataBase.authentificate(JSON.parse(req.cookies['player-data']));
                 if (player.memberLevel >= PAGES[i].needMemberLevel) {
                     res.send(PAGES[i].getData(req.body));
                 } else {
@@ -149,10 +149,11 @@ router.post('/sync', function (req, res) {
 // ================ handlers for Login ================ //
 
 router.post('/login', function (req, res) {
-    console.log('password = ', req.body.credentials.password);
-    console.log('user = ', req.body.credentials.user);
+    console.log('password = ', JSON.parse(req.cookies['player-data']).password);
+    console.log('user = ', JSON.parse(req.cookies['player-data']).user);
+    console.log('user = ', JSON.parse(req.cookies['player-data']));
 
-    var player = dataBase.authentificate(req.body.credentials);
+    var player = dataBase.authentificate(JSON.parse(req.cookies['player-data']));
 
     if (player) {
         res.send(JSON.stringify(player));
@@ -165,7 +166,7 @@ router.post('/login', function (req, res) {
 
 router.post('/set', function(req, res) {
     console.log('[router] /set ');
-    var player = dataBase.authentificate(req.body.credentials);
+    var player = dataBase.authentificate(JSON.parse(req.cookies['player-data']));
     var promise = null;
     if (player) {
         promise = dataBase.setData(req.body.data, req.body.field);
