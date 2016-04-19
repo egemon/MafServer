@@ -163,17 +163,19 @@ router.post('/login', function (req, res) {
     }
 });
 
-router.post('/setplayers', function(req, res) {
-    console.log('[router] /setplayers ');
+router.post('/set', function(req, res) {
+    console.log('[router] /set ');
     var player = dataBase.authentificate(req.body.credentials);
+    var promise = null;
     if (player) {
-        var result = dataBase.setPlayers(req.body.players);
-        res.send(result);
+        promise = dataBase.setData(req.body.data, req.body.field);
+        promise.when(res.send.bind(res));
     } else {
         res.send(JSON.stringify({
             errorText: 'Недостаточно прав для этого действия!'
         }));
     }
+
 });
 
 module.exports = router;

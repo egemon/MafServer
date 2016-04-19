@@ -7,14 +7,13 @@ var meetingHelper = require('../helpers/meetings');
 var PATHS = {
     players: './data-base/players/players.json',
     photos: './data-base/photos.json',
-    meetings: './data-base/news/meetings.json'
+    contents: './data-base/news/meetings.json'
 };
 
 var dataBase = {
     players: require('.' + PATHS.players),
     photos: require('.' + PATHS.photos),
-    meetings: require('.' + PATHS.meetings),
-
+    contents: require('.' + PATHS.contents),
 };
 
 function initializeWatching(field) {
@@ -43,7 +42,7 @@ function refreshInfoFor (field) {
                 try {
                     JSON.parse(data);
                     dataBase[field] = JSON.parse(data);
-                    console.log('[dataBase] refreshInfoFor() dataBase.'+field+' = ', dataBase[field]);
+                    console.log('[dataBase] refreshInfoFor() dataBase.'+field);
                 } catch(e){
                     console.error('[dataBase] refreshInfoFor() readFile error', e);
                 }
@@ -52,14 +51,29 @@ function refreshInfoFor (field) {
     }
 }
 
-function setPlayers(players) {
-    fs.writeFile(PATHS.players, JSON.stringify(players, null, 4), 'utf8', function function_name(err) {
+function setData(data, field) {
+    var promise = {
+        callback: null,
+        resolve: function (data) {
+            if (typeof this.callback === 'function') {
+                this.callback(data);
+            } else {
+                console.warn('[dataBase] Promise doesn"t work!');
+            }
+        },
+        when: function (callback) {
+            this.callback = callback;
+        }
+    };
+
+    fs.writeFile(PATHS[field], JSON.stringify(data, null, 4), 'utf8', function (err) {
         if (err) {
-            return {errorText: err};
+            promise.resolve({errorText: err});
         } else {
-            return {succesText: 'Данные сохранены!'};
+            promise.resolve({succesText: 'Данные сохранены!'});
         }
     });
+    return promise;
 }
 
 function getPlayers() {
@@ -70,7 +84,7 @@ function getPhotos() {
 }
 
 function getNews() {
-    return meetingHelper.getMeetings(dataBase.meetings);
+    return meetingHelper.getMeetings(dataBase.contents);
 }
 
 function getMembers() {
@@ -92,7 +106,7 @@ function getPlayerFields() {
 module.exports = {
     initializeWatching: initializeWatching,
     refreshInfoFor: refreshInfoFor,
-    setPlayers: setPlayers,
+    setData: setData,
     getPlayers: getPlayers,
     getPhotos: getPhotos,
     getNews: getNews,
