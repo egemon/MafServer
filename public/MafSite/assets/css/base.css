@@ -7720,3 +7720,10 @@ tr:hover .remove-player-button,
     visibility: visible;
     opacity: 1;
 }
+
+.set-data-button {
+    font-size: 15px;
+    padding: 5px 25px;
+    line-height: 22px;
+    margin: 10px auto;
+}
