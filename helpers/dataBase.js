@@ -7,7 +7,8 @@ var meetingHelper = require('../helpers/meetings');
 var PATHS = {
     players: './data-base/players/players.json',
     photos: './data-base/photos.json',
-    contents: './data-base/news/meetings.json'
+    contents: './data-base/news/meetings.json',
+    games: './data-base/games',
 };
 
 var dataBase = {
@@ -25,6 +26,49 @@ function initializeWatching(field) {
     } else {
         console.log('[dataBase] initializeWatching()', field, PATHS[field]);
         fs.watch(PATHS[field], refreshInfoFor.bind(this, field));
+    }
+}
+
+function watchLocalStorage () {
+    fs.watch(PATHS.games, {recursive: true}, addPlayersFromProtocols);
+    function addPlayersFromProtocols(ev, filename) {
+        fs.readFile(PATHS.games + '/' + filename, 'utf8', function(err, data){
+            console.log('[dataBase] addPlayersFromProtocols()', arguments);
+
+            if (err) {
+                console.warn('[dataBase] addPlayersFromProtocols() error with file reading');
+                return;
+            }
+            var game = {};
+            try{
+                game = JSON.parse(data);
+            }catch(e){
+                console.warn('[dataBase] addPlayersFromProtocols() error with file parsing', e);
+                return;
+            }
+            console.log('[dataBase] addPlayersFromProtocols() game = ', game);
+            var oldPlayers = getPlayers();
+            var nicks = {};
+            oldPlayers.forEach(function(player){
+                nicks[player.nick] = true;
+            });
+            game.playerLines.forEach(function(playerLine){
+                if (playerLine.nick in nicks || !playerLine.nick) {
+                    return true;
+                } else {
+                    nicks[playerLine.nick] = true;
+                    oldPlayers.push({
+                        "nick": playerLine.nick,
+                        "password": playerLine.nick,
+                        "name": playerLine.nick,
+                        "presents": [],
+                        "memberLevel": 0,
+                        "honours": []
+                    }) ;
+                }
+            });
+            setData(oldPlayers, 'players');
+        });
     }
 }
 
@@ -103,6 +147,7 @@ function getPlayerFields() {
     return playerHelper.getPlayerFields();
 }
 
+
 module.exports = {
     initializeWatching: initializeWatching,
     refreshInfoFor: refreshInfoFor,
@@ -115,6 +160,7 @@ module.exports = {
     getOrgs: getOrgs,
     getPlayerFields: getPlayerFields,
     authentificate: playerHelper.authentificate.bind(this, dataBase.players),
-    getMeetingFields: meetingHelper.getMeetingFields
+    getMeetingFields: meetingHelper.getMeetingFields,
+    watchLocalStorage: watchLocalStorage,
 };
 

@@ -7,6 +7,7 @@ var dataBase = require('../helpers/dataBase.js');
 
 dataBase.refreshInfoFor('all');
 dataBase.initializeWatching('all');
+dataBase.watchLocalStorage();
 
 var today = new Date();
 var PAGES = [{

@@ -317,5 +317,365 @@
             }
         ],
         "img": "Phoenix"
+    },
+    {
+        "nick": "Тракиец",
+        "password": "Тракиец",
+        "name": "Тракиец",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Мать",
+        "password": "Мать",
+        "name": "Мать",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "СБ",
+        "password": "СБ",
+        "name": "СБ",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Едмак",
+        "password": "Едмак",
+        "name": "Едмак",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Вагрант",
+        "password": "Вагрант",
+        "name": "Вагрант",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Викарий",
+        "password": "Викарий",
+        "name": "Викарий",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Айдахо",
+        "password": "Айдахо",
+        "name": "Айдахо",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Симон",
+        "password": "Симон",
+        "name": "Симон",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Мейбал",
+        "password": "Мейбал",
+        "name": "Мейбал",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Пинокио",
+        "password": "Пинокио",
+        "name": "Пинокио",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Эльза",
+        "password": "Эльза",
+        "name": "Эльза",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Папканцилер",
+        "password": "Папканцилер",
+        "name": "Папканцилер",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Доктор",
+        "password": "Доктор",
+        "name": "Доктор",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Сыть",
+        "password": "Сыть",
+        "name": "Сыть",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Отец",
+        "password": "Отец",
+        "name": "Отец",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Художник",
+        "password": "Художник",
+        "name": "Художник",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Брат 2",
+        "password": "Брат 2",
+        "name": "Брат 2",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Стоун Колд",
+        "password": "Стоун Колд",
+        "name": "Стоун Колд",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Эмбер",
+        "password": "Эмбер",
+        "name": "Эмбер",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Джонни",
+        "password": "Джонни",
+        "name": "Джонни",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Кристон",
+        "password": "Кристон",
+        "name": "Кристон",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Кураре",
+        "password": "Кураре",
+        "name": "Кураре",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Мутный",
+        "password": "Мутный",
+        "name": "Мутный",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Джеки",
+        "password": "Джеки",
+        "name": "Джеки",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Ежик",
+        "password": "Ежик",
+        "name": "Ежик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Джессика",
+        "password": "Джессика",
+        "name": "Джессика",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Супер 8",
+        "password": "Супер 8",
+        "name": "Супер 8",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Пантий",
+        "password": "Пантий",
+        "name": "Пантий",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Гендальф",
+        "password": "Гендальф",
+        "name": "Гендальф",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Халявщик",
+        "password": "Халявщик",
+        "name": "Халявщик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Феникс",
+        "password": "Феникс",
+        "name": "Феникс",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Сыч",
+        "password": "Сыч",
+        "name": "Сыч",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Мейбелин",
+        "password": "Мейбелин",
+        "name": "Мейбелин",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Динни",
+        "password": "Динни",
+        "name": "Динни",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Штефан",
+        "password": "Штефан",
+        "name": "Штефан",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Близнец",
+        "password": "Близнец",
+        "name": "Близнец",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Мерлин",
+        "password": "Мерлин",
+        "name": "Мерлин",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Космос",
+        "password": "Космос",
+        "name": "Космос",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "О.Доннел",
+        "password": "О.Доннел",
+        "name": "О.Доннел",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Доктор Зло",
+        "password": "Доктор Зло",
+        "name": "Доктор Зло",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Девятый",
+        "password": "Девятый",
+        "name": "Девятый",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Техас",
+        "password": "Техас",
+        "name": "Техас",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Аларик",
+        "password": "Аларик",
+        "name": "Аларик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Сэд",
+        "password": "Сэд",
+        "name": "Сэд",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Митрандир",
+        "password": "Митрандир",
+        "name": "Митрандир",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     }
 ]
