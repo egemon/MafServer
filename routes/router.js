@@ -124,14 +124,20 @@ router.get('/*', function(req, res) {
 // ================ handlers for MafTable ================ //
 
 //getGamesByFilter
-router.get('/sync', function (req, res) {
+router.post('/load', function (req, res) {
     console.log('sync get request taken!');
-    var filterObject = req.query.filterObject;
-    console.log('req.data = ', filterObject);
-
-    var games = JSON.stringify(LocalGameStorage.getGamesByFilter(JSON.parse(filterObject)));
-    console.log('games = ', games);
-    res.send(games);
+    console.log('[router] getGames / load', req.body);
+    var games = LocalGameStorage.getGamesByFilter({
+        gameId: LocalGameStorage.generateGameId(req.body)
+    });
+    console.log('[router] getGames /load games = ', games);
+    if (games) {
+        res.send(games);
+    } else {
+        res.send({
+            errorText: 'Игра не найдена!'
+        });
+    }
 });
 
 //saveGamesByFilter
@@ -140,11 +146,11 @@ router.post('/sync', function (req, res) {
     console.log('req.data = ', req.body.games);
     var result = "";
     if (LocalGameStorage.saveGameArray(req.body.games)) {
-        result = 'Game Saved!';
+        result = 'Игра сохарнена!';
     } else {
-        result = 'There is no games!';
+        result = 'Проблемы с сервером. Сообщите администратору!';
     }
-    res.send(result);
+    res.send({errorText: result});
 });
 
 // ================ handlers for Login ================ //
