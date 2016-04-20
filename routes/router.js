@@ -124,6 +124,25 @@ router.get('/*', function(req, res) {
 // ================ handlers for MafTable ================ //
 
 //getGamesByFilter
+router.post('/delete', function (req, res) {
+    console.log('sync delete request taken!');
+    console.log('[router] getGames / delete', req.body);
+    LocalGameStorage.deleteGame(
+        LocalGameStorage.generateGameId(req.body)
+    ).when(function(isDeleted){
+        if (isDeleted) {
+            res.send({
+                errorText: 'Игра удалена!'
+            });
+        } else {
+            res.send({
+                errorText: 'Игра не найдена!'
+            });
+        }
+    });
+});
+
+//getGamesByFilter
 router.post('/load', function (req, res) {
     console.log('sync get request taken!');
     console.log('[router] getGames / load', req.body);

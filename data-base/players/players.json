@@ -677,5 +677,85 @@
         "presents": [],
         "memberLevel": 0,
         "honours": []
+    },
+    {
+        "nick": "Player1",
+        "password": "Player1",
+        "name": "Player1",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Player2",
+        "password": "Player2",
+        "name": "Player2",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Player3",
+        "password": "Player3",
+        "name": "Player3",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Player4",
+        "password": "Player4",
+        "name": "Player4",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Player5",
+        "password": "Player5",
+        "name": "Player5",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Player6",
+        "password": "Player6",
+        "name": "Player6",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Player7",
+        "password": "Player7",
+        "name": "Player7",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Player8",
+        "password": "Player8",
+        "name": "Player8",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Player9",
+        "password": "Player9",
+        "name": "Player9",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Player10",
+        "password": "Player10",
+        "name": "Player10",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     }
 ]
