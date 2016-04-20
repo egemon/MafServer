@@ -12,7 +12,6 @@
     "maxerr": 150,
     "loopfunc": true,
     "devel": true,
-    "maxlen": 120,
     "globals" : {
         "require": true,
         "angular": true,

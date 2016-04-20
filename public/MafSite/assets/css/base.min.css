@@ -1,20 +1,74 @@
+days {
+    display: block;
+    float: left;
+    margin: 35px 0px 0px 3px;
+    font-size: 12px;
+    font-family: cursive;
+    width: 300px;
+}
+
+.days-input {
+    display: inline-block;
+}
+
+.results,
+.votes {
+    display: block;
+}
+
+.day {
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+.votes-number-input {
+    display: inline-block;
+}
+
+.votes {
+    border-top: 1px dashed #fff;
+    border-bottom: 1px dashed #fff;
+}
+
+days select,
+days input {
+    width: 67px;
+}
+
 protocol-header {
     display: block;
 }
 
-table,
 .button-container {
     text-align: center;
+    overflow: hidden;
 }
 
-.protocol-container {
-    width: 69%;
-    float: left;
-}
-
+.protocol-container,
 .metadata-container {
-    width: 30%;
     float: left;
+}
+
+#control-btn {
+    line-height: 30px;
+    padding: 5px 5px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+protocol .table>tbody>tr>td,
+protocol .table>tbody>tr>th,
+protocol .table>tfoot>tr>td,
+protocol .table>tfoot>tr>th,
+protocol .table>thead>tr>td,
+protocol .table>thead>tr>th {
+    padding: 0 8px;
+}
+
+protocol button {
+    font-family: Barocco_Floral_Initial, Georgia, 'Times New Roman', serif;
 }
 
 player {
@@ -29,13 +83,23 @@ player {
     margin: 17px 0;
 }
 
-player .player-nick,
+player .player-nick-input,
 player .player-role {
     margin: 10px 0px;
 }
 
-.player-nick.ng-touched.ng-invalid {
+.player-nick-input.ng-touched.ng-invalid {
     border: 1px solid black;
+}
+
+.player-nick-input {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.player-container .player-role {
+    font-family: cursive;
+    font-size: 13px;
 }
 
 td, th {
@@ -43,7 +107,8 @@ td, th {
 }
 
 #timerContainer {
-    margin: 10px;
+    float: left;
+    margin: 10px 10px 10px 0;
     border: 1px solid green;
     padding: 10px;
     border-radius: 10px;
@@ -7679,7 +7744,7 @@ protocol #timerTime {
 }
 
 protocol #timerContainer {
-    border-color: #000;
+    border-color: #fff;
 }
 
 a:focus, a:hover {
