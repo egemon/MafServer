@@ -1,12 +1,64 @@
 [
     {
-        "nick": "Тракиец",
-        "password": "Тракиец",
-        "name": "Тракиец",
-        "presents": [],
-        "memberLevel": "1",
+        "nick": "50",
+        "password": "50",
+        "vk": "https://vk.com/memmy",
+        "birthday": "1994-04-05",
+        "name": "Иванна Улыбина",
+        "presents": [
+            "футболка"
+        ],
+        "phone": "+380508197302",
+        "position": "Администратор группы",
+        "memberLevel": 3,
+        "faculty": "КНУ, Исторический Факультет",
+        "experiance": "Играет 3 года",
         "honours": [],
-        "img": "Тракиец.jpeg"
+        "img": "50.jpg"
+    },
+    {
+        "nick": "Earl Gray",
+        "password": "Earl Gray",
+        "vk": "https://vk.com/id31217960",
+        "birthday": "1997-01-10",
+        "name": "Игорь Гаврилюк",
+        "presents": [
+            "маска",
+            "чашка"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КНУ, Институт Филологии",
+        "experiance": "Играет 3 месяца",
+        "honours": [
+            {
+                "year": 2015,
+                "period": 4,
+                "periodType": "season",
+                "place": 1,
+                "avr": 2.68,
+                "gameNumber": 25
+            }
+        ],
+        "img": "EarlGray.jpg"
+    },
+    {
+        "nick": "Johny",
+        "password": "Johny",
+        "vk": "https://vk.com/id32393088",
+        "birthday": "1995-08-08",
+        "name": "Иван Кармазин",
+        "presents": [
+            "кружка"
+        ],
+        "phone": "+380937032241",
+        "position": "Администратор встреч",
+        "memberLevel": 3,
+        "faculty": "КНУ, Мех-Мат",
+        "experiance": "Играет 3 года",
+        "honours": [],
+        "img": "Johny.jpg"
     },
     {
         "nick": "Merlin",
@@ -27,6 +79,195 @@
         "img": "Merlin.jpg"
     },
     {
+        "nick": "Pacman",
+        "password": "Pacman",
+        "vk": "https://vk.com/kovtanyuk_oleg",
+        "birthday": "1992-12-13",
+        "name": "Олег Ковтанюк",
+        "presents": [
+            "кружка"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КПИ, ХТФ",
+        "experiance": "Играет 3 года",
+        "honours": [],
+        "img": "Pacman.jpg"
+    },
+    {
+        "nick": "Phoenix",
+        "password": "Phoenix",
+        "vk": "",
+        "birthday": "1992-03-31",
+        "name": "Ярослав Щербак",
+        "presents": [
+            "кружка",
+            "футблока"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КНУ, Институт Информационных технологий",
+        "experiance": "Играет 9 месяцев",
+        "honours": [
+            {
+                "year": 2015,
+                "periodType": "season",
+                "period": 4,
+                "place": 3,
+                "avr": 2.1,
+                "gameNumber": 29
+            }
+        ],
+        "img": "Phoenix.jpg"
+    },
+    {
+        "nick": "Snoopy",
+        "password": "Snoopy",
+        "vk": "https://vk.com/snoopy_ua",
+        "birthday": "1992-12-31",
+        "name": "Макс Сорока",
+        "presents": [
+            "кружка"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КПИ, ИХФ",
+        "experiance": "Играет 3 года",
+        "honours": [],
+        "img": "Snoopy.jpg"
+    },
+    {
+        "nick": "Stone Cold",
+        "password": "Stone Cold",
+        "name": "Артем Косенков",
+        "presents": [],
+        "memberLevel": "1",
+        "honours": [],
+        "img": "СтоунКолд.jpeg"
+    },
+    {
+        "nick": "Айдахо",
+        "password": "Айдахо",
+        "name": "Юлия Смачило",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [],
+        "vk": "https://vk.com/lookfortheclue"
+    },
+    {
+        "nick": "Аксолотль",
+        "password": "Аксолотль",
+        "vk": "https://vk.com/qwertyuiopasdnmxct",
+        "birthday": "1997-06-25",
+        "name": "Викотрия Гурин",
+        "presents": [],
+        "phone": "+380937032241",
+        "position": "Администратор группы",
+        "memberLevel": 3,
+        "faculty": "КНУ, Институт Биологии",
+        "experiance": "Играет 1 год",
+        "honours": [],
+        "img": "Аксолотль.jpg"
+    },
+    {
+        "nick": "Аларик",
+        "password": "Аларик",
+        "name": "Аларик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Баффет",
+        "password": "Баффет",
+        "vk": "https://vk.com/id24021994ann",
+        "birthday": "1992-03-31",
+        "name": "Анна Шумей",
+        "presents": [
+            "кружка",
+            "футблока"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КНУ, Институт Инофрмационных технологий",
+        "experiance": "Играет 9 месяцев",
+        "honours": [],
+        "img": "Баффет.jpg"
+    },
+    {
+        "nick": "Близнец",
+        "password": "Близнец",
+        "name": "Близнец",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Борман",
+        "password": "Борман",
+        "vk": "https://vk.com/keepbleeding",
+        "birthday": "1993-08-19",
+        "name": "Богдан Гаврилишин",
+        "presents": [
+            "кружка",
+            "футболка",
+            "маска",
+            "плед"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КНУ, РФФ",
+        "experiance": "Играет 3 года",
+        "honours": [],
+        "img": "Борман.jpg"
+    },
+    {
+        "nick": "Брат 2",
+        "password": "Брат 2",
+        "name": "Брат 2",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Вагрант",
+        "password": "Вагрант",
+        "name": "Александр Земсков",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [],
+        "vk": "https://vk.com/ivagrant"
+    },
+    {
+        "nick": "Викарий",
+        "password": "Викарий",
+        "name": "Викарий",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Гендальф",
+        "password": "Гендальф",
+        "name": "Гендальф",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Девятый",
+        "password": "Девятый",
+        "name": "Девятый",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Джек-Пот",
         "password": "Джек-Пот",
         "vk": "https://vk.com/x_jack_pot_x",
@@ -44,19 +285,44 @@
         "img": "Джек-Пот.jpg"
     },
     {
-        "nick": "Морковка",
-        "password": "Морковка",
-        "vk": "https://vk.com/kay__g",
-        "birthday": "1993-09-29",
-        "name": "Екатерина Твердохлеб",
+        "nick": "Джессика",
+        "password": "Джессика",
+        "name": "Джессика",
         "presents": [],
-        "phone": "+380666667885",
-        "position": "Экс-организатор клуба",
-        "memberLevel": 4,
-        "faculty": "КНУ, Экономический Факультет",
-        "experiance": "Играет 4 года",
-        "honours": [],
-        "img": "Морковка.jpg"
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Джонни",
+        "password": "Джонни",
+        "name": "Джонни",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Доктор",
+        "password": "Доктор",
+        "name": "Доктор",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Доктор Зло",
+        "password": "Доктор Зло",
+        "name": "Доктор Зло",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Ежик",
+        "password": "Ежик",
+        "name": "Ежик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Заяц",
@@ -94,143 +360,6 @@
         "img": "Зло.jpg"
     },
     {
-        "nick": "50",
-        "password": "50",
-        "vk": "https://vk.com/memmy",
-        "birthday": "1994-04-05",
-        "name": "Иванна Улыбина",
-        "presents": [
-            "футболка"
-        ],
-        "phone": "+380508197302",
-        "position": "Администратор группы",
-        "memberLevel": 3,
-        "faculty": "КНУ, Исторический Факультет",
-        "experiance": "Играет 3 года",
-        "honours": [],
-        "img": "50.jpg"
-    },
-    {
-        "nick": "Johny",
-        "password": "Johny",
-        "vk": "https://vk.com/id32393088",
-        "birthday": "1995-08-08",
-        "name": "Иван Кармазин",
-        "presents": [
-            "кружка"
-        ],
-        "phone": "+380937032241",
-        "position": "Администратор встреч",
-        "memberLevel": 3,
-        "faculty": "КНУ, Мех-Мат",
-        "experiance": "Играет 3 года",
-        "honours": [],
-        "img": "Johny.jpg"
-    },
-    {
-        "nick": "Аксолотль",
-        "password": "Аксолотль",
-        "vk": "https://vk.com/qwertyuiopasdnmxct",
-        "birthday": "1997-06-25",
-        "name": "Викотрия Гурин",
-        "presents": [],
-        "phone": "+380937032241",
-        "position": "Администратор группы",
-        "memberLevel": 3,
-        "faculty": "КНУ, Институт Биологии",
-        "experiance": "Играет 1 год",
-        "honours": [],
-        "img": "Аксолотль.jpg"
-    },
-    {
-        "nick": "Pacman",
-        "password": "Pacman",
-        "vk": "https://vk.com/kovtanyuk_oleg",
-        "birthday": "1992-12-13",
-        "name": "Олег Ковтанюк",
-        "presents": [
-            "кружка"
-        ],
-        "phone": "",
-        "position": "игрок",
-        "memberLevel": 1,
-        "faculty": "КПИ, ХТФ",
-        "experiance": "Играет 3 года",
-        "honours": [],
-        "img": "Pacman.jpg"
-    },
-    {
-        "nick": "Snoopy",
-        "password": "Snoopy",
-        "vk": "https://vk.com/snoopy_ua",
-        "birthday": "1992-12-31",
-        "name": "Макс Сорока",
-        "presents": [
-            "кружка"
-        ],
-        "phone": "",
-        "position": "игрок",
-        "memberLevel": 1,
-        "faculty": "КПИ, ИХФ",
-        "experiance": "Играет 3 года",
-        "honours": [],
-        "img": "Snoopy.jpg"
-    },
-    {
-        "nick": "Рейнджер",
-        "password": "Рейнджер",
-        "vk": "https://vk.com/lubomyr95",
-        "birthday": "1995-06-26",
-        "name": "Ярослав Чепурний",
-        "presents": [
-            "кружка"
-        ],
-        "phone": "",
-        "position": "игрок",
-        "memberLevel": 1,
-        "faculty": "КПИ",
-        "experiance": "Играет 3 года",
-        "honours": [],
-        "img": "Рейнджер.jpg"
-    },
-    {
-        "nick": "Борман",
-        "password": "Борман",
-        "vk": "https://vk.com/keepbleeding",
-        "birthday": "1993-08-19",
-        "name": "Богдан Гаврилишин",
-        "presents": [
-            "кружка",
-            "футболка",
-            "маска",
-            "плед"
-        ],
-        "phone": "",
-        "position": "игрок",
-        "memberLevel": 1,
-        "faculty": "КНУ, РФФ",
-        "experiance": "Играет 3 года",
-        "honours": [],
-        "img": "Борман.jpg"
-    },
-    {
-        "nick": "Мой Господин",
-        "password": "Мой Господин",
-        "vk": "https://vk.com/utvenko",
-        "birthday": "1993-06-08",
-        "name": "Андрей Утвенко",
-        "presents": [
-            "кружка"
-        ],
-        "phone": "",
-        "position": "игрок",
-        "memberLevel": 1,
-        "faculty": "КНУ, РФФ",
-        "experiance": "Играет 3 года",
-        "honours": [],
-        "img": "МойГосподин.jpg"
-    },
-    {
         "nick": "Клич",
         "password": "Клич",
         "vk": "https://vk.com/id19111965",
@@ -259,198 +388,9 @@
         "img": "Клич.jpg"
     },
     {
-        "nick": "Earl Gray",
-        "password": "Earl Gray",
-        "vk": "https://vk.com/id31217960",
-        "birthday": "1997-01-10",
-        "name": "Игорь Гаврилюк",
-        "presents": [
-            "маска",
-            "чашка"
-        ],
-        "phone": "",
-        "position": "игрок",
-        "memberLevel": 1,
-        "faculty": "КНУ, Институт Филологии",
-        "experiance": "Играет 3 месяца",
-        "honours": [
-            {
-                "year": 2015,
-                "period": 4,
-                "periodType": "season",
-                "place": 1,
-                "avr": 2.68,
-                "gameNumber": 25
-            }
-        ],
-        "img": "EarlGray.jpg"
-    },
-    {
-        "nick": "Баффет",
-        "password": "Баффет",
-        "vk": "https://vk.com/id24021994ann",
-        "birthday": "1992-03-31",
-        "name": "Анна Шумей",
-        "presents": [
-            "кружка",
-            "футблока"
-        ],
-        "phone": "",
-        "position": "игрок",
-        "memberLevel": 1,
-        "faculty": "КНУ, Институт Инофрмационных технологий",
-        "experiance": "Играет 9 месяцев",
-        "honours": [],
-        "img": "Баффет.jpg"
-    },
-    {
-        "nick": "Phoenix",
-        "password": "Phoenix",
-        "vk": "",
-        "birthday": "1992-03-31",
-        "name": "Ярослав Щербак",
-        "presents": [
-            "кружка",
-            "футблока"
-        ],
-        "phone": "",
-        "position": "игрок",
-        "memberLevel": 1,
-        "faculty": "КНУ, Институт Информационных технологий",
-        "experiance": "Играет 9 месяцев",
-        "honours": [
-            {
-                "year": 2015,
-                "periodType": "season",
-                "period": 4,
-                "place": 3,
-                "avr": 2.1,
-                "gameNumber": 29
-            }
-        ],
-        "img": "Phoenix.jpg"
-    },
-    {
-        "nick": "Мать",
-        "password": "Мать",
-        "name": "Мать",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "СБ",
-        "password": "СБ",
-        "name": "СБ",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": [],
-        "vk": "https://vk.com/id11723856",
-        "birthday": "Mar 14, 2014"
-    },
-    {
-        "nick": "Вагрант",
-        "password": "Вагрант",
-        "name": "Александр Земсков",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": [],
-        "vk": "https://vk.com/ivagrant"
-    },
-    {
-        "nick": "Викарий",
-        "password": "Викарий",
-        "name": "Викарий",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Айдахо",
-        "password": "Айдахо",
-        "name": "Юлия Смачило",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": [],
-        "vk": "https://vk.com/lookfortheclue"
-    },
-    {
-        "nick": "Пинокио",
-        "password": "Пинокио",
-        "name": "Пинокио",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Эльза",
-        "password": "Эльза",
-        "name": "Эльза",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Папканцилер",
-        "password": "Папканцилер",
-        "name": "Папканцилер",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Доктор",
-        "password": "Доктор",
-        "name": "Доктор",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Отец",
-        "password": "Отец",
-        "name": "Отец",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Художник",
-        "password": "Художник",
-        "name": "Художник",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Брат 2",
-        "password": "Брат 2",
-        "name": "Брат 2",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Stone Cold",
-        "password": "Stone Cold",
-        "name": "Артем Косенков",
-        "presents": [],
-        "memberLevel": "1",
-        "honours": [],
-        "img": "СтоунКолд.jpeg"
-    },
-    {
-        "nick": "Эмбер",
-        "password": "Эмбер",
-        "name": "Эмбер",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Джонни",
-        "password": "Джонни",
-        "name": "Джонни",
+        "nick": "Космос",
+        "password": "Космос",
+        "name": "Космос",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -472,90 +412,9 @@
         "honours": []
     },
     {
-        "nick": "Мутный",
-        "password": "Мутный",
-        "name": "Мутный",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Ежик",
-        "password": "Ежик",
-        "name": "Ежик",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Джессика",
-        "password": "Джессика",
-        "name": "Джессика",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Супер 8",
-        "password": "Супер 8",
-        "name": "Супер 8",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": [],
-        "vk": ""
-    },
-    {
-        "nick": "Пантий",
-        "password": "Пантий",
-        "name": "Пантий",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Гендальф",
-        "password": "Гендальф",
-        "name": "Гендальф",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Халявщик",
-        "password": "Халявщик",
-        "name": "Халявщик",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Феникс",
-        "password": "Феникс",
-        "name": "Феникс",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Сыч",
-        "password": "Сыч",
-        "name": "Сыч",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Штефан",
-        "password": "Штефан",
-        "name": "Штефан",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Близнец",
-        "password": "Близнец",
-        "name": "Близнец",
+        "nick": "Мать",
+        "password": "Мать",
+        "name": "Мать",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -569,9 +428,49 @@
         "honours": []
     },
     {
-        "nick": "Космос",
-        "password": "Космос",
-        "name": "Космос",
+        "nick": "Митрандир",
+        "password": "Митрандир",
+        "name": "Митрандир",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Мой Господин",
+        "password": "Мой Господин",
+        "vk": "https://vk.com/utvenko",
+        "birthday": "1993-06-08",
+        "name": "Андрей Утвенко",
+        "presents": [
+            "кружка"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КНУ, РФФ",
+        "experiance": "Играет 3 года",
+        "honours": [],
+        "img": "МойГосподин.jpg"
+    },
+    {
+        "nick": "Морковка",
+        "password": "Морковка",
+        "vk": "https://vk.com/kay__g",
+        "birthday": "1993-09-29",
+        "name": "Екатерина Твердохлеб",
+        "presents": [],
+        "phone": "+380666667885",
+        "position": "Экс-организатор клуба",
+        "memberLevel": 4,
+        "faculty": "КНУ, Экономический Факультет",
+        "experiance": "Играет 4 года",
+        "honours": [],
+        "img": "Морковка.jpg"
+    },
+    {
+        "nick": "Мутный",
+        "password": "Мутный",
+        "name": "Мутный",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -585,33 +484,79 @@
         "honours": []
     },
     {
-        "nick": "Доктор Зло",
-        "password": "Доктор Зло",
-        "name": "Доктор Зло",
+        "nick": "Отец",
+        "password": "Отец",
+        "name": "Отец",
         "presents": [],
         "memberLevel": 0,
         "honours": []
     },
     {
-        "nick": "Девятый",
-        "password": "Девятый",
-        "name": "Девятый",
+        "nick": "Пантий",
+        "password": "Пантий",
+        "name": "Пантий",
         "presents": [],
         "memberLevel": 0,
         "honours": []
     },
     {
-        "nick": "Техас",
-        "password": "Техас",
-        "name": "Техас",
+        "nick": "Папканцилер",
+        "password": "Папканцилер",
+        "name": "Папканцилер",
         "presents": [],
         "memberLevel": 0,
         "honours": []
     },
     {
-        "nick": "Аларик",
-        "password": "Аларик",
-        "name": "Аларик",
+        "nick": "Пинокио",
+        "password": "Пинокио",
+        "name": "Пинокио",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Рейнджер",
+        "password": "Рейнджер",
+        "vk": "https://vk.com/lubomyr95",
+        "birthday": "1995-06-26",
+        "name": "Ярослав Чепурний",
+        "presents": [
+            "кружка"
+        ],
+        "phone": "",
+        "position": "игрок",
+        "memberLevel": 1,
+        "faculty": "КПИ",
+        "experiance": "Играет 3 года",
+        "honours": [],
+        "img": "Рейнджер.jpg"
+    },
+    {
+        "nick": "СБ",
+        "password": "СБ",
+        "name": "Александр Пономаренко",
+        "presents": [],
+        "memberLevel": "1",
+        "honours": [],
+        "vk": "https://vk.com/id11723856",
+        "birthday": "Mar 14, 2014",
+        "img": "СБ.jpeg",
+        "position": "игрок"
+    },
+    {
+        "nick": "Супер 8",
+        "password": "Супер 8",
+        "name": "Супер 8",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [],
+        "vk": ""
+    },
+    {
+        "nick": "Сыч",
+        "password": "Сыч",
+        "name": "Сыч",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -625,9 +570,66 @@
         "honours": []
     },
     {
-        "nick": "Митрандир",
-        "password": "Митрандир",
-        "name": "Митрандир",
+        "nick": "Техас",
+        "password": "Техас",
+        "name": "Техас",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Тракиец",
+        "password": "Тракиец",
+        "name": "Тракиец",
+        "presents": [],
+        "memberLevel": "1",
+        "honours": [],
+        "img": "Тракиец.jpeg"
+    },
+    {
+        "nick": "Феникс",
+        "password": "Феникс",
+        "name": "Феникс",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Халявщик",
+        "password": "Халявщик",
+        "name": "Халявщик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Художник",
+        "password": "Художник",
+        "name": "Художник",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Штефан",
+        "password": "Штефан",
+        "name": "Штефан",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Эльза",
+        "password": "Эльза",
+        "name": "Эльза",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Эмбер",
+        "password": "Эмбер",
+        "name": "Эмбер",
         "presents": [],
         "memberLevel": 0,
         "honours": []
