@@ -15,18 +15,24 @@ function byHonourLevel (player1, player2) {
     return player1.memberLevel > player2.memberLevel;
 }
 
+function byAlphabet (player1, player2) {
+    return player1.nick > player2.nick;
+}
 
 function getOrgs (players) {
-	return players.filter(isOrg).sort(byOrgLevel).map(addImgSrc);
+	return players.filter(isOrg).sort(byAlphabet).map(addImgSrc.bind(this, null));
 }
 
 function getMembers (players) {
-	return players.filter(isMember).sort(byHonourLevel).map(addImgSrc);
+	return players.filter(isMember).sort(byHonourLevel).map(addImgSrc.bind(this, null));
 }
 
-function addImgSrc (player) {
-    player.img = player.nick.replace(/\s+/g, '');
-    console.log('player', JSON.stringify(player));
+function addImgSrc (format, player) {
+    if (player.img) {
+        return player;
+    }
+    format = format || '.jpg';
+    player.img = player.nick.replace(/\s+/g, '') + format;
     return player;
 }
 
@@ -39,7 +45,7 @@ function getPlayerByNick (players, nick) {
 }
 
 function authentificate (players, credentials) {
-    console.log('[playerHelper] authentificate() ', arguments);
+    console.log('[playerHelper] authentificate() ');
     var password = credentials.password;
     var user = credentials.nick;
     var player = getPlayerByNick(players, user);
@@ -76,6 +82,7 @@ function getPlayerFields () {
 }
 
 module.exports = {
+    addImgSrc:addImgSrc,
 	getOrgs: getOrgs,
 	getMembers: getMembers,
     getPlayerByNick: getPlayerByNick,

@@ -6,7 +6,7 @@ var meetingHelper = require('../helpers/meetings');
 
 var PATHS = {
     players: './data-base/players/players.json',
-    photos: './data-base/photos.json',
+    photos: './data-base/photos/photos.json',
     contents: './data-base/news/meetings.json',
     games: './data-base/games',
 };
@@ -16,6 +16,8 @@ var dataBase = {
     photos: require('.' + PATHS.photos),
     contents: require('.' + PATHS.contents),
 };
+
+
 
 function initializeWatching(field) {
     console.log('[dataBase] initializeWatching()', arguments);
@@ -96,6 +98,12 @@ function refreshInfoFor (field) {
 }
 
 function setData(data, field) {
+    console.log('[dataBase] setData()', field);
+    if (field === 'players') {
+        data = handleImages(data);
+    }
+    console.log('[dataBase] setData() data[0] = ', data[0]);
+
     var promise = {
         callback: null,
         resolve: function (data) {
@@ -119,6 +127,42 @@ function setData(data, field) {
     });
     return promise;
 }
+
+function handleImages(players) {
+    console.log('[dataBase] handleImages()', players);
+    return players.map(function (player) {
+        if (player.imgFile) {
+            var format = '.'+ RegExp(/\/.*;base64/).exec(player.imgFile)[0].slice(1,-7);
+            console.log('[dataBase handleImages()] format ', format);
+            player = playerHelper.addImgSrc(format, player);
+            console.log('[dataBase] handleImages() player.img = ', player.img);
+            saveImg(player.imgFile, player.img, format);
+            delete player.imgFile;
+        }
+        return player;
+    });
+}
+
+function saveImg(base64text, fileName, format) {
+    console.log('[dataBase] saveImg()', fileName);
+    var FORMATS = {
+        '.png': true,
+        '.jpg': true,
+        '.jpeg': true,
+        '.bmp': true
+    };
+    if (format in FORMATS) {
+        var base64Data = base64text.replace(/^.*;base64,/, "");
+        require("fs").writeFile("./data-base/players/img/"+ fileName, base64Data, 'base64', function(err) {
+            console.log('[dataBase] wirteImage error = ', err);
+        });
+    } else {
+        return {
+            errorText: 'Неподдерживаемый формат изображения!'
+        };
+    }
+}
+
 
 function getPlayers() {
     return dataBase.players;

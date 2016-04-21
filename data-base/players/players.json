@@ -1,5 +1,14 @@
 [
     {
+        "nick": "Тракиец",
+        "password": "Тракиец",
+        "name": "Тракиец",
+        "presents": [],
+        "memberLevel": "1",
+        "honours": [],
+        "img": "Тракиец.jpeg"
+    },
+    {
         "nick": "Merlin",
         "password": "armatura",
         "vk": "https://vk.com/egemon",
@@ -15,7 +24,7 @@
         "faculty": "КНУ, Мех-Мат",
         "experiance": "Играет 5 лет",
         "honours": [],
-        "img": "Merlin"
+        "img": "Merlin.jpg"
     },
     {
         "nick": "Джек-Пот",
@@ -32,7 +41,7 @@
         "faculty": "КНУ, Экономический факультет",
         "experiance": "Играет 5 лет",
         "honours": [],
-        "img": "Джек-Пот"
+        "img": "Джек-Пот.jpg"
     },
     {
         "nick": "Морковка",
@@ -47,7 +56,7 @@
         "faculty": "КНУ, Экономический Факультет",
         "experiance": "Играет 4 года",
         "honours": [],
-        "img": "Морковка"
+        "img": "Морковка.jpg"
     },
     {
         "nick": "Заяц",
@@ -64,7 +73,7 @@
         "faculty": "КНУ, Геологический факультет",
         "experiance": "Играет 3 года",
         "honours": [],
-        "img": "Заяц"
+        "img": "Заяц.jpg"
     },
     {
         "nick": "Зло",
@@ -81,7 +90,7 @@
         "faculty": "КНУ, Факультет психологии",
         "experiance": "Играет 2 года",
         "honours": [],
-        "img": "Зло"
+        "img": "Зло.jpg"
     },
     {
         "nick": "50",
@@ -98,7 +107,7 @@
         "faculty": "КНУ, Исторический Факультет",
         "experiance": "Играет 3 года",
         "honours": [],
-        "img": "50"
+        "img": "50.jpg"
     },
     {
         "nick": "Johny",
@@ -115,7 +124,7 @@
         "faculty": "КНУ, Мех-Мат",
         "experiance": "Играет 3 года",
         "honours": [],
-        "img": "Johny"
+        "img": "Johny.jpg"
     },
     {
         "nick": "Аксолотль",
@@ -130,7 +139,7 @@
         "faculty": "КНУ, Институт Биологии",
         "experiance": "Играет 1 год",
         "honours": [],
-        "img": "Аксолотль"
+        "img": "Аксолотль.jpg"
     },
     {
         "nick": "Pacman",
@@ -147,7 +156,7 @@
         "faculty": "КПИ, ХТФ",
         "experiance": "Играет 3 года",
         "honours": [],
-        "img": "Pacman"
+        "img": "Pacman.jpg"
     },
     {
         "nick": "Snoopy",
@@ -164,7 +173,7 @@
         "faculty": "КПИ, ИХФ",
         "experiance": "Играет 3 года",
         "honours": [],
-        "img": "Snoopy"
+        "img": "Snoopy.jpg"
     },
     {
         "nick": "Рейнджер",
@@ -181,7 +190,7 @@
         "faculty": "КПИ",
         "experiance": "Играет 3 года",
         "honours": [],
-        "img": "Рейнджер"
+        "img": "Рейнджер.jpg"
     },
     {
         "nick": "Борман",
@@ -201,7 +210,7 @@
         "faculty": "КНУ, РФФ",
         "experiance": "Играет 3 года",
         "honours": [],
-        "img": "Борман"
+        "img": "Борман.jpg"
     },
     {
         "nick": "Мой Господин",
@@ -218,7 +227,7 @@
         "faculty": "КНУ, РФФ",
         "experiance": "Играет 3 года",
         "honours": [],
-        "img": "МойГосподин"
+        "img": "МойГосподин.jpg"
     },
     {
         "nick": "Клич",
@@ -245,11 +254,11 @@
                 "gameNumber": 29
             }
         ],
-        "img": "Клич"
+        "img": "Клич.jpg"
     },
     {
         "nick": "Earl Gray",
-        "password": "Earl",
+        "password": "Earl Gray",
         "vk": "https://vk.com/id31217960",
         "birthday": "1997-01-10",
         "name": "Игорь Гаврилюк",
@@ -271,7 +280,7 @@
                 "gameNumber": 25
             }
         ],
-        "img": "EarlGray"
+        "img": "EarlGray.jpg"
     },
     {
         "nick": "Баффет",
@@ -289,7 +298,7 @@
         "faculty": "КНУ, Институт Инофрмационных технологий",
         "experiance": "Играет 9 месяцев",
         "honours": [],
-        "img": "Баффет"
+        "img": "Баффет.jpg"
     },
     {
         "nick": "Phoenix",
@@ -316,15 +325,7 @@
                 "gameNumber": 29
             }
         ],
-        "img": "Phoenix"
-    },
-    {
-        "nick": "Тракиец",
-        "password": "Тракиец",
-        "name": "Тракиец",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
+        "img": "Phoenix.jpg"
     },
     {
         "nick": "Мать",
@@ -338,14 +339,6 @@
         "nick": "СБ",
         "password": "СБ",
         "name": "СБ",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Едмак",
-        "password": "Едмак",
-        "name": "Едмак",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -370,22 +363,6 @@
         "nick": "Айдахо",
         "password": "Айдахо",
         "name": "Айдахо",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Симон",
-        "password": "Симон",
-        "name": "Симон",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Мейбал",
-        "password": "Мейбал",
-        "name": "Мейбал",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -423,14 +400,6 @@
         "honours": []
     },
     {
-        "nick": "Сыть",
-        "password": "Сыть",
-        "name": "Сыть",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
         "nick": "Отец",
         "password": "Отец",
         "name": "Отец",
@@ -455,12 +424,13 @@
         "honours": []
     },
     {
-        "nick": "Стоун Колд",
-        "password": "Стоун Колд",
-        "name": "Стоун Колд",
+        "nick": "Stone Cold",
+        "password": "Stone Cold",
+        "name": "Артем Косенков",
         "presents": [],
-        "memberLevel": 0,
-        "honours": []
+        "memberLevel": "1",
+        "honours": [],
+        "img": "СтоунКолд.jpeg"
     },
     {
         "nick": "Эмбер",
@@ -503,14 +473,6 @@
         "honours": []
     },
     {
-        "nick": "Джеки",
-        "password": "Джеки",
-        "name": "Джеки",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
         "nick": "Ежик",
         "password": "Ежик",
         "name": "Ежик",
@@ -532,7 +494,8 @@
         "name": "Супер 8",
         "presents": [],
         "memberLevel": 0,
-        "honours": []
+        "honours": [],
+        "vk": ""
     },
     {
         "nick": "Пантий",
@@ -570,22 +533,6 @@
         "nick": "Сыч",
         "password": "Сыч",
         "name": "Сыч",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Мейбелин",
-        "password": "Мейбелин",
-        "name": "Мейбелин",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Динни",
-        "password": "Динни",
-        "name": "Динни",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -674,86 +621,6 @@
         "nick": "Митрандир",
         "password": "Митрандир",
         "name": "Митрандир",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Player1",
-        "password": "Player1",
-        "name": "Player1",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Player2",
-        "password": "Player2",
-        "name": "Player2",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Player3",
-        "password": "Player3",
-        "name": "Player3",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Player4",
-        "password": "Player4",
-        "name": "Player4",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Player5",
-        "password": "Player5",
-        "name": "Player5",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Player6",
-        "password": "Player6",
-        "name": "Player6",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Player7",
-        "password": "Player7",
-        "name": "Player7",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Player8",
-        "password": "Player8",
-        "name": "Player8",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Player9",
-        "password": "Player9",
-        "name": "Player9",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Player10",
-        "password": "Player10",
-        "name": "Player10",
         "presents": [],
         "memberLevel": 0,
         "honours": []
