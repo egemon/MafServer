@@ -165,7 +165,7 @@ function saveImg(base64text, fileName, format) {
 
 
 function getPlayers() {
-    return dataBase.players;
+    return playerHelper.getSortedPlayers(dataBase.players);
 }
 function getPhotos() {
     return dataBase.photos;

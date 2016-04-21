@@ -16,15 +16,19 @@ function byHonourLevel (player1, player2) {
 }
 
 function byAlphabet (player1, player2) {
-    return player1.nick > player2.nick;
+    return player1.nick < player2.nick ? -1 : 1;
 }
 
 function getOrgs (players) {
-	return players.filter(isOrg).sort(byAlphabet).map(addImgSrc.bind(this, null));
+	return players.filter(isOrg).sort(byOrgLevel).map(addImgSrc.bind(this, null));
 }
 
 function getMembers (players) {
-	return players.filter(isMember).sort(byHonourLevel).map(addImgSrc.bind(this, null));
+	return players.filter(isMember).sort(byAlphabet).map(addImgSrc.bind(this, null));
+}
+
+function getSortedPlayers(players) {
+    return players.sort(byAlphabet);
 }
 
 function addImgSrc (format, player) {
@@ -85,6 +89,7 @@ module.exports = {
     addImgSrc:addImgSrc,
 	getOrgs: getOrgs,
 	getMembers: getMembers,
+    getSortedPlayers: getSortedPlayers,
     getPlayerByNick: getPlayerByNick,
     getPlayerFields: getPlayerFields,
     authentificate: authentificate

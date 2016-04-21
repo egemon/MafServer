@@ -29,7 +29,7 @@ function createHonours (players) {
                 vk: player.vk,
                 experiance: player.experiance,
                 honours: player.honours || [],
-                img: player.nick.replace(/\s+/g, '')
+                img: player.img || player.nick.replace(/\s+/g, '')
                 //other stuffn
             });
         }
