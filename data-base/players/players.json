@@ -6,9 +6,11 @@
         "birthday": "1994-04-05",
         "name": "Иванна Улыбина",
         "presents": [
-            "футболка"
+            "футболка",
+            "чашка",
+            "маска"
         ],
-        "phone": "+380508197302",
+        "phone": "+380637563792",
         "position": "Администратор группы",
         "memberLevel": 3,
         "faculty": "КНУ, Исторический Факультет",
@@ -42,6 +44,15 @@
             }
         ],
         "img": "EarlGray.jpg"
+    },
+    {
+        "presents": "",
+        "honours": "",
+        "nick": "Green Day",
+        "password": "Green Day",
+        "vk": "https://vk.com/id12742235",
+        "birthday": "1990-03-30",
+        "name": "Алексей Симпотенко"
     },
     {
         "nick": "Johny",
@@ -123,6 +134,15 @@
         "img": "Phoenix.jpg"
     },
     {
+        "presents": [],
+        "honours": [],
+        "nick": "Questra",
+        "password": "Questra",
+        "vk": "https://vk.com/questra",
+        "birthday": "2014-11-26",
+        "name": "Олег Микитенко"
+    },
+    {
         "nick": "Snoopy",
         "password": "Snoopy",
         "vk": "https://vk.com/snoopy_ua",
@@ -143,10 +163,16 @@
         "nick": "Stone Cold",
         "password": "Stone Cold",
         "name": "Артем Косенков",
-        "presents": [],
-        "memberLevel": "1",
+        "presents": [
+            "маска",
+            "подушка"
+        ],
+        "memberLevel": "2",
         "honours": [],
-        "img": "СтоунКолд.jpeg"
+        "img": "СтоунКолд.jpeg",
+        "vk": "https://vk.com/stonecold975",
+        "birthday": "Jan 13, 1994",
+        "position": ""
     },
     {
         "nick": "Айдахо",
@@ -155,7 +181,8 @@
         "presents": [],
         "memberLevel": 0,
         "honours": [],
-        "vk": "https://vk.com/lookfortheclue"
+        "vk": "https://vk.com/lookfortheclue",
+        "birthday": "Jun 3, 1992"
     },
     {
         "nick": "Аксолотль",
@@ -164,7 +191,7 @@
         "birthday": "1997-06-25",
         "name": "Викотрия Гурин",
         "presents": [],
-        "phone": "+380937032241",
+        "phone": "+380988413304",
         "position": "Администратор группы",
         "memberLevel": 3,
         "faculty": "КНУ, Институт Биологии",
@@ -181,6 +208,25 @@
         "honours": []
     },
     {
+        "presents": "",
+        "honours": "",
+        "nick": "Амбал",
+        "password": "Амбал",
+        "memberLevel": 1,
+        "img": "Амбал.jpeg"
+    },
+    {
+        "presents": [],
+        "honours": [],
+        "nick": "Антонио",
+        "password": "Антонио",
+        "vk": "https://vk.com/id143123629",
+        "birthday": "1996-11-17",
+        "name": "Антон Инюшев",
+        "memberLevel": 1,
+        "img": "Антонио.jpg"
+    },
+    {
         "nick": "Баффет",
         "password": "Баффет",
         "vk": "https://vk.com/id24021994ann",
@@ -191,8 +237,8 @@
             "футблока"
         ],
         "phone": "",
-        "position": "игрок",
-        "memberLevel": 1,
+        "position": "игрок, ведущая",
+        "memberLevel": "2",
         "faculty": "КНУ, Институт Инофрмационных технологий",
         "experiance": "Играет 9 месяцев",
         "honours": [],
@@ -220,7 +266,7 @@
         ],
         "phone": "",
         "position": "игрок",
-        "memberLevel": 1,
+        "memberLevel": "2",
         "faculty": "КНУ, РФФ",
         "experiance": "Играет 3 года",
         "honours": [],
@@ -238,7 +284,10 @@
         "nick": "Вагрант",
         "password": "Вагрант",
         "name": "Александр Земсков",
-        "presents": [],
+        "presents": [
+            "маска",
+            "подушка"
+        ],
         "memberLevel": 0,
         "honours": [],
         "vk": "https://vk.com/ivagrant"
@@ -246,10 +295,13 @@
     {
         "nick": "Викарий",
         "password": "Викарий",
-        "name": "Викарий",
+        "name": "Виктор Скляров",
         "presents": [],
-        "memberLevel": 0,
-        "honours": []
+        "memberLevel": "1",
+        "honours": [],
+        "vk": "https://vk.com/skliarov_viktor",
+        "birthday": "Aug 9, 1993",
+        "img": "Викарий.jpeg"
     },
     {
         "nick": "Гендальф",
@@ -360,6 +412,12 @@
         "img": "Зло.jpg"
     },
     {
+        "presents": "",
+        "honours": "",
+        "nick": "Йоко",
+        "password": "Йоко"
+    },
+    {
         "nick": "Клич",
         "password": "Клич",
         "vk": "https://vk.com/id19111965",
@@ -390,10 +448,13 @@
     {
         "nick": "Космос",
         "password": "Космос",
-        "name": "Космос",
+        "name": "Маша Билогуб",
         "presents": [],
-        "memberLevel": 0,
-        "honours": []
+        "memberLevel": "2",
+        "honours": [],
+        "img": "Космос.jpeg",
+        "vk": "https://vk.com/id206913380",
+        "birthday": "Jun 7, 2014"
     },
     {
         "nick": "Кристон",
@@ -406,10 +467,13 @@
     {
         "nick": "Кураре",
         "password": "Кураре",
-        "name": "Кураре",
+        "name": "Влад Мунин",
         "presents": [],
-        "memberLevel": 0,
-        "honours": []
+        "memberLevel": "2",
+        "honours": [],
+        "vk": "https://vk.com/lliaxxxer",
+        "birthday": "Apr 24, 1996",
+        "img": "Кураре.jpeg"
     },
     {
         "nick": "Мать",
@@ -470,10 +534,12 @@
     {
         "nick": "Мутный",
         "password": "Мутный",
-        "name": "Мутный",
+        "name": "Ваня Ломов",
         "presents": [],
-        "memberLevel": 0,
-        "honours": []
+        "memberLevel": "2",
+        "honours": [],
+        "vk": "https://vk.com/id11182691",
+        "img": "Мутный.jpeg"
     },
     {
         "nick": "О.Доннел",
@@ -492,12 +558,28 @@
         "honours": []
     },
     {
+        "presents": [
+            "чашка",
+            "маска"
+        ],
+        "honours": [],
+        "nick": "Палац України",
+        "password": "Палац України",
+        "vk": "https://vk.com/stasmahula",
+        "birthday": "1997-04-09",
+        "name": "Стас Магула",
+        "img": "ПалацУкраїни.jpeg",
+        "memberLevel": "2"
+    },
+    {
         "nick": "Пантий",
         "password": "Пантий",
         "name": "Пантий",
         "presents": [],
         "memberLevel": 0,
-        "honours": []
+        "honours": [],
+        "vk": "https://vk.com/ischenko_dima",
+        "birthday": "Aug 9, 2014"
     },
     {
         "nick": "Папканцилер",
@@ -545,6 +627,12 @@
         "position": "игрок"
     },
     {
+        "presents": [],
+        "honours": [],
+        "nick": "Скарлет",
+        "password": "Скарлет"
+    },
+    {
         "nick": "Супер 8",
         "password": "Супер 8",
         "name": "Супер 8",
@@ -566,8 +654,19 @@
         "password": "Сэд",
         "name": "Сэд",
         "presents": [],
-        "memberLevel": 0,
-        "honours": []
+        "memberLevel": "3",
+        "honours": [],
+        "vk": "https://vk.com/edwardd_u",
+        "birthday": "Oct 4, 2014",
+        "img": "Сэд.jpeg"
+    },
+    {
+        "presents": "",
+        "honours": "",
+        "nick": "Тарантино",
+        "password": "Тарантино",
+        "memberLevel": "1",
+        "img": "Тарантино.jpeg"
     },
     {
         "nick": "Техас",
@@ -595,20 +694,26 @@
         "honours": []
     },
     {
-        "nick": "Халявщик",
-        "password": "Халявщик",
-        "name": "Халявщик",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
         "nick": "Художник",
         "password": "Художник",
-        "name": "Художник",
+        "name": "Максим Чемпель",
         "presents": [],
-        "memberLevel": 0,
-        "honours": []
+        "memberLevel": "1",
+        "honours": [],
+        "vk": "https://vk.com/id135327378",
+        "birthday": "May 24, 1994",
+        "img": "Художник.jpg"
+    },
+    {
+        "presents": [],
+        "honours": [],
+        "vk": "https://vk.com/sherlock11",
+        "nick": "Шрек",
+        "password": "Шрек",
+        "birthday": "2014-06-08",
+        "name": "Александр Погорелов",
+        "memberLevel": "0",
+        "img": "Шрек.jpeg"
     },
     {
         "nick": "Штефан",
@@ -633,5 +738,34 @@
         "presents": [],
         "memberLevel": 0,
         "honours": []
+    },
+    {
+        "presents": "",
+        "honours": "",
+        "nick": "Эхо",
+        "password": "Эхо",
+        "memberLevel": 1,
+        "img": "Эхо.jpeg"
+    },
+    {
+        "presents": [],
+        "honours": [],
+        "nick": "Zara",
+        "password": "Zara",
+        "vk": "https://vk.com/kuzhylnaya",
+        "birthday": "2014-05-02",
+        "name": "Инна Кужильная",
+        "memberLevel": 1,
+        "img": "Zara.jpeg"
+    },
+    {
+        "presents": "",
+        "honours": "",
+        "nick": "Француженка",
+        "password": "Француженка",
+        "vk": "https://vk.com/svjatkanosta",
+        "birthday": "1992-11-30",
+        "name": "Вика Гащишина",
+        "memberLevel": ""
     }
 ]
