@@ -168,11 +168,12 @@ function getPlayers() {
     return playerHelper.getSortedPlayers(dataBase.players);
 }
 function getPhotos() {
-    return dataBase.photos;
+    return meetingHelper.sortItemsByDate(dataBase.photos);
 }
 
 function getNews() {
-    return meetingHelper.getMeetings(dataBase.contents);
+    var meetings = meetingHelper.getMeetings(dataBase.contents);
+    return meetingHelper.addImgs(meetings, playerHelper.getPlayerByNick.bind(null, dataBase.players));
 }
 
 function getMembers() {

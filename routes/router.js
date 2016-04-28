@@ -194,7 +194,7 @@ router.post('/set', function(req, res) {
     console.log('[router] /set ');
     var player = dataBase.authentificate(JSON.parse(req.cookies['player-data']));
     var promise = null;
-    if (player) {
+    if (player.memberLevel >= 3) {
         promise = dataBase.setData(req.body.data, req.body.field);
         promise.when(res.send.bind(res));
     } else {

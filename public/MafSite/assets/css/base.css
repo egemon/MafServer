@@ -7562,6 +7562,10 @@ article p:last-child {
     right: 50px;
 }
 
+.article {
+    overflow: hidden;
+}
+
 /* ============== HALL OF FAME =======*/
 .player-logo,
 .photo-logo {
@@ -7633,6 +7637,9 @@ article p:last-child {
     font-size: 23px;
 }
 
+.photo-title {
+    clear: both;
+}
 .honours {
     background: black;
     /*height: 46px;*/
@@ -7855,4 +7862,20 @@ tr:hover .remove-player-button,
     padding: 5px 25px;
     line-height: 22px;
     margin: 10px auto;
+}
+
+#view players td,
+#view players th {
+    padding: 4px 2px;
+    line-height: 1;
+    font-size: 10px;
+}
+players input {
+    width: 100%;
+}
+input[type=file] {
+    width: 75px;
+}
+.content-block{
+    height: 100%;
 }
