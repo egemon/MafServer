@@ -19,6 +19,22 @@
         "img": "50.jpg"
     },
     {
+        "nick": "Arch Enemy",
+        "password": "Arch Enemy",
+        "name": "Arch Enemy",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "DD",
+        "password": "DD",
+        "name": "DD",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Earl Gray",
         "password": "Earl Gray",
         "vk": "https://vk.com/id31217960",
@@ -173,6 +189,25 @@
         "vk": "https://vk.com/stonecold975",
         "birthday": "Jan 13, 1994",
         "position": ""
+    },
+    {
+        "nick": "Vinsent",
+        "password": "Vinsent",
+        "name": "Vinsent",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "presents": [],
+        "honours": [],
+        "nick": "Zara",
+        "password": "Zara",
+        "vk": "https://vk.com/kuzhylnaya",
+        "birthday": "2014-05-02",
+        "name": "Инна Кужильная",
+        "memberLevel": 1,
+        "img": "Zara.jpeg"
     },
     {
         "nick": "Айдахо",
@@ -418,6 +453,14 @@
         "password": "Йоко"
     },
     {
+        "nick": "Картмен",
+        "password": "Картмен",
+        "name": "Картмен",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Клич",
         "password": "Клич",
         "vk": "https://vk.com/id19111965",
@@ -572,6 +615,14 @@
         "memberLevel": "2"
     },
     {
+        "nick": "Панда",
+        "password": "Панда",
+        "name": "Панда",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Пантий",
         "password": "Пантий",
         "name": "Пантий",
@@ -598,6 +649,14 @@
         "honours": []
     },
     {
+        "nick": "Рандом",
+        "password": "Рандом",
+        "name": "Рандом",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Рейнджер",
         "password": "Рейнджер",
         "vk": "https://vk.com/lubomyr95",
@@ -613,6 +672,14 @@
         "experiance": "Играет 3 года",
         "honours": [],
         "img": "Рейнджер.jpg"
+    },
+    {
+        "nick": "Риката",
+        "password": "Риката",
+        "name": "Риката",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "СБ",
@@ -694,6 +761,16 @@
         "honours": []
     },
     {
+        "presents": "",
+        "honours": "",
+        "nick": "Француженка",
+        "password": "Француженка",
+        "vk": "https://vk.com/svjatkanosta",
+        "birthday": "1992-11-30",
+        "name": "Вика Гащишина",
+        "memberLevel": ""
+    },
+    {
         "nick": "Художник",
         "password": "Художник",
         "name": "Максим Чемпель",
@@ -740,32 +817,19 @@
         "honours": []
     },
     {
+        "nick": "Эрл Грей",
+        "password": "Эрл Грей",
+        "name": "Эрл Грей",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "presents": "",
         "honours": "",
         "nick": "Эхо",
         "password": "Эхо",
         "memberLevel": 1,
         "img": "Эхо.jpeg"
-    },
-    {
-        "presents": [],
-        "honours": [],
-        "nick": "Zara",
-        "password": "Zara",
-        "vk": "https://vk.com/kuzhylnaya",
-        "birthday": "2014-05-02",
-        "name": "Инна Кужильная",
-        "memberLevel": 1,
-        "img": "Zara.jpeg"
-    },
-    {
-        "presents": "",
-        "honours": "",
-        "nick": "Француженка",
-        "password": "Француженка",
-        "vk": "https://vk.com/svjatkanosta",
-        "birthday": "1992-11-30",
-        "name": "Вика Гащишина",
-        "memberLevel": ""
     }
 ]
