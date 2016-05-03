@@ -150,22 +150,6 @@
         "img": "Phoenix.jpg"
     },
     {
-        "nick": "Player1",
-        "password": "Player1",
-        "name": "Player1",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Player7",
-        "password": "Player7",
-        "name": "Player7",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
         "presents": [],
         "honours": [],
         "nick": "Questra",
