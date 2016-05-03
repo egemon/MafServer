@@ -37,7 +37,6 @@ function watchLocalStorage () {
     function addItemsFromProtocols(type, ev, filename) {
         fs.readFile(PATHS.games + '/' + filename, 'utf8', function(err, data){
             console.log('[dataBase] addItemsFromProtocols()' + type);
-            console.log('[dataBase] settingDataInProcess  =');
             if (err) {
                 console.warn('[dataBase] addItemsFromProtocols() error with file reading');
                 return;
@@ -50,6 +49,8 @@ function watchLocalStorage () {
                 return;
             }
             var oldItems = handlers[type](game.metadata.date);
+            console.log('[dataBase] addItemsFromProtocols() oldItems ', oldItems);
+
             var nicks = {};
             oldItems.forEach(function(player){
                 nicks[player.nick] = true;
@@ -62,7 +63,7 @@ function watchLocalStorage () {
                     oldItems.push(formatItem(playerLine, type)) ;
                 }
             });
-            setData(oldItems, type, type ==='register' ? ('/' + game.metadata.date + '.json') : '');
+            setData(oldItems, type, type ==='register' ? ('/' + game.metadata.date + '.json') : '', true);
         });
     }
 }
@@ -111,21 +112,22 @@ function refreshInfoFor (field) {
     }
 }
 
-function setData(data, field, path) {
+function setData(data, field, path, isInternal) {
     console.log('[dataBase] setData()', field);
 
     path = path || '';
 
-    if (field === 'debts') {
-        registerHelper.calculateDebts(path.replace('.json', ''));
-        return;
-    }
 
     if (field === 'players') {
         data = handleImages(data);
     }
 
     fs.writeFileSync(PATHS[field] + path, JSON.stringify(data, null, 4), 'utf8');
+
+    if (!isInternal && field === 'register') {
+        registerHelper.updateDebts(path.replace('.json', ''));
+    }
+
     return {succesText: 'Данные сохранены!'};
 }
 
@@ -224,6 +226,5 @@ module.exports = {
     watchLocalStorage: watchLocalStorage,
     getRegister: registerHelper.getRegister,
     getRegisterFields: getRegisterFields,
-    calculateDebts: registerHelper.calculateDebts,
 };
 

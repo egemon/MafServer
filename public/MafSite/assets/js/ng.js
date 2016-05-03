@@ -240,6 +240,11 @@ function(PAGES, $scope, serverService, $timeout, $window, $location, editService
             if (page.url == 'rating') {
                 $scope.$broadcast('rating-request');
             }
+
+            if (page.url == 'register') {
+                $scope.$broadcast('register-request');
+            }
+
             fetchDataFor(page, page.needMemberLevel, page.data);
         }
     }
@@ -495,9 +500,24 @@ angular.module('base').directive('register', ['serverService', function(serverSe
         restrict: 'E',
         templateUrl: 'pages/directives/register.html',
         link: function (scope) {
-            scope.date = new Date();
+            console.log('[register.directive.js] link()', arguments);
+
+            restoreDefaults();
+            scope.$on('register-request', restoreDefaults);
 
             scope.setRegister = function setRegister(register, date) {
+                for (var i = 0; i < register.length; i++) {
+                    if (register[i].nick === null) {
+                        register[i].nick = '';
+                    }
+                    if (register[i].sum === null) {
+                        register[i].sum = 0;
+                    }
+                    if (register[i].debt === null) {
+                        register[i].debt = 0;
+                    }
+
+                }
                 serverService.setItems(register, 'register', '/' + dateToStr(date) + '.json');
             };
 
@@ -510,8 +530,14 @@ angular.module('base').directive('register', ['serverService', function(serverSe
                 });
             });
 
+            // ====== HELPERS ========
+
             function dateToStr(date) {
                 return date.toISOString().split('T')[0];
+            }
+
+            function restoreDefaults() {
+                scope.date = new Date();
             }
         }
     };

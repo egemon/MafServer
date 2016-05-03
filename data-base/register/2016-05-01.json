@@ -1,13 +1,13 @@
 [
     {
-        "nick": "50",
-        "sum": 0,
-        "debt": -25
+        "nick": "Merlin",
+        "sum": 25,
+        "debt": 0
     },
     {
-        "nick": "Earl Gray",
-        "sum": 0,
-        "debt": -25
+        "nick": "Arch Enemy",
+        "sum": 25,
+        "debt": 0
     },
     {
         "nick": "Phoenix",
@@ -21,7 +21,17 @@
     },
     {
         "nick": "Johny",
-        "sum": 25,
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "DD",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Earl Gray",
+        "sum": 0,
         "debt": 0
     },
     {
@@ -31,22 +41,22 @@
     },
     {
         "nick": "Баффет",
-        "sum": 25,
-        "debt": 0
+        "sum": 0,
+        "debt": 25
     },
     {
         "nick": "Айдахо",
-        "sum": 25,
-        "debt": 0
+        "sum": 0,
+        "debt": 25
     },
     {
-        "nick": "Merlin",
-        "sum": 25,
-        "debt": 0
+        "nick": "50",
+        "sum": 0,
+        "debt": 25
     },
     {
-        "nick": "DD",
-        "sum": 25,
-        "debt": 0
+        "nick": "Green Day",
+        "sum": 0,
+        "debt": 25
     }
 ]
