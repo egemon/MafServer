@@ -12,16 +12,13 @@ dataBase.watchLocalStorage();
 var today = new Date();
 var PAGES = [{
         url: 'home',
-        rus: 'О нас'
     },{
         url: 'news',
-        rus: 'Новости',
         getData: function () {
             return dataBase.getNews();
         }
     },{
         url: 'rating',
-        rus: 'Рейтинг',
         getData: function (body) {
             console.log('[router] getData(rating)', arguments);
             if (!Object.keys(body).length) {
@@ -38,36 +35,30 @@ var PAGES = [{
         }
     },{
         url: 'members',
-        rus: 'Члены клуба',
         getData:  function () {
             return dataBase.getMembers();
         }
     },{
         url: 'hall_of_fame',
-        rus: 'Зал Славы',
         getData: function () {
             return dataBase.getHallOfFame();
         }
     },{
         url: 'photos',
-        rus: 'Фото',
         getData: function () {
             return dataBase.getPhotos();
         }
     },{
         url: 'contacts',
-        rus: 'Контакты',
         getData: function () {
             return dataBase.getOrgs();
         }
 
     },{
         url: 'protocols',
-        rus: 'Бланки',
         needMemberLevel: 3
     },{
         url: 'players',
-        rus: 'Игроки',
         getData:  function () {
             return {
                 data: dataBase.getPlayers(),
@@ -77,11 +68,24 @@ var PAGES = [{
         needMemberLevel: 3
     },{
         url: 'contents',
-        rus: 'Контент',
         getData:  function () {
             return {
                 data: dataBase.getNews(),
                 fields: dataBase.getMeetingFields()
+            };
+        },
+        needMemberLevel: 3
+    },{
+        url: 'register',
+        getData:  function (request) {
+            console.log('[router.js] getRegister() ', arguments);
+            var date = request.date;
+            if (!date) {
+                date = new Date().toISOString().split('T')[0];
+            }
+            return {
+                data: dataBase.getRegister(date),
+                fields: dataBase.getRegisterFields()
             };
         },
         needMemberLevel: 3
@@ -100,6 +104,7 @@ for (var i = 0; i < PAGES.length; i++) {
                 console.log('req.cookies[player-data]', JSON.parse(req.cookies['player-data']));
                 var player = dataBase.authentificate(JSON.parse(req.cookies['player-data']));
                 if (player.memberLevel >= PAGES[i].needMemberLevel) {
+                    console.log('[router.js] body = ', req.body);
                     res.send(PAGES[i].getData(req.body));
                 } else {
                     res.send(JSON.stringify({
@@ -107,6 +112,7 @@ for (var i = 0; i < PAGES.length; i++) {
                     }));
                 }
             } else {
+                console.log('[router.js] body = ', req.body);
                 res.send(PAGES[i].getData(req.body));
             }
         });
@@ -193,16 +199,16 @@ router.post('/login', function (req, res) {
 router.post('/set', function(req, res) {
     console.log('[router] /set ');
     var player = dataBase.authentificate(JSON.parse(req.cookies['player-data']));
-    var promise = null;
     if (player.memberLevel >= 3) {
-        promise = dataBase.setData(req.body.data, req.body.field);
-        promise.when(res.send.bind(res));
+        dataBase.setData(req.body.data, req.body.field, req.body.path);
+        res.send(JSON.stringify({
+            successText: 'Данные по регистрации сохарнены!'
+        }));
     } else {
         res.send(JSON.stringify({
             errorText: 'Недостаточно прав для этого действия!'
         }));
     }
-
 });
 
 module.exports = router;

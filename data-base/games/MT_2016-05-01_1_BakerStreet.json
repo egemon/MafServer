@@ -1,0 +1,68 @@
+{
+    "playerLines": [
+        {
+            "nick": "Merlin",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Phoenix",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Player1",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Johny",
+            "role": "Мирный"
+        },
+        {
+            "nick": "DD",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Player7",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Баффет",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Айдахо",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мирные",
+        "date": "2016-05-01",
+        "ref": "Merlin",
+        "gameNumber": 1
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

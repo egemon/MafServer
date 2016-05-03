@@ -7879,3 +7879,9 @@ input[type=file] {
 .content-block{
     height: 100%;
 }
+
+/*========= REGISTRATION ========*/
+
+#view register table input {
+    display: inline-block;
+}

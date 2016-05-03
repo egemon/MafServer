@@ -47,10 +47,12 @@ $templateCache.put("pages/photos.html","<div class=\"photo\" ng-repeat=\"(i, pho
 $templateCache.put("pages/players.html","<players players=\"players\">\n\n</players>");
 $templateCache.put("pages/protocols.html","<protocol></protocol>");
 $templateCache.put("pages/rating.html","<rating\n  page=\"page\"\n  fetch-data-for=\"fetchDataFor\"\n  ></rating>\n<table class=\"table table-bordered\" id=\"ratingTable\" border=\'1\'>\n  <thead>\n    <tr>\n      <th>Фото</th>\n      <th>Ник</th>\n      <th>Сумма</th>\n      <th>Игр</th>\n      <th>Среднее</th>\n      <th>Лучшие от игроков</th>\n      <th>Лучшие от Судей</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr class=\"rating-row\" id=\"{{player.nick}}\" ng-repeat=\"(i, player) in rating\">\n      <td id=\"{{player.avatar}}\">\n        <img class=\"playerAvatarInRating\"\n        onerror=\"this.src=\'public/MafSite/assets/img/main_logo.png\'; this.onerror=\'\'\"\n        ng-src=\"data-base/players/img/{{player.nick}}.jpg\"\n        alt=\"\">\n      </td>\n      <td>{{player.nick}}</td>\n      <td>{{player.sum}}</td>\n      <td>{{player.gameNumber}}</td>\n      <td>{{player.sum / player.gameNumber | number:2}}</td>\n      <td>{{player.BP}}</td>\n      <td>{{player.BR}}</td>\n    </tr>\n  </tbody>\n</table>\n<script src=\"../js/plain/rating.js\" type=\"text/javascript\" charset=\"utf-8\"></script>\n");
+$templateCache.put("pages/register.html","<register\n    data=\"register\"\n    fetch-data-for=\"fetchDataFor\"\n    remove-item=\"removeItem\"\n    add-item=\"addItem\"\n>\n\n</register>");
 $templateCache.put("pages/directives/contents.html","<button class=\"set-data-button\" ng-click=\"setMeetings(contents.data)\">Внести данные</button>\n<table>\n    <thead>\n        <tr>\n            <th ng-repeat=\"(i, key) in contents.fields\">{{::key}}</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr ng-repeat=\"(j, meeting) in contents.data\">\n            <td ng-repeat=\"(k, key) in contents.fields\">\n                <div\n                ng-click=\"startEdit($event, meeting)\"\n                class=\"content-block\"\n                key=\"{{::key}}\"\n                >\n                {{::meeting[key]}}\n                </div>\n            </td>\n            <td>\n                <button class=\"remove-button\" ng-click=\"removeItem(contents.data, meeting)\">-</button>\n            </td>\n        </tr>\n        <tr>\n           <td ng-repeat=\"(k, key) in contents.fields\">\n                <input type=\"text\" ng-model=\"newEvent[key]\">\n            </td>\n            <td>\n                <button class=\"remove-button\" ng-click=\"addItem(contents.data, newEvent); newEvent={};\">+</button>\n            </td>\n        </tr>\n    </tbody>\n</table>");
 $templateCache.put("pages/directives/new-player.html","<td ng-repeat=\"(i, key) in fields\">\n<input\n    type=\"{{::inputTypes[key]}}\"\n    key=\"{{::key}}\"\n    ng-if=\"key !== \'presents\' && key !== \'honours\'\"\n    ng-model=\"newPlayer.data[key]\"\n>\n</input>\n<div class=\"hint\">\n    Данные некорректны! Проверьте.\n</div>\n\n\n<!-- presents container -->\n<div\n    ng-if=\"key ===\'presents\'\"\n    class=\"player-presents-container\"\n    data=\"{{::newPlayer.data.presents}}\"\n>\n    <!-- player-continer in repeate -->\n    <div\n        class=\'present-container\'\n        ng-repeat=\"(j, present) in newPlayer.data.presents track by $index \"\n    >\n        <span\n            data={{::present}}\n            key=\"presents\"\n            iterator=\"{{::j}}\"\n            ng-click=\"startEdit({$event: $event, player: newPlayer.data})\"\n        >\n            {{::present}}\n        </span>\n        <button class=\"remove-present-button\" ng-click=\"removeItem({items: newPlayer.data.presents, item: present})\">-</button>\n    </div>\n\n    <!--  new present container-->\n    <div>\n        <input type=\"text\" ng-model=\"newPresent\">\n        <button\n            class=\"add-present-button\"\n            ng-click=\"addPresent({presents: newPlayer.data.presents, present: newPresent}); newPresent = \'\'\"\n        >+</button>\n    </div>\n</div>\n\n\n<div ng-if=\"key ===\'honours\'\" ng-repeat=\"(j, honour) in player[key] track by $index\">\n    <div  ng-repeat=\"(Key, honour) in honour\">\n        <span class=\"player-honour-key\">\n            {{::Key}} :\n        </span>\n        <span class=\"player-honour-value\">\n            {{::honour}}\n        </span>\n    </div>\n</div>\n</td>\n<td>\n    <button id=\"add-player-button\" ng-click=\"addPlayer({player: newPlayer.data})\">+</button>\n</td>");
 $templateCache.put("pages/directives/players.html","<button class=\"set-data-button\" ng-click=\"setPlayers(players.data)\">Внести данные</button>\n<table class=\"table players-table table-hover\">\n    <thead>\n        <tr>\n            <th ng-repeat=\"(j, field) in players.fields\">{{::field}}</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr ng-repeat=\"(i, player) in players.data\" ng-include=\"\'pages/partials/player-tr.html\'\">\n        </tr>\n        <tr>\n            <tr new-player\n                add-present=\"addPresent(presents, present)\"\n                fields=\"players.fields\"\n                add-player=\"addNewPlayer(player)\"\n                start-edit=\"startEdit($event, player)\"\n                remove-item=\"removeItem(items, item)\"\n            ></tr>\n        </tr>\n    </tbody>\n</table>\n");
 $templateCache.put("pages/directives/rating.html","<select\n    class=\"rating-select\"\n    ng-model=\"ratingCtr.periodType\">\n    <option\n        ng-repeat=\"(periodType, val) in ratingCtr.filterFields\"\n        value=\"{{::periodType}}\"\n        >\n        {{::val.name}}\n    </option>\n</select>\n<select\n    class=\"rating-select\"\n    ng-model=\"ratingCtr.period\"\n    ng-show=\"ratingCtr.periodType !== \'year\'\"\n    ng-options=\"item as item.name for item in ratingCtr.filterFields[ratingCtr.periodType].value track by item.value\"\n    >\n</select>\n<select\n    class=\"rating-select\"\n    ng-model=\"ratingCtr.year\"\n    ng-options=\"item as item.name for item in ratingCtr.filterFields.year.value track by item.value\"\n    >\n</select>\n<button class=\"show-rating-button\" ng-click=\"ratingCtr.getRating()\">Показать рейтинг</button>");
+$templateCache.put("pages/directives/register.html","<button class=\"set-data-button\" ng-click=\"setRegister(register.data, date)\">Внести данные</button>\n<label>\n    Выберите дату\n    <input type=\"date\" ng-model=\"date\">\n</label>\n\n<table class=\"table players-table table-hover\">\n    <thead>\n        <tr>\n            <th>\n                #\n            </th>\n            <th ng-repeat=\"(j, field) in register.fields\">{{::field.name}}</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr\n            ng-repeat=\"(i, player) in register.data\">\n            <td>\n                {{:: i+1}}\n            </td>\n            <td\n                ng-repeat=\"(k, field) in register.fields\"\n                >\n                <input type=\"{{::field.type}}\" ng-model=\"player[field.name]\">\n            </td>\n            <td>\n                <button ng-click=\"removeItem(register.data, player)\"> - </button>\n            </td>\n        </tr>\n        <tr ng-init=\"newPlayer = {}\">\n            <td>\n                {{register.data.length + 1}}\n            </td>\n            <td\n                ng-repeat=\"(k, field) in register.fields\"\n                >\n                <input type=\"{{::field.type}}\" ng-model=\"newPlayer[field.name]\">\n            </td>\n            <td>\n                <button ng-click=\"addItem(register.data, newPlayer); newPlayer = {};\">+</button>\n            </td>\n        </tr>\n    </tbody>\n\n</table>\n");
 $templateCache.put("pages/partials/loginForm.html","<div>\n    <button class=\"form-button\" id=\'showLogin\' ng-click=\"loginActive = !loginActive\">{{loginActive ? \'Скрыть\' : \'Логин\'}}</button>\n    <div id=\"authform\" ng-show=\"loginActive\">\n        <input class=\"form-input\" id=\"user\" type=\"text\" placeholder=\"Ник\" ng-model=\"user.data.nick\">\n        <input class=\"form-input\" id=\"password\" type=\"password\" placeholder=\"Пароль\" ng-model=\"user.data.password\">\n        <button\n            id=\"authButton\"\n            class=\"form-button\"\n            ng-click=\"login(user); loginActive = false;\">\n            Войти\n        </button>\n    </div>\n</div>");
 $templateCache.put("pages/partials/player-tr.html","<td ng-repeat=\"(j, key) in players.fields\" >\n<div ng-if=\"key === \'#\'\">\n    {{::i+1}}\n</div>\n\n<div\n    class=\"player-input\"\n    key=\"{{::key}}\"\n    ng-if=\"key !== \'presents\' && key !== \'honours\' && key !== \'image\' && key !== \'#\'\"\n    ng-click=\"startEdit($event, player, playersCtr.inputTypes[key])\"\n    date = \"{{::key == \'birthday\' ? (player[key] | date:\'yyyy-MM-dd\') : \'\'}}\"\n>\n    {{::key == \'birthday\' ? (player[key] | date) : player[key]}}\n</div>\n<div class=\"hint\">\n    Данные некорректны! Проверьте.\n</div>\n\n<!-- presents container -->\n<div\n    class=\"player-presents-container\"\n    ng-if=\"key ===\'presents\'\"\n    data=\"{{::player.presents}}\"\n>\n    <!-- player-continer in repeate -->\n    <div\n        class = \"present-container\"\n        ng-repeat=\"(j, present) in player[key] track by $index \"\n    >\n        <span\n            data={{::present}}\n            key=\"presents\"\n            iterator=\"{{::j}}\"\n            ng-click=\"startEdit($event, player)\"\n        >\n            {{::present}}\n        </span>\n        <button class=\"remove-present-button\" ng-click=\"removeItem(player.presents, present)\">-</button>\n    </div>\n    <div>\n        <input\n            class=\"new-present-input\"\n            type=\"text\"\n            ng-model=\"newPresent\">\n        <button\n            class=\"add-present-button\"\n            ng-click=\"addPresent(player.presents, newPresent); newPresent = \'\'\"\n        >+</button>\n    </div>\n</div>\n\n<div\n    ng-if=\"key ===\'honours\'\"\n    ng-repeat=\"(j, honour) in player.honours track by $index\"\n>\n    <div\n        class=\"honour-container\"\n        ng-repeat=\"(clue, val) in honour\"\n    >\n        <span class=\"player-honour-key\">\n            {{::clue}} :\n        </span>\n        <span\n            class=\"player-honour-value\"\n            key=\"{{::key}}\"\n            clue=\"{{::clue}}\"\n            iterator=\"{{::j}}\"\n            ng-click=\"startEdit($event, player)\"\n        >\n            {{::val}}\n        </span>\n    </div>\n\n</div>\n\n<div\n    ng-if=\"key ===\'image\'\"\n    >\n    <input\n        type = \"file\"\n        file-model = \"player.imgFile\"\n    >\n</div>\n</td>\n<td>\n    <button class=\"remove-player-button\" ng-click=\"removeItem(players.data, player)\">-</button>\n</td>\n");
 $templateCache.put("pages/partials/player.html","<img\n    class=\"player-logo\"\n    ng-src=\"data-base/players/img/{{player.img}}\"\n    alt=\"{{player.nick}}\"\n    ng-click=\"openNewTab(player.vk)\"\n    vk={{player.vk}}\n>\n<div class=\"player-text-container\">\n    <p class=\"player-nick\">{{player.nick}}</p>\n    <p class=\"player-faculty\">{{player.name}}</p>\n    <p class=\"player-results\" ng-show=\"player.avr\">{{player.avr + \' средний бал \'}}{{\'(\' + player.gameNumber + \' игр)\'}}</p>\n    <p class=\"player-faculty\" ng-show=\"player.memberLevel > 2\">{{player.position}}</p>\n    <p class=\"player-faculty\">{{player.faculty}}</p>\n    <p class=\"player-exp\">{{player.experiance}}</p>\n    <p class=\"player-faculty\" ng-show=\"player.memberLevel > 2\">{{player.phone}}</p>\n    <div class=\"honours\">\n        <div\n        ng-repeat=\"(j, honour) in player.honours\"\n        title=\"{{honour.title}}\"\n        class=\"{{honour.type}}-{{honour.place}} honour\"\n        ></div>\n    </div>\n</div>\n");}]);
@@ -197,6 +199,11 @@ angular.module('base')
     name: 'Контент',
     needData: true,
     needMemberLevel: 3
+},{
+    url: 'register',
+    name: 'Регистрация',
+    needData: true,
+    needMemberLevel: 3
 }]);
 angular.module('base')
 .controller('baseCtrl',
@@ -233,7 +240,7 @@ function(PAGES, $scope, serverService, $timeout, $window, $location, editService
             if (page.url == 'rating') {
                 $scope.$broadcast('rating-request');
             }
-            fetchDataFor(page, page.needMemberLevel);
+            fetchDataFor(page, page.needMemberLevel, page.data);
         }
     }
 
@@ -246,6 +253,7 @@ function(PAGES, $scope, serverService, $timeout, $window, $location, editService
     }
 
     function fetchDataFor (page, needMemberLevel, data) {
+        page = page || $scope.page;
         console.log('[base.controller] fetchDataFor()', arguments);
 
         return serverService.$_fetchData(page, needMemberLevel, data)
@@ -477,6 +485,40 @@ angular.module('base').directive('rating', function(){
     };
 });
 
+angular.module('base').directive('register', ['serverService', function(serverService){
+
+    return {
+        scope: {
+            register:"=data",
+            removeItem: '=',
+            addItem: '=',
+            fetchDataFor: '=',
+        },
+        restrict: 'E',
+        templateUrl: 'pages/directives/register.html',
+        link: function (scope) {
+            scope.date = new Date();
+
+            scope.setRegister = function setRegister(register, date) {
+                serverService.setItems(register, 'register', '/' + dateToStr(date) + '.json');
+            };
+
+            scope.$watch('date', function(newValue, oldValue, scope) {
+                if (newValue === oldValue) {
+                    return;
+                }
+                scope.fetchDataFor(null, 3, {
+                    date: dateToStr(scope.date)
+                });
+            });
+
+            function dateToStr(date) {
+                return date.toISOString().split('T')[0];
+            }
+        }
+    };
+}]);
+
 angular.module('server')
 .service('editService', ['$http', 'CONFIG', 'dateFilter',
 function editService ($http, CONFIG, dateFilter) {
@@ -602,10 +644,6 @@ angular.module('server')
     serverService.prototype.$_fetchData = function(page, needMemberLevel, data) {
         console.log('[server.service] $_fetchData()', arguments);
 
-        if (needMemberLevel) {
-            data = data || {};
-        }
-
         return $http.post(CONFIG.BASE_SERVER_URL + page.url, data)
         .catch(failCallback.bind(this, needMemberLevel))
         .then(handleData.bind(this, page));
@@ -625,11 +663,12 @@ angular.module('server')
             .then(handleLogin.bind(this));
     };
 
-    serverService.prototype.setItems = function(items, field) {
+    serverService.prototype.setItems = function(items, field, path) {
         console.log('[server.service] setPlayers()', items);
         var data = {
             field: field,
-            data: items
+            data: items,
+            path: path || '',
         };
 
         return $http.post(CONFIG.BASE_SERVER_URL + CONFIG.SET_URL, data)
