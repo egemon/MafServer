@@ -1,6 +1,6 @@
 var honourTitle = "Лучшие игроки";
-var MONTHS = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"]
-var SEASONS = ["","ЗИМЫ", 'ВЕСНЫ', "ЛЕТА", "ОСЕНИ"]
+var MONTHS = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
+var SEASONS = ["","ЗИМЫ", 'ВЕСНЫ', "ЛЕТА", "ОСЕНИ"];
 
 
 function createPeriodsOfFame (players) {
@@ -56,30 +56,30 @@ function createPeriods (honours) {
             };
         }
         period.honours[honour.place - 1] = honour;
-    };
+    }
     var periodsArray = [];
     for (var title in periods) {
         periods[title].title = title;
         periodsArray.push(periods[title]);
-    };
+    }
     return periodsArray;
 }
 
 function createPeriodTitle (honour) {
     switch (honour.periodType) {
         case "year":
-            return honourTitle + ' ' + honour.period + '-го года'
+            return honourTitle + ' ' + honour.period + '-го года';
         case "season":
-            return honourTitle + ' ' + SEASONS[honour.period]
+            return honourTitle + ' ' + SEASONS[honour.period] + ' '+ honour.year;
         case "month":
-            return honourTitle + ' ' + MONTHS[honour.period]
+            return honourTitle + ' ' + MONTHS[honour.period] + ' '+ honour.year;
     }
 }
 
 function byPeriod (period1, period2) {
     return (period1.year - period2.year) ||
         (period1.periodType === "year") ||
-        (period1.priority - period2.priority)
+        (period1.priority - period2.priority);
 }
 
 function getPeriodPriority (periodType, period) {
