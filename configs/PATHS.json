@@ -1,0 +1,7 @@
+{
+    "players": "./data-base/players/players.json",
+    "photos": "./data-base/photos/photos.json",
+    "contents": "./data-base/news/meetings.json",
+    "games": "./data-base/games",
+    "register": "./data-base/register"
+}

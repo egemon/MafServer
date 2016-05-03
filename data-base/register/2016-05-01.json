@@ -1,50 +1,52 @@
 [
     {
         "nick": "50",
-        "isPaid": false,
         "sum": 0,
-        "debt": 0
+        "debt": -25
     },
     {
         "nick": "Earl Gray",
-        "isPaid": false,
         "sum": 0,
-        "debt": 0
+        "debt": -25
     },
     {
         "nick": "Phoenix",
-        "isPaid": false,
-        "sum": 0,
+        "sum": 25,
         "debt": 0
     },
     {
         "nick": "Player1",
-        "isPaid": false,
-        "sum": 0,
+        "sum": 25,
         "debt": 0
     },
     {
         "nick": "Johny",
-        "isPaid": false,
-        "sum": 0,
+        "sum": 25,
         "debt": 0
     },
     {
         "nick": "Player7",
-        "isPaid": false,
         "sum": 0,
         "debt": 0
     },
     {
         "nick": "Баффет",
-        "isPaid": true,
         "sum": 25,
         "debt": 0
     },
     {
         "nick": "Айдахо",
-        "isPaid": true,
-        "sum": 0,
+        "sum": 25,
+        "debt": 0
+    },
+    {
+        "nick": "Merlin",
+        "sum": 25,
+        "debt": 0
+    },
+    {
+        "nick": "DD",
+        "sum": 25,
         "debt": 0
     }
 ]

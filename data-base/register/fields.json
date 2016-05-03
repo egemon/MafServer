@@ -4,10 +4,6 @@
     "type": "text"
 },
 {
-    "name": "isPaid",
-    "type": "checkbox"
-},
-{
     "name": "sum",
     "type": "number"
 },

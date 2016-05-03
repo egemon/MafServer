@@ -267,8 +267,6 @@ function(PAGES, $scope, serverService, $timeout, $window, $location, editService
     }
 
     // ===== private mehtods
-
-
     function handleError (page, err) {
         console.log('[base.controller] handleError()', arguments);
 

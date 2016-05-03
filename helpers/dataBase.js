@@ -1,24 +1,18 @@
 var fs = require('fs');
+var PATHS = require('../configs/PATHS.json');
 
 var periodHelper = require('../helpers/famePeriods');
 var playerHelper = require('../helpers/players');
 var meetingHelper = require('../helpers/meetings');
+var registerHelper = require('../helpers/register');
 
-var PATHS = {
-    players: './data-base/players/players.json',
-    photos: './data-base/photos/photos.json',
-    contents: './data-base/news/meetings.json',
-    games: './data-base/games',
-    register: './data-base/register',
-};
+
 
 var dataBase = {
     players: require('.' + PATHS.players),
     photos: require('.' + PATHS.photos),
     contents: require('.' + PATHS.contents),
 };
-
-
 
 function initializeWatching(field) {
     console.log('[dataBase] initializeWatching()', arguments);
@@ -37,7 +31,7 @@ function watchLocalStorage () {
     fs.watch(PATHS.games, {recursive: true}, addItemsFromProtocols.bind(this, 'register'));
     var handlers = {
         players: getPlayers,
-        register: getRegister,
+        register: registerHelper.getRegister,
     };
 
     function addItemsFromProtocols(type, ev, filename) {
@@ -88,36 +82,9 @@ function formatItem(playerLine, type) {
 
             return {
                 "nick": playerLine.nick,
-                "isPaid": false,
                 "sum": 0,
-                "debt": getDebt(playerLine.nick)
+                "debt": registerHelper.getDebt(playerLine.nick)
             };
-    }
-}
-
-function getDebt(nick) {
-    var debts = [];
-    try {
-        debts = JSON.parse(fs.readFileSync(PATHS.register + '/debts.json', 'utf8'));
-    } catch(e) {
-        console.error('Error with reading register-fields', e);
-    }
-
-    return nick === undefined ? debts : (debts[nick] || 0);
-}
-
-function calculateDebts (date) {
-    var debts = getDebt();
-    var register = getRegister(date);
-    for (var i = 0; i < register.length; i++) {
-        var player = register[i];
-        if (player.debts === 0 && player.sum > 0) {
-            continue;
-        } else {
-            var nick = player.nick;
-            debts[nick] = debts[nick] || 0;
-            debts[nick] += player.sum;
-        }
     }
 }
 
@@ -145,15 +112,14 @@ function refreshInfoFor (field) {
 }
 
 function setData(data, field, path) {
-
-    if (field === 'debts') {
-        calculateDebts(path.replace('.json', ''));
-        return;
-    }
-
     console.log('[dataBase] setData()', field);
 
     path = path || '';
+
+    if (field === 'debts') {
+        registerHelper.calculateDebts(path.replace('.json', ''));
+        return;
+    }
 
     if (field === 'players') {
         data = handleImages(data);
@@ -227,32 +193,6 @@ function getPlayerFields() {
     return playerHelper.getPlayerFields();
 }
 
-function getRegister(date) {
-    console.log('[dataBase] getRegister()', date);
-
-
-    var debts = [];
-    try {
-        debts = JSON.parse(fs.readFileSync(PATHS.register + '/debts.json', 'utf8'));
-    } catch(e) {
-        console.error('Error with reading debts-fields', e);
-    }
-
-    var register = [];
-    try {
-        register = JSON.parse(fs.readFileSync(PATHS.register + '/' + date + '.json', 'utf8'));
-    } catch(e) {
-        console.error('Error with reading register-fields', e);
-    }
-
-    for (var i = 0; i < register.length; i++) {
-        if (register.nick in debts) {
-            register.debt = debts[register.nick];
-        }
-    }
-
-    return register;
-}
 
 function getRegisterFields() {
 
@@ -282,8 +222,8 @@ module.exports = {
     authentificate: playerHelper.authentificate.bind(this, dataBase.players),
     getMeetingFields: meetingHelper.getMeetingFields,
     watchLocalStorage: watchLocalStorage,
-    getRegister: getRegister,
+    getRegister: registerHelper.getRegister,
     getRegisterFields: getRegisterFields,
-    calculateDebts: calculateDebts,
+    calculateDebts: registerHelper.calculateDebts,
 };
 
