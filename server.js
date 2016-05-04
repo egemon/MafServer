@@ -1,4 +1,5 @@
 #!/bin/env node
+var CONFIG = require('./configs/serverConfig.json')
 var express = require('express'),
     app = express();
 var compress = require('compression');
@@ -16,7 +17,7 @@ var users = require('./routes/users');
 app.set('views', path.join(__dirname, 'public/views'));
 app.set('view engine', 'ejs');
 
-app.use(compress());
+app.use(compress(CONFIG));
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json({limit: '1mb'}));
