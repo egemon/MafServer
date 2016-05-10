@@ -1,52 +1,54 @@
 {
     "playerLines": [
         {
-            "nick": "Борман",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Questra",
-            "role": "Мирный"
-        },
-        {
             "nick": "DD",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Vinsent",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Сэд",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Скарлет",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Панда",
-            "role": "Шериф"
-        },
-        {
-            "nick": "Snoopy",
             "role": "Дон"
         },
         {
-            "nick": "Феникс",
+            "nick": "Техас",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Random",
+            "role": "Мирный",
+            "BR": true
+        },
+        {
+            "nick": "Fox",
+            "role": "Мафия",
+            "BP": true
+        },
+        {
+            "nick": "Черный лебедь",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Амальгама",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Картмен",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Фемида",
             "role": "Мафия"
         },
         {
-            "nick": "Айдахо",
-            "role": "Мирный"
+            "nick": "Johny",
+            "role": "Шериф"
         }
     ],
     "metadata": {
-        "table": "BakerStreet",
+        "table": "AbbeyRoad",
         "win": "Мафия",
-        "date": "2016-04-11",
-        "ref": "Баффет",
-        "gameNumber": 2
+        "date": "2016-05-10",
+        "ref": "Сэд",
+        "gameNumber": 1
     },
     "days": [
         {

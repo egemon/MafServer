@@ -21,10 +21,19 @@
     {
         "nick": "Arch Enemy",
         "password": "Arch Enemy",
-        "name": "Arch Enemy",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
+        "name": "Виктор Хомяк",
+        "presents": [
+            "магнит"
+        ],
+        "memberLevel": "1",
+        "honours": [],
+        "birthday": "1995-09-30",
+        "phone": "+380962234032",
+        "position": "игрок",
+        "faculty": "КНУ, РФФ",
+        "vk": "https://vk.com/dreamwalker7",
+        "experiance": "Играет с 01.03.2013",
+        "img": "ArchEnemy.jpeg"
     },
     {
         "nick": "DD",
@@ -42,13 +51,14 @@
         "name": "Игорь Гаврилюк",
         "presents": [
             "маска",
-            "чашка"
+            "чашка",
+            "рюмка"
         ],
-        "phone": "",
+        "phone": "+380937743669",
         "position": "игрок",
-        "memberLevel": 1,
+        "memberLevel": "1",
         "faculty": "КНУ, Институт Филологии",
-        "experiance": "Играет 3 месяца",
+        "experiance": "Впервые сыграл 29.09.2015",
         "honours": [
             {
                 "year": 2015,
@@ -60,6 +70,14 @@
             }
         ],
         "img": "EarlGray.jpg"
+    },
+    {
+        "nick": "Fox",
+        "password": "Fox",
+        "name": "Fox",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "presents": "",
@@ -159,6 +177,14 @@
         "name": "Олег Микитенко"
     },
     {
+        "nick": "Random",
+        "password": "Random",
+        "name": "Random",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Snoopy",
         "password": "Snoopy",
         "vk": "https://vk.com/snoopy_ua",
@@ -213,11 +239,20 @@
         "nick": "Айдахо",
         "password": "Айдахо",
         "name": "Юлия Смачило",
-        "presents": [],
-        "memberLevel": 0,
+        "presents": [
+            "маска",
+            "кружка",
+            "подушка"
+        ],
+        "memberLevel": "2",
         "honours": [],
         "vk": "https://vk.com/lookfortheclue",
-        "birthday": "Jun 3, 1992"
+        "birthday": "Jun 3, 1992",
+        "phone": "+380630685282",
+        "position": "игрок",
+        "faculty": "КНУ, КИМО",
+        "experiance": "Играет с 1.09.2012",
+        "img": "Айдахо.jpg"
     },
     {
         "nick": "Аксолотль",
@@ -238,6 +273,14 @@
         "nick": "Аларик",
         "password": "Аларик",
         "name": "Аларик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Амальгама",
+        "password": "Амальгама",
+        "name": "Амальгама",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -268,14 +311,13 @@
         "birthday": "1992-03-31",
         "name": "Анна Шумей",
         "presents": [
-            "кружка",
-            "футблока"
+            "Сертификат на маникюр"
         ],
-        "phone": "",
+        "phone": "+380507679493",
         "position": "игрок, ведущая",
         "memberLevel": "2",
-        "faculty": "КНУ, Институт Инофрмационных технологий",
-        "experiance": "Играет 9 месяцев",
+        "faculty": "КНУ, Экономический факультет",
+        "experiance": "Играет с 28.05.2013",
         "honours": [],
         "img": "Баффет.jpg"
     },
@@ -489,6 +531,14 @@
         "img": "Клич.jpg"
     },
     {
+        "nick": "Кобра",
+        "password": "Кобра",
+        "name": "Кобра",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Космос",
         "password": "Космос",
         "name": "Маша Билогуб",
@@ -508,6 +558,14 @@
         "honours": []
     },
     {
+        "nick": "Крюгер",
+        "password": "Крюгер",
+        "name": "Крюгер",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Кураре",
         "password": "Кураре",
         "name": "Влад Мунин",
@@ -517,6 +575,14 @@
         "vk": "https://vk.com/lliaxxxer",
         "birthday": "Apr 24, 1996",
         "img": "Кураре.jpeg"
+    },
+    {
+        "nick": "Люцик",
+        "password": "Люцик",
+        "name": "Люцик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Мать",
@@ -733,24 +799,53 @@
         "nick": "Тарантино",
         "password": "Тарантино",
         "memberLevel": "1",
-        "img": "Тарантино.jpeg"
+        "img": "Тарантино.jpeg",
+        "faculty": "КНУ, Экономический Факультет",
+        "experiance": ""
     },
     {
         "nick": "Техас",
         "password": "Техас",
-        "name": "Техас",
+        "name": "Кристина Флокос",
         "presents": [],
-        "memberLevel": 0,
-        "honours": []
+        "memberLevel": "1",
+        "honours": [],
+        "vk": "https://vk.com/kriss_teen",
+        "birthday": "1996-03-29",
+        "phone": "+380934632184",
+        "position": "игрок",
+        "faculty": "КНУ, Институт Геологии",
+        "experiance": "Играет с 01.10.2015",
+        "img": "Техас.jpeg"
     },
     {
         "nick": "Тракиец",
         "password": "Тракиец",
-        "name": "Тракиец",
+        "name": "Алексей Гаманюк",
         "presents": [],
         "memberLevel": "1",
         "honours": [],
-        "img": "Тракиец.jpeg"
+        "img": "Тракиец.jpeg",
+        "vk": "https://vk.com/id42205249",
+        "birthday": "1995-07-21",
+        "phone": "+380631016087",
+        "faculty": "НаУКМА, Факультет эконмических наук",
+        "position": "игрок",
+        "experiance": "Играет с 01.09.2012"
+    },
+    {
+        "presents": [],
+        "honours": [],
+        "nick": "Фемида",
+        "password": "Фемида",
+        "vk": "https://vk.com/id158882132",
+        "birthday": "1997-07-21",
+        "name": "Анастасия Мельничук",
+        "position": "игрок",
+        "memberLevel": "1",
+        "faculty": "НАУ, Институт аэронавигации",
+        "experiance": "Играет с 10.03.2106",
+        "img": "Фемида.jpeg"
     },
     {
         "nick": "Феникс",
@@ -782,6 +877,14 @@
         "img": "Художник.jpg"
     },
     {
+        "nick": "Черный лебедь",
+        "password": "Черный лебедь",
+        "name": "Черный лебедь",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "presents": [],
         "honours": [],
         "vk": "https://vk.com/sherlock11",
@@ -798,7 +901,8 @@
         "name": "Штефан",
         "presents": [],
         "memberLevel": 0,
-        "honours": []
+        "honours": [],
+        "faculty": ""
     },
     {
         "nick": "Эльза",
@@ -812,14 +916,6 @@
         "nick": "Эмбер",
         "password": "Эмбер",
         "name": "Эмбер",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Эрл Грей",
-        "password": "Эрл Грей",
-        "name": "Эрл Грей",
         "presents": [],
         "memberLevel": 0,
         "honours": []
