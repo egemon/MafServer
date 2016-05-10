@@ -168,13 +168,25 @@
         "img": "Phoenix.jpg"
     },
     {
-        "presents": [],
+        "presents": [
+            "футболка",
+            "маска",
+            "фляга",
+            "головоломка",
+            "магнит"
+        ],
         "honours": [],
         "nick": "Questra",
         "password": "Questra",
         "vk": "https://vk.com/questra",
         "birthday": "2014-11-26",
-        "name": "Олег Микитенко"
+        "name": "Олег Микитенко",
+        "phone": "+380634769623",
+        "position": "игрок",
+        "memberLevel": "2",
+        "faculty": "КНТЕУ, ФЭМП",
+        "experiance": "Играет с 01.12.2013",
+        "img": "Questra.jpeg"
     },
     {
         "nick": "Random",
