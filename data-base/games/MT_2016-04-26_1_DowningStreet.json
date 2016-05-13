@@ -1,0 +1,68 @@
+{
+    "playerLines": [
+        {
+            "nick": "Борман",
+            "role": "Дон"
+        },
+        {
+            "nick": "Do You",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Клич",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Фрейя",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Йоко",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Добрый Волшебник",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Картмен",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Художник",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Kemmy",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Черный лебедь",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "DowningStreet",
+        "win": "Мафия",
+        "date": "2016-04-26",
+        "ref": "Сэд",
+        "gameNumber": 1
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

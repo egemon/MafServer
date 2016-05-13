@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Earl Gray",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Айдахо",
+            "role": "Мирный"
+        },
+        {
+            "nick": "50",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Fox",
+            "role": "Дон"
+        },
+        {
+            "nick": "Questra",
+            "role": "Мирный",
+            "BR": true
+        },
+        {
+            "nick": "Шрек",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Борман",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Рандом",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Тракиец",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Художник",
+            "role": "Шериф",
+            "BP": true
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мирные",
+        "date": "2016-05-10",
+        "ref": "Аксолотль",
+        "gameNumber": 5
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

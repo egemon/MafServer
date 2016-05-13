@@ -44,6 +44,14 @@
         "honours": []
     },
     {
+        "nick": "Do You",
+        "password": "Do You",
+        "name": "Do You",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Earl Gray",
         "password": "Earl Gray",
         "vk": "https://vk.com/id31217960",
@@ -104,6 +112,14 @@
         "experiance": "Играет 3 года",
         "honours": [],
         "img": "Johny.jpg"
+    },
+    {
+        "nick": "Kemmy",
+        "password": "Kemmy",
+        "name": "Kemmy",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Merlin",
@@ -461,6 +477,14 @@
         "nick": "Джонни",
         "password": "Джонни",
         "name": "Джонни",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Добрый Волшебник",
+        "password": "Добрый Волшебник",
+        "name": "Добрый Волшебник",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -948,6 +972,22 @@
         "birthday": "1992-11-30",
         "name": "Вика Гащишина",
         "memberLevel": ""
+    },
+    {
+        "nick": "Фрейя",
+        "password": "Фрейя",
+        "name": "Фрейя",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Фул",
+        "password": "Фул",
+        "name": "Фул",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Художник",

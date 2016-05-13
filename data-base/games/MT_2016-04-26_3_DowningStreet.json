@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Stone Cold",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Do You",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Merlin",
+            "role": "Дон"
+        },
+        {
+            "nick": "Скарлет",
+            "role": "Мафия",
+            "BR": true
+        },
+        {
+            "nick": "DD",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Борман",
+            "role": "Мирный"
+        },
+        {
+            "nick": "СБ",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кобра",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Шалига",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Фул",
+            "role": "Мафия",
+            "BP": true
+        }
+    ],
+    "metadata": {
+        "table": "DowningStreet",
+        "win": "Мафия",
+        "date": "2016-04-26",
+        "ref": "Сэд",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

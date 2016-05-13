@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Arch Enemy",
+            "role": "Дон"
+        },
+        {
+            "nick": "Техас",
+            "role": "Мирный"
+        },
+        {
+            "nick": "DD",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Черный лебедь",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Крюгер",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Скарлет",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Шрек",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Картмен",
+            "role": "Мирный",
+            "BP": true,
+            "BR": true
+        },
+        {
+            "nick": "Кобра",
+            "role": "Мафия"
+        }
+    ],
+    "metadata": {
+        "table": "AbbeyRoad",
+        "win": "Мафия",
+        "date": "2016-05-10",
+        "ref": "Джонни",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}
