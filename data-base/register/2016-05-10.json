@@ -6,17 +6,17 @@
     },
     {
         "nick": "Крюгер",
-        "sum": 0,
+        "sum": 25,
         "debt": 25
     },
     {
         "nick": "Questra",
-        "sum": 0,
+        "sum": 25,
         "debt": 0
     },
     {
         "nick": "Шрек",
-        "sum": 0,
+        "sum": 25,
         "debt": 0
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "nick": "Люцик",
-        "sum": 0,
+        "sum": 25,
         "debt": 0
     },
     {
@@ -46,27 +46,27 @@
     },
     {
         "nick": "Arch Enemy",
-        "sum": 0,
+        "sum": 25,
         "debt": 0
     },
     {
         "nick": "DD",
-        "sum": 0,
+        "sum": 25,
         "debt": 0
     },
     {
         "nick": "Техас",
-        "sum": 0,
+        "sum": 25,
         "debt": 0
     },
     {
         "nick": "Random",
-        "sum": 0,
+        "sum": 25,
         "debt": 0
     },
     {
         "nick": "Fox",
-        "sum": 0,
+        "sum": 25,
         "debt": 0
     },
     {
@@ -82,7 +82,7 @@
     {
         "nick": "Earl Gray",
         "sum": 0,
-        "debt": 0
+        "debt": 25
     },
     {
         "nick": "Картмен",
@@ -106,11 +106,16 @@
     },
     {
         "nick": "Айдахо",
-        "sum": 0,
+        "sum": 25,
         "debt": 0
     },
     {
         "nick": "Тракиец",
+        "sum": 25,
+        "debt": 0
+    },
+    {
+        "nick": "50",
         "sum": 0,
         "debt": 0
     }

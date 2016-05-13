@@ -1,0 +1,68 @@
+{
+    "playerLines": [
+        {
+            "nick": "Snoopy",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Цапля",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Амбал",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Шерлок",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Ниграмма",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Эмили",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Несквик",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Панда",
+            "role": "Дон"
+        },
+        {
+            "nick": "Vinsent",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Questra",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мафия",
+        "date": "2016-04-12",
+        "ref": "Баффет",
+        "gameNumber": 4
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

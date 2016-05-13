@@ -290,6 +290,14 @@
         "honours": []
     },
     {
+        "nick": "Аль Капоне",
+        "password": "Аль Капоне",
+        "name": "Аль Капоне",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Амальгама",
         "password": "Амальгама",
         "name": "Амальгама",
@@ -382,6 +390,14 @@
         "vk": "https://vk.com/ivagrant"
     },
     {
+        "nick": "Ведьма",
+        "password": "Ведьма",
+        "name": "Ведьма",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Викарий",
         "password": "Викарий",
         "name": "Виктор Скляров",
@@ -404,6 +420,14 @@
         "nick": "Девятый",
         "password": "Девятый",
         "name": "Девятый",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Дейнер",
+        "password": "Дейнер",
+        "name": "Дейнер",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -507,6 +531,14 @@
         "password": "Йоко"
     },
     {
+        "nick": "Калибри",
+        "password": "Калибри",
+        "name": "Калибри",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Картмен",
         "password": "Картмен",
         "name": "Картмен",
@@ -546,6 +578,14 @@
         "nick": "Кобра",
         "password": "Кобра",
         "name": "Кобра",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Колибри",
+        "password": "Колибри",
+        "name": "Колибри",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -600,6 +640,14 @@
         "nick": "Мать",
         "password": "Мать",
         "name": "Мать",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Мела",
+        "password": "Мела",
+        "name": "Мела",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -661,6 +709,22 @@
         "honours": [],
         "vk": "https://vk.com/id11182691",
         "img": "Мутный.jpeg"
+    },
+    {
+        "nick": "Несквик",
+        "password": "Несквик",
+        "name": "Несквик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Ниграмма",
+        "password": "Ниграмма",
+        "name": "Ниграмма",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "О.Доннел",
@@ -755,6 +819,14 @@
         "nick": "Риката",
         "password": "Риката",
         "name": "Риката",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Рикотта",
+        "password": "Рикотта",
+        "name": "Рикотта",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -889,9 +961,33 @@
         "img": "Художник.jpg"
     },
     {
+        "nick": "Цапля",
+        "password": "Цапля",
+        "name": "Цапля",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Черный лебедь",
         "password": "Черный лебедь",
         "name": "Черный лебедь",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Шалига",
+        "password": "Шалига",
+        "name": "Шалига",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Шерлок",
+        "password": "Шерлок",
+        "name": "Шерлок",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -928,6 +1024,14 @@
         "nick": "Эмбер",
         "password": "Эмбер",
         "name": "Эмбер",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Эмили",
+        "password": "Эмили",
+        "name": "Эмили",
         "presents": [],
         "memberLevel": 0,
         "honours": []

@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Рандом",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Художник",
+            "role": "Мирный"
+        },
+        {
+            "nick": "DD",
+            "role": "Шериф",
+            "BP": true
+        },
+        {
+            "nick": "Айдахо",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Амальгама",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Дейнер",
+            "role": "Дон"
+        },
+        {
+            "nick": "Люцик",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Шалига",
+            "role": "Мирный",
+            "BR": true
+        },
+        {
+            "nick": "Колибри",
+            "role": "Мафия"
+        }
+    ],
+    "metadata": {
+        "table": "DowningStreet",
+        "win": "Мирные",
+        "date": "2016-04-18",
+        "ref": "Зло",
+        "gameNumber": 1
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}
