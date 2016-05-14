@@ -1,36 +1,36 @@
 {
     "playerLines": [
         {
-            "nick": "Скарлет",
+            "nick": "Skarlet",
             "role": "Мирный"
         },
         {
-            "nick": "Феникс",
+            "nick": "Phoenix",
             "role": "Мирный"
         },
         {
             "nick": "Snoopy",
-            "role": "Мирный"
+            "role": "Мафия"
         },
         {
             "nick": "Кобра",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Questra",
             "role": "Дон"
         },
         {
-            "nick": "Борман",
+            "nick": "Questra",
             "role": "Мирный"
         },
         {
-            "nick": "DD",
+            "nick": "Борман",
             "role": "Шериф"
         },
         {
-            "nick": "Vinsent",
+            "nick": "DD",
             "role": "Мафия"
+        },
+        {
+            "nick": "Vinsent",
+            "role": "Мирный"
         },
         {
             "nick": "Ниграмма",

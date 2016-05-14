@@ -5,7 +5,7 @@
             "role": "Дон"
         },
         {
-            "nick": "Do You",
+            "nick": "DD",
             "role": "Мафия"
         },
         {
@@ -33,7 +33,7 @@
             "role": "Мирный"
         },
         {
-            "nick": "Kemmy",
+            "nick": "Kenny",
             "role": "Мирный"
         },
         {
@@ -45,7 +45,7 @@
         "table": "DowningStreet",
         "win": "Мафия",
         "date": "2016-04-26",
-        "ref": "Сэд",
+        "ref": "Sad",
         "gameNumber": 1
     },
     "days": [

@@ -15,7 +15,20 @@
         "memberLevel": 3,
         "faculty": "КНУ, Исторический Факультет",
         "experiance": "Играет 3 года",
-        "honours": [],
+        "honours": [
+            {
+                "year": 2014,
+                "period": 10,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2014,
+                "period": 2,
+                "periodType": "month",
+                "place": 2
+            }
+        ],
         "img": "50.jpg"
     },
     {
@@ -33,7 +46,7 @@
         "faculty": "КНУ, РФФ",
         "vk": "https://vk.com/dreamwalker7",
         "experiance": "Играет с 01.03.2013",
-        "img": "ArchEnemy.jpeg"
+        "img": "ArchEnemy.jpg"
     },
     {
         "nick": "DD",
@@ -75,9 +88,75 @@
                 "place": 1,
                 "avr": 2.68,
                 "gameNumber": 25
+            },{
+                "year": 2015,
+                "period": 9,
+                "periodType": "month",
+                "place": 3
             }
         ],
         "img": "EarlGray.jpg"
+    },
+    {
+        "nick": "Халявщик",
+        "password": "Халявщик",
+        "name": "Халявщик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2014,
+                "period": 2,
+                "periodType": "month",
+                "place": 3
+            }]
+    },
+    {
+        "nick": "BMW",
+        "password": "BMW",
+        "name": "Николай Беднов",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2012,
+                "period": 8,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2012,
+                "period": 2,
+                "periodType": "season",
+                "place": 1
+            },
+            {
+                "year": 2011,
+                "period": 9,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2011,
+                "period": 8,
+                "periodType": "month",
+                "place": 2
+            },
+            {
+                "year": 2011,
+                "period": 2,
+                "periodType": "month",
+                "place": 3
+            }
+        ]
+    },
+    {
+        "nick": "Fool",
+        "password": "Fool",
+        "name": "Fool",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Fox",
@@ -114,9 +193,9 @@
         "img": "Johny.jpg"
     },
     {
-        "nick": "Kemmy",
-        "password": "Kemmy",
-        "name": "Kemmy",
+        "nick": "Kenny",
+        "password": "Kenny",
+        "name": "Kenny",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -136,7 +215,14 @@
         "memberLevel": 4,
         "faculty": "КНУ, Мех-Мат",
         "experiance": "Играет 5 лет",
-        "honours": [],
+        "honours": [
+            {
+                "year": 2011,
+                "period": 2,
+                "periodType": "month",
+                "place": 2
+            }
+        ],
         "img": "Merlin.jpg"
     },
     {
@@ -179,9 +265,53 @@
                 "place": 3,
                 "avr": 2.1,
                 "gameNumber": 29
+            },{
+                "year": 2015,
+                "period": 10,
+                "periodType": "month",
+                "place": 1
             }
         ],
         "img": "Phoenix.jpg"
+    },
+    {
+        "nick": "Доктор Шелдон Купер",
+        "password": "Доктор Шелдон Купер",
+        "name": "Доктор Шелдон Купер",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2014,
+                "period": 11,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2012,
+                "period": 4,
+                "periodType": "season",
+                "place": 2
+            },
+            {
+                "year": 2012,
+                "period": 10,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2012,
+                "period": 9,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2012,
+                "period": 8,
+                "periodType": "month",
+                "place": 2
+            }
+        ]
     },
     {
         "presents": [
@@ -191,7 +321,55 @@
             "головоломка",
             "магнит"
         ],
-        "honours": [],
+        "honours": [
+            {
+                "year": 2015,
+                "period": 2,
+                "periodType": "season",
+                "place": 2
+            },{
+                "year": 2015,
+                "period": 3,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2014,
+                "period": 2014,
+                "periodType": "year",
+                "place": 3
+            },
+            {
+                "year": 2014,
+                "period": 10,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2014,
+                "period": 7,
+                "periodType": "month",
+                "place": 2
+            },
+            {
+                "year": 2014,
+                "period": 6,
+                "periodType": "month",
+                "place": 2
+            },
+            {
+                "year": 2014,
+                "period": 2,
+                "periodType": "season",
+                "place": 1
+            },
+            {
+                "year": 2014,
+                "period": 2,
+                "periodType": "month",
+                "place": 1
+            }
+        ],
         "nick": "Questra",
         "password": "Questra",
         "vk": "https://vk.com/questra",
@@ -202,7 +380,22 @@
         "memberLevel": "2",
         "faculty": "КНТЕУ, ФЭМП",
         "experiance": "Играет с 01.12.2013",
-        "img": "Questra.jpeg"
+        "img": "Questra.jpg"
+    },
+    {
+        "nick": "Мака",
+        "password": "Мака",
+        "name": "Мака",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2014,
+                "period": 7,
+                "periodType": "month",
+                "place": 3
+            }
+        ]
     },
     {
         "nick": "Random",
@@ -211,6 +404,86 @@
         "presents": [],
         "memberLevel": 0,
         "honours": []
+    },
+    {
+        "nick": "Сенсация",
+        "password": "Сенсация",
+        "name": "Сенсация",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2014,
+                "period": 6,
+                "periodType": "month",
+                "place": 3
+            }
+        ]
+    },
+    {
+        "nick": "Командор",
+        "password": "Командор",
+        "name": "Командор",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2014,
+                "period": 5,
+                "periodType": "month",
+                "place": 1
+            }
+        ]
+    },
+    {
+        "nick": "Роммель",
+        "password": "Роммель",
+        "name": "Роммель",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2014,
+                "period": 5,
+                "periodType": "month",
+                "place": 2
+            },
+            {
+                "year": 2014,
+                "period": 4,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2014,
+                "period": 1,
+                "periodType": "season",
+                "place": 2
+            },
+            {
+                "year": 2013,
+                "period": 11,
+                "periodType": "month",
+                "place": 2
+            }
+        ]
+    },
+    {
+        "nick": "Sad",
+        "password": "Sad",
+        "name": "Sad",
+        "presents": [],
+        "memberLevel": "3",
+        "honours": [],
+        "vk": "https://vk.com/edwardd_u",
+        "birthday": "Oct 4, 2014",
+        "img": "Sad.jpg"
+    },
+    {
+        "presents": [],
+        "honours": [],
+        "nick": "Skarlet",
+        "password": "Skarlet"
     },
     {
         "nick": "Snoopy",
@@ -226,8 +499,31 @@
         "memberLevel": 1,
         "faculty": "КПИ, ИХФ",
         "experiance": "Играет 3 года",
-        "honours": [],
+        "honours": [
+            {
+                "year": 2013,
+                "period": 1,
+                "periodType": "month",
+                "place": 3
+            }
+        ],
         "img": "Snoopy.jpg"
+    },
+    {
+        "nick": "Вертий",
+        "password": "Вертий",
+        "name": "Вертий",
+        "presents": [],
+        "position": "игрок",
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2013,
+                "period": 1,
+                "periodType": "month",
+                "place": 3
+            }
+        ]
     },
     {
         "nick": "Stone Cold",
@@ -238,8 +534,58 @@
             "подушка"
         ],
         "memberLevel": "2",
-        "honours": [],
-        "img": "СтоунКолд.jpeg",
+        "honours": [
+            {
+                "year": 2015,
+                "period": 10,
+                "periodType": "month",
+                "place": 2
+            },
+            {
+                "year": 2015,
+                "period": 5,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2013,
+                "period": 2013,
+                "periodType": "year",
+                "place": 3
+            },
+            {
+                "year": 2013,
+                "period": 2,
+                "periodType": "season",
+                "place": 3
+            },
+            {
+                "year": 2013,
+                "period": 3,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2012,
+                "period": 4,
+                "periodType": "season",
+                "place": 1
+            },
+            {
+                "year": 2012,
+                "period": 10,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2012,
+                "period": 8,
+                "periodType": "month",
+                "place": 1
+            }
+
+        ],
+        "img": "StoneCold.jpg",
         "vk": "https://vk.com/stonecold975",
         "birthday": "Jan 13, 1994",
         "position": ""
@@ -250,18 +596,62 @@
         "name": "Vinsent",
         "presents": [],
         "memberLevel": 0,
-        "honours": []
+        "honours": [
+            {
+                "year": 2014,
+                "period": 0,
+                "periodType": "month",
+                "place": 1
+            }
+        ]
+    },
+    {
+        "nick": "Джо Блэк",
+        "password": "Джо Блэк",
+        "name": "Джо Блэк",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2013,
+                "period": 8,
+                "periodType": "month",
+                "place": 2
+            }
+        ]
+    },
+    {
+        "nick": "PacMan",
+        "password": "PacMan",
+        "name": "PacMan",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2013,
+                "period": 1,
+                "periodType": "month",
+                "place": 2
+            }
+        ]
     },
     {
         "presents": [],
-        "honours": [],
+        "honours": [
+            {
+                "year": 2013,
+                "period": 1,
+                "periodType": "month",
+                "place": 1
+            }
+        ],
         "nick": "Zara",
         "password": "Zara",
         "vk": "https://vk.com/kuzhylnaya",
         "birthday": "2014-05-02",
         "name": "Инна Кужильная",
         "memberLevel": 1,
-        "img": "Zara.jpeg"
+        "img": "Zara.jpg"
     },
     {
         "nick": "Айдахо",
@@ -273,7 +663,26 @@
             "подушка"
         ],
         "memberLevel": "2",
-        "honours": [],
+        "honours": [
+            {
+                "year": 2015,
+                "period": 2,
+                "periodType": "season",
+                "place": 1
+            },
+            {
+                "year": 2015,
+                "period": 6,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2013,
+                "period": 8,
+                "periodType": "month",
+                "place": 3
+            }
+        ],
         "vk": "https://vk.com/lookfortheclue",
         "birthday": "Jun 3, 1992",
         "phone": "+380630685282",
@@ -306,6 +715,32 @@
         "honours": []
     },
     {
+        "nick": "Hank Moody",
+        "password": "Hank Moody",
+        "name": "Hank Moody",
+        "presents": [],
+        "memberLevel": 1,
+        "honours": [
+            {
+                "year": 2015,
+                "period": 2,
+                "periodType": "season",
+                "place": 2
+            },
+            {
+                "year": 2015,
+                "period": 6,
+                "periodType": "month",
+                "place": 2
+            },{
+                "year": 2015,
+                "period": 2,
+                "periodType": "month",
+                "place": 1
+            }
+        ]
+    },
+    {
         "nick": "Аль Капоне",
         "password": "Аль Капоне",
         "name": "Аль Капоне",
@@ -319,7 +754,19 @@
         "name": "Амальгама",
         "presents": [],
         "memberLevel": 0,
-        "honours": []
+        "honours": [
+            {
+                "year": 2015,
+                "period": 8,
+                "periodType": "month",
+                "place": 2
+            },{
+                "year": 2014,
+                "period": 11,
+                "periodType": "month",
+                "place": 2
+            }
+        ]
     },
     {
         "presents": "",
@@ -327,7 +774,7 @@
         "nick": "Амбал",
         "password": "Амбал",
         "memberLevel": 1,
-        "img": "Амбал.jpeg"
+        "img": "Амбал.jpg"
     },
     {
         "presents": [],
@@ -354,8 +801,74 @@
         "memberLevel": "2",
         "faculty": "КНУ, Экономический факультет",
         "experiance": "Играет с 28.05.2013",
-        "honours": [],
+        "honours": [
+            {
+                "year": 2015,
+                "period": 5,
+                "periodType": "month",
+                "place": 3
+            }
+        ],
         "img": "Баффет.jpg"
+    },
+    {
+        "nick": "Фетиш",
+        "password": "Фетиш",
+        "name": "Ирина Крикунова",
+        "presents": [],
+        "position": "игрок",
+        "memberLevel": "2",
+        "faculty": "КНУ, Институт филологии",
+        "honours": [
+            {
+                "year": 2013,
+                "period": 2013,
+                "periodType": "year",
+                "place": 1
+            },
+            {
+                "year": 2013,
+                "period": 4,
+                "periodType": "season",
+                "place": 1
+            },
+            {
+                "year": 2013,
+                "period": 10,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2013,
+                "period": 3,
+                "periodType": "season",
+                "place": 1
+            },
+            {
+                "year": 2013,
+                "period": 6,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2013,
+                "period": 2,
+                "periodType": "season",
+                "place": 1
+            },
+            {
+                "year": 2013,
+                "period": 3,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2013,
+                "period": 2,
+                "periodType": "month",
+                "place": 2
+            }
+        ]
     },
     {
         "nick": "Близнец",
@@ -364,6 +877,135 @@
         "presents": [],
         "memberLevel": 0,
         "honours": []
+    },
+    {
+        "nick": "Алатрис",
+        "password": "Алатрис",
+        "name": "Алатрис",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2013,
+                "period": 6,
+                "periodType": "month",
+                "place": 2
+            }
+        ]
+    },
+    {
+        "nick": "Proud Deer",
+        "password": "Proud Deer",
+        "name": "Proud Deer",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2013,
+                "period": 3,
+                "periodType": "month",
+                "place": 3
+            }
+        ]
+    },
+    {
+        "nick": "R2D2",
+        "password": "R2D2",
+        "name": "R2D2",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2013,
+                "period": 6,
+                "periodType": "month",
+                "place": 3
+            }
+        ]
+    },
+    {
+        "nick": "Милена",
+        "password": "Милена",
+        "name": "Милена",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2013,
+                "period": 5,
+                "periodType": "month",
+                "place": 1
+            }
+        ]
+    },
+    {
+        "nick": "Blink",
+        "password": "Blink",
+        "name": "Blink",
+        "presents": [],
+        "memberLevel": 1,
+        "honours": [
+            {
+                "year": 2014,
+                "period": 7,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2014,
+                "period": 6,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2014,
+                "period": 5,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2014,
+                "period": 0,
+                "periodType": "month",
+                "place": 2
+            },
+            {
+                "year": 2013,
+                "period": 4,
+                "periodType": "season",
+                "place": 2
+            }
+        ]
+    },
+    {
+        "nick": "Мальборо",
+        "password": "Мальборо",
+        "name": "Мальборо",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2015,
+                "period": 3,
+                "periodType": "month",
+                "place": 2
+            }
+        ]
+    },
+    {
+        "nick": "Ванямба",
+        "password": "Ванямба",
+        "name": "Ванямба",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2013,
+                "period": 8,
+                "periodType": "month",
+                "place": 1
+            }
+        ]
     },
     {
         "nick": "Борман",
@@ -382,7 +1024,49 @@
         "memberLevel": "2",
         "faculty": "КНУ, РФФ",
         "experiance": "Играет 3 года",
-        "honours": [],
+        "honours": [
+            {
+                "year": 2015,
+                "period": 2,
+                "periodType": "season",
+                "place": 3
+            },{
+                "year": 2015,
+                "period": 3,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2014,
+                "period": 11,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2015,
+                "period": 3,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2013,
+                "period": 4,
+                "periodType": "season",
+                "place": 2
+            },
+            {
+                "year": 2013,
+                "period": 10,
+                "periodType": "month",
+                "place": 2
+            },
+            {
+                "year": 2013,
+                "period": 4,
+                "periodType": "month",
+                "place": 3
+            }
+        ],
         "img": "Борман.jpg"
     },
     {
@@ -394,6 +1078,36 @@
         "honours": []
     },
     {
+        "nick": "Link",
+        "password": "Link",
+        "name": "Link",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2013,
+                "period": 4,
+                "periodType": "month",
+                "place": 2
+            }
+        ]
+    },
+    {
+        "nick": "Пиаф",
+        "password": "Пиаф",
+        "name": "Пиаф",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2015,
+                "period": 4,
+                "periodType": "month",
+                "place": 1
+            }
+        ]
+    },
+    {
         "nick": "Вагрант",
         "password": "Вагрант",
         "name": "Александр Земсков",
@@ -402,7 +1116,62 @@
             "подушка"
         ],
         "memberLevel": 0,
-        "honours": [],
+        "honours": [
+            {
+                "year": 2015,
+                "period": 2,
+                "periodType": "season",
+                "place": 3
+            },
+            {
+                "year": 2015,
+                "period": 4,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2014,
+                "period": 8,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2014,
+                "period": 2014,
+                "periodType": "year",
+                "place": 2
+            },
+            {
+                "year": 2014,
+                "period": 9,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2014,
+                "period": 1,
+                "periodType": "season",
+                "place": 3
+            },
+            {
+                "year": 2014,
+                "period": 1,
+                "periodType": "month",
+                "place": 2
+            },
+            {
+                "year": 2013,
+                "period": 2,
+                "periodType": "season",
+                "place": 3
+            },
+            {
+                "year": 2013,
+                "period": 4,
+                "periodType": "month",
+                "place": 1
+            }
+        ],
         "vk": "https://vk.com/ivagrant"
     },
     {
@@ -414,6 +1183,29 @@
         "honours": []
     },
     {
+        "nick": "Француженка",
+        "password": "Француженка",
+        "vk": "https://vk.com/svjatkanosta",
+        "birthday": "1992-11-30",
+        "name": "Вика Гащишина",
+        "presents": [],
+        "memberLevel": 1,
+        "honours": [
+            {
+                "year": 2014,
+                "period": 9,
+                "periodType": "month",
+                "place": 2
+            },
+            {
+                "year": 2014,
+                "period": 4,
+                "periodType": "month",
+                "place": 1
+            }
+        ]
+    },
+    {
         "nick": "Викарий",
         "password": "Викарий",
         "name": "Виктор Скляров",
@@ -422,7 +1214,7 @@
         "honours": [],
         "vk": "https://vk.com/skliarov_viktor",
         "birthday": "Aug 9, 1993",
-        "img": "Викарий.jpeg"
+        "img": "Викарий.jpg"
     },
     {
         "nick": "Гендальф",
@@ -431,6 +1223,39 @@
         "presents": [],
         "memberLevel": 0,
         "honours": []
+    },
+    {
+        "nick": "Ария",
+        "password": "Ария",
+        "name": "Ария",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2015,
+                "period": 2,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2014,
+                "period": 5,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2014,
+                "period": 2,
+                "periodType": "season",
+                "place": 3
+            },
+            {
+                "year": 2015,
+                "period": 3,
+                "periodType": "month",
+                "place": 2
+            }
+        ]
     },
     {
         "nick": "Девятый",
@@ -514,6 +1339,36 @@
         "honours": []
     },
     {
+        "nick": "Зайчик",
+        "password": "Зайчик",
+        "name": "Зайчик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2015,
+                "period": 8,
+                "periodType": "month",
+                "place": 3
+            }
+        ]
+    },
+    {
+        "nick": "Джульетта",
+        "password": "Джульетта",
+        "name": "Джульетта",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2014,
+                "period": 1,
+                "periodType": "month",
+                "place": 3
+            }
+        ]
+    },
+    {
         "nick": "Заяц",
         "password": "Заяц",
         "vk": "https://vk.com/egor.zaitsev",
@@ -528,7 +1383,20 @@
         "memberLevel": 3,
         "faculty": "КНУ, Геологический факультет",
         "experiance": "Играет 3 года",
-        "honours": [],
+        "honours": [
+            {
+                "year": 2013,
+                "period": 11,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2013,
+                "period": 5,
+                "periodType": "month",
+                "place": 2
+            }
+        ],
         "img": "Заяц.jpg"
     },
     {
@@ -545,14 +1413,29 @@
         "memberLevel": 3,
         "faculty": "КНУ, Факультет психологии",
         "experiance": "Играет 2 года",
-        "honours": [],
+        "honours": [
+            {
+                "year": 2015,
+                "period": 8,
+                "periodType": "month",
+                "place": 1
+            }
+        ],
         "img": "Зло.jpg"
     },
     {
         "presents": "",
         "honours": "",
         "nick": "Йоко",
-        "password": "Йоко"
+        "password": "Йоко",
+        "name": "Анна Алексєєнко",
+        "vk": "https://vk.com/a_alekseyenko",
+        "birthday": "1992-02-17",
+        "phone": "+380988865825",
+        "position": "игрок",
+        "memberLevel": "1",
+        "faculty": "КНУ, Интститут Филологии",
+        "img": "Йоко.jpg"
     },
     {
         "nick": "Калибри",
@@ -561,6 +1444,22 @@
         "presents": [],
         "memberLevel": 0,
         "honours": []
+    },
+
+    {
+        "nick": "Алистер",
+        "password": "Алистер",
+        "name": "Алистер",
+        "presents": [],
+        "memberLevel": 1,
+        "honours": [
+            {
+                "year": 2015,
+                "period": 10,
+                "periodType": "month",
+                "place": 3
+            }
+        ]
     },
     {
         "nick": "Картмен",
@@ -594,6 +1493,36 @@
                 "place": 2,
                 "avr": 2.48,
                 "gameNumber": 29
+            },{
+                "year": 2015,
+                "periodType": "month",
+                "period": 9,
+                "place": 1
+            },{
+                "year": 2015,
+                "periodType": "month",
+                "period": 5,
+                "place": 2
+            },{
+                "year": 2015,
+                "periodType": "season",
+                "period": 2,
+                "place": 1
+            },{
+                "year": 2015,
+                "periodType": "month",
+                "period": 4,
+                "place": 2
+            },{
+                "year": 2015,
+                "periodType": "month",
+                "period": 2,
+                "place": 2
+            },{
+                "year": 2014,
+                "periodType": "month",
+                "period": 8,
+                "place": 2
             }
         ],
         "img": "Клич.jpg"
@@ -605,6 +1534,27 @@
         "presents": [],
         "memberLevel": 0,
         "honours": []
+    },
+    {
+        "nick": "Омел",
+        "password": "Омел",
+        "name": "Омел",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": [
+            {
+                "year": 2013,
+                "period": 3,
+                "periodType": "season",
+                "place": 3
+            },
+            {
+                "year": 2013,
+                "period": 5,
+                "periodType": "month",
+                "place": 3
+            }
+        ]
     },
     {
         "nick": "Колибри",
@@ -620,8 +1570,27 @@
         "name": "Маша Билогуб",
         "presents": [],
         "memberLevel": "2",
-        "honours": [],
-        "img": "Космос.jpeg",
+        "honours": [
+            {
+                "year": 2014,
+                "period": 1,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2013,
+                "period": 3,
+                "periodType": "season",
+                "place": 2
+            },
+            {
+                "year": 2013,
+                "period": 3,
+                "periodType": "month",
+                "place": 2
+            }
+        ],
+        "img": "Космос.jpg",
         "vk": "https://vk.com/id206913380",
         "birthday": "Jun 7, 2014"
     },
@@ -650,7 +1619,7 @@
         "honours": [],
         "vk": "https://vk.com/lliaxxxer",
         "birthday": "Apr 24, 1996",
-        "img": "Кураре.jpeg"
+        "img": "Кураре.jpg"
     },
     {
         "nick": "Люцик",
@@ -677,12 +1646,25 @@
         "honours": []
     },
     {
-        "nick": "Мерлин",
-        "password": "Мерлин",
-        "name": "Мерлин",
+        "nick": "Айсберг",
+        "password": "Айсберг",
+        "name": "Айсберг",
         "presents": [],
         "memberLevel": 0,
-        "honours": []
+        "honours": [
+            {
+                "year": 2014,
+                "period": 8,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2013,
+                "period": 2,
+                "periodType": "month",
+                "place": 3
+            }
+        ]
     },
     {
         "nick": "Митрандир",
@@ -690,7 +1672,14 @@
         "name": "Митрандир",
         "presents": [],
         "memberLevel": 0,
-        "honours": []
+        "honours": [
+            {
+                "year": 2015,
+                "period": 9,
+                "periodType": "month",
+                "place": 2
+            }
+        ]
     },
     {
         "nick": "Мой Господин",
@@ -732,7 +1721,7 @@
         "memberLevel": "2",
         "honours": [],
         "vk": "https://vk.com/id11182691",
-        "img": "Мутный.jpeg"
+        "img": "Мутный.jpg"
     },
     {
         "nick": "Несквик",
@@ -777,7 +1766,7 @@
         "vk": "https://vk.com/stasmahula",
         "birthday": "1997-04-09",
         "name": "Стас Магула",
-        "img": "ПалацУкраїни.jpeg",
+        "img": "ПалацУкраїни.jpg",
         "memberLevel": "2"
     },
     {
@@ -864,14 +1853,8 @@
         "honours": [],
         "vk": "https://vk.com/id11723856",
         "birthday": "Mar 14, 2014",
-        "img": "СБ.jpeg",
+        "img": "СБ.jpg",
         "position": "игрок"
-    },
-    {
-        "presents": [],
-        "honours": [],
-        "nick": "Скарлет",
-        "password": "Скарлет"
     },
     {
         "nick": "Супер 8",
@@ -883,32 +1866,281 @@
         "vk": ""
     },
     {
-        "nick": "Сыч",
-        "password": "Сыч",
-        "name": "Сыч",
+        "nick": "Амахонда",
+        "password": "Амахонда",
+        "name": "Амахонда",
         "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Сэд",
-        "password": "Сэд",
-        "name": "Сэд",
-        "presents": [],
-        "memberLevel": "3",
-        "honours": [],
-        "vk": "https://vk.com/edwardd_u",
-        "birthday": "Oct 4, 2014",
-        "img": "Сэд.jpeg"
+        "memberLevel": 2,
+        "honours": [
+            {
+                "year": 2014,
+                "period": 2014,
+                "periodType": "year",
+                "place": 1
+            },
+            {
+                "year": 2014,
+                "period": 10,
+                "periodType": "month",
+                "place": 2
+            },
+            {
+                "year": 2014,
+                "period": 9,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2014,
+                "period": 2,
+                "periodType": "season",
+                "place": 2
+            },
+            {
+                "year": 2015,
+                "period": 3,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2014,
+                "period": 1,
+                "periodType": "season",
+                "place": 1
+            },
+            {
+                "year": 2014,
+                "period": 0,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2013,
+                "period": 2013,
+                "periodType": "year",
+                "place": 2
+            },
+            {
+                "year": 2013,
+                "period": 11,
+                "periodType": "month",
+                "place": 3
+            },
+            {
+                "year": 2013,
+                "period": 4,
+                "periodType": "season",
+                "place": 3
+            },
+            {
+                "year": 2013,
+                "period": 2,
+                "periodType": "season",
+                "place": 2
+            },
+            {
+                "year": 2013,
+                "period": 2,
+                "periodType": "month",
+                "place": 1
+            },
+            {
+                "year": 2012,
+                "period": 4,
+                "periodType": "season",
+                "place": 3
+            },
+            {
+                "year": 2012,
+                "period": 10,
+                "periodType": "month",
+                "place": 2
+            },
+            {
+                "year": 2012,
+                "period": 9,
+                "periodType": "month",
+                "place": 2
+            },
+            {
+                "year": 2012,
+                "period": 2,
+                "periodType": "season",
+                "place": 2
+            }
+
+        ]
     },
     {
         "presents": "",
-        "honours": "",
+        "honours": [],
         "nick": "Тарантино",
         "password": "Тарантино",
         "memberLevel": "1",
-        "img": "Тарантино.jpeg",
+        "img": "Тарантино.jpg",
         "faculty": "КНУ, Экономический Факультет",
+        "experiance": ""
+    },
+    {
+        "presents": "",
+        "honours": [
+            {
+                "year": 2012,
+                "period": 2,
+                "periodType": "season",
+                "place": 3
+            }
+        ],
+        "nick": "Сумрак",
+        "password": "Сумрак",
+        "memberLevel": "1",
+        "faculty": "КНУ, КИМО",
+        "experiance": ""
+    },
+    {
+        "presents": "",
+        "honours": [
+            {
+                "year": 2011,
+                "period": 4,
+                "periodType": "season",
+                "place": 2
+            },
+            {
+                "year": 2011,
+                "period": 2,
+                "periodType": "month",
+                "place": 1
+            }
+        ],
+        "nick": "Франческо",
+        "password": "Франческо",
+        "experiance": ""
+    },
+    {
+        "presents": "",
+        "honours": [
+            {
+                "year": 2011,
+                "period": 4,
+                "periodType": "season",
+                "place": 3
+            }
+        ],
+        "nick": "Иммитация (Иллюзия)",
+        "password": "Иммитация (Иллюзия)",
+        "experiance": ""
+    },
+    {
+        "presents": "",
+        "honours": [
+            {
+                "year": 2011,
+                "period": 10,
+                "periodType": "month",
+                "place": 1
+            }
+        ],
+        "nick": "Клео (Колючка)",
+        "password": "Клео (Колючка)",
+        "experiance": ""
+    },
+    {
+        "presents": "",
+        "honours": [
+            {
+                "year": 2011,
+                "period": 10,
+                "periodType": "month",
+                "place": 2
+            }
+        ],
+        "nick": "Ванильная Фея",
+        "password": "Ванильная Фея",
+        "experiance": ""
+    },
+    {
+        "presents": "",
+        "honours": [
+            {
+                "year": 2011,
+                "period": 8,
+                "periodType": "month",
+                "place": 1
+            }
+        ],
+        "nick": "Хитч",
+        "password": "Хитч",
+        "experiance": ""
+    },
+    {
+        "presents": "",
+        "honours": [
+            {
+                "year": 2011,
+                "period": 8,
+                "periodType": "month",
+                "place": 3
+            }
+        ],
+        "nick": "Саб",
+        "password": "Саб",
+        "experiance": ""
+    },
+    {
+        "presents": "",
+        "honours": [
+            {
+                "year": 2011,
+                "period": 9,
+                "periodType": "month",
+                "place": 3
+            }
+        ],
+        "nick": "Банан",
+        "password": "Банан",
+        "experiance": ""
+    },
+    {
+        "presents": "",
+        "honours": [
+            {
+                "year": 2011,
+                "period": 9,
+                "periodType": "month",
+                "place": 2
+            }
+        ],
+        "nick": "Кот",
+        "password": "Кот",
+        "experiance": ""
+    },
+    {
+        "presents": "",
+        "honours": [
+            {
+                "year": 2011,
+                "period": 10,
+                "periodType": "month",
+                "place": 3
+            }
+        ],
+        "nick": "Каапуста",
+        "password": "Каапуста",
+        "experiance": ""
+    },
+    {
+        "presents": "",
+        "honours": [
+            {
+                "year": 2011,
+                "period": 4,
+                "periodType": "season",
+                "place": 1
+            }
+        ],
+        "nick": "Клео (Колючка)",
+        "password": "Клео (Колючка)",
         "experiance": ""
     },
     {
@@ -924,7 +2156,7 @@
         "position": "игрок",
         "faculty": "КНУ, Институт Геологии",
         "experiance": "Играет с 01.10.2015",
-        "img": "Техас.jpeg"
+        "img": "Техас.jpg"
     },
     {
         "nick": "Тракиец",
@@ -932,14 +2164,37 @@
         "name": "Алексей Гаманюк",
         "presents": [],
         "memberLevel": "1",
-        "honours": [],
-        "img": "Тракиец.jpeg",
+        "honours": [
+            {
+                "year": 2015,
+                "period": 6,
+                "periodType": "month",
+                "place": 3
+            }
+        ],
+        "img": "Тракиец.jpg",
         "vk": "https://vk.com/id42205249",
         "birthday": "1995-07-21",
         "phone": "+380631016087",
         "faculty": "НаУКМА, Факультет эконмических наук",
         "position": "игрок",
         "experiance": "Играет с 01.09.2012"
+    },
+    {
+        "nick": "Джокс",
+        "password": "Джокс",
+        "name": "Джокс",
+        "presents": [],
+        "memberLevel": "0",
+        "honours": [
+            {
+                "year": 2014,
+                "period": 4,
+                "periodType": "month",
+                "place": 2
+            }
+        ],
+        "position": "игрок"
     },
     {
         "presents": [],
@@ -953,25 +2208,7 @@
         "memberLevel": "1",
         "faculty": "НАУ, Институт аэронавигации",
         "experiance": "Играет с 10.03.2106",
-        "img": "Фемида.jpeg"
-    },
-    {
-        "nick": "Феникс",
-        "password": "Феникс",
-        "name": "Феникс",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "presents": "",
-        "honours": "",
-        "nick": "Француженка",
-        "password": "Француженка",
-        "vk": "https://vk.com/svjatkanosta",
-        "birthday": "1992-11-30",
-        "name": "Вика Гащишина",
-        "memberLevel": ""
+        "img": "Фемида.jpg"
     },
     {
         "nick": "Фрейя",
@@ -982,12 +2219,19 @@
         "honours": []
     },
     {
-        "nick": "Фул",
-        "password": "Фул",
-        "name": "Фул",
+        "nick": "Rios",
+        "password": "Rios",
+        "name": "Rios",
         "presents": [],
         "memberLevel": 0,
-        "honours": []
+        "honours": [
+            {
+                "year": 2013,
+                "period": 10,
+                "periodType": "month",
+                "place": 1
+            }
+        ]
     },
     {
         "nick": "Художник",
@@ -1003,10 +2247,22 @@
     {
         "nick": "Цапля",
         "password": "Цапля",
-        "name": "Цапля",
+        "name": "Ященко Евгений",
         "presents": [],
-        "memberLevel": 0,
-        "honours": []
+        "memberLevel": "2",
+        "honours": [
+            {
+                "year": 2012,
+                "period": 9,
+                "periodType": "month",
+                "place": 3
+            }
+        ],
+        "vk": "https://vk.com/id27309668",
+        "phone": "+380958456830",
+        "position": "игрок",
+        "faculty": "КНУ, КИМО",
+        "img": "Цапля.jpg"
     },
     {
         "nick": "Черный лебедь",
@@ -1027,10 +2283,14 @@
     {
         "nick": "Шерлок",
         "password": "Шерлок",
-        "name": "Шерлок",
+        "name": "Игорь Завгородний",
         "presents": [],
-        "memberLevel": 0,
-        "honours": []
+        "memberLevel": "1",
+        "honours": [],
+        "vk": "https://vk.com/id36381740",
+        "birthday": "1995-11-04",
+        "position": "игрок",
+        "img": "Шерлок.jpg"
     },
     {
         "presents": [],
@@ -1041,7 +2301,7 @@
         "birthday": "2014-06-08",
         "name": "Александр Погорелов",
         "memberLevel": "0",
-        "img": "Шрек.jpeg"
+        "img": "Шрек.jpg"
     },
     {
         "nick": "Штефан",
@@ -1082,6 +2342,6 @@
         "nick": "Эхо",
         "password": "Эхо",
         "memberLevel": 1,
-        "img": "Эхо.jpeg"
+        "img": "Эхо.jpg"
     }
 ]

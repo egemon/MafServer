@@ -11,7 +11,7 @@
             "role": "Мирный"
         },
         {
-            "nick": "Скарлет",
+            "nick": "Skarlet",
             "role": "Мафия"
         },
         {
@@ -45,7 +45,7 @@
     ],
     "metadata": {
         "table": "AbbeyRoad",
-        "win": "Мафия",
+        "win": "Мирные",
         "date": "2016-04-27",
         "ref": "Заяц",
         "gameNumber": 4

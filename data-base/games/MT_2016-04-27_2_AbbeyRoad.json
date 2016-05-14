@@ -1,7 +1,7 @@
 {
     "playerLines": [
         {
-            "nick": "Скарлет",
+            "nick": "Skarlet",
             "role": "Мирный"
         },
         {
@@ -36,7 +36,7 @@
         {
             "nick": "Художник",
             "role": "Мафия",
-            "BR": true
+            "BP": true
         },
         {
             "nick": "Random",
@@ -47,7 +47,7 @@
         "table": "AbbeyRoad",
         "win": "Мирные",
         "date": "2016-04-27",
-        "ref": "Сэд",
+        "ref": "Sad",
         "gameNumber": 2
     },
     "days": [

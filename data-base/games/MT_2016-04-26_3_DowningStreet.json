@@ -13,7 +13,7 @@
             "role": "Дон"
         },
         {
-            "nick": "Скарлет",
+            "nick": "Skarlet",
             "role": "Мафия",
             "BR": true
         },
@@ -38,7 +38,7 @@
             "role": "Мирный"
         },
         {
-            "nick": "Фул",
+            "nick": "Fool",
             "role": "Мафия",
             "BP": true
         }
@@ -47,7 +47,7 @@
         "table": "DowningStreet",
         "win": "Мафия",
         "date": "2016-04-26",
-        "ref": "Сэд",
+        "ref": "Sad",
         "gameNumber": 3
     },
     "days": [

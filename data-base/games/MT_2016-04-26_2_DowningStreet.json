@@ -14,27 +14,27 @@
         },
         {
             "nick": "Earl Gray",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Картмен",
             "role": "Шериф"
         },
         {
-            "nick": "Kemmy",
+            "nick": "Картмен",
             "role": "Мирный"
         },
         {
-            "nick": "Скарлет",
+            "nick": "Kenny",
             "role": "Мирный"
         },
         {
-            "nick": "DD",
+            "nick": "Skarlet",
             "role": "Дон"
         },
         {
-            "nick": "Шрек",
+            "nick": "DD",
             "role": "Мафия"
+        },
+        {
+            "nick": "Шрек",
+            "role": "Мирный"
         },
         {
             "nick": "Шалига",
@@ -45,7 +45,7 @@
         "table": "DowningStreet",
         "win": "Мафия",
         "date": "2016-04-26",
-        "ref": "Сэд",
+        "ref": "Sad",
         "gameNumber": 2
     },
     "days": [

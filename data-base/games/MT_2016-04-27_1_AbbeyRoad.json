@@ -10,8 +10,7 @@
         },
         {
             "nick": "Random",
-            "role": "Мирный",
-            "BR": true
+            "role": "Мирный"
         },
         {
             "nick": "Fox",
@@ -40,14 +39,16 @@
         },
         {
             "nick": "Johny",
-            "role": "Шериф"
+            "role": "Шериф",
+            "BR": true,
+            "BP": true
         }
     ],
     "metadata": {
         "table": "AbbeyRoad",
         "win": "Мафия",
         "date": "2016-04-27",
-        "ref": "Сэд",
+        "ref": "Sad",
         "gameNumber": 1
     },
     "days": [
