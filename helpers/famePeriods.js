@@ -78,12 +78,12 @@ function createPeriodTitle (honour) {
 
 function byPeriod (period1, period2) {
     return (period1.year - period2.year) ||
-        (period1.periodType === "year") ||
+        (period1.periodType === "year" ? 1 : 0) ||
         (period1.priority - period2.priority);
 }
 
 function getPeriodPriority (periodType, period) {
-    return periodType === "season" ? period * 3 - 1 / 2 : period ;
+    return periodType === "season" ? period * 3 - 3 / 2 : period ;
 }
 
 module.exports = {

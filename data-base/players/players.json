@@ -110,6 +110,12 @@
             },
             {
                 "year": 2014,
+                "period": 3,
+                "periodType": "season",
+                "place": 1
+            },
+            {
+                "year": 2014,
                 "period": 6,
                 "periodType": "month",
                 "place": 1
@@ -218,7 +224,7 @@
         "honours": [
             {
                 "year": 2015,
-                "period": 2,
+                "period": 3,
                 "periodType": "season",
                 "place": 2
             },
@@ -419,6 +425,12 @@
                 "period": 7,
                 "periodType": "month",
                 "place": 2
+            },
+            {
+                "year": 2014,
+                "period": 3,
+                "periodType": "season",
+                "place": 3
             },
             {
                 "year": 2014,
@@ -672,7 +684,7 @@
         "honours": [
             {
                 "year": 2015,
-                "period": 2,
+                "period": 3,
                 "periodType": "season",
                 "place": 1
             },
@@ -791,12 +803,6 @@
                 "period": 8,
                 "periodType": "month",
                 "place": 2
-            },
-            {
-                "year": 2014,
-                "period": 11,
-                "periodType": "month",
-                "place": 2
             }
         ]
     },
@@ -812,6 +818,12 @@
                 "period": 2014,
                 "periodType": "year",
                 "place": 1
+            },
+            {
+                "year": 2014,
+                "period": 11,
+                "periodType": "month",
+                "place": 2
             },
             {
                 "year": 2014,
@@ -832,7 +844,7 @@
                 "place": 2
             },
             {
-                "year": 2015,
+                "year": 2014,
                 "period": 3,
                 "periodType": "month",
                 "place": 1
@@ -950,7 +962,7 @@
                 "place": 3
             },
             {
-                "year": 2015,
+                "year": 2014,
                 "period": 3,
                 "periodType": "month",
                 "place": 2
@@ -1040,7 +1052,7 @@
                 "place": 3
             },
             {
-                "year": 2015,
+                "year": 2014,
                 "period": 3,
                 "periodType": "month",
                 "place": 3
@@ -1086,7 +1098,7 @@
         "honours": [
             {
                 "year": 2015,
-                "period": 2,
+                "period": 3,
                 "periodType": "season",
                 "place": 3
             },
@@ -1991,6 +2003,12 @@
         "presents": [],
         "memberLevel": 0,
         "honours": [
+            {
+                "year": 2014,
+                "period": 3,
+                "periodType": "season",
+                "place": 2
+            },
             {
                 "year": 2014,
                 "period": 5,
