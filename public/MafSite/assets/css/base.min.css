@@ -7732,11 +7732,23 @@ button {
 }
 
 .rating-select,
-.show-rating-button {
+.show-rating-button,
+.controls-text,
+.number-input {
     float: left;
     font-size: 15px;
     padding: 5px;
     line-height: 22px;
+}
+
+.controls-text {
+    float: right;
+    margin: 6px;
+}
+
+.number-input {
+    float: right;
+    width: 60px;
 }
 /* ================ LOGIN ==========*/
 #authform {

@@ -133,19 +133,36 @@ router.get('/*', function(req, res) {
 router.post('/delete', function (req, res) {
     console.log('sync delete request taken!');
     console.log('[router] getGames / delete', req.body);
-    LocalGameStorage.deleteGame(
-        LocalGameStorage.generateGameId(req.body)
-    ).when(function(isDeleted){
-        if (isDeleted) {
-            res.send({
-                errorText: 'Игра удалена!'
-            });
-        } else {
-            res.send({
-                errorText: 'Игра не найдена!'
-            });
-        }
-    });
+    var metadata = req.body.metadata;
+    var force = req.body.force;
+    var gameId = LocalGameStorage.generateGameId(metadata);
+    var game = LocalGameStorage.getGamesByFilter({id:gameId});
+    var successText = 'Игра удалена!';
+    var errorText = 'Игра не удалена!';
+    var confirmText = 'Вы действительно хотите удалиь игру?';
+
+    if (game && !force) {
+        res.send({
+            confirmText: confirmText
+        });
+    } else if(game && force) {
+        LocalGameStorage.deleteGame(gameId).when(function(isDeleted){
+            if (isDeleted) {
+                res.send({
+                    errorText: successText
+                });
+            } else {
+                res.send({
+                    errorText: errorText
+                });
+            }
+        });
+    } else {
+        res.send({
+            errorText: errorText
+        });
+    }
+
 });
 
 //getGamesByFilter
@@ -169,13 +186,33 @@ router.post('/load', function (req, res) {
 router.post('/sync', function (req, res) {
     console.log('psync post request taken!');
     console.log('req.data = ', req.body.games);
-    var result = "";
-    if (LocalGameStorage.saveGameArray(req.body.games)) {
-        result = 'Игра сохарнена!';
-    } else {
-        result = 'Проблемы с сервером. Сообщите администратору!';
+    var force = req.body.force;
+    var game = req.body.games[0];
+    var metadata = game.metadata;
+    var gameId = LocalGameStorage.generateGameId(metadata);
+    var isGameExists = LocalGameStorage.getGamesByFilter({id:gameId});
+
+    var successText = 'Игра сохарнена!';
+    var errorText = 'Игра не сохарнена!';
+    var confirmText = 'Игра существует. Вы действительно хотите перезатереть игру?';
+    console.log('SYNC!!!!!!!!!!!!!!!!!!!!');
+    console.log('metadata', metadata);
+    console.log('force', force);
+    console.log('game', game);
+
+    if (isGameExists && !force) {
+        res.send({
+            confirmText: confirmText
+        });
+    } else if(!isGameExists || isGameExists && force) {
+        var result = "";
+        if (LocalGameStorage.saveGameArray(req.body.games)) {
+            result = successText;
+        } else {
+            result = errorText;
+        }
+        res.send({errorText: result});
     }
-    res.send({errorText: result});
 });
 
 // ================ handlers for Login ================ //

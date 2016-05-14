@@ -135,7 +135,10 @@ function handleImages(players) {
     console.log('[dataBase] handleImages()');
     return players.map(function (player) {
         if (player.imgFile) {
-            var format = '.'+ RegExp(/\/.*;base64/).exec(player.imgFile)[0].slice(1,-7);
+
+            //hardcode fromat for sinplicity
+            // var format = '.'+ RegExp(/\/.*;base64/).exec(player.imgFile)[0].slice(1,-7);
+            var format = '.jpg';
             console.log('[dataBase handleImages()] format ', format);
             player = playerHelper.addImgSrc(format, player);
             console.log('[dataBase] handleImages() player.img = ', player.img);

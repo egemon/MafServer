@@ -6,7 +6,7 @@ var SEASONS = ["","ЗИМЫ", 'ВЕСНЫ', "ЛЕТА", "ОСЕНИ"];
 function createPeriodsOfFame (players) {
     var honours = createHonours(players);
     var periods = createPeriods(honours);
-    return periods.sort(byPeriod);
+    return periods.sort(byPeriod).reverse();
 }
 
 function createHonours (players) {
