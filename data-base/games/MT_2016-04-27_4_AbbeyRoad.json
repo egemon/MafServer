@@ -1,54 +1,54 @@
 {
     "playerLines": [
         {
-            "nick": "Кобра",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Крюгер",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Questra",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Шрек",
-            "role": "Мирный",
+            "nick": "Фемида",
+            "role": "Шериф",
             "BP": true,
             "BR": true
         },
         {
-            "nick": "Художник",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Борман",
+            "nick": "Крюгер",
             "role": "Мирный"
         },
         {
             "nick": "Скарлет",
-            "role": "Мирный"
+            "role": "Мафия"
         },
         {
             "nick": "Люцик",
-            "role": "Дон"
-        },
-        {
-            "nick": "Зло",
             "role": "Мирный"
         },
         {
+            "nick": "Техас",
+            "role": "Мирный"
+        },
+        {
+            "nick": "DD",
+            "role": "Мафия"
+        },
+        {
             "nick": "Arch Enemy",
-            "role": "Шериф"
+            "role": "Дон"
+        },
+        {
+            "nick": "Кобра",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Картмен",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Амальгама",
+            "role": "Мирный"
         }
     ],
     "metadata": {
-        "table": "BakerStreet",
+        "table": "AbbeyRoad",
         "win": "Мафия",
-        "date": "2016-05-10",
+        "date": "2016-04-27",
         "ref": "Заяц",
-        "gameNumber": 1
+        "gameNumber": 4
     },
     "days": [
         {

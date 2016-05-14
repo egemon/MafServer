@@ -1,37 +1,33 @@
 {
     "playerLines": [
         {
-            "nick": "Фемида",
-            "role": "Шериф",
-            "BP": true,
-            "BR": true
-        },
-        {
-            "nick": "Крюгер",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Скарлет",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Люцик",
-            "role": "Мирный"
+            "nick": "DD",
+            "role": "Дон"
         },
         {
             "nick": "Техас",
             "role": "Мирный"
         },
         {
-            "nick": "DD",
-            "role": "Мафия"
+            "nick": "Random",
+            "role": "Мирный",
+            "BR": true
         },
         {
-            "nick": "Arch Enemy",
-            "role": "Дон"
+            "nick": "Fox",
+            "role": "Мафия",
+            "BP": true
         },
         {
-            "nick": "Кобра",
+            "nick": "Черный лебедь",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Амальгама",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Earl Gray",
             "role": "Мирный"
         },
         {
@@ -39,16 +35,20 @@
             "role": "Мирный"
         },
         {
-            "nick": "Амальгама",
-            "role": "Мирный"
+            "nick": "Фемида",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Johny",
+            "role": "Шериф"
         }
     ],
     "metadata": {
         "table": "AbbeyRoad",
         "win": "Мафия",
-        "date": "2016-05-10",
-        "ref": "Заяц",
-        "gameNumber": 4
+        "date": "2016-04-27",
+        "ref": "Сэд",
+        "gameNumber": 1
     },
     "days": [
         {

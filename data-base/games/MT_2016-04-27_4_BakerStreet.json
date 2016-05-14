@@ -1,54 +1,53 @@
 {
     "playerLines": [
         {
-            "nick": "Arch Enemy",
+            "nick": "Баффет",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Questra",
+            "role": "Мирный"
+        },
+        {
+            "nick": "50",
             "role": "Дон"
         },
         {
-            "nick": "Техас",
-            "role": "Мирный"
-        },
-        {
-            "nick": "DD",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Черный лебедь",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Крюгер",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Скарлет",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Шрек",
+            "nick": "Художник",
             "role": "Мафия"
         },
         {
-            "nick": "Earl Gray",
+            "nick": "Fox",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Фемида",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Борман",
+            "role": "Мирный",
+            "BP": true
+        },
+        {
+            "nick": "Сэд",
             "role": "Шериф"
         },
         {
-            "nick": "Картмен",
-            "role": "Мирный",
-            "BP": true,
-            "BR": true
+            "nick": "Айдахо",
+            "role": "Мирный"
         },
         {
-            "nick": "Кобра",
-            "role": "Мафия"
+            "nick": "Тракиец",
+            "role": "Мирный"
         }
     ],
     "metadata": {
-        "table": "AbbeyRoad",
-        "win": "Мафия",
-        "date": "2016-05-10",
-        "ref": "Джонни",
-        "gameNumber": 3
+        "table": "BakerStreet",
+        "win": "Мирные",
+        "date": "2016-04-27",
+        "ref": "Аксолотль",
+        "gameNumber": 4
     },
     "days": [
         {
