@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Техас",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Люцик",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Fool",
+            "role": "Мирный",
+            "BP": true,
+            "BR": true
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Тракиец",
+            "role": "Дон"
+        },
+        {
+            "nick": "Рандом",
+            "role": "Мирный"
+        },
+        {
+            "nick": "О'Доннел",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Дейнер",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Гора",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Баффет",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "AbbeyRoad",
+        "win": "Мирные",
+        "date": "2016-04-29",
+        "ref": "Аксолотль",
+        "gameNumber": 1
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": null,
+                    "whom": null,
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": null,
+                "killed": null,
+                "checkedS": null,
+                "checkedD": null
+            }
+        }
+    ]
+}

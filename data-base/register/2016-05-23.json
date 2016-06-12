@@ -1,10 +1,6 @@
 [
     {
-        "nick": "Крюгер",
-        "sum": 0
-    },
-    {
-        "nick": "Йоко",
+        "nick": "Skarlet",
         "sum": 0,
         "debt": 0
     },
@@ -14,17 +10,12 @@
         "debt": 25
     },
     {
+        "nick": "кл",
+        "sum": 0,
+        "debt": 0
+    },
+    {
         "nick": "Stone Cold",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Изюм",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "DD",
         "sum": 0,
         "debt": 0
     },
@@ -34,7 +25,37 @@
         "debt": 0
     },
     {
-        "nick": "ВДулич",
+        "nick": "Каапуста",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Green Day",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Random",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Айдахо",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "DD",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Командор",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Фемида",
         "sum": 0,
         "debt": 0
     },
@@ -44,72 +65,42 @@
         "debt": 0
     },
     {
+        "nick": "Клич",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Цапля",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Панда",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Амбал",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Vinsent",
+        "sum": 0,
+        "debt": 0
+    },
+    {
         "nick": "Люцик",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "СБ",
+        "nick": "gr",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "О'Доннел",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Тракиец",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Cibinna",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Mello",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Граффег",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Рандом",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Cибилла",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Сибилла",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Баффет",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Fox",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Questra",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Художник",
+        "nick": "Грей",
         "sum": 0,
         "debt": 0
     },
@@ -119,37 +110,22 @@
         "debt": 0
     },
     {
-        "nick": "Фиби",
+        "nick": "О'Доннел",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Борман",
+        "nick": "Йоко",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Цезарь",
+        "nick": "Шрек",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Клич",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Картмен",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Пабрес",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Грей",
+        "nick": "Аксолотль",
         "sum": 0,
         "debt": 0
     }

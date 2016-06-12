@@ -1,0 +1,68 @@
+{
+    "playerLines": [
+        {
+            "nick": "Люцик",
+            "role": "Мафия"
+        },
+        {
+            "nick": "gr",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Грей",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Мела",
+            "role": "Мафия"
+        },
+        {
+            "nick": "О'Доннел",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Йоко",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Цапля",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Шрек",
+            "role": "Дон"
+        },
+        {
+            "nick": "Аксолотль",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Random",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "AbbeyRoad",
+        "win": "Мафия",
+        "date": "2016-04-29",
+        "ref": "Баффет",
+        "gameNumber": 2
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

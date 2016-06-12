@@ -1,0 +1,68 @@
+{
+    "playerLines": [
+        {
+            "nick": "Скарлет",
+            "role": "Мирный"
+        },
+        {
+            "nick": "DD",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Мутный",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Йоко",
+            "role": "Дон"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Пабич",
+            "role": "Мирный"
+        },
+        {
+            "nick": "50",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Фортуна",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Фемида",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Кобра",
+            "role": "Мафия"
+        }
+    ],
+    "metadata": {
+        "table": "Aldwych",
+        "win": "Мафия",
+        "date": "2016-03-15",
+        "ref": "Sad",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

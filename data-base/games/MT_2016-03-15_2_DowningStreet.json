@@ -1,0 +1,68 @@
+{
+    "playerLines": [
+        {
+            "nick": "Чивас",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Шрек",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Картмен",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Маска",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Моцарт",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Леф",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Техас",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Алькапоне",
+            "role": "Дон"
+        },
+        {
+            "nick": "Художник",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "DowningStreet",
+        "win": "Мафия",
+        "date": "2016-03-15",
+        "ref": "Баффет",
+        "gameNumber": 2
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "playerLines": [
+        {
+            "nick": "Твистер",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Техас",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Моцарт",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Альфа",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Люцик",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Пабрес",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Тракиец",
+            "role": "Мирный"
+        },
+        {
+            "nick": "DD",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Крюгер",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Леф",
+            "role": "Мафия"
+        }
+    ],
+    "metadata": {
+        "table": "DowningStreet",
+        "win": "Мирные",
+        "date": "2016-03-15",
+        "ref": "Sad",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

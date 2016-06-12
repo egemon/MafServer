@@ -1,0 +1,74 @@
+{
+    "playerLines": [
+        {
+            "nick": "Fool",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Амбал",
+            "falls": 3,
+            "role": "Мирный"
+        },
+        {
+            "nick": "Дейнер",
+            "falls": 3,
+            "role": "Мирный",
+            "BR": true
+        },
+        {
+            "nick": "Vinsent",
+            "falls": 3,
+            "role": "Мирный"
+        },
+        {
+            "nick": "Панда",
+            "falls": 2,
+            "role": "Мирный"
+        },
+        {
+            "nick": "Йоко",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Борман",
+            "role": "Дон",
+            "BP": true
+        },
+        {
+            "nick": "Stone Cold",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Изюм",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Командор",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "Aldwych",
+        "win": "Мафия",
+        "date": "2016-04-29",
+        "ref": "Merlin",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

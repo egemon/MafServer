@@ -1,60 +1,31 @@
 [
     {
-        "nick": "Крюгер",
-        "sum": 0
-    },
-    {
-        "nick": "Йоко",
+        "nick": "50",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Earl Gray",
-        "sum": 0,
-        "debt": 25
-    },
-    {
-        "nick": "Stone Cold",
+        "nick": "Фортуна",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Изюм",
+        "nick": "Аксолотль",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "DD",
+        "nick": "Алара",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Кобра",
+        "nick": "Айдахо",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "ВДулич",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Скарлет",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Люцик",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "СБ",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "О'Доннел",
+        "nick": "Фемида",
         "sum": 0,
         "debt": 0
     },
@@ -64,82 +35,77 @@
         "debt": 0
     },
     {
-        "nick": "Cibinna",
+        "nick": "Крюгер",
+        "sum": 0,
+        "debt": 25
+    },
+    {
+        "nick": "Йоко",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Mello",
+        "nick": "Кобра",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Граффег",
+        "nick": "Скарлет",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Рандом",
+        "nick": "DD",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Cибилла",
+        "nick": "Мутный",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Сибилла",
+        "nick": "Маска",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Баффет",
+        "nick": "Заяц",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Fox",
+        "nick": "Earl Gray",
+        "sum": 0,
+        "debt": 25
+    },
+    {
+        "nick": "Пабич",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Questra",
+        "nick": "Твистер",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Художник",
+        "nick": "Техас",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Мела",
+        "nick": "Моцарт",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Фиби",
+        "nick": "Альфа",
         "sum": 0,
         "debt": 0
     },
     {
-        "nick": "Борман",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Цезарь",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Клич",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Картмен",
+        "nick": "Люцик",
         "sum": 0,
         "debt": 0
     },
@@ -149,7 +115,72 @@
         "debt": 0
     },
     {
-        "nick": "Грей",
+        "nick": "Леф",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Триста",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Вагрант",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Чивас",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Алькапоне",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Шрек",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Картмен",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Художник",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Sad",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Торвальд",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Палац України",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "ВДулич",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "О'Доннел",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Цапля",
         "sum": 0,
         "debt": 0
     }

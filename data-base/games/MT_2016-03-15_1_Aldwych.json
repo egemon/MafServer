@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "50",
+            "role": "Мирный",
+            "BP": true,
+            "BR": true
+        },
+        {
+            "nick": "Фортуна",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Аксолотль",
+            "role": "Дон"
+        },
+        {
+            "nick": "Алара",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Айдахо",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Фемида",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Тракиец",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Крюгер",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Йоко",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кобра",
+            "role": "Шериф"
+        }
+    ],
+    "metadata": {
+        "table": "Aldwych",
+        "win": "Мирные",
+        "date": "2016-03-15",
+        "ref": "Johny",
+        "gameNumber": 1
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "playerLines": [
+        {
+            "nick": "Люцик",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Дейнер",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Амбал",
+            "role": "Дон"
+        },
+        {
+            "nick": "Шрек",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Мелло",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Гора",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Изюм",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Сибилла",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Фемида",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Stone Cold",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мафия",
+        "date": "2016-04-29",
+        "ref": "Merlin",
+        "gameNumber": 1
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

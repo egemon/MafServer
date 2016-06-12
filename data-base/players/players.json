@@ -138,7 +138,24 @@
                 "periodType": "season",
                 "place": 2
             }
-        ]
+        ],
+        "img": "Blink.jpg"
+    },
+    {
+        "nick": "Cibinna",
+        "password": "Cibinna",
+        "name": "Cibinna",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Cибилла",
+        "password": "Cибилла",
+        "name": "Cибилла",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "DD",
@@ -240,7 +257,8 @@
                 "periodType": "month",
                 "place": 1
             }
-        ]
+        ],
+        "img": "HankMoody.jpg"
     },
     {
         "nick": "Johny",
@@ -281,6 +299,14 @@
                 "place": 2
             }
         ]
+    },
+    {
+        "nick": "Mello",
+        "password": "Mello",
+        "name": "Mello",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Merlin",
@@ -640,38 +666,6 @@
         "img": "Zara.jpg"
     },
     {
-        "nick": "ddfadsfads",
-        "password": "ddfadsfads",
-        "name": "ddfadsfads",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "dfsdfdsf",
-        "password": "dfsdfdsf",
-        "name": "dfsdfdsf",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "fdafdsf",
-        "password": "fdafdsf",
-        "name": "fdafdsf",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "sdfdsfsdfs",
-        "password": "sdfdsfsdfs",
-        "name": "sdfdsfsdfs",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
         "nick": "Айдахо",
         "password": "Айдахо",
         "name": "Юлия Смачило",
@@ -746,6 +740,14 @@
         "img": "Аксолотль.jpg"
     },
     {
+        "nick": "Алара",
+        "password": "Алара",
+        "name": "Алара",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Аларик",
         "password": "Аларик",
         "name": "Аларик",
@@ -781,12 +783,29 @@
                 "periodType": "month",
                 "place": 3
             }
-        ]
+        ],
+        "img": "Алистер.jpg"
     },
     {
         "nick": "Аль Капоне",
         "password": "Аль Капоне",
         "name": "Аль Капоне",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Алькапоне",
+        "password": "Алькапоне",
+        "name": "Алькапоне",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Альфа",
+        "password": "Альфа",
+        "name": "Альфа",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -915,7 +934,8 @@
                 "periodType": "season",
                 "place": 2
             }
-        ]
+        ],
+        "img": "Амахонда.jpg"
     },
     {
         "presents": "",
@@ -1087,6 +1107,14 @@
         "honours": []
     },
     {
+        "nick": "ВДулич",
+        "password": "ВДулич",
+        "name": "ВДулич",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Вагрант",
         "password": "Вагрант",
         "name": "Александр Земсков",
@@ -1221,6 +1249,30 @@
         "nick": "Гендальф",
         "password": "Гендальф",
         "name": "Гендальф",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Гора",
+        "password": "Гора",
+        "name": "Гора",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Граффег",
+        "password": "Граффег",
+        "name": "Граффег",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Грей",
+        "password": "Грей",
+        "name": "Грей",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -1460,6 +1512,14 @@
             }
         ],
         "img": "Зло.jpg"
+    },
+    {
+        "nick": "Изюм",
+        "password": "Изюм",
+        "name": "Изюм",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "presents": "",
@@ -1714,6 +1774,14 @@
         "img": "Кураре.jpg"
     },
     {
+        "nick": "Леф",
+        "password": "Леф",
+        "name": "Леф",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Люцик",
         "password": "Люцик",
         "name": "Люцик",
@@ -1752,6 +1820,14 @@
         ]
     },
     {
+        "nick": "Маска",
+        "password": "Маска",
+        "name": "Маска",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Мать",
         "password": "Мать",
         "name": "Мать",
@@ -1763,6 +1839,14 @@
         "nick": "Мела",
         "password": "Мела",
         "name": "Мела",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Мелло",
+        "password": "Мелло",
+        "name": "Мелло",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -1830,6 +1914,14 @@
         "img": "Морковка.jpg"
     },
     {
+        "nick": "Моцарт",
+        "password": "Моцарт",
+        "name": "Моцарт",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Мутный",
         "password": "Мутный",
         "name": "Ваня Ломов",
@@ -1851,6 +1943,14 @@
         "nick": "Ниграмма",
         "password": "Ниграмма",
         "name": "Ниграмма",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "О'Доннел",
+        "password": "О'Доннел",
+        "name": "О'Доннел",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -1888,6 +1988,22 @@
         "nick": "Отец",
         "password": "Отец",
         "name": "Отец",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Пабич",
+        "password": "Пабич",
+        "name": "Пабич",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Пабрес",
+        "password": "Пабрес",
+        "name": "Пабрес",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -2077,6 +2193,22 @@
         ]
     },
     {
+        "nick": "Сибилла",
+        "password": "Сибилла",
+        "name": "Сибилла",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Скарлет",
+        "password": "Скарлет",
+        "name": "Скарлет",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "presents": "",
         "honours": [
             {
@@ -2090,7 +2222,8 @@
         "password": "Сумрак",
         "memberLevel": "1",
         "faculty": "КНУ, КИМО",
-        "experiance": ""
+        "experiance": "",
+        "img": "Сумрак.jpg"
     },
     {
         "nick": "Супер 8",
@@ -2112,6 +2245,14 @@
         "experiance": ""
     },
     {
+        "nick": "Твистер",
+        "password": "Твистер",
+        "name": "Твистер",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Техас",
         "password": "Техас",
         "name": "Кристина Флокос",
@@ -2125,6 +2266,14 @@
         "faculty": "КНУ, Институт Геологии",
         "experiance": "Играет с 01.10.2015",
         "img": "Техас.jpg"
+    },
+    {
+        "nick": "Торвальд",
+        "password": "Торвальд",
+        "name": "Торвальд",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Тракиец",
@@ -2147,6 +2296,14 @@
         "faculty": "НаУКМА, Факультет эконмических наук",
         "position": "игрок",
         "experiance": "Играет с 01.09.2012"
+    },
+    {
+        "nick": "Триста",
+        "password": "Триста",
+        "name": "Триста",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "presents": [],
@@ -2219,7 +2376,24 @@
                 "periodType": "month",
                 "place": 2
             }
-        ]
+        ],
+        "img": "Фетиш.jpg"
+    },
+    {
+        "nick": "Фиби",
+        "password": "Фиби",
+        "name": "Фиби",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Фортуна",
+        "password": "Фортуна",
+        "name": "Фортуна",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Француженка",
@@ -2242,7 +2416,8 @@
                 "periodType": "month",
                 "place": 1
             }
-        ]
+        ],
+        "img": "Француженка.jpg"
     },
     {
         "presents": "",
@@ -2333,9 +2508,25 @@
         "img": "Цапля.jpg"
     },
     {
+        "nick": "Цезарь",
+        "password": "Цезарь",
+        "name": "Цезарь",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Черный лебедь",
         "password": "Черный лебедь",
         "name": "Черный лебедь",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Чивас",
+        "password": "Чивас",
+        "name": "Чивас",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -2411,5 +2602,13 @@
         "password": "Эхо",
         "memberLevel": 1,
         "img": "Эхо.jpg"
+    },
+    {
+        "nick": "кл",
+        "password": "кл",
+        "name": "кл",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     }
 ]

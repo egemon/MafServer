@@ -1,0 +1,68 @@
+{
+    "playerLines": [
+        {
+            "nick": "Изюм",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Фиби",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Скарлет",
+            "role": "Мафия"
+        },
+        {
+            "nick": "DD",
+            "role": "Дон"
+        },
+        {
+            "nick": "Крюгер",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Картмен",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Questra",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кобра",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Люцик",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Пабрес",
+            "role": "Шериф"
+        }
+    ],
+    "metadata": {
+        "table": "Aldwych",
+        "win": "Мафия",
+        "date": "2016-04-28",
+        "ref": "Заяц",
+        "gameNumber": 4
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}
