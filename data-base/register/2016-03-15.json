@@ -183,5 +183,10 @@
         "nick": "Цапля",
         "sum": 0,
         "debt": 0
+    },
+    {
+        "nick": "Skarlet",
+        "sum": 0,
+        "debt": 0
     }
 ]

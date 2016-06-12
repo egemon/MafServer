@@ -1,15 +1,23 @@
 {
     "playerLines": [
         {
-            "nick": "Фемида",
+            "nick": "Сибилла",
             "role": "Мирный"
         },
         {
-            "nick": "Скарлет",
+            "nick": "Изюм",
             "role": "Мирный"
         },
         {
-            "nick": "Клич",
+            "nick": "Questra",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Шрек",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Fox",
             "role": "Мирный"
         },
         {
@@ -17,35 +25,27 @@
             "role": "Мирный"
         },
         {
-            "nick": "Панда",
-            "role": "Мирный"
+            "nick": "Mello",
+            "role": "Шериф"
         },
         {
-            "nick": "Амбал",
+            "nick": "Художник",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Йоко",
             "role": "Дон"
         },
         {
-            "nick": "Айдахо",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Командор",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Stone Cold",
+            "nick": "СБ",
             "role": "Мирный"
-        },
-        {
-            "nick": "Vinsent",
-            "role": "Шериф"
         }
     ],
     "metadata": {
         "table": "BakerStreet",
         "win": "Мирные",
         "date": "2016-04-29",
-        "ref": "Merlin",
+        "ref": "Sad",
         "gameNumber": 2
     },
     "days": [

@@ -5,7 +5,7 @@
             "role": "Шериф"
         },
         {
-            "nick": "Мела",
+            "nick": "Mello",
             "role": "Мирный",
             "BR": true
         },
@@ -45,7 +45,7 @@
     ],
     "metadata": {
         "table": "BakerStreet",
-        "win": "Мафия",
+        "win": "Мирные",
         "date": "2016-04-28",
         "ref": "Sad",
         "gameNumber": 4

@@ -17,7 +17,8 @@
         {
             "nick": "Stone Cold",
             "falls": 2,
-            "role": "Дон"
+            "role": "Дон",
+            "BP": true
         },
         {
             "nick": "Кобра",

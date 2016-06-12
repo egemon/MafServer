@@ -3,8 +3,7 @@
         {
             "nick": "Фемида",
             "falls": 3,
-            "role": "Мафия",
-            "BP": true
+            "role": "Мафия"
         },
         {
             "nick": "Баффет",
@@ -35,14 +34,13 @@
             "BR": true
         },
         {
-            "nick": "Грей",
+            "nick": "Earl Gray",
             "role": "Мирный"
         },
         {
-            "nick": "Скарлет",
+            "nick": "Skarlet",
             "falls": 3,
-            "role": "Мирный",
-            "BP": true
+            "role": "Мирный"
         },
         {
             "nick": "Earl Gray",

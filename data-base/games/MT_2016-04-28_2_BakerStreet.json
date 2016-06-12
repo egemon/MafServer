@@ -2,7 +2,7 @@
     "playerLines": [
         {
             "nick": "Люцик",
-            "role": "Мафия"
+            "role": "Шериф"
         },
         {
             "nick": "Earl Gray",
@@ -22,7 +22,7 @@
         },
         {
             "nick": "Крюгер",
-            "role": "Шериф"
+            "role": "Мафия"
         },
         {
             "nick": "Stone Cold",
@@ -34,7 +34,7 @@
             "role": "Мирный"
         },
         {
-            "nick": "Скарлет",
+            "nick": "Skarlet",
             "role": "Мирный"
         },
         {
