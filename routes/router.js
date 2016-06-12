@@ -123,7 +123,7 @@ for (var i = 0; i < PAGES.length; i++) {
 // ==================== BASE for ANGULAR ==============
 router.get('/*', function(req, res) {
     console.log('[ROUTER] get for', req.url);
-    res.render('../MafSite/assets/app.html');
+    res.render('../MafSite/assets/base.html');
 });
 
 
