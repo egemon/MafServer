@@ -11,7 +11,7 @@
         {
             "nick": "Цапля",
             "role": "Мирный",
-            "BP": true
+            "BR": true
         },
         {
             "nick": "Клич",
@@ -40,7 +40,7 @@
         {
             "nick": "Stone Cold",
             "role": "Дон",
-            "BR": true
+            "BP": true
         }
     ],
     "metadata": {
