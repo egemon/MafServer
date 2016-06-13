@@ -286,6 +286,14 @@
         "honours": []
     },
     {
+        "nick": "Kinder",
+        "password": "Kinder",
+        "name": "Kinder",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Link",
         "password": "Link",
         "name": "Link",
@@ -1028,6 +1036,14 @@
         "img": "Баффет.jpg"
     },
     {
+        "nick": "Беня Крик",
+        "password": "Беня Крик",
+        "name": "Беня Крик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Близнец",
         "password": "Близнец",
         "name": "Близнец",
@@ -1584,8 +1600,8 @@
         "honours": [
             {
                 "year": 2011,
-                "period": 4,
-                "periodType": "season",
+                "period": 10,
+                "periodType": "month",
                 "place": 1
             }
         ],
@@ -1598,8 +1614,8 @@
         "honours": [
             {
                 "year": 2011,
-                "period": 10,
-                "periodType": "month",
+                "period": 4,
+                "periodType": "season",
                 "place": 1
             }
         ],
@@ -1747,6 +1763,14 @@
         "experiance": ""
     },
     {
+        "nick": "Кошка",
+        "password": "Кошка",
+        "name": "Кошка",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Кристон",
         "password": "Кристон",
         "name": "Кристон",
@@ -1818,6 +1842,14 @@
                 "place": 2
             }
         ]
+    },
+    {
+        "nick": "Марья Ивановна",
+        "password": "Марья Ивановна",
+        "name": "Марья Ивановна",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Маска",

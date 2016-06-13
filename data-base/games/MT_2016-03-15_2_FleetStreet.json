@@ -2,7 +2,8 @@
     "playerLines": [
         {
             "nick": "Палац України",
-            "role": "Дон"
+            "role": "Дон",
+            "BP": true
         },
         {
             "nick": "О'Доннел",

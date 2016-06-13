@@ -1,54 +1,52 @@
 {
     "playerLines": [
         {
-            "nick": "Айдахо",
+            "nick": "Командор",
             "role": "Мирный"
         },
         {
-            "nick": "Кобра",
+            "nick": "Мутный",
             "role": "Мирный"
         },
         {
-            "nick": "Триста",
+            "nick": "Изюм",
             "role": "Мирный"
         },
         {
-            "nick": "Тракиец",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Вагрант",
-            "role": "Дон",
-            "BP": true,
-            "BR": true
-        },
-        {
-            "nick": "Чивас",
+            "nick": "Фетиш",
             "role": "Мафия"
         },
         {
-            "nick": "Крюгер",
+            "nick": "Kinder",
             "role": "Мафия"
         },
         {
-            "nick": "Леф",
+            "nick": "Борман",
             "role": "Мирный"
         },
         {
-            "nick": "Аль Капоне",
+            "nick": "Кошка",
+            "role": "Дон"
+        },
+        {
+            "nick": "Sad",
             "role": "Шериф"
         },
         {
-            "nick": "Йоко",
+            "nick": "Антонио",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Stone Cold",
             "role": "Мирный"
         }
     ],
     "metadata": {
-        "table": "DowningStreet",
-        "win": "Мафия",
+        "table": "BakerStreet",
+        "win": "Мирные",
         "date": "2016-03-15",
-        "ref": "Баффет",
-        "gameNumber": 1
+        "ref": "Амахонда",
+        "gameNumber": 2
     },
     "days": [
         {
