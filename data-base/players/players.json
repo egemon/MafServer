@@ -142,14 +142,6 @@
         "img": "Blink.jpg"
     },
     {
-        "nick": "Cibinna",
-        "password": "Cibinna",
-        "name": "Cibinna",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
         "nick": "Cибилла",
         "password": "Cибилла",
         "name": "Cибилла",
@@ -340,21 +332,6 @@
             }
         ],
         "img": "Merlin.jpg"
-    },
-    {
-        "nick": "PacMan",
-        "password": "PacMan",
-        "name": "PacMan",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": [
-            {
-                "year": 2013,
-                "period": 1,
-                "periodType": "month",
-                "place": 2
-            }
-        ]
     },
     {
         "nick": "Pacman",
@@ -798,14 +775,6 @@
         "nick": "Аль Капоне",
         "password": "Аль Капоне",
         "name": "Аль Капоне",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Алькапоне",
-        "password": "Алькапоне",
-        "name": "Алькапоне",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -1610,20 +1579,6 @@
         "experiance": ""
     },
     {
-        "presents": "",
-        "honours": [
-            {
-                "year": 2011,
-                "period": 4,
-                "periodType": "season",
-                "place": 1
-            }
-        ],
-        "nick": "Клео (Колючка)",
-        "password": "Клео (Колючка)",
-        "experiance": ""
-    },
-    {
         "nick": "Клич",
         "password": "Клич",
         "vk": "https://vk.com/id19111965",
@@ -1814,14 +1769,6 @@
         "honours": []
     },
     {
-        "nick": "Леф",
-        "password": "Леф",
-        "name": "Леф",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
         "nick": "Люцик",
         "password": "Люцик",
         "name": "Люцик",
@@ -1879,22 +1826,6 @@
         "nick": "Мать",
         "password": "Мать",
         "name": "Мать",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Мела",
-        "password": "Мела",
-        "name": "Мела",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Мелло",
-        "password": "Мелло",
-        "name": "Мелло",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -1999,14 +1930,6 @@
         "nick": "О'Доннел",
         "password": "О'Доннел",
         "name": "О'Доннел",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "О.Доннел",
-        "password": "О.Доннел",
-        "name": "О.Доннел",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -2143,14 +2066,6 @@
         "experiance": "Играет 3 года",
         "honours": [],
         "img": "Рейнджер.jpg"
-    },
-    {
-        "nick": "Риката",
-        "password": "Риката",
-        "name": "Риката",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
     },
     {
         "nick": "Рикотта",
@@ -2658,13 +2573,5 @@
         "password": "Эхо",
         "memberLevel": 1,
         "img": "Эхо.jpg"
-    },
-    {
-        "nick": "кл",
-        "password": "кл",
-        "name": "кл",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
     }
 ]
