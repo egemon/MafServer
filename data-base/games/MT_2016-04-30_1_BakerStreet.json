@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Кобра",
+            "role": "Мирный"
+        },
+        {
+            "nick": "DD",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Изюм",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Рыжая",
+            "role": "Дон",
+            "BP": true
+        },
+        {
+            "nick": "Questra",
+            "role": "Мирный",
+            "BR": true
+        },
+        {
+            "nick": "50",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Крюгер",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Stone Cold",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Мой Господин",
+            "role": "Мирный"
+        },
+        {
+            "nick": "О'Доннел",
+            "role": "Мафия"
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мирные",
+        "date": "2016-04-30",
+        "ref": "Sad",
+        "gameNumber": 1
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

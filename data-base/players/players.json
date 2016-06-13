@@ -1798,6 +1798,22 @@
         "img": "Кураре.jpg"
     },
     {
+        "nick": "Лана",
+        "password": "Лана",
+        "name": "Лана",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Лев",
+        "password": "Лев",
+        "name": "Лев",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Леф",
         "password": "Леф",
         "name": "Леф",
@@ -2182,6 +2198,14 @@
                 "place": 2
             }
         ]
+    },
+    {
+        "nick": "Рыжая",
+        "password": "Рыжая",
+        "name": "Рыжая",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "СБ",
