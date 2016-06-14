@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Капитошка",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Skarlet",
+            "role": "Дон"
+        },
+        {
+            "nick": "Айдахо",
+            "role": "Мафия",
+            "BP": true
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Дагер",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Грей",
+            "role": "Мирный",
+            "BR": true
+        },
+        {
+            "nick": "Sibarit",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Мутный",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Random",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Матан",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "FleetStreet",
+        "win": "Мафия",
+        "date": "2016-06-14",
+        "ref": "Sad",
+        "gameNumber": 1
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

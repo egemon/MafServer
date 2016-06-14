@@ -1,54 +1,54 @@
 {
     "playerLines": [
         {
-            "nick": "Амальгама",
+            "nick": "Роммель",
             "role": "Мирный"
         },
         {
-            "nick": "DD",
+            "nick": "О'Доннел",
             "role": "Мирный"
         },
         {
-            "nick": "Тарантино",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Айдахо",
-            "role": "Шериф"
-        },
-        {
-            "nick": "Изюм",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Рильф",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Batman",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Техас",
+            "nick": "Марья Ивановна",
             "role": "Мафия"
         },
         {
-            "nick": "Black",
+            "nick": "Skarlet",
+            "role": "Мафия"
+        },
+        {
+            "nick": "50",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Люцик",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кельвин",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Slamet",
             "role": "Дон",
             "BP": true,
             "BR": true
         },
         {
-            "nick": "Люцик",
-            "role": "Мафия"
+            "nick": "Тарантино",
+            "role": "Шериф"
+        },
+        {
+            "nick": "ВДулич",
+            "role": "Мирный"
         }
     ],
     "metadata": {
-        "table": "DowningStreet",
+        "table": "Aldwych",
         "win": "Мафия",
-        "date": "2016-03-01",
-        "ref": "Шрек",
-        "gameNumber": 2
+        "date": "2016-02-29",
+        "ref": "Аксолотль",
+        "gameNumber": 4
     },
     "days": [
         {

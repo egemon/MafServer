@@ -1,54 +1,52 @@
 {
     "playerLines": [
         {
-            "nick": "Шерлок",
+            "nick": "Batman",
             "role": "Мирный"
         },
         {
-            "nick": "Несквик",
+            "nick": "Йоко",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Митрандир",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Vinsent",
             "role": "Мафия"
         },
         {
-            "nick": "Борман",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Ник",
-            "role": "Шериф"
-        },
-        {
-            "nick": "Цапля",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Эхо",
-            "role": "Мафия",
-            "BP": true,
-            "BR": true
-        },
-        {
-            "nick": "Jester",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Поровозик",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Questra",
+            "nick": "Лоран",
             "role": "Дон"
         },
         {
-            "nick": "Антонио",
+            "nick": "Тесла",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Гора",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Цезарь",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Адель",
             "role": "Мирный"
         }
     ],
     "metadata": {
-        "table": "BakerStreet",
+        "table": "AbbeyRoad",
         "win": "Мафия",
-        "date": "2016-03-01",
-        "ref": "Космос",
-        "gameNumber": 2
+        "date": "2016-06-14",
+        "ref": "Баффет",
+        "gameNumber": 1
     },
     "days": [
         {

@@ -1,13 +1,29 @@
 {
     "playerLines": [
         {
-            "nick": "Амбал",
+            "nick": "R2D2",
+            "role": "Мирный"
+        },
+        {
+            "nick": "DD",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кошка",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Изюм",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Blink",
             "role": "Мирный",
             "BP": true,
             "BR": true
         },
         {
-            "nick": "Анаконда",
+            "nick": "Stone Cold",
             "role": "Мирный"
         },
         {
@@ -15,40 +31,24 @@
             "role": "Мирный"
         },
         {
-            "nick": "DD",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Крюгер",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Гоморра",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Изюм",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Jester",
+            "nick": "Художник",
             "role": "Дон"
         },
         {
-            "nick": "Техас",
-            "role": "Мафия"
+            "nick": "Антонио",
+            "role": "Шериф"
         },
         {
-            "nick": "Batman",
-            "role": "Шериф"
+            "nick": "Questra",
+            "role": "Мирный"
         }
     ],
     "metadata": {
-        "table": "FleetStreet",
-        "win": "Мирные",
-        "date": "2016-03-01",
-        "ref": "Кошка",
-        "gameNumber": 4
+        "table": "BakerStreet",
+        "win": "Мафия",
+        "date": "2016-06-14",
+        "ref": "Заяц",
+        "gameNumber": 1
     },
     "days": [
         {

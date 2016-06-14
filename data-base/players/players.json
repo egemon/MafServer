@@ -564,6 +564,14 @@
         "img": "Sad.jpg"
     },
     {
+        "nick": "Sibarit",
+        "password": "Sibarit",
+        "name": "Sibarit",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "presents": [],
         "honours": [],
         "nick": "Skarlet",
@@ -697,6 +705,14 @@
         "name": "Инна Кужильная",
         "memberLevel": 1,
         "img": "Zara.jpg"
+    },
+    {
+        "nick": "Адель",
+        "password": "Адель",
+        "name": "Адель",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Айдахо",
@@ -1351,6 +1367,14 @@
         "honours": []
     },
     {
+        "nick": "Дагер",
+        "password": "Дагер",
+        "name": "Дагер",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Девятый",
         "password": "Девятый",
         "name": "Девятый",
@@ -1653,6 +1677,14 @@
         "honours": []
     },
     {
+        "nick": "Капитошка",
+        "password": "Капитошка",
+        "name": "Капитошка",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Картмен",
         "password": "Картмен",
         "name": "Картмен",
@@ -1881,6 +1913,14 @@
         "honours": []
     },
     {
+        "nick": "Лоран",
+        "password": "Лоран",
+        "name": "Лоран",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Люцик",
         "password": "Люцик",
         "name": "Люцик",
@@ -1946,6 +1986,14 @@
         "nick": "Маска",
         "password": "Маска",
         "name": "Маска",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Матан",
+        "password": "Матан",
+        "name": "Матан",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -2379,6 +2427,14 @@
         "nick": "Твистер",
         "password": "Твистер",
         "name": "Твистер",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Тесла",
+        "password": "Тесла",
+        "name": "Тесла",
         "presents": [],
         "memberLevel": 0,
         "honours": []

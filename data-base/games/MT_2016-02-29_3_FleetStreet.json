@@ -1,54 +1,54 @@
 {
     "playerLines": [
         {
+            "nick": "Изюм",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кобра",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Batman",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Skarlet",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Крюгер",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кельвин",
+            "role": "Шериф",
+            "BP": true,
+            "BR": true
+        },
+        {
+            "nick": "DD",
+            "role": "Мирный"
+        },
+        {
             "nick": "Техас",
             "role": "Мирный"
         },
         {
-            "nick": "Эхо",
-            "role": "Шериф",
-            "BR": true
-        },
-        {
-            "nick": "Шрек",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Slamet",
-            "role": "Мирный",
-            "BP": true
-        },
-        {
-            "nick": "Earl Gray",
+            "nick": "Кошка",
             "role": "Мафия"
         },
         {
-            "nick": "Black",
+            "nick": "Люцик",
             "role": "Дон"
-        },
-        {
-            "nick": "Jester",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Поровозик",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Гоморра",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Анаконда",
-            "role": "Мирный"
         }
     ],
     "metadata": {
-        "table": "BakerStreet",
-        "win": "Мирные",
-        "date": "2016-03-01",
-        "ref": "Космос",
-        "gameNumber": 1
+        "table": "FleetStreet",
+        "win": "Мафия",
+        "date": "2016-02-29",
+        "ref": "Роммель",
+        "gameNumber": 3
     },
     "days": [
         {

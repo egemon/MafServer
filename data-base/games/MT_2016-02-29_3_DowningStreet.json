@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Рильф",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Black",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Эхо",
+            "role": "Мафия",
+            "BP": true
+        },
+        {
+            "nick": "Картмен",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Поровозик",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Тарантино",
+            "role": "Дон"
+        },
+        {
+            "nick": "Тракиец",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Амальгама",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Троллейбус",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Доктор Зло",
+            "role": "Мирный",
+            "BR": true
+        }
+    ],
+    "metadata": {
+        "table": "DowningStreet",
+        "win": "Мафия",
+        "date": "2016-02-29",
+        "ref": "Зло",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

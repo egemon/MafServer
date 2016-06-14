@@ -1,42 +1,42 @@
 {
     "playerLines": [
         {
-            "nick": "Доктор Зло",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Skarlet",
-            "role": "Шериф"
-        },
-        {
-            "nick": "Аль Капоне",
+            "nick": "Техас",
             "role": "Мирный"
+        },
+        {
+            "nick": "Эхо",
+            "role": "Шериф",
+            "BR": true
+        },
+        {
+            "nick": "Шрек",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Slamet",
+            "role": "Мирный",
+            "BP": true
         },
         {
             "nick": "Earl Gray",
             "role": "Мафия"
         },
         {
-            "nick": "ВДулич",
+            "nick": "Black",
+            "role": "Дон"
+        },
+        {
+            "nick": "Jester",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Поровозик",
             "role": "Мирный"
         },
         {
             "nick": "Гоморра",
-            "role": "Дон"
-        },
-        {
-            "nick": "Sad",
-            "role": "Мирный",
-            "BP": true
-        },
-        {
-            "nick": "Троллейбус",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Slamet",
-            "role": "Мирный",
-            "BR": true
+            "role": "Мафия"
         },
         {
             "nick": "Анаконда",
@@ -44,11 +44,11 @@
         }
     ],
     "metadata": {
-        "table": "FleetStreet",
+        "table": "BakerStreet",
         "win": "Мирные",
-        "date": "2016-03-01",
-        "ref": "Кошка",
-        "gameNumber": 2
+        "date": "2016-02-29",
+        "ref": "Космос",
+        "gameNumber": 1
     },
     "days": [
         {

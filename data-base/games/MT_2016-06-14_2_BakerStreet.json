@@ -1,52 +1,52 @@
 {
     "playerLines": [
         {
-            "nick": "Рильф",
+            "nick": "R2D2",
             "role": "Мирный"
         },
         {
-            "nick": "Картмен",
+            "nick": "Кошка",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Questra",
             "role": "Мафия"
         },
         {
-            "nick": "Тракиец",
+            "nick": "Антонио",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Изюм",
             "role": "Мирный"
         },
         {
-            "nick": "Амальгама",
-            "role": "Дон"
-        },
-        {
-            "nick": "Айдахо",
+            "nick": "Stone Cold",
             "role": "Мирный"
         },
         {
-            "nick": "Троллейбус",
+            "nick": "Фемида",
             "role": "Мирный"
         },
         {
-            "nick": "Фортуна",
+            "nick": "Рыжая",
             "role": "Шериф"
         },
         {
-            "nick": "Black",
-            "role": "Мирный"
+            "nick": "Несквик",
+            "role": "Дон"
         },
         {
-            "nick": "Доктор Зло",
+            "nick": "Blink",
             "role": "Мирный"
-        },
-        {
-            "nick": "Sad",
-            "role": "Мафия"
         }
     ],
     "metadata": {
-        "table": "DowningStreet",
+        "table": "BakerStreet",
         "win": "Мафия",
-        "date": "2016-03-01",
-        "ref": "Зло",
-        "gameNumber": 4
+        "date": "2016-06-14",
+        "ref": "Заяц",
+        "gameNumber": 2
     },
     "days": [
         {
