@@ -1,0 +1,69 @@
+{
+    "playerLines": [
+        {
+            "nick": "Sad",
+            "role": "Дон"
+        },
+        {
+            "nick": "Шрек",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Аксолотль",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Mello",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Леди",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Доктор Зло",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Крюгер",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Айдахо",
+            "role": "Мафия"
+        },
+        {
+            "nick": "DD",
+            "role": "Мирный",
+            "BR": true
+        },
+        {
+            "nick": "Изюм",
+            "role": "Мафия"
+        }
+    ],
+    "metadata": {
+        "table": "FleetStreet",
+        "win": "Мирные",
+        "date": "2016-03-22",
+        "ref": "Баффет",
+        "gameNumber": 2
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

@@ -269,6 +269,22 @@
         "img": "HankMoody.jpg"
     },
     {
+        "nick": "Janes",
+        "password": "Janes",
+        "name": "Janes",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Jennis",
+        "password": "Jennis",
+        "name": "Jennis",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Jester",
         "password": "Jester",
         "name": "Jester",
@@ -1279,6 +1295,14 @@
         "img": "Викарий.jpg"
     },
     {
+        "nick": "Гандай",
+        "password": "Гандай",
+        "name": "Гандай",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Гендальф",
         "password": "Гендальф",
         "name": "Гендальф",
@@ -1849,9 +1873,25 @@
         "honours": []
     },
     {
+        "nick": "Леди",
+        "password": "Леди",
+        "name": "Леди",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Люцик",
         "password": "Люцик",
         "name": "Люцик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Магда",
+        "password": "Магда",
+        "name": "Магда",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -1885,6 +1925,14 @@
                 "place": 2
             }
         ]
+    },
+    {
+        "nick": "Марта",
+        "password": "Марта",
+        "name": "Марта",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Марья Ивановна",

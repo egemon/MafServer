@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Изюм",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Художник",
+            "role": "Мирный"
+        },
+        {
+            "nick": "ВДулич",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Клич",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Шрек",
+            "role": "Дон",
+            "BP": true,
+            "BR": true
+        },
+        {
+            "nick": "Stone Cold",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Баффет",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Mello",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Аль Капоне",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кельвин",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "DowningStreet",
+        "win": "Мафия",
+        "date": "2016-03-22",
+        "ref": "Аксолотль",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}
