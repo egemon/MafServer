@@ -1,0 +1,68 @@
+{
+    "playerLines": [
+        {
+            "nick": "Антонио",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Тарантино",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Sad",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Борман",
+            "role": "Мирный"
+        },
+        {
+            "nick": "DD",
+            "role": "Дон"
+        },
+        {
+            "nick": "Questra",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Клич",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Фемида",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Рыжая",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Кельвин",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мафия",
+        "date": "2016-03-29",
+        "ref": "Johny",
+        "gameNumber": 2
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

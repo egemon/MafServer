@@ -1,0 +1,69 @@
+{
+    "playerLines": [
+        {
+            "nick": "Earl Gray",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Клич",
+            "role": "Дон"
+        },
+        {
+            "nick": "Борман",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Тарантино",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Sad",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Рыжая",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Антонио",
+            "role": "Мафия",
+            "BR": true
+        },
+        {
+            "nick": "Stone Cold",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Skarlet",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кельвин",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мафия",
+        "date": "2016-03-29",
+        "ref": "Амахонда",
+        "gameNumber": 1
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

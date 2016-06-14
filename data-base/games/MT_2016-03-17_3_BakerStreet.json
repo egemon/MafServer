@@ -1,0 +1,69 @@
+{
+    "playerLines": [
+        {
+            "nick": "Sad",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Зло",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Alex",
+            "role": "Дон"
+        },
+        {
+            "nick": "Митрандир",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Палац України",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Космос",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Айдахо",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Борман",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Йоко",
+            "role": "Мафия",
+            "BP": true
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мафия",
+        "date": "2016-03-17",
+        "ref": "Эхо",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

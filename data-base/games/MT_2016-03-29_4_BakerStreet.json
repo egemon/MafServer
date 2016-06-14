@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Stone Cold",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Вагрант",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Questra",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Клич",
+            "role": "Дон"
+        },
+        {
+            "nick": "Антонио",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Тарантино",
+            "role": "Мирный"
+        },
+        {
+            "nick": "50",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Борман",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Амбал",
+            "role": "Мирный",
+            "BP": true,
+            "BR": true
+        },
+        {
+            "nick": "Vinsent",
+            "role": "Шериф"
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мирные",
+        "date": "2016-03-29",
+        "ref": "Заяц",
+        "gameNumber": 4
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

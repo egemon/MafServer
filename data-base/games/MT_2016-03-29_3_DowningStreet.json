@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Фемида",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мирный",
+            "BP": true
+        },
+        {
+            "nick": "Геноцид",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Картмен",
+            "role": "Дон"
+        },
+        {
+            "nick": "Sad",
+            "role": "Мирный",
+            "BR": true
+        },
+        {
+            "nick": "Кобра",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Slamet",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Тракиец",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Skarlet",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Аль Капоне",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "DowningStreet",
+        "win": "Мирные",
+        "date": "2016-03-29",
+        "ref": "Палац України",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

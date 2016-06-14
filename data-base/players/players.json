@@ -40,6 +40,14 @@
         "img": "50.jpg"
     },
     {
+        "nick": "Alex",
+        "password": "Alex",
+        "name": "Alex",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Arch Enemy",
         "password": "Arch Enemy",
         "name": "Виктор Хомяк",
@@ -999,6 +1007,14 @@
         ]
     },
     {
+        "nick": "Астория",
+        "password": "Астория",
+        "name": "Астория",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "presents": "",
         "honours": [
             {
@@ -1266,6 +1282,14 @@
         "nick": "Гендальф",
         "password": "Гендальф",
         "name": "Гендальф",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Геноцид",
+        "password": "Геноцид",
+        "name": "Геноцид",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -1559,6 +1583,14 @@
         "nick": "Иммитация (Иллюзия)",
         "password": "Иммитация (Иллюзия)",
         "experiance": ""
+    },
+    {
+        "nick": "Исландия",
+        "password": "Исландия",
+        "name": "Исландия",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "presents": "",
@@ -1959,6 +1991,14 @@
         "img": "Мутный.jpg"
     },
     {
+        "nick": "Настя",
+        "password": "Настя",
+        "name": "Настя",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Несквик",
         "password": "Несквик",
         "name": "Несквик",
@@ -2352,6 +2392,14 @@
         "nick": "Троллейбус",
         "password": "Троллейбус",
         "name": "Троллейбус",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Уно",
+        "password": "Уно",
+        "name": "Уно",
         "presents": [],
         "memberLevel": 0,
         "honours": []

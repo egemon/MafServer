@@ -1,0 +1,68 @@
+{
+    "playerLines": [
+        {
+            "nick": "Амбал",
+            "role": "Мирный"
+        },
+        {
+            "nick": "50",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Айдахо",
+            "role": "Дон"
+        },
+        {
+            "nick": "Кельвин",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Геноцид",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Skarlet",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Палац України",
+            "role": "Мафия"
+        },
+        {
+            "nick": "О'Доннел",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Баффет",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Тракиец",
+            "role": "Мафия"
+        }
+    ],
+    "metadata": {
+        "table": "DowningStreet",
+        "win": "Мафия",
+        "date": "2016-03-29",
+        "ref": "Johny",
+        "gameNumber": 4
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}
