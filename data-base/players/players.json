@@ -96,6 +96,22 @@
         ]
     },
     {
+        "nick": "Batman",
+        "password": "Batman",
+        "name": "Batman",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Black",
+        "password": "Black",
+        "name": "Black",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Blink",
         "password": "Blink",
         "name": "Blink",
@@ -140,14 +156,6 @@
             }
         ],
         "img": "Blink.jpg"
-    },
-    {
-        "nick": "Cибилла",
-        "password": "Cибилла",
-        "name": "Cибилла",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
     },
     {
         "nick": "DD",
@@ -251,6 +259,14 @@
             }
         ],
         "img": "HankMoody.jpg"
+    },
+    {
+        "nick": "Jester",
+        "password": "Jester",
+        "name": "Jester",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Johny",
@@ -528,6 +544,14 @@
         "honours": [],
         "nick": "Skarlet",
         "password": "Skarlet"
+    },
+    {
+        "nick": "Slamet",
+        "password": "Slamet",
+        "name": "Slamet",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Snoopy",
@@ -923,6 +947,14 @@
         "img": "Амбал.jpg"
     },
     {
+        "nick": "Анаконда",
+        "password": "Анаконда",
+        "name": "Анаконда",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "presents": [],
         "honours": [],
         "nick": "Антонио",
@@ -1234,6 +1266,14 @@
         "nick": "Гендальф",
         "password": "Гендальф",
         "name": "Гендальф",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Гоморра",
+        "password": "Гоморра",
+        "name": "Гоморра",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -1560,6 +1600,14 @@
         "nick": "Картмен",
         "password": "Картмен",
         "name": "Картмен",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Кельвин",
+        "password": "Кельвин",
+        "name": "Кельвин",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -1927,6 +1975,14 @@
         "honours": []
     },
     {
+        "nick": "Ник",
+        "password": "Ник",
+        "name": "Ник",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "О'Доннел",
         "password": "О'Доннел",
         "name": "О'Доннел",
@@ -2043,6 +2099,14 @@
         "honours": []
     },
     {
+        "nick": "Поровозик",
+        "password": "Поровозик",
+        "name": "Поровозик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Рандом",
         "password": "Рандом",
         "name": "Рандом",
@@ -2071,6 +2135,14 @@
         "nick": "Рикотта",
         "password": "Рикотта",
         "name": "Рикотта",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Рильф",
+        "password": "Рильф",
+        "name": "Рильф",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -2272,6 +2344,14 @@
         "nick": "Триста",
         "password": "Триста",
         "name": "Триста",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Троллейбус",
+        "password": "Троллейбус",
+        "name": "Троллейбус",
         "presents": [],
         "memberLevel": 0,
         "honours": []

@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Изюм",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кобра",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Batman",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Skarlet",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Крюгер",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кельвин",
+            "role": "Шериф",
+            "BP": true,
+            "BR": true
+        },
+        {
+            "nick": "DD",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Техас",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кошка",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Люцик",
+            "role": "Дон"
+        }
+    ],
+    "metadata": {
+        "table": "FleetStreet",
+        "win": "Мафия",
+        "date": "2016-03-01",
+        "ref": "Роммель",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Доктор Зло",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Skarlet",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Аль Капоне",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мафия"
+        },
+        {
+            "nick": "ВДулич",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Гоморра",
+            "role": "Дон"
+        },
+        {
+            "nick": "Sad",
+            "role": "Мирный",
+            "BP": true
+        },
+        {
+            "nick": "Троллейбус",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Slamet",
+            "role": "Мирный",
+            "BR": true
+        },
+        {
+            "nick": "Анаконда",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "FleetStreet",
+        "win": "Мирные",
+        "date": "2016-03-01",
+        "ref": "Кошка",
+        "gameNumber": 2
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

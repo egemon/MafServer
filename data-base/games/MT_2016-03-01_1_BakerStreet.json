@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Техас",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Эхо",
+            "role": "Шериф",
+            "BR": true
+        },
+        {
+            "nick": "Шрек",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Slamet",
+            "role": "Мирный",
+            "BP": true
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Black",
+            "role": "Дон"
+        },
+        {
+            "nick": "Jester",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Поровозик",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Гоморра",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Анаконда",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мирные",
+        "date": "2016-03-01",
+        "ref": "Космос",
+        "gameNumber": 1
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}
