@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Дагер",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Шрек",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Ниграмма",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Художник",
+            "role": "Дон",
+            "BP": true,
+            "BR": true
+        },
+        {
+            "nick": "DD",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Борман",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Айдахо",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Изюм",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Тракиец",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мафия",
+        "date": "2016-06-07",
+        "ref": "Аксолотль",
+        "gameNumber": 4
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

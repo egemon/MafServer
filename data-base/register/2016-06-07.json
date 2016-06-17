@@ -1,41 +1,6 @@
 [
     {
-        "nick": "Люцик",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Дейнер",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Амбал",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Шрек",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Кобра",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Командор",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Green Day",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Random",
+        "nick": "Зло",
         "sum": 0,
         "debt": 0
     },
@@ -45,57 +10,7 @@
         "debt": 0
     },
     {
-        "nick": "DD",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Мелло",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Гора",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Изюм",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Сибилла",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Фемида",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Stone Cold",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Техас",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Fool",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Грей",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Тракиец",
+        "nick": "Дагер",
         "sum": 0,
         "debt": 0
     },
@@ -105,47 +20,7 @@
         "debt": 0
     },
     {
-        "nick": "Баффет",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Mello",
-        "sum": 0,
-        "debt": 0
-    },
-    {
         "nick": "Йоко",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Цапля",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Аксолотль",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Questra",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Fox",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "Клич",
-        "sum": 0,
-        "debt": 0
-    },
-    {
-        "nick": "СБ",
         "sum": 0,
         "debt": 0
     },
@@ -155,8 +30,108 @@
         "debt": 0
     },
     {
+        "nick": "Амальгама",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Крюгер",
+        "sum": 0,
+        "debt": 25
+    },
+    {
+        "nick": "Цезарь",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Вже не той",
+        "sum": 0,
+        "debt": 0
+    },
+    {
         "nick": "Earl Gray",
         "sum": 0,
         "debt": 25
+    },
+    {
+        "nick": "Random",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Матан",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Кобра",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "DD",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Фемида",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Палац України",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Sad",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "50",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Questra",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Тракиец",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Художник",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Шрек",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Константин?",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Изюм",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Ниграмма",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Борман",
+        "sum": 0,
+        "debt": 0
     }
 ]
