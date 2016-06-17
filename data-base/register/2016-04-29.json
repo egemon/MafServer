@@ -158,5 +158,35 @@
         "nick": "Earl Gray",
         "sum": 0,
         "debt": 25
+    },
+    {
+        "nick": "Панда",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Vinsent",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Художник",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Борман",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "50",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "Sad",
+        "sum": 0,
+        "debt": 0
     }
 ]
