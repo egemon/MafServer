@@ -1,5 +1,5 @@
 #!/bin/env node
-var CONFIG = require('./configs/serverConfig.json')
+var CONFIG = require('./configs/serverConfig.json');
 var express = require('express'),
     app = express();
 var compress = require('compression');
@@ -10,12 +10,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var router = require('./routes/router');
-var users = require('./routes/users');
+// var users = require('./routes/users');
 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'public/views'));
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
 app.use(compress(CONFIG));
 app.use(favicon(__dirname + '/public/favicon.ico'));
