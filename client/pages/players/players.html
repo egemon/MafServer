@@ -1,0 +1,23 @@
+<button class="set-data-button" ng-click="setPlayers(players.data)">Внести данные</button>
+<table class="table players-table table-hover">
+    <thead>
+        <tr>
+            <th ng-repeat="(j, field) in players.fields">{{::field}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="(i, player) in players.data"
+            ng-include="'players/player-tr.html'">
+        </tr>
+        <tr>
+            <tr new-player
+                add-present="addPresent(presents, present)"
+                fields="players.fields"
+                add-player="addNewPlayer(player)"
+                start-edit="startEdit($event, player)"
+                remove-item="removeItem(items, item)"
+            ></tr>
+        </tr>
+    </tbody>
+</table>
+

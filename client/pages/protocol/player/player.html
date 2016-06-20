@@ -1,0 +1,25 @@
+<td>{{::number + 1}}</td>
+<td>
+    <input class="best-checkbox" type="checkbox" name="best" value="" ng-model="player.data.BP">
+</td>
+<td>
+    <input class="best-checkbox" type="checkbox" name="best" value="" ng-model="player.data.BR">
+</td>
+<td>
+    <autocomplete tabindex="{{::(number+1)*10+1}}" class="" required ng-model="player.data.nick" data="playerNicks"></autocomplete>
+    <!-- <input required class="player-nick-input form-control" type="text" ng-model="player.data.nick"> -->
+</td>
+<td>
+    <select tabindex="{{::(number+1)*10+2}}" required class="player-role metadata-input" name="" id="" ng-model="player.data.role">
+        <option ng-repeat= "role in roles">{{role}}</option>
+    </select>
+</td>
+<td class="falls">
+    <button type="" class="decrFall btn btn-primary" ng-disabled="player.data.falls == 0" ng-click="player.decrFall()">-</button>
+    <span>{{player.data.falls}}</span>
+    <button type="" class="incrFall btn btn-primary" ng-disabled="player.data.falls == maxFalls" ng-click="player.incrFall()">+</button>
+</td>
+
+<!--     <input type="checkbox">Убит
+<input type="checkbox">Проверен шерифом
+<input type="checkbox">Проверен доном -->

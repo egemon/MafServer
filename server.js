@@ -14,7 +14,7 @@ var router = require('./routes/router');
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'public/views'));
+app.set('views', path.join(__dirname, 'public'));
 // app.set('view engine', 'ejs');
 
 app.use(compress(CONFIG));
@@ -23,7 +23,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json({limit: '1mb'}));
 app.use(bodyParser.urlencoded({ extended: false, limit: '5mb' }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '/')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/', router);
 // app.use('/users', users);

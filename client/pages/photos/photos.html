@@ -1,0 +1,52 @@
+<div class="photo" ng-repeat="(i, photo) in photos">
+    <button
+        id="add-player-button"
+        ng-click="photosCtrl.removeItem(photos, photo)"
+        ng-show="user.data.memberLevel >= 3">Удалить</button>
+    <a href="{{::photo.href}}" title="{{::photo.title}}" target="_blank">
+        <img class="photo-logo"
+        onerror="this.src='../img/main_logo_black2.png'; this.onerror=''"
+        ng-src="{{::photo.src}}"
+        alt="{{::photo.title}}"
+        >
+    </a>
+    <p class="photo-title">{{::photo.title}}</p>
+    <p class="photo-date">{{::photo.date | date}}</p>
+</div>
+
+
+<div ng-show="user.data.memberLevel >= 3">
+    <label>
+        Название
+    <input
+        type="text"
+        ng-model="newPhoto.title"
+    >
+    </input>
+    </label>
+    <label>
+        Дата
+    <input
+        type="date"
+        ng-model="newPhoto.date"
+    >
+    </input>
+    </label>
+    <label>
+        Ссылка
+    <input
+        type="text"
+        ng-model="newPhoto.href"
+    >
+    </input>
+    </label>
+    <label>
+        Картинка
+    <input
+        type="text"
+        ng-model="newPhoto.src"
+    >
+    </input>
+    </label>
+    <button id="add-player-button" ng-click="photosCtrl.addItem(photos, newPhoto);newPhoto = {};">Добавить</button>
+</div>

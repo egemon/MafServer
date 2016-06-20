@@ -1,0 +1,13 @@
+/*========= REGISTRATION ========*/
+
+#view register table input {
+    display: inline-block;
+}
+
+.set-data-button[disabled] {
+    opacity: 0.5;
+}
+[disabled]+.hint{
+    display: block;
+    text-align: center;
+}

@@ -1,0 +1,51 @@
+<div class="day" ng-repeat="(i, day) in days track by $index">
+    <div class="day-title">
+        День {{::i}}
+        <button class="btn btn-primary" ng-click="DaysCtrl.removeItem(day, days)">-</button>
+    </div>
+    <div class="votes" ng-repeat="(j, details) in day.votes">
+        <span>
+            Кто
+            <select
+                class="days-input"
+                ng-model="details.who"
+                ng-options="player.nick for player in players track by player.nick">
+            </select>
+        </span>
+        <span>
+            Кого
+            <select
+                class="days-input"
+                ng-model="details.whom"
+                ng-options="player.nick for player in players track by player.nick">
+            </select>
+        </span>
+        <div>
+            <span>
+                Голосов
+        <!--             <button type="" class="decrFall btn btn-primary" ng-disabled="details.sum == 0" ng-click="DaysCtrl.decrNumber(details, 'sum')">-</button>
+                <span>{{details.sum}}</span>
+                <button type="" class="incrFall btn btn-primary" ng-disabled="details.sum == 10" ng-click="DaysCtrl.incrNumber(details, 'sum')">+</button> -->
+                <input class="votes-number-input" type="number" ng-model="details.sum">
+            </span>
+            <button class="btn btn-primary" ng-click="DaysCtrl.removeItem(details, day.votes)">-</button>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" ng-click="DaysCtrl.addVote(day.votes)">Добавить выставление</button>
+    <div class="results">
+            <span
+                ng-repeat="(key, value) in day.results"
+                class="{{::key}}-container"
+            >
+                {{::key | translate}}
+                <select
+                    class="days-input"
+                    ng-model="day.results[key]"
+                    ng-options="player.nick for player in players track by player.nick"
+                >
+                </select>
+            </span>
+    </div>
+</div>
+<button class="btn btn-primary" ng-click="DaysCtrl.addDay()">Следующий день</button>

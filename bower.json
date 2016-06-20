@@ -1,0 +1,33 @@
+{
+  "name": "MafSite_Angular",
+  "version": "0.0.0",
+  "authors": [
+    "ilukianov <ilukianov@cogniance.com>"
+  ],
+  "description": "Client side for site of BakerStreet Mafia Club",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "install": {
+    "path": {
+      "css": "client/css/lib",
+      "js": "client/js/lib"
+    }
+  },
+  "dependencies": {
+    "angular": "^1.5.2",
+    "angular-ui-router": "^0.2.18",
+    "angular-animate": "^1.5.2",
+    "angular-cookies": "^1.5.3",
+    "bootstrap-css": "^3.3.6",
+    "angular-autocomplete": "git://github.com/JustGoscha/allmighty-autocomplete.git"
+  }
+}

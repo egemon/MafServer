@@ -1,0 +1,20 @@
+/*=============== NEWS ===============*/
+article p:last-child {
+    text-align: right;
+}
+.article-title {
+    display: block;
+}
+
+#seal{
+    float: right;
+    width: 155px;
+    height: 173px;
+    position: relative;
+    bottom: 90px;
+    right: 50px;
+}
+
+.article {
+    overflow: hidden;
+}

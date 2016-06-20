@@ -1,0 +1,11 @@
+/* ============= PHOTOS =============*/
+.photo-logo {
+    height: 200px;
+    width: auto;
+    border-color: black;
+}
+
+.photo {
+    height: auto;
+    width: auto;
+}

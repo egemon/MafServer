@@ -1,0 +1,60 @@
+<td ng-repeat="(i, key) in fields">
+<input
+    type="{{::inputTypes[key]}}"
+    key="{{::key}}"
+    ng-if="key !== 'presents' && key !== 'honours'"
+    ng-model="newPlayer.data[key]"
+>
+</input>
+<div class="hint">
+    Данные некорректны! Проверьте.
+</div>
+
+
+<!-- presents container -->
+<div
+    ng-if="key ==='presents'"
+    class="player-presents-container"
+    data="{{::newPlayer.data.presents}}"
+>
+    <!-- player-continer in repeate -->
+    <div
+        class='present-container'
+        ng-repeat="(j, present) in newPlayer.data.presents track by $index "
+    >
+        <span
+            data={{::present}}
+            key="presents"
+            iterator="{{::j}}"
+            ng-click="startEdit({$event: $event, player: newPlayer.data})"
+        >
+            {{::present}}
+        </span>
+        <button class="remove-present-button" ng-click="removeItem({items: newPlayer.data.presents, item: present})">-</button>
+    </div>
+
+    <!--  new present container-->
+    <div>
+        <input type="text" ng-model="newPresent">
+        <button
+            class="add-present-button"
+            ng-click="addPresent({presents: newPlayer.data.presents, present: newPresent}); newPresent = ''"
+        >+</button>
+    </div>
+</div>
+
+
+<div ng-if="key ==='honours'" ng-repeat="(j, honour) in player[key] track by $index">
+    <div  ng-repeat="(Key, honour) in honour">
+        <span class="player-honour-key">
+            {{::Key}} :
+        </span>
+        <span class="player-honour-value">
+            {{::honour}}
+        </span>
+    </div>
+</div>
+</td>
+<td>
+    <button id="add-player-button" ng-click="addPlayer({player: newPlayer.data})">+</button>
+</td>

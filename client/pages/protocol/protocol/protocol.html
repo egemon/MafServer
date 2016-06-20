@@ -1,0 +1,46 @@
+<form class="clearfix" novalidate accept-charset="utf-8" name="ProtocolForm" ng-submit="">
+
+  <div class="metadata-container">
+    <table metadata
+      wins="protocol.WIN"
+      tables="protocol.TABLES"
+      class="table table-bordered table-hover"
+      player-nicks="protocol.playerNicks"
+    >
+    </table >
+    <div class="button-container">
+      <timer></timer>
+      <button class= "btn btn-primary" id="control-btn" ng-disabled="ProtocolForm.$invalid" ng-click="protocol.saveGame()">Сохранить игру</button>
+      <button class= "btn btn-primary" id="control-btn" ng-disabled="!protocol.game.metadata.gameNumber || !protocol.game.metadata.date || !protocol.game.metadata.table" ng-click="protocol.loadGame()">Загрузить игру</button>
+      <button class= "btn btn-primary" id="control-btn" ng-disabled="!protocol.game.metadata.gameNumber || !protocol.game.metadata.date || !protocol.game.metadata.table" ng-click="protocol.deleteGame()">Удалить игру</button>
+    </div>
+    <div class="player-hint" ng-show="ProtocolForm.$invalid">
+      Пожалуйста заполните все игровые ники и необходимые поля!
+    </div>
+  </div>
+
+  <div class="protocol-container">
+    <table class="table table-bordered table-hover clearfix">
+      <caption>Бланк</caption>
+      <thead>
+        <tr ng-include="'players/players-header.html'"></tr>
+      </thead>
+      <tbody class="player-container">
+        <tr player
+          ng-repeat="player in protocol.game.playerLines track by $index"
+          number="$index"
+          max-falls="protocol.MAX_FALLS"
+          roles="protocol.ROLES"
+          player-nicks="protocol.playerNicks"
+        >
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <days
+  state="protocol.state"
+  days="protocol.game.days"
+  players="protocol.game.playerLines"
+  ></days>
+</form>

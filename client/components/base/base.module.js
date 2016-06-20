@@ -1,0 +1,1 @@
+angular.module('base', ['ui.router', 'server', 'ngAnimate', 'templates', 'ProtocolApp','ngCookies', 'autocomplete']);

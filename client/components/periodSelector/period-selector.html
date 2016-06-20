@@ -1,0 +1,23 @@
+<select
+    class="rating-select"
+    ng-model="periodType">
+    <option
+        ng-repeat="(periodType, val) in filterFields"
+        value="{{::periodType}}"
+        >
+        {{::val.name}}
+    </option>
+</select>
+<select
+    class="rating-select"
+    ng-model="period"
+    ng-show="periodType !== 'year'"
+    ng-options="item as item.name for item in filterFields[periodType].value track by item.value"
+    >
+</select>
+<select
+    class="rating-select"
+    ng-model="year"
+    ng-options="item as item.name for item in filterFields.year.value track by item.value"
+    >
+</select>

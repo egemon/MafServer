@@ -1,0 +1,1 @@
+angular.module('ProtocolApp', ['timer', 'sync', 'templates', 'autocomplete']);

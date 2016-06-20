@@ -1,0 +1,46 @@
+protocol {
+    display: block;
+}
+protocol form {
+    display: inline-block;
+}
+protocol-header{
+    display: block;
+}
+
+.button-container {
+    text-align: center;
+    overflow: hidden;
+}
+
+.protocol-container,
+.metadata-container {
+    float: left;
+}
+
+#control-btn {
+    line-height: 30px;
+    padding: 5px 5px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+protocol .table>tbody>tr>td,
+protocol .table>tbody>tr>th,
+protocol .table>tfoot>tr>td,
+protocol .table>tfoot>tr>th,
+protocol .table>thead>tr>td,
+protocol .table>thead>tr>th{
+    padding: 0 8px;
+}
+
+protocol button {
+    font-family: Barocco_Floral_Initial, Georgia, 'Times New Roman', serif;
+}
+.player-hint {
+    width: 300px;
+}
+.metadata-input {
+    width: 100%;
+    font-size: 13px;
+}

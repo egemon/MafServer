@@ -1,0 +1,85 @@
+/* ============== HALL OF FAME =======*/
+.player-logo,
+.photo-logo {
+    width: 150px;
+    height: 200px;
+    float: left;
+    margin-right: 5px;
+    border-radius: 90px/100px;
+    border-width: 2px;
+    border-style: ridge;
+    transition: all 1.5s ease;
+}
+.player-text-container {
+    width: 194px;
+    float: right;
+}
+.player-logo:hover,
+.photo-logo:hover {
+    transform: scale(-1,1);
+}
+
+#top-players {
+    text-align: center;
+}
+
+.top-title {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 1px dashed;
+    border-top: 1px dashed;
+}
+
+#top0-player .player-logo {
+    border-color: #000;
+}
+
+#top1-player .player-logo {
+    border-color: #FFD700;
+}
+
+#top2-player .player-logo {
+    border-color: #C0C0C0;
+}
+
+#top3-player .player-logo {
+    border-color: #cd7f32;
+}
+
+.player,
+.photo {
+    display: inline-block;
+    vertical-align: top;
+    width: 350px;
+    margin: 10px;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.player a,
+.photo a {
+    float: left;
+}
+
+.player-nick,
+.photo-title,
+.photo-date {
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.photo-title {
+    clear: both;
+}
+.honours {
+    background: black;
+    float: left;
+    width: 191px;
+}
+.honour {
+    width: 50px;
+    float: left;
+    background-color: silver;
+    border-radius: 50px;
+}

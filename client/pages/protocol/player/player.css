@@ -1,0 +1,33 @@
+player {
+    display: block;
+    /*border: 1px solid black;*/
+}
+.best-checkbox {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 17px 0;
+}
+player .player-nick-input,
+player .player-role {
+    margin: 10px 0px;
+}
+
+.player-nick-input.ng-touched.ng-invalid {
+    border: 1px solid black;
+}
+
+.player-nick-input {
+    font-weight: bold;
+    font-size: 13px;
+}
+.player-container .player-role {
+    font-family: cursive;
+    font-size: 13px;
+}
+autocomplete {
+    font-family: 'Monotype Corsiva', 'Comic Sans MS', cursive;
+}
+td, th {
+    padding: 10px;
+}

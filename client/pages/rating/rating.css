@@ -1,0 +1,71 @@
+/*=========== RATING ==========*/
+.playerAvatarInRating {
+    width: 30px;
+    height: 40px;
+    border-radius: 25px;
+    margin: 3x 0px;
+}
+
+#ratingTable td,
+#ratingTable th {
+    padding: 0px;
+    font-size: 19px;
+    vertical-align: middle;
+}
+
+td,
+th {
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+input,
+select,
+button {
+    transition: all 1s;
+    display: block;
+    margin: 5px;
+    padding: 2px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #f0dab4;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.form-button.current,
+.form-button:hover {
+    position: relative;
+    bottom: 1px;
+    left: 1px;
+    background-color: rgb(217, 185, 128);
+}
+
+.form-input {
+    margin: 5px;
+    padding: 2px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #f0dab4;
+}
+
+.rating-select,
+.show-rating-button,
+.controls-text,
+.number-input {
+    float: left;
+    font-size: 15px;
+    padding: 5px;
+    line-height: 22px;
+}
+
+.controls-text {
+    float: right;
+    margin: 6px;
+}
+
+.number-input {
+    float: right;
+    width: 60px;
+}

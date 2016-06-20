@@ -1,0 +1,34 @@
+<article class="article" ng-repeat="(i, new) in news">
+    <title class="article-title">
+      {{::new.type === 'встреча' ? new.number + new.title : new.title}}
+    </title>
+    <img class="player-logo"
+      ng-src="data-base/players/img/{{::new.img}}"
+      src="MafSite/img/main_logo.png"
+      onerror="this.src = 'MafSite/img/main_logo.png'; this.onerror=''"
+    >
+    <p class="entry">
+        {{::new.entry}}
+      <a ng-if="new.vk"  href='{{:: new.vk || "https://vk.com/bs_vstrecha_" + new.number}}' target='_blank'>
+          глянуть вк...
+      </a>
+    </p>
+    <p ng-if="new.what">
+      Что? - {{::new.what}}
+    </p>
+    <p ng-if="new.where">
+      Где? -
+      <a href="https://goo.gl/oFev5u">
+       {{::new.where}}
+      </a>
+    </p>
+    <p ng-if="new.when">
+       Когда? - {{::new.when | date: 'medium'}}
+    </p>
+    <p ng-if="new.price">
+       Сколько? - {{::new.price}} за вечер игр
+    </p>
+    <p>
+      С уважением, команда организаторов.
+    </p>
+</article>

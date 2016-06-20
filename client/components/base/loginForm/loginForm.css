@@ -1,0 +1,34 @@
+/* ================ LOGIN ==========*/
+#authform {
+    transition: all 1s;
+}
+
+#authform.ng-hide {
+    opacity: 0;
+}
+
+login-form {
+    float: right;
+}
+
+.rating-row.ng-enter, .rating-row.ng-move {
+    -webkit-transition:1s linear all;
+    -moz-transition:1s linear all;
+    -o-transition:1s linear all;
+    transition:1s linear all;
+    opacity: 0;
+}
+
+.rating-row.ng-enter.ng-enter-active,
+.rating-row.ng-move.ng-move-active {
+    opacity:1;
+}
+
+.animating-started {
+    transition:1s linear all;
+    transform: scale(-1,1);
+}
+
+.player-logo[vk^="http"]{
+    cursor: pointer;
+}

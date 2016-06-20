@@ -1,0 +1,105 @@
+
+/*============== HEADER =============*/
+
+#header {
+    margin: 10px auto;
+}
+
+.page-title-container {
+    text-align: center;
+    overflow: hidden;
+}
+
+#page-logo-ref {
+    float: left;
+}
+
+#pageLogo {
+    transition: all 1.5s ease;
+    display: inline-block;
+    width: 60px;
+    height: 80px;
+}
+
+#pageLogo:hover {
+    transform: scale(-1,1);
+}
+
+#page-title {
+    float: left;
+    line-height: 80px;
+    margin-left: 10px;
+    font-size: 55px;
+    font-family: "old_english", Georgia, 'Times New Roman', serif;
+}
+
+
+/*============ MAIN MENU ============*/
+nav {
+    text-align: center;
+}
+.main-menu {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.main-menu-item {
+    transition: all 1s;
+    margin: 2px;
+    border-radius: 12px;
+    float: left;
+    text-align: center;
+    list-style: none;
+    background-color: #f0dab4;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) ;
+}
+
+.main-menu-item.current,
+.main-menu-item:hover {
+    box-shadow: 1px 1px 8px rgb(0, 0, 0);
+    position: relative;
+    bottom: 1px;
+    left: 1px;
+    background-color: rgb(217, 185, 128);
+}
+
+.main-menu-ref {
+    padding: 0 6px;
+    display: inline-block;
+    min-width: 82px;
+    color: #000;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 40px;
+    font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
+}
+
+/* ==========  MAIN ==========*/
+main {
+    margin: 10px auto;
+}
+
+article {
+    font-size: 19px;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    text-indent: 1em;
+    border: 1px dashed;
+    /*cursor: url(../img/cursor.png), auto;*/
+}
+.about_us_article::first-letter,
+.entry::first-letter {
+    font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
+    font-size: 30px;
+}
+article a{
+    text-decoration: none;
+    color: #250707;
+    font-style: italic;
+    font-weight: bold;
+}
+article a:hover{
+    transition:all 1s;
+    background-color: #852929;
+}

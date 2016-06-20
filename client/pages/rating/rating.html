@@ -1,0 +1,56 @@
+<period-selector
+  period-type="RatingCtrl.periodType"
+  period="RatingCtrl.period"
+  year="RatingCtrl.year"
+  ></period-selector>
+<button class="show-rating-button" ng-click="RatingCtrl.getRating()">Показать рейтинг</button>
+<span class="controls-text">
+  Игр
+</span>
+<input
+    class="number-input"
+    type="number"
+    name="edge"
+    placeholder=""
+    ng-model="gameEdge"
+    ng-init="gameEdge = 0"
+>
+<span class="controls-text">
+  Показать игроков, сыгравших не менее
+</span>
+
+<table class="table table-bordered" id="ratingTable" border='1'>
+  <thead>
+    <tr>
+      <th>Фото</th>
+      <th>Ник</th>
+      <th>Сумма</th>
+      <th>Игр</th>
+      <th>Среднее</th>
+      <th>Лучшие от игроков</th>
+      <th>Лучшие от Судей</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+        class="rating-row"
+        id="{{::player.nick}}"
+        ng-repeat="(i, player) in rating"
+        ng-show="player.gameNumber >= gameEdge"
+    >
+      <td id="{{::player.avatar}}">
+        <img class="playerAvatarInRating"
+        onerror="this.src='MafSite/img/main_logo.png'; this.onerror=''"
+        ng-src="data-base/players/img/{{::player.nick.split(' ').join('')}}.jpg"
+        alt="">
+      </td>
+      <td>{{::player.nick}}</td>
+      <td>{{::player.sum}}</td>
+      <td>{{::player.gameNumber}}</td>
+      <td>{{::player.sum / player.gameNumber | number:2}}</td>
+      <td>{{::player.BP}}</td>
+      <td>{{::player.BR}}</td>
+    </tr>
+  </tbody>
+</table>
+<script src="../js/plain/rating.js" type="text/javascript" charset="utf-8"></script>

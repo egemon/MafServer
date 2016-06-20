@@ -1,0 +1,673 @@
+@font-face {
+    font-family: 'Barocco_Floral_Initial';
+    src: url(../fonts/Barocco_Floral_Initial.ttf);
+}
+
+@font-face {
+    font-family: 'old_english';
+    src: url(../fonts/old_english.ttf);
+}
+
+/*@font-face {
+    font-family: 'MainTextFont';
+    src: url(../fonts/Nexa.otf);
+}*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background: #b89b70;
+    background: -moz-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
+    background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #b89b70), color-stop(100%, #78553d));
+    background: -webkit-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
+    background: -o-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
+    background: -ms-radial-gradient(top, ellipse cover, #b89b70 0%, #78553d 100%);
+    background: radial-gradient(ellipse at top, #b89b70 0%, #78553d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#facd96', endColorstr='#2b2b2b', GradientType=1 );
+    background-image: url(../img/main_bg_low.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    color: #000;
+    font-family: "Comic Sans MS", cursive;
+}
+
+#page-container {
+    height: 100%;
+    margin: 0 auto;
+    width: 90%;
+    background-color: transparent;
+}
+
+
+/*============== HEADER =============*/
+
+#header {
+    margin: 10px auto;
+}
+
+.page-title-container {
+    text-align: center;
+    overflow: hidden;
+}
+
+#page-logo-ref {
+    float: left;
+}
+
+#pageLogo {
+    transition: all 1.5s ease;
+    display: inline-block;
+    width: 60px;
+    height: 80px;
+}
+
+#pageLogo:hover {
+    transform: scale(-1,1);
+}
+
+#page-title {
+    float: left;
+    line-height: 80px;
+    margin-left: 10px;
+    font-size: 55px;
+    font-family: "old_english", Georgia, 'Times New Roman', serif;
+}
+
+
+/*============ MAIN MENU ============*/
+nav {
+    text-align: center;
+}
+
+.main-menu {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.main-menu-item {
+    transition: all 1s;
+    margin: 2px;
+    border-radius: 12px;
+    float: left;
+    text-align: center;
+    list-style: none;
+    background-color: #f0dab4;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main-menu-item.current,
+.main-menu-item:hover {
+    box-shadow: 1px 1px 8px rgb(0, 0, 0);
+    position: relative;
+    bottom: 1px;
+    left: 1px;
+    background-color: rgb(217, 185, 128);
+}
+
+.main-menu-ref {
+    padding: 0 6px;
+    display: inline-block;
+    min-width: 82px;
+    color: #000;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 40px;
+    font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
+}
+
+/* ==========  MAIN ==========*/
+main {
+    margin: 10px auto;
+}
+
+article {
+    font-size: 19px;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    text-indent: 1em;
+    border: 1px dashed;
+    /*cursor: url(../img/cursor.png), auto;*/
+}
+
+.about_us_article::first-letter,
+.entry::first-letter {
+    font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
+    font-size: 30px;
+}
+
+article a {
+    text-decoration: none;
+    color: #250707;
+    font-style: italic;
+    font-weight: bold;
+}
+
+article a:hover {
+    transition: all 1s;
+    background-color: #852929;
+}
+
+/* ============== HALL OF FAME =======*/
+.player-logo,
+.photo-logo {
+    width: 150px;
+    height: 200px;
+    float: left;
+    margin-right: 5px;
+    border-radius: 90px/100px;
+    border-width: 2px;
+    border-style: ridge;
+    transition: all 1.5s ease;
+}
+
+.player-text-container {
+    width: 194px;
+    float: right;
+}
+
+.player-logo:hover,
+.photo-logo:hover {
+    transform: scale(-1,1);
+}
+
+#top-players {
+    text-align: center;
+}
+
+.top-title {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 1px dashed;
+    border-top: 1px dashed;
+}
+
+#top0-player .player-logo {
+    border-color: #000;
+}
+
+#top1-player .player-logo {
+    border-color: #FFD700;
+}
+
+#top2-player .player-logo {
+    border-color: #C0C0C0;
+}
+
+#top3-player .player-logo {
+    border-color: #cd7f32;
+}
+
+.player,
+.photo {
+    display: inline-block;
+    vertical-align: top;
+    width: 350px;
+    margin: 10px;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.player a,
+.photo a {
+    float: left;
+}
+
+.player-nick,
+.photo-title,
+.photo-date {
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.photo-title {
+    clear: both;
+}
+
+.honours {
+    background: black;
+    float: left;
+    width: 191px;
+}
+
+.honour {
+    width: 50px;
+    float: left;
+    background-color: silver;
+    border-radius: 50px;
+}
+
+/*=============== NEWS ===============*/
+article p:last-child {
+    text-align: right;
+}
+
+.article-title {
+    display: block;
+}
+
+#seal {
+    float: right;
+    width: 155px;
+    height: 173px;
+    position: relative;
+    bottom: 90px;
+    right: 50px;
+}
+
+.article {
+    overflow: hidden;
+}
+
+/* ============= PHOTOS =============*/
+.photo-logo {
+    height: 200px;
+    width: auto;
+    border-color: black;
+}
+
+.photo {
+    height: auto;
+    width: auto;
+}
+
+/*============== PLAYERS ============*/
+.player-input {
+    height: 100%;
+}
+
+table,
+td {
+    height: 100%;
+}
+
+.players-table {
+    margin-left: -5%;
+}
+
+input.ng-invalid {
+    border: 1px solid red;
+}
+
+.hint {
+    display: none;
+}
+
+input.ng-invalid+
+.hint {
+    display: block;
+}
+
+.remove-present-button,
+.add-present-button {
+    display: inline-block;
+}
+
+.remove-player-button,
+.remove-present-button,
+.add-present-button,
+.new-present-input {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transition: all 1s;
+}
+
+tr:hover .remove-player-button,
+.present-container:hover .remove-present-button,
+.player-presents-container:hover .add-present-button,
+.player-presents-container:hover .new-present-input {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+}
+
+.set-data-button {
+    font-size: 15px;
+    padding: 5px 25px;
+    line-height: 22px;
+    margin: 10px auto;
+}
+
+#view players td,
+#view players th {
+    padding: 4px 2px;
+    line-height: 1;
+    font-size: 10px;
+}
+
+players input {
+    width: 100%;
+}
+
+input[type=file] {
+    width: 75px;
+}
+
+.content-block {
+    height: 100%;
+}
+
+/*============= PROTOCOL =========*/
+protocol,
+protocol caption,
+protocol th {
+    font-family: "Barocco_Floral_Initial", Georgia, 'Times New Roman', serif;
+    color: black;
+    text-align: center;
+    font-weight: 100;
+}
+
+.metadata-container [metadata] td,
+.protocol-container .player-container td {
+    vertical-align: middle;
+}
+
+protocol .btn-primary {
+    background-color: #f0dab4;
+    color: #000;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition: all 1s;
+}
+
+protocol .btn-primary:hover,
+protocol .btn-primary:active,
+protocol .btn-primary:active:focus,
+protocol .btn-primary:active:hover,
+protocol .btn-primary:focus,
+protocol .btn-primary:focus:hover {
+    box-shadow: 1px 1px 8px rgb(0, 0, 0);
+    position: relative;
+    bottom: 1px;
+    left: 1px;
+    background-color: rgb(217, 185, 128);
+    border: none;
+    outline-color: #000;
+}
+
+protocol #timerTime {
+    color: #000;
+}
+
+protocol #timerContainer {
+    border-color: #fff;
+}
+
+a:focus, a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+/*=========== RATING ==========*/
+.playerAvatarInRating {
+    width: 30px;
+    height: 40px;
+    border-radius: 25px;
+    margin: 3x 0px;
+}
+
+#ratingTable td,
+#ratingTable th {
+    padding: 0px;
+    font-size: 19px;
+    vertical-align: middle;
+}
+
+td,
+th {
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+input,
+select,
+button {
+    transition: all 1s;
+    display: block;
+    margin: 5px;
+    padding: 2px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #f0dab4;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.form-button.current,
+.form-button:hover {
+    position: relative;
+    bottom: 1px;
+    left: 1px;
+    background-color: rgb(217, 185, 128);
+}
+
+.form-input {
+    margin: 5px;
+    padding: 2px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #f0dab4;
+}
+
+.rating-select,
+.show-rating-button,
+.controls-text,
+.number-input {
+    float: left;
+    font-size: 15px;
+    padding: 5px;
+    line-height: 22px;
+}
+
+.controls-text {
+    float: right;
+    margin: 6px;
+}
+
+.number-input {
+    float: right;
+    width: 60px;
+}
+/*========= REGISTRATION ========*/
+
+#view register table input {
+    display: inline-block;
+}
+
+.set-data-button[disabled] {
+    opacity: 0.5;
+}
+
+[disabled]+.hint {
+    display: block;
+    text-align: center;
+}
+/* ================ LOGIN ==========*/
+#authform {
+    transition: all 1s;
+}
+
+#authform.ng-hide {
+    opacity: 0;
+}
+
+login-form {
+    float: right;
+}
+
+.rating-row.ng-enter, .rating-row.ng-move {
+    -webkit-transition: 1s linear all;
+    -moz-transition: 1s linear all;
+    -o-transition: 1s linear all;
+    transition: 1s linear all;
+    opacity: 0;
+}
+
+.rating-row.ng-enter.ng-enter-active,
+.rating-row.ng-move.ng-move-active {
+    opacity: 1;
+}
+
+.animating-started {
+    transition: 1s linear all;
+    transform: scale(-1,1);
+}
+
+.player-logo[vk^="http"] {
+    cursor: pointer;
+}
+
+days {
+    display: block;
+    float: left;
+    margin: 35px 0px 0px 3px;
+    font-size: 12px;
+    font-family: cursive;
+    width: 300px;
+}
+
+.days-input {
+    display: inline-block;
+}
+
+.results,
+.votes {
+    display: block;
+}
+
+.day {
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+.votes-number-input {
+    display: inline-block;
+}
+
+.votes {
+    border-top: 1px dashed #fff;
+    border-bottom: 1px dashed #fff;
+}
+
+days select,
+days input {
+    width: 67px;
+}
+
+protocol {
+    display: block;
+}
+
+protocol form {
+    display: inline-block;
+}
+
+protocol-header {
+    display: block;
+}
+
+.button-container {
+    text-align: center;
+    overflow: hidden;
+}
+
+.protocol-container,
+.metadata-container {
+    float: left;
+}
+
+#control-btn {
+    line-height: 30px;
+    padding: 5px 5px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+protocol .table>tbody>tr>td,
+protocol .table>tbody>tr>th,
+protocol .table>tfoot>tr>td,
+protocol .table>tfoot>tr>th,
+protocol .table>thead>tr>td,
+protocol .table>thead>tr>th {
+    padding: 0 8px;
+}
+
+protocol button {
+    font-family: Barocco_Floral_Initial, Georgia, 'Times New Roman', serif;
+}
+
+.player-hint {
+    width: 300px;
+}
+
+.metadata-input {
+    width: 100%;
+    font-size: 13px;
+}
+
+player {
+    display: block;
+    /*border: 1px solid black;*/
+}
+
+.best-checkbox {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 17px 0;
+}
+
+player .player-nick-input,
+player .player-role {
+    margin: 10px 0px;
+}
+
+.player-nick-input.ng-touched.ng-invalid {
+    border: 1px solid black;
+}
+
+.player-nick-input {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.player-container .player-role {
+    font-family: cursive;
+    font-size: 13px;
+}
+
+autocomplete {
+    font-family: 'Monotype Corsiva', 'Comic Sans MS', cursive;
+}
+
+td, th {
+    padding: 10px;
+}
+
+#timerContainer {
+    float: left;
+    margin: 10px 10px 10px 0;
+    border: 1px solid green;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#timerTime {
+    text-align: center;
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+}

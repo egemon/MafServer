@@ -1,0 +1,78 @@
+<button class="set-data-button"
+ng-click="registerCtrl.setRegister(register.data, date)"
+ng-disabled="!registerCtrl.isValid()"
+>Внести данные</button>
+<div class="hint">
+    Введите ники всех игроков!
+</div>
+<div>
+    <label>
+        Дата встречи
+        <input type="date" ng-model="date">
+    </label>
+    <label>
+        Бюджет встречи: {{registerCtrl.getSum()}}
+    </label>
+</div>
+
+<table class="table players-table table-hover">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th ng-repeat="(j, field) in register.fields">{{::field.name}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr
+            ng-repeat="(i, player) in register.data">
+            <td>
+                {{:: i+1}}
+            </td>
+            <td
+            ng-repeat="(k, field) in register.fields"
+            >
+                <autocomplete
+                ng-if="field.name === 'nick'"
+                ng-model="player[field.name]"
+                data="vm.playerNicks"
+                ></autocomplete>
+
+                <input
+                ng-if="field.name !== 'nick'"
+                type="{{::field.type}}"
+                ng-model="player[field.name]"
+                >
+            </td>
+            <td>
+                <button ng-click="removeItem(register.data, player)"> - </button>
+            </td>
+        </tr>
+        <tr ng-init="newPlayer = {}">
+            <td>
+                {{register.data.length + 1}}
+            </td>
+            <td
+
+                ng-repeat="(k, field) in register.fields"
+                >
+
+                <autocomplete
+                ng-if="field.name === 'nick'"
+                ng-model="newPlayer[field.name]"
+                data="vm.playerNicks"
+                ></autocomplete>
+
+                <input
+                ng-if="field.name !== 'nick'"
+                type="{{::field.type}}"
+                ng-model="newPlayer[field.name]">
+            </td>
+            <td>
+                <button ng-click="addItem(register.data, newPlayer); newPlayer = {};">+</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>

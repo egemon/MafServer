@@ -1,0 +1,22 @@
+<header id="header">
+    <div class="page-title-container">
+        <a id="page-logo-ref" ui-sref="{{'/' + PAGES[0].url}}" ng-click="setPage(PAGES[0])">
+            <img src="img/main_logo.png" alt="BakerLogo" id="pageLogo" ng-class="logoClass" >
+        </a>
+        <div id="page-title">
+            "Baker Street 221b" Mafia Club
+        </div>
+    <login-form ng-include="'base/loginForm/loginForm.html'"></login-form>
+    </div>
+    <nav>
+        <ul class="main-menu">
+            <li class="main-menu-item" ng-repeat="(i, thisPage) in PAGES" ng-class="{current:thisPage == page}" ng-show="user.data.memberLevel >= thisPage.needMemberLevel">
+                <a class="main-menu-ref" ui-sref="{{'/' + thisPage.url}}" ng-click="setPage(thisPage)">
+                    {{thisPage.name}}
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main ui-view id="view">
+</main>

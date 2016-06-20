@@ -1,0 +1,38 @@
+<caption>Информация об игре</caption>
+<tbody>
+    <tr>
+        <td>Стол</td>
+        <td>
+            <select tabindex="1" class="metadata-input" required ng-model="metadata.data.table" name="" id="">
+                <option ng-repeat="table in tables">{{table}}</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Дата</td>
+        <td>
+            <input tabindex="2" class="metadata-input" required ng-model="metadata.data.date" type="date" name="" value="" placeholder="">
+        </td>
+    </tr>
+    <tr>
+        <td>Ведущий</td>
+        <td>
+            <autocomplete tabindex="3" class="metadata-input" required ng-model="metadata.data.ref" data="playerNicks"></autocomplete>
+        </td>
+    </tr>
+    <tr>
+        <td>Победа</td>
+        <td>
+            <select  tabindex="4" class="metadata-input" required ng-model="metadata.data.win" name="" id="">
+                <option ng-repeat="win in wins">{{win}}</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Номер игры</td>
+        <td>
+            <input  tabindex="5" class="metadata-input" required ng-model="metadata.data.gameNumber" type="number" name="" value="" placeholder="" min="0" step="1">
+        </td>
+    </tr>
+
+</tbody>

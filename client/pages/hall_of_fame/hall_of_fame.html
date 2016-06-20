@@ -1,0 +1,9 @@
+<div class="top-block">
+    <div ng-repeat="(i, period) in hall_of_fame">
+        <title class="top-title">{{::period.title}}</title>
+        <div id="top-players">
+            <div ng-repeat="(j, player) in period.honours" class="player" id="top{{::j+1}}-player" ng-include="'player/player.html'">
+            </div>
+        </div>
+    </div>
+</div>
