@@ -1,6 +1,8 @@
+var isDev = process.argv[2] === 'dev' ? true : false;
+console.log('isDev = ', isDev);
+
 var express = require('express');
 var router = express.Router();
-
 var LocalGameStorage = require('../model/LocalGameStorage');
 var RatingBase = require('../model/RatingBase');
 var dataBase = require('../helpers/dataBase.js');
@@ -123,7 +125,7 @@ for (var i = 0; i < PAGES.length; i++) {
 // ==================== BASE for ANGULAR ==============
 router.get('/*', function(req, res) {
     console.log('[ROUTER] get for', req.url);
-    res.render('app.html');
+    res.render(isDev ? 'client/dev.html' : 'app.html');
 });
 
 
