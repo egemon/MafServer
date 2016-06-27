@@ -1,4 +1,4 @@
-angular.module('base').directive('periodSelector', function(){
+angular.module('base').directive('periodSelector', ()=>{
 
     return {
         scope: {

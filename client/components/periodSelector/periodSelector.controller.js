@@ -1,36 +1,36 @@
 angular.module('base').controller('periodSelectorCtrl', ['$scope', 'CONFIG',
-function($scope, CONFIG) {
-    var today = new Date();
+($scope, CONFIG)=> {
+    let today = new Date();
     $scope.filterFields = CONFIG.filterFields;
 
     $scope.periodType = 'month';
-    $scope.period = getObjByValue(+today.toISOString().split('T')[0].split('-')[1], $scope.filterFields.month.value);
-    $scope.year = getObjByValue(today.getUTCFullYear(), $scope.filterFields.year.value);
+    $scope.period = $scope.filterFields.month.value
+        .find(function (el) {
+            return el.value ==  +today.toISOString().split('T')[0].split('-')[1];
+    });
+    $scope.year = $scope.filterFields.year.value
+        .find(function (el) {
+            return el.value ==  today.getUTCFullYear();
+    });
 
     $scope.$on('restore-defaults', restoreDefaults);
     $scope.$watch('periodType', defaultPeriod);
 
 
     // ======= PRIVATE ==========
-
-    function getObjByValue(value, array) {
-        for (var i = 0; i < array.length; i++) {
-            if (array[i].value == value) {
-                return array[i];
-            }
-        }
-    }
-
-    var defaults = {
-        periodType: $scope.periodType,
-        period: $scope.period,
-        year: $scope.year
-    };
+    let defaults = {};
+    ({
+        periodType: defaults.periodType,
+        period: defaults.period,
+        year: defaults.year
+    } = $scope);
 
     function restoreDefaults() {
-        $scope.periodType = defaults.periodType;
-        $scope.period = defaults.period;
-        $scope.year = defaults.year;
+        ({
+            periodType: $scope.periodType,
+            period: $scope.period,
+            year: $scope.year  
+        } = defaults;)
     }
 
     function defaultPeriod (periodType, oldPeriodType) {

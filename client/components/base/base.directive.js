@@ -1,4 +1,4 @@
-angular.module('base').directive('base', function(){
+angular.module('base').directive('base', ()=>{
 
     return {
         controller: "baseCtrl as baseCtrl",

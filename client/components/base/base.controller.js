@@ -1,7 +1,7 @@
 angular.module('base')
 .controller('baseCtrl',
 ['PAGES', '$scope', 'serverService', '$timeout', '$window', '$location', 'editService',
-function(PAGES, $scope, serverService, $timeout, $window, $location, editService) {
+(PAGES, $scope, serverService, $timeout, $window, $location, editService)=> {
 
     const pageUrl = $location.path().slice(1);
     setPage(findPageByUrl(pageUrl) || PAGES[0]);

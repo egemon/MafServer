@@ -1,4 +1,4 @@
-angular.module('base').directive('newPlayer', function(){
+angular.module('base').directive('newPlayer', ()=>{
 
     return {
         scope: {
