@@ -3,9 +3,8 @@ angular.module('base')
 ['PAGES', '$scope', 'serverService', '$timeout', '$window', '$location', 'editService',
 function(PAGES, $scope, serverService, $timeout, $window, $location, editService) {
 
-    var pageUrl = $location.path().slice(1);
-    var firstPage = findPageByUrl(pageUrl) || PAGES[0];
-    setPage(firstPage);
+    const pageUrl = $location.path().slice(1);
+    setPage(findPageByUrl(pageUrl) || PAGES[0]);
     $scope.PAGES = PAGES;
     $scope.loginActive = false;
     $scope.user = serverService.player;
@@ -29,17 +28,15 @@ function(PAGES, $scope, serverService, $timeout, $window, $location, editService
         console.log('[base.controller] setPage()', arguments);
 
         $scope.page = page;
-        if (page.needData) {
-            if (page.url == 'rating') {
+        switch (page.needData && page.url) {
+            case ('rating'):
                 $scope.$broadcast('rating-request');
-            }
-
-            if (page.url == 'register') {
+            break;
+            case ('register'):
                 $scope.$broadcast('register-request');
-            }
-
-            fetchDataFor(page, page.needMemberLevel, page.data);
+            break;
         }
+        fetchDataFor(page, page.needMemberLevel, page.data);
     }
 
     function openNewTab (url) {
@@ -50,8 +47,7 @@ function(PAGES, $scope, serverService, $timeout, $window, $location, editService
         }
     }
 
-    function fetchDataFor (page, needMemberLevel, data) {
-        page = page || $scope.page;
+    function fetchDataFor (page = $scope.page, needMemberLevel, data) {
         console.log('[base.controller] fetchDataFor()', arguments);
 
         return serverService.$_fetchData(page, needMemberLevel, data)
@@ -70,11 +66,8 @@ function(PAGES, $scope, serverService, $timeout, $window, $location, editService
     function findPageByUrl(url) {
         console.log('[base.controller] findPageByUrl()', arguments);
 
-        for (var i = 0; i < PAGES.length; i++) {
-            var el = PAGES[i];
-            if (el.url == url) {
-                return el;
-            }
+        for (var page of PAGES) {
+            return page.url == url && page;
         }
     }
 
