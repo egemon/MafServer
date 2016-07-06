@@ -2,52 +2,53 @@
     "playerLines": [
         {
             "nick": "О'Доннел",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Тракиец",
-            "role": "Шериф"
-        },
-        {
-            "nick": "Earl Gray",
             "role": "Мирный"
-        },
-        {
-            "nick": "Сивилла",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Mello",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Граффег",
-            "role": "Мафия"
         },
         {
             "nick": "Random",
             "role": "Мирный"
         },
         {
-            "nick": "Изюм",
-            "role": "Мирный",
-            "BR": true
+            "nick": "Цезарь",
+            "role": "Мафия",
+            "BP": true
         },
         {
-            "nick": "СБ",
+            "nick": "Earl Gray",
             "role": "Мирный"
         },
         {
-            "nick": "Stone Cold",
-            "role": "Дон"
+            "nick": "Тракиец",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Клич",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Матан",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Тесла",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Сивилла",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Skarlet",
+            "role": "Дон",
+            "BR": true
         }
     ],
     "metadata": {
-        "table": "BakerStreet",
-        "win": "Мирные",
-        "date": "2016-04-28",
-        "ref": "Sad",
-        "gameNumber": 3
+        "table": "AbbeyRoad",
+        "win": "Мафия",
+        "date": "2016-06-21",
+        "ref": "Баффет",
+        "gameNumber": 2
     },
     "days": [
         {

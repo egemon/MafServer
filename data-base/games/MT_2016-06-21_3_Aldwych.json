@@ -1,0 +1,106 @@
+{
+    "playerLines": [
+        {
+            "nick": "Ник",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Айдахо",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Лунатик",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Крюгер",
+            "role": "Мирный"
+        },
+        {
+            "nick": "DD",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Фемида",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Заяц",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Фортуна",
+            "role": "Дон"
+        },
+        {
+            "nick": "Маэстро",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Матан",
+            "role": "Мафия"
+        }
+    ],
+    "metadata": {
+        "table": "Aldwych",
+        "win": "Мафия",
+        "date": "2016-06-21",
+        "ref": "Аксолотль",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": {
+                        "nick": "Маэстро",
+                        "falls": 0,
+                        "role": "Мирный",
+                        "BP": false,
+                        "BR": false
+                    },
+                    "whom": {
+                        "nick": "DD",
+                        "falls": 0,
+                        "role": "Мафия",
+                        "BP": false,
+                        "BR": false
+                    },
+                    "sum": 5
+                },
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": {
+                    "nick": "Крюгер",
+                    "falls": 0,
+                    "role": "Мирный",
+                    "BP": false,
+                    "BR": false
+                },
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        },
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

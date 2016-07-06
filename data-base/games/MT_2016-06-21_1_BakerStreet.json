@@ -1,15 +1,19 @@
 {
     "playerLines": [
         {
-            "nick": "Люцик",
+            "nick": "Изюм",
             "role": "Мирный"
         },
         {
-            "nick": "Дейнер",
+            "nick": "Антонио",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Заяц",
             "role": "Мирный"
         },
         {
-            "nick": "Амбал",
+            "nick": "Stone Cold",
             "role": "Дон"
         },
         {
@@ -17,39 +21,54 @@
             "role": "Мирный"
         },
         {
-            "nick": "Mello",
+            "nick": "Гора",
             "role": "Мирный"
         },
         {
-            "nick": "Гора",
-            "role": "Шериф"
-        },
-        {
-            "nick": "Изюм",
-            "role": "Мирный",
-            "BP": true
-        },
-        {
             "nick": "Сивилла",
-            "role": "Мафия"
+            "role": "Дон"
+        },
+        {
+            "nick": "Цезарь",
+            "role": "Шериф"
         },
         {
             "nick": "Фемида",
             "role": "Мафия"
         },
         {
-            "nick": "Stone Cold",
+            "nick": "Май",
             "role": "Мирный"
         }
     ],
     "metadata": {
         "table": "BakerStreet",
-        "win": "Мирные",
-        "date": "2016-04-29",
-        "ref": "Merlin",
+        "win": "Мафия",
+        "date": "2016-06-21",
+        "ref": "Sad",
         "gameNumber": 1
     },
     "days": [
+        {
+            "votes": [
+                {
+                    "who": null,
+                    "whom": null,
+                    "sum": 5
+                },
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": null,
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        },
         {
             "votes": [
                 {

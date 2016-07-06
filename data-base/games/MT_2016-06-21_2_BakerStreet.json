@@ -1,53 +1,52 @@
 {
     "playerLines": [
         {
-            "nick": "О'Доннел",
+            "nick": "Гора",
             "role": "Мафия"
         },
         {
-            "nick": "Тракиец",
+            "nick": "Май",
             "role": "Шериф"
         },
         {
-            "nick": "Earl Gray",
+            "nick": "Шрек",
             "role": "Мирный"
         },
         {
-            "nick": "Сивилла",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Mello",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Граффег",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Random",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Изюм",
-            "role": "Мирный",
-            "BR": true
-        },
-        {
-            "nick": "СБ",
+            "nick": "Цезарь",
             "role": "Мирный"
         },
         {
             "nick": "Stone Cold",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Изюм",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Антонио",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Фемида",
+            "role": "Мирный"
+        },
+        {
+            "nick": "DD",
             "role": "Дон"
+        },
+        {
+            "nick": "Заяц",
+            "role": "Мирный"
         }
     ],
     "metadata": {
         "table": "BakerStreet",
         "win": "Мирные",
-        "date": "2016-04-28",
+        "date": "2016-06-21",
         "ref": "Sad",
-        "gameNumber": 3
+        "gameNumber": 2
     },
     "days": [
         {

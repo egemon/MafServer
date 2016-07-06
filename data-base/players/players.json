@@ -1937,6 +1937,15 @@
         "honours": []
     },
     {
+        "presents": [],
+        "honours": [],
+        "#": "195",
+        "nick": "Лунатик",
+        "password": "Лунатик",
+        "name": "Лунатик",
+        "memberLevel": 0
+    },
+    {
         "nick": "Люцик",
         "password": "Люцик",
         "name": "Люцик",
@@ -1951,6 +1960,15 @@
         "presents": [],
         "memberLevel": 0,
         "honours": []
+    },
+    {
+        "presents": "",
+        "honours": "",
+        "#": "197",
+        "nick": "Май",
+        "password": "Май",
+        "name": "Май",
+        "memberLevel": 0
     },
     {
         "nick": "Мака",
@@ -2021,6 +2039,15 @@
         "presents": [],
         "memberLevel": 0,
         "honours": []
+    },
+    {
+        "presents": "",
+        "honours": "",
+        "#": "196",
+        "nick": "Маэстро",
+        "password": "Маэстро",
+        "name": "Маэстро",
+        "memberLevel": 0
     },
     {
         "nick": "Милена",
@@ -2243,6 +2270,14 @@
         ]
     },
     {
+        "nick": "Пик",
+        "password": "Пик",
+        "name": "Пик",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Пинокио",
         "password": "Пинокио",
         "name": "Пинокио",
@@ -2388,9 +2423,9 @@
         ]
     },
     {
-        "nick": "Сибилла",
-        "password": "Сибилла",
-        "name": "Сибилла",
+        "nick": "Сивилла",
+        "password": "Сивилла",
+        "name": "Сивилла",
         "presents": [],
         "memberLevel": 0,
         "honours": []

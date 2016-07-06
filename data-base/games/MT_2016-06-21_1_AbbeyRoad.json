@@ -1,37 +1,37 @@
 {
     "playerLines": [
         {
-            "nick": "Сивилла",
+            "nick": "Матан",
             "role": "Мафия"
         },
         {
-            "nick": "Крюгер",
-            "role": "Мирный"
+            "nick": "Skarlet",
+            "role": "Дон",
+            "BP": true
         },
         {
-            "nick": "Грей",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Тракиец",
-            "role": "Дон"
-        },
-        {
-            "nick": "Баффет",
-            "role": "Шериф"
-        },
-        {
-            "nick": "Fox",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Questra",
-            "role": "Мафия",
-            "BP": true,
+            "nick": "Random",
+            "role": "Мирный",
             "BR": true
         },
         {
+            "nick": "Earl Gray",
+            "role": "Мафия"
+        },
+        {
             "nick": "О'Доннел",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Тракиец",
+            "role": "Мирный"
+        },
+        {
+            "nick": "DD",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Гора",
             "role": "Мирный"
         },
         {
@@ -39,15 +39,15 @@
             "role": "Мирный"
         },
         {
-            "nick": "Mello",
+            "nick": "Клич",
             "role": "Мирный"
         }
     ],
     "metadata": {
-        "table": "Aldwych",
+        "table": "AbbeyRoad",
         "win": "Мафия",
-        "date": "2016-04-28",
-        "ref": "Заяц",
+        "date": "2016-06-21",
+        "ref": "Баффет",
         "gameNumber": 1
     },
     "days": [
