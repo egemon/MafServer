@@ -4,8 +4,7 @@
   "description": "Server side app for rating",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "echo \"Illia starts\" && npm install && bower install && node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "private": true,
   "author": "egemon",
