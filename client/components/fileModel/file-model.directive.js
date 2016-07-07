@@ -17,7 +17,6 @@ angular.module('base')
                 }
                 var reader = new FileReader();
                 reader.onload = function (loadEvent) {
-                    console.log('[file-model] reader.onload()', arguments);
                     scope.$apply(function () {
                         scope.fileModel = loadEvent.target.result;
                     });

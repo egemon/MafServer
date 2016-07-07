@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "bower install && gulp build"
   },
   "private": true,
   "author": "egemon",
@@ -54,5 +54,6 @@
     "jshint": "^2.9.2",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.1"
-  }
+  },
+  "cacheDirectories": ["node_modules", "client/lib"]
 }
