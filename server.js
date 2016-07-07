@@ -87,11 +87,11 @@ app.listen(port, ipaddress, function() {
 var pg = require('pg');
 
 pg.defaults.ssl = true;
-conosle.log('process.env.DATABASE_URL', process.env.DATABASE_URL);
+conosole.log('process.env.DATABASE_URL', process.env.DATABASE_URL);
 pg.connect(process.env.DATABASE_URL, function(err, client) {
   if (err) throw err;
   console.log('Connected to postgres! Getting schemas...');
-    console.log('client', client);
+  console.log('client', client);
   client
     .query('SELECT table_schema,table_name FROM information_schema.tables;')
     .on('row', function(row) {
