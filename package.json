@@ -25,9 +25,6 @@
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "morgan": "^1.6.1",
-    "serve-favicon": "^2.3.0"
-  },
-  "devDependencies": {
     "bluebird": "^3.4.1",
     "browser-sync": "~2.9.11",
     "del": "^2.2.0",
@@ -51,6 +48,9 @@
     "gulp-util": "~3.0.6",
     "jshint": "^2.9.2",
     "require-dir": "^0.3.0",
-    "run-sequence": "^1.2.1"
+    "run-sequence": "^1.2.1",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
   }
 }
