@@ -10,16 +10,15 @@ angular.module('base')
                 console.log('[file-model] element.bind()', arguments);
                 if (changeEvent.target.files.length === 0) {
                     console.log('[cancel]', arguments);
-
-                    scope.$apply(()=> {
+                    scope.$apply(function () {
                         scope.fileModel = '';
                     });
                     return;
                 }
                 var reader = new FileReader();
-                reader.onload = (loadEvent)=> {
+                reader.onload = function (loadEvent) {
                     console.log('[file-model] reader.onload()', arguments);
-                    scope.$apply(()=> {
+                    scope.$apply(function () {
                         scope.fileModel = loadEvent.target.result;
                     });
                 };

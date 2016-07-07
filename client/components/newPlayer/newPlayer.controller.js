@@ -1,6 +1,5 @@
-angular.module('base').controller('newPlayerCtrl', 
-['$scope', 'CONFIG',
-($scope, CONFIG)=> {
+angular.module('base').controller('newPlayerCtrl', ['$scope', 'CONFIG',
+function($scope, CONFIG) {
 
     this.data = {
         presents: [],
