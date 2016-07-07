@@ -3,8 +3,9 @@ angular.module('base')
 ['PAGES', '$scope', 'serverService', '$timeout', '$window', '$location', 'editService',
 (PAGES, $scope, serverService, $timeout, $window, $location, editService)=> {
 
-    const pageUrl = $location.path().slice(1);
-    setPage(findPageByUrl(pageUrl) || PAGES[0]);
+    var pageUrl = $location.path().slice(1);
+    var firstPage = findPageByUrl(pageUrl) || PAGES[0];
+    setPage(firstPage);
     $scope.PAGES = PAGES;
     $scope.loginActive = false;
     $scope.user = serverService.player;
@@ -28,15 +29,17 @@ angular.module('base')
         console.log('[base.controller] setPage()', arguments);
 
         $scope.page = page;
-        switch (page.needData && page.url) {
-            case ('rating'):
+        if (page.needData) {
+            if (page.url == 'rating') {
                 $scope.$broadcast('rating-request');
-            break;
-            case ('register'):
+            }
+
+            if (page.url == 'register') {
                 $scope.$broadcast('register-request');
-            break;
+            }
+
+            fetchDataFor(page, page.needMemberLevel, page.data);
         }
-        fetchDataFor(page, page.needMemberLevel, page.data);
     }
 
     function openNewTab (url) {
@@ -47,7 +50,8 @@ angular.module('base')
         }
     }
 
-    function fetchDataFor (page = $scope.page, needMemberLevel, data) {
+    function fetchDataFor (page, needMemberLevel, data) {
+        page = page || $scope.page;
         console.log('[base.controller] fetchDataFor()', arguments);
 
         return serverService.$_fetchData(page, needMemberLevel, data)
@@ -66,8 +70,11 @@ angular.module('base')
     function findPageByUrl(url) {
         console.log('[base.controller] findPageByUrl()', arguments);
 
-        for (var page of PAGES) {
-            return page.url == url && page;
+        for (var i = 0; i < PAGES.length; i++) {
+            var el = PAGES[i];
+            if (el.url == url) {
+                return el;
+            }
         }
     }
 
