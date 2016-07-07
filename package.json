@@ -27,6 +27,7 @@
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "morgan": "^1.6.1",
+    "pg": "6.0.1",
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
@@ -55,5 +56,8 @@
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.1"
   },
-  "cacheDirectories": ["node_modules", "client/lib"]
+  "cacheDirectories": [
+    "node_modules",
+    "client/lib"
+  ]
 }
