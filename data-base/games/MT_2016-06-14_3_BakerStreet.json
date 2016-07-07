@@ -1,51 +1,50 @@
 {
     "playerLines": [
         {
-            "nick": "О'Доннел",
-            "role": "Мафия"
-        },
-        {
-            "nick": "Тракиец",
-            "role": "Шериф"
+            "nick": "Рыжая",
+            "role": "Мирный"
         },
         {
             "nick": "Earl Gray",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Сибилла",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Mello",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Граффег",
             "role": "Мафия"
         },
         {
-            "nick": "Random",
+            "nick": "Stone Cold",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Blink",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Несквик",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Художник",
+            "role": "Мирный"
+        },
+        {
+            "nick": "R2D2",
+            "role": "Дон"
+        },
+        {
+            "nick": "Questra",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Лоран",
             "role": "Мирный"
         },
         {
             "nick": "Изюм",
-            "role": "Мирный",
-            "BR": true
-        },
-        {
-            "nick": "СБ",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Stone Cold",
-            "role": "Дон"
+            "role": "Мафия"
         }
     ],
     "metadata": {
         "table": "BakerStreet",
         "win": "Мирные",
-        "date": "2016-04-28",
+        "date": "2016-06-14",
         "ref": "Sad",
         "gameNumber": 3
     },

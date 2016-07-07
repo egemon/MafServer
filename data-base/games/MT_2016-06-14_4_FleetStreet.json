@@ -1,53 +1,53 @@
 {
     "playerLines": [
         {
-            "nick": "О'Доннел",
-            "role": "Мафия"
+            "nick": "Матан",
+            "role": "Мирный"
         },
         {
-            "nick": "Тракиец",
+            "nick": "Мутный",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Заяц",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Гора",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Цезарь",
             "role": "Шериф"
         },
         {
-            "nick": "Earl Gray",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Сибилла",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Mello",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Граффег",
+            "nick": "Random",
             "role": "Мафия"
         },
         {
-            "nick": "Random",
-            "role": "Мирный"
-        },
-        {
-            "nick": "Изюм",
-            "role": "Мирный",
+            "nick": "Лоран",
+            "role": "Мафия",
             "BR": true
         },
         {
-            "nick": "СБ",
+            "nick": "Фемида",
             "role": "Мирный"
         },
         {
-            "nick": "Stone Cold",
-            "role": "Дон"
+            "nick": "Айдахо",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Skarlet",
+            "role": "Мафия"
         }
     ],
     "metadata": {
-        "table": "BakerStreet",
-        "win": "Мирные",
-        "date": "2016-04-28",
-        "ref": "Sad",
-        "gameNumber": 3
+        "table": "FleetStreet",
+        "win": "Мафия",
+        "date": "2016-06-14",
+        "ref": "Йоко",
+        "gameNumber": 4
     },
     "days": [
         {
