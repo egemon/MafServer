@@ -82,19 +82,3 @@ app.listen(port, ipaddress, function() {
     Date(Date.now() ), ipaddress, port);
 });
 
-// ============ POSTGRESS ==========
-
-var pg = require('pg');
-
-pg.defaults.ssl = true;
-console.log('process.env.DATABASE_URL', process.env.DATABASE_URL);
-pg.connect(process.env.DATABASE_URL, function(err, client) {
-  if (err) throw err;
-  console.log('Connected to postgres! Getting schemas...');
-  console.log('client', client);
-  client
-    .query('SELECT table_schema,table_name FROM information_schema.tables;')
-    .on('row', function(row) {
-      console.log(JSON.stringify(row));
-    });
-});

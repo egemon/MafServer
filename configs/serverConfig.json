@@ -1,3 +1,4 @@
 {
-	"level": 1
+	"level": 1,
+	"connectionString": "postgres://zgnzyaffdzjhcy:zdxG_Iyl3lm4Ardyhsi4YZDNo3@ec2-54-221-244-190.compute-1.amazonaws.com:5432/dcm7vrqpua1afn"
 }
