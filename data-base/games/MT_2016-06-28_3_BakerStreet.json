@@ -1,0 +1,70 @@
+{
+    "playerLines": [
+        {
+            "nick": "Рыжая",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Изюм",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Эхо",
+            "role": "Мирный",
+            "BP": true
+        },
+        {
+            "nick": "Фиби",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Questra",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Цезарь",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Шрек",
+            "role": "Мирный",
+            "BP": true
+        },
+        {
+            "nick": "Цапля",
+            "role": "Дон"
+        },
+        {
+            "nick": "DD",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Борман",
+            "role": "Мафия"
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мирные",
+        "date": "2016-06-28",
+        "ref": "Заяц(05/07/16)",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

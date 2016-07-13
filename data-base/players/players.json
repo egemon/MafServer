@@ -166,6 +166,14 @@
         "img": "Blink.jpg"
     },
     {
+        "nick": "Boss",
+        "password": "Boss",
+        "name": "Boss",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "DD",
         "password": "DD",
         "name": "DD",
@@ -538,6 +546,14 @@
         "honours": []
     },
     {
+        "nick": "Random",
+        "password": "Random",
+        "name": "Random",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Rios",
         "password": "Rios",
         "name": "Rios",
@@ -576,6 +592,14 @@
         "honours": [],
         "nick": "Skarlet",
         "password": "Skarlet"
+    },
+    {
+        "nick": "Skarlet",
+        "password": "Skarlet",
+        "name": "Skarlet",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Slamet",
@@ -2050,6 +2074,14 @@
         "memberLevel": 0
     },
     {
+        "nick": "Мери",
+        "password": "Мери",
+        "name": "Мери",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Милена",
         "password": "Милена",
         "name": "Милена",
@@ -2095,6 +2127,14 @@
         "experiance": "Играет 3 года",
         "honours": [],
         "img": "МойГосподин.jpg"
+    },
+    {
+        "nick": "Мойша",
+        "password": "Мойша",
+        "name": "Мойша",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Морковка",
@@ -2294,9 +2334,9 @@
         "honours": []
     },
     {
-        "nick": "Random",
-        "password": "Random",
-        "name": "Random",
+        "nick": "Ральф",
+        "password": "Ральф",
+        "name": "Ральф",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -2426,14 +2466,6 @@
         "nick": "Сивилла",
         "password": "Сивилла",
         "name": "Сивилла",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
-        "nick": "Skarlet",
-        "password": "Skarlet",
-        "name": "Skarlet",
         "presents": [],
         "memberLevel": 0,
         "honours": []

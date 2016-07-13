@@ -1,0 +1,69 @@
+{
+    "playerLines": [
+        {
+            "nick": "Айдахо",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Мери",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Кобра",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Earl Gray",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Отец",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Мать",
+            "role": "Мирный"
+        },
+        {
+            "nick": "50",
+            "role": "Дон"
+        },
+        {
+            "nick": "Sad",
+            "role": "Мирный",
+            "BR": true
+        },
+        {
+            "nick": "Антонио",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Мойша",
+            "role": "Мирный"
+        }
+    ],
+    "metadata": {
+        "table": "DowningStreet",
+        "win": "Мирные",
+        "date": "2016-06-28",
+        "ref": "Заяц(05/07/16)",
+        "gameNumber": 4
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}
