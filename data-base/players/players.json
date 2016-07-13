@@ -456,6 +456,26 @@
         ],
         "honours": [
             {
+                "year": 2016,
+                "period": 2,
+                "periodType": "season",
+                "place": 1
+            },{
+                "year": 2016,
+                "period": 2,
+                "periodType": "month",
+                "place": 3
+            },{
+                "year": 2016,
+                "period": 1,
+                "periodType": "month",
+                "place": 2
+            },{
+                "year": 2016,
+                "period": 1,
+                "periodType": "season",
+                "place": 2
+            },{
                 "year": 2015,
                 "period": 2,
                 "periodType": "season",
@@ -644,6 +664,28 @@
         "memberLevel": "2",
         "honours": [
             {
+                "year": 2016,
+                "period": 2,
+                "periodType": "season",
+                "place": 2
+            },{
+                "year": 2016,
+                "period": 3,
+                "periodType": "month",
+                "place": 1
+            },{
+                "year": 2015,
+                "period": 2015,
+                "periodType": "year",
+                "place": 2
+            },
+            {
+                "year": 2015,
+                "period": 11,
+                "periodType": "month",
+                "place": 3
+            },
+            {
                 "year": 2015,
                 "period": 10,
                 "periodType": "month",
@@ -750,6 +792,11 @@
         "memberLevel": "2",
         "honours": [
             {
+                "year": 2016,
+                "period": 1,
+                "periodType": "month",
+                "place": 3
+            },{
                 "year": 2015,
                 "period": 3,
                 "periodType": "season",
@@ -1004,7 +1051,12 @@
     },
     {
         "presents": "",
-        "honours": "",
+        "honours": [{
+            "year": 2016,
+            "period": 2,
+            "periodType": "month",
+            "place": 1
+        }],
         "nick": "Амбал",
         "password": "Амбал",
         "memberLevel": 1,
@@ -1143,6 +1195,16 @@
         "experiance": "Играет 3 года",
         "honours": [
             {
+                "year": 2016,
+                "period": 2,
+                "periodType": "season",
+                "place": 3
+            },{
+                "year": 2016,
+                "period": 3,
+                "periodType": "month",
+                "place": 3
+            },{
                 "year": 2015,
                 "period": 2,
                 "periodType": "season",
@@ -1213,6 +1275,12 @@
         ],
         "memberLevel": 0,
         "honours": [
+            {
+                "year": 2015,
+                "period": 2015,
+                "periodType": "year",
+                "place": 3
+            },
             {
                 "year": 2015,
                 "period": 3,
@@ -1765,6 +1833,12 @@
         "honours": [
             {
                 "year": 2015,
+                "period": 2015,
+                "periodType": "year",
+                "place": 1
+            },
+            {
+                "year": 2015,
                 "periodType": "season",
                 "period": 4,
                 "place": 2,
@@ -2259,7 +2333,18 @@
             "чашка",
             "маска"
         ],
-        "honours": [],
+        "honours": [
+        {
+            "year": 2016,
+            "period": 1,
+            "periodType": "season",
+            "place": 3
+        },{
+            "year": 2015,
+            "period": 11,
+            "periodType": "month",
+            "place": 1
+        }],
         "nick": "Палац України",
         "password": "Палац України",
         "vk": "https://vk.com/stasmahula",
@@ -2553,6 +2638,11 @@
         "memberLevel": "1",
         "honours": [
             {
+                "year": 2016,
+                "period": 2,
+                "periodType": "month",
+                "place": 2
+            },{
                 "year": 2015,
                 "period": 6,
                 "periodType": "month",
@@ -2831,7 +2921,13 @@
         "name": "Игорь Завгородний",
         "presents": [],
         "memberLevel": "1",
-        "honours": [],
+        "honours": [
+        {
+            "year": 2015,
+            "period": 11,
+            "periodType": "month",
+            "place": 2
+        }],
         "vk": "https://vk.com/id36381740",
         "birthday": "1995-11-04",
         "position": "игрок",
@@ -2839,7 +2935,13 @@
     },
     {
         "presents": [],
-        "honours": [],
+        "honours": [
+        {
+            "year": 2016,
+            "period": 3,
+            "periodType": "month",
+            "place": 2
+        }],
         "vk": "https://vk.com/sherlock11",
         "nick": "Шрек",
         "password": "Шрек",
@@ -2883,7 +2985,18 @@
     },
     {
         "presents": "",
-        "honours": "",
+        "honours": [
+        {
+            "year": 2016,
+            "period": 1,
+            "periodType": "season",
+            "place": 1
+        },{
+            "year": 2016,
+            "period": 1,
+            "periodType": "month",
+            "place": 1
+        }],
         "nick": "Эхо",
         "password": "Эхо",
         "memberLevel": 1,
