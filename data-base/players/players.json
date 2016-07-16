@@ -460,22 +460,26 @@
                 "period": 2,
                 "periodType": "season",
                 "place": 1
-            },{
+            },
+            {
                 "year": 2016,
                 "period": 2,
                 "periodType": "month",
                 "place": 3
-            },{
+            },
+            {
                 "year": 2016,
                 "period": 1,
                 "periodType": "month",
                 "place": 2
-            },{
+            },
+            {
                 "year": 2016,
                 "period": 1,
                 "periodType": "season",
                 "place": 2
-            },{
+            },
+            {
                 "year": 2015,
                 "period": 2,
                 "periodType": "season",
@@ -566,14 +570,6 @@
         "honours": []
     },
     {
-        "nick": "Random",
-        "password": "Random",
-        "name": "Random",
-        "presents": [],
-        "memberLevel": 0,
-        "honours": []
-    },
-    {
         "nick": "Rios",
         "password": "Rios",
         "name": "Rios",
@@ -587,6 +583,14 @@
                 "place": 1
             }
         ]
+    },
+    {
+        "nick": "Rosenran",
+        "password": "Rosenran",
+        "name": "Rosenran",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Sad",
@@ -606,12 +610,6 @@
         "presents": [],
         "memberLevel": 0,
         "honours": []
-    },
-    {
-        "presents": [],
-        "honours": [],
-        "nick": "Skarlet",
-        "password": "Skarlet"
     },
     {
         "nick": "Skarlet",
@@ -668,12 +666,14 @@
                 "period": 2,
                 "periodType": "season",
                 "place": 2
-            },{
+            },
+            {
                 "year": 2016,
                 "period": 3,
                 "periodType": "month",
                 "place": 1
-            },{
+            },
+            {
                 "year": 2015,
                 "period": 2015,
                 "periodType": "year",
@@ -740,6 +740,14 @@
         "position": ""
     },
     {
+        "nick": "Underdog",
+        "password": "Underdog",
+        "name": "Underdog",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Vinsent",
         "password": "Vinsent",
         "name": "Vinsent",
@@ -796,7 +804,8 @@
                 "period": 1,
                 "periodType": "month",
                 "place": 3
-            },{
+            },
+            {
                 "year": 2015,
                 "period": 3,
                 "periodType": "season",
@@ -895,7 +904,7 @@
         "password": "Алистер",
         "name": "Алистер",
         "presents": [],
-        "memberLevel": 1,
+        "memberLevel": "0",
         "honours": [
             {
                 "year": 2015,
@@ -935,7 +944,8 @@
                 "periodType": "month",
                 "place": 2
             }
-        ]
+        ],
+        "img": "Амальгама.jpg"
     },
     {
         "nick": "Амахонда",
@@ -1051,12 +1061,14 @@
     },
     {
         "presents": "",
-        "honours": [{
-            "year": 2016,
-            "period": 2,
-            "periodType": "month",
-            "place": 1
-        }],
+        "honours": [
+            {
+                "year": 2016,
+                "period": 2,
+                "periodType": "month",
+                "place": 1
+            }
+        ],
         "nick": "Амбал",
         "password": "Амбал",
         "memberLevel": 1,
@@ -1080,6 +1092,14 @@
         "name": "Антон Инюшев",
         "memberLevel": 1,
         "img": "Антонио.jpg"
+    },
+    {
+        "nick": "Апельман",
+        "password": "Апельман",
+        "name": "Апельман",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
     },
     {
         "nick": "Ария",
@@ -1112,7 +1132,8 @@
                 "periodType": "month",
                 "place": 2
             }
-        ]
+        ],
+        "img": "Ария.jpg"
     },
     {
         "nick": "Астория",
@@ -1199,12 +1220,14 @@
                 "period": 2,
                 "periodType": "season",
                 "place": 3
-            },{
+            },
+            {
                 "year": 2016,
                 "period": 3,
                 "periodType": "month",
                 "place": 3
-            },{
+            },
+            {
                 "year": 2015,
                 "period": 2,
                 "periodType": "season",
@@ -1336,7 +1359,8 @@
                 "place": 1
             }
         ],
-        "vk": "https://vk.com/ivagrant"
+        "vk": "https://vk.com/ivagrant",
+        "img": "Вагрант.jpg"
     },
     {
         "presents": "",
@@ -1653,7 +1677,8 @@
                 "periodType": "month",
                 "place": 3
             }
-        ]
+        ],
+        "img": "Зайчик.jpg"
     },
     {
         "nick": "Заяц",
@@ -2148,6 +2173,22 @@
         "memberLevel": 0
     },
     {
+        "nick": "Мелорис",
+        "password": "Мелорис",
+        "name": "Мелорис",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "Мелфис",
+        "password": "Мелфис",
+        "name": "Мелфис",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
         "nick": "Мери",
         "password": "Мери",
         "name": "Мери",
@@ -2183,7 +2224,8 @@
                 "periodType": "month",
                 "place": 2
             }
-        ]
+        ],
+        "img": "Митрандир.jpg"
     },
     {
         "nick": "Мой Господин",
@@ -2334,17 +2376,19 @@
             "маска"
         ],
         "honours": [
-        {
-            "year": 2016,
-            "period": 1,
-            "periodType": "season",
-            "place": 3
-        },{
-            "year": 2015,
-            "period": 11,
-            "periodType": "month",
-            "place": 1
-        }],
+            {
+                "year": 2016,
+                "period": 1,
+                "periodType": "season",
+                "place": 3
+            },
+            {
+                "year": 2015,
+                "period": 11,
+                "periodType": "month",
+                "place": 1
+            }
+        ],
         "nick": "Палац України",
         "password": "Палац України",
         "vk": "https://vk.com/stasmahula",
@@ -2612,7 +2656,7 @@
         "password": "Техас",
         "name": "Кристина Флокос",
         "presents": [],
-        "memberLevel": "1",
+        "memberLevel": "0",
         "honours": [],
         "vk": "https://vk.com/kriss_teen",
         "birthday": "1996-03-29",
@@ -2642,7 +2686,8 @@
                 "period": 2,
                 "periodType": "month",
                 "place": 2
-            },{
+            },
+            {
                 "year": 2015,
                 "period": 6,
                 "periodType": "month",
@@ -2690,7 +2735,7 @@
         "birthday": "1997-07-21",
         "name": "Анастасия Мельничук",
         "position": "игрок",
-        "memberLevel": "1",
+        "memberLevel": "0",
         "faculty": "НАУ, Институт аэронавигации",
         "experiance": "Играет с 10.03.2106",
         "img": "Фемида.jpg"
@@ -2922,12 +2967,13 @@
         "presents": [],
         "memberLevel": "1",
         "honours": [
-        {
-            "year": 2015,
-            "period": 11,
-            "periodType": "month",
-            "place": 2
-        }],
+            {
+                "year": 2015,
+                "period": 11,
+                "periodType": "month",
+                "place": 2
+            }
+        ],
         "vk": "https://vk.com/id36381740",
         "birthday": "1995-11-04",
         "position": "игрок",
@@ -2936,12 +2982,13 @@
     {
         "presents": [],
         "honours": [
-        {
-            "year": 2016,
-            "period": 3,
-            "periodType": "month",
-            "place": 2
-        }],
+            {
+                "year": 2016,
+                "period": 3,
+                "periodType": "month",
+                "place": 2
+            }
+        ],
         "vk": "https://vk.com/sherlock11",
         "nick": "Шрек",
         "password": "Шрек",
@@ -2986,17 +3033,19 @@
     {
         "presents": "",
         "honours": [
-        {
-            "year": 2016,
-            "period": 1,
-            "periodType": "season",
-            "place": 1
-        },{
-            "year": 2016,
-            "period": 1,
-            "periodType": "month",
-            "place": 1
-        }],
+            {
+                "year": 2016,
+                "period": 1,
+                "periodType": "season",
+                "place": 1
+            },
+            {
+                "year": 2016,
+                "period": 1,
+                "periodType": "month",
+                "place": 1
+            }
+        ],
         "nick": "Эхо",
         "password": "Эхо",
         "memberLevel": 1,

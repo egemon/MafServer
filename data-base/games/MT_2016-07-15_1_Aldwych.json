@@ -1,0 +1,68 @@
+{
+    "playerLines": [
+        {
+            "nick": "Вже не той",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Underdog",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Мой Господин",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Борман",
+            "role": "Шериф"
+        },
+        {
+            "nick": "Мелфис",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Айдахо",
+            "role": "Мирный"
+        },
+        {
+            "nick": "50",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Random",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Arch Enemy",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Skarlet",
+            "role": "Дон"
+        }
+    ],
+    "metadata": {
+        "table": "Aldwych",
+        "win": "Мафия",
+        "date": "2016-07-15",
+        "ref": "Аксолотль",
+        "gameNumber": 1
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}

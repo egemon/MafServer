@@ -1,0 +1,71 @@
+{
+    "playerLines": [
+        {
+            "nick": "Клич",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Random",
+            "role": "Мирный",
+            "BR": true
+        },
+        {
+            "nick": "Художник",
+            "role": "Дон"
+        },
+        {
+            "nick": "Мой Господин",
+            "role": "Шериф",
+            "BP": true
+        },
+        {
+            "nick": "Изюм",
+            "role": "Мафия"
+        },
+        {
+            "nick": "Kenny",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Рыжая",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Blink",
+            "role": "Мирный"
+        },
+        {
+            "nick": "Анаконда",
+            "role": "Мирный",
+            "BR": true
+        },
+        {
+            "nick": "Rosenran",
+            "role": "Мафия"
+        }
+    ],
+    "metadata": {
+        "table": "BakerStreet",
+        "win": "Мирные",
+        "date": "2016-07-15",
+        "ref": "Sad",
+        "gameNumber": 3
+    },
+    "days": [
+        {
+            "votes": [
+                {
+                    "who": "",
+                    "whom": "",
+                    "sum": 0
+                }
+            ],
+            "results": {
+                "hanged": "",
+                "killed": "",
+                "checkedS": "",
+                "checkedD": ""
+            }
+        }
+    ]
+}
