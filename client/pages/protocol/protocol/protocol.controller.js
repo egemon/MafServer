@@ -1,7 +1,7 @@
 angular.module('ProtocolApp')
-.controller('ProtocolCtrl', ['$scope', '$http', 'sync','club', 'game', ProtocolCtrl]);
+.controller('ProtocolCtrl', ['$scope', '$http', 'sync','club', 'game', 'pgService', ProtocolCtrl]);
 
-function ProtocolCtrl ($scope, $http, sync, club, game) {
+function ProtocolCtrl ($scope, $http, sync, club, game, pgService) {
     console.log('ProtocolCtrl init');
 
     // ========== INIT BLOCK ===========
@@ -27,6 +27,7 @@ function ProtocolCtrl ($scope, $http, sync, club, game) {
     // ============ PUBLIC FUNCTIONS ========
     function saveGame () {
         console.log('PROTOCOL saveGame()', vm.game);
+        pgService.putGame(vm.game);
         sync.push(vm.game)
             .then(handlePrompt.bind(this, 'push'));
     }

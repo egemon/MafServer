@@ -15,8 +15,8 @@
   },
   "license": "ISC",
   "engines": {
-    "node": ">= 0.6.0",
-    "npm": ">= 1.0.0"
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
   },
   "dependencies": {
     "body-parser": "^1.14.1",
@@ -28,7 +28,8 @@
     "jade": "^1.11.0",
     "morgan": "^1.6.1",
     "pg": "6.0.1",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "lodash": "*"
   },
   "devDependencies": {
     "bluebird": "^3.4.1",

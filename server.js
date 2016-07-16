@@ -1,4 +1,5 @@
 #!/bin/env node
+var isDev = process.argv[2] === 'dev' ? true : false;
 var CONFIG = require('./configs/serverConfig.json');
 var express = require('express'),
     app = express();
@@ -14,16 +15,16 @@ var router = require('./routes/router');
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'public'));
+app.set('views', path.join(__dirname, (isDev ? 'client' : 'public')));
 // app.set('view engine', 'ejs');
 
 app.use(compress(CONFIG));
-app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon(__dirname + (isDev ? '/client/favicon.ico': '/public/favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json({limit: '1mb'}));
 app.use(bodyParser.urlencoded({ extended: false, limit: '5mb' }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, (isDev ? '': '/public'))));
 
 app.use('/', router);
 // app.use('/users', users);

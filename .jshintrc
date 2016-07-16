@@ -1,5 +1,6 @@
 {
     "noarg": true,
+    "esnext": true,
     "noempty": true,
     "eqeqeq": false,
     "bitwise": true,
@@ -15,6 +16,7 @@
     "globals" : {
         "require": true,
         "angular": true,
-        "module": true
+        "module": true,
+        "process": true
     }
 }
