@@ -51,7 +51,7 @@ gulp.task('js-lib', function () {
 });
 
 // this task unite ng-modules and libs
-gulp.task('js',['js-ng-app'] ,function() {
+gulp.task('js',['js-ng-app', 'js-lib'] ,function() {
   return gulp.src('public/js/libs.min.js')
     .pipe(add.append('public/js/ng.min.js'))
     .pipe(concat('main.min.js'))
