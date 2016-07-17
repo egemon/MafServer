@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 var _ = require('lodash');
 var Connection = require('./connection.js');
 
@@ -12,30 +12,40 @@ module.exports = class Record extends Connection {
     this.record_id =  record_id;
     this.sql_fetcher = `select * from ${this.table_name} `;
 
-  };
+  }
 
   identifierCondition(){
     if (this.record_id === '' || this.record_id === null) {
       throw new Error('Unable to identify record. Id is absent.');
-    };
+    }
 
     return `where id = ${this.record_id}`;
-  };
+  }
 
   assign_attributes(attrs){
     this.attributes = attrs;
 
     return this.attributes;
-  };
+  }
 
   getAttributes(){
     return this.attributes;
-  };
+  }
 
   reload(){
     this.sql = `${this.sql_fetcher} ${this.identifierCondition()} limit 1`;
     return this.execQuery().then( data => data.rows[0]);
-  };
+  }
+
+  getBy(options) {
+    this.sql = `${this.sql_fetcher} where ${options.key} = '${options.value}'`;
+    return this.execQuery().then( data => data.rows);
+  }
+
+  getAll(){
+    this.sql = `${this.sql_fetcher}`;
+    return this.execQuery().then( data => data.rows);
+  }
 
   save(){
     if (this.record_id) {
@@ -43,19 +53,19 @@ module.exports = class Record extends Connection {
       // this.sql = this.updateSql();
     } else {
       this.sql = this.insertSql();
-    };
+    }
 
     return this.execQuery().then( data => this.record_id = data.rows[0].id);
-  };
+  }
 
   destroy(){
     this.sql = this.deleteSql();
     return this.execQuery();
-  };
+  }
 
   deleteSql(attrs){
     return `delete from ${this.table_name} ${this.identifierCondition()}`;
-  };
+  }
 
   columns(prefix){
     return _.keys(this.attributes).map((k) => {
@@ -64,7 +74,7 @@ module.exports = class Record extends Connection {
       else
         return k;
     });
-  };
+  }
 
   values(){
     return _.values(this.attributes)
@@ -75,12 +85,12 @@ module.exports = class Record extends Connection {
         return `'${e}'`;
       }
     });
-  };
+  }
 
   insertSql(attrs){
     let columns = this.columns().join(', ');
     return `insert into ${this.table_name}(${columns}) values(${this.values()}) returning id;`
-  };
+  }
 
   // updateSql(attrs){
   //   return `update ${this.table_name} ${this.identifierCondition()}`

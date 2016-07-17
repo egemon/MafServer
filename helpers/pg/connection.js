@@ -16,7 +16,6 @@ module.exports = class Connection {
   };
 
   sqlQuery(){
-    console.log('sqlQuery()', this.sql);
     if (this.sql === '' || this.sql === null) {
       throw new Error('Method should be overridden!');
     }
@@ -28,7 +27,8 @@ module.exports = class Connection {
     return new Promise((resolve, reject) => {
       this.client.query(this.sqlQuery(), (err, result) => {
         if(err) {
-          reject(`Unable to execute SQL: ${err}`);
+          console.log('Unable to execute SQL: ', this.sqlQuery());
+          reject(`Error: ${err}`);
         }
 
         resolve(result);
