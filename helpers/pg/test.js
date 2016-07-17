@@ -1,11 +1,16 @@
 var pgApi = require('./myPgApi');
 
-// pgApi.read('games', [209, 999999]).then(function (results) {
-// 	console.log('results', results);
-// });
-
-pgApi.create('test', [{data: 'illi1'}, {ds: 'illi2'}]).then(function (results) {
+pgApi.update('gametest', [
+    {nick: 'data', date: '2016-01-01'},
+    {nick: 'data', date: '2016-01-01'},
+    {nick: 'data', date: '2016-01-01'},
+    {nick: 'datadatadatadatadata', date: '2016-01-01'},
+    ], [1,2,300,4]).then(function (results) {
 	console.log('results', results);
-}, function (errs) {
-	console.log('errs', errs);
-})
+});
+
+// pgApi.create('test', [{data: 'illi1'}, {f: 'illi2'}, {data: 'illi3'}]).then(function (results) {
+// 	console.log('results', results);
+// }, function (errs) {
+// 	console.log('errs', errs);
+// });

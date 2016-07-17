@@ -1,7 +1,7 @@
 angular.module('ProtocolApp')
-.controller('ProtocolCtrl', ['$scope', '$http', 'sync','club', 'game', 'pgService', ProtocolCtrl]);
+.controller('ProtocolCtrl', ['$scope', '$http', 'sync','club', 'game', ProtocolCtrl]);
 
-function ProtocolCtrl ($scope, $http, sync, club, game, pgService) {
+function ProtocolCtrl ($scope, $http, sync, club, game) {
     console.log('ProtocolCtrl init');
 
     // ========== INIT BLOCK ===========
@@ -17,6 +17,7 @@ function ProtocolCtrl ($scope, $http, sync, club, game, pgService) {
     vm.TABLES = club.TABLES;
     vm.WIN = club.WIN;
     vm.playerNicks = [];
+    vm.ids = [];
 
     //========== PUBLIC API ========
     vm.saveGame = saveGame;
@@ -27,7 +28,6 @@ function ProtocolCtrl ($scope, $http, sync, club, game, pgService) {
     // ============ PUBLIC FUNCTIONS ========
     function saveGame () {
         console.log('PROTOCOL saveGame()', vm.game);
-        pgService.putGame(vm.game);
         sync.push(vm.game)
             .then(handlePrompt.bind(this, 'push'));
     }
@@ -52,9 +52,10 @@ function ProtocolCtrl ($scope, $http, sync, club, game, pgService) {
     }
 
     function handlePrompt(cmd, data) {
+        vm.ids = data.ids;
         if (data.confirmText) {
             if (window.confirm(data.confirmText)) {
-                var promise = sync[cmd](vm.game, true);
+                var promise = sync[cmd](vm.game, true, vm.ids);
                 if (cmd === 'push') {
                     promise.then(restoreDefaults);
                 }

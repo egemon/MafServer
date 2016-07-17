@@ -1,9 +1,16 @@
 var pgApi = require('./myPgApi.js');
-var db = require('../dataBase.js');
-var LGS = require('../../model/LocalGameStorage.js');
+// var db = require('../dataBase.js');
+// var LGS = require('../../model/LocalGameStorage.js');
+// var players = db.getPlayers();
+// migratePlayers(players);
+// var games = LGS.getAllGames();
+// migrateGames(games);
+// var news = db.getNews();
+// migrateNews(news);
+// var periods = db.getHallOfFame();
+// migrateHonours(periods);
 
-function migratePlayers() {
-    var players = db.getPlayers();
+function migratePlayers(tableName, players, ids) {
     players = players.map(function(player) {
         var newPlayer = {};
         console.log('player', player);
@@ -49,12 +56,15 @@ function migratePlayers() {
         //  startdate
         // }
     });
-
-    pgApi.addRecords('players', players);
+    if (ids) {
+    return pgApi.update(tableName, players, ids);
+    } else {
+    return pgApi.create(tableName, players);
+    }
 }
 
-function migrateGames() {
-    var games = LGS.getAllGames();
+
+function migrateGames(tableName, games, ids) {
     var gameLines = [];
 
     games.forEach(function(game) {
@@ -75,6 +85,7 @@ function migrateGames() {
                 bp: player.BP ? 1 : 0,
                 br: player.BR ? 1 : 0,
                 falls: 0,
+                gameid: metadata.date + '_' + metadata.gameNumber + '_' + metadata.table
             });
         });
     });
@@ -95,14 +106,15 @@ function migrateGames() {
  // falls
  // notes
 
-
-    pgApi.addRecords('games', gameLines);
+ if (ids) {
+    return pgApi.update(tableName, gameLines, ids);
+ } else {
+    return pgApi.create(tableName, gameLines);
+ }
 }
-// migrateGames();
 
 
-function migrateNews() {
-    var news = db.getNews();
+function migrateNews(tableName, news, ids) {
     news = news.map(function (item) {
         var type = item.type;
         delete item.type;
@@ -122,10 +134,12 @@ function migrateNews() {
     // date
     // data
     // notes
-
-    pgApi.addRecords('news', news);
+    if (ids) {
+    return pgApi.update(tableName, news, ids);
+    } else {
+    return pgApi.create(tableName, news);
+    }
 }
-migrateNews();
 
 
 
@@ -134,15 +148,14 @@ migrateNews();
 // TODO: additinaly joined shuld be
 // player startdate, faculty, all honours,
 // imgLink, vk
-function migrateHonours() {
-    var periods = db.getHallOfFame();
+function migrateHonours(tableName, periods, ids) {
     var honours = [];
     periods.forEach(function (period) {
-        period.forEach(function (honour) {
+        period.honours.forEach(function (honour) {
             honours.push({
                 nick: honour.nick,
                 year: period.year,
-                periodtype: period.periodtype,
+                periodtype: period.periodType,
                 period: period.period,
                 place: honour.place,
             });
@@ -151,8 +164,11 @@ function migrateHonours() {
 
 
 
-
- // pgApi.addRecords('honours', honours);
+    if (ids) {
+ return pgApi.update(tableName, honours, ids);
+    } else {
+ return pgApi.create(tableName, honours);
+    }
  // id,
  // nick,
  // year,
@@ -164,4 +180,9 @@ function migrateHonours() {
 
 }
 
-migrateHonours();
+module.exports = {
+    migratePlayers,
+    migrateGames,
+    migrateNews,
+    migrateHonours,
+};

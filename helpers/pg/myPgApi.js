@@ -1,29 +1,33 @@
-// var debug = true;
-// console.log = function () {
-//     if (debug) {
-//         console.log(arguments);
-//     }
-// }
 
 var Record = require('./record.js');
+
 // CRUD-M
+var method = {
+    "create": "save",
+    "read": "reload",
+    "update": "update",
+    "delete": "destroy",
 
-function addRecords(table, items) {
-    "use strict";
-
-    return make(method.create, table, items);
-
-
-
-    // user.reload().then(result => {
-    //  return console.log(result.rows[0]);
-    // }).catch((error) => {
-    //  console.error(error);
-    // });
-}
+    // TODO remove aftet rewriting of pg-lib
+    "getAll": "getAll",
+    "getBy": "getBy",
+};
 
 function read(table, ids) {
-    return make(method.read, table, ids, ids);
+    var options;
+    var all = ids === 'all';
+    var getBy = !(ids instanceof Array) && ids instanceof Object;
+    var name = all ? 'getAll' : 'read';
+    if (getBy) {
+        options = ids;
+        name ='getBy';
+    }
+    return make(method[name], table, ids, ids, options).then(function (data) {
+        if (all || getBy) {
+            return data[0];
+        }
+        return data;
+    });
 }
 
 function create(table, items) {
@@ -31,14 +35,15 @@ function create(table, items) {
 }
 
 function del(table, ids) {
-    return make(method.delete, table, items, ids);
+    return make(method.delete, table, ids, ids);
 }
 
-function update(table, item, ids) {
+function update(table, items, ids) {
     return make(method.update, table, items, ids);
 }
 
-function make(cmd, table, items, ids) {
+function make(cmd, table, items, ids, options) {
+    "use strict";
     items = toArray(items);
     ids = toArray(ids);
     var results = [];
@@ -51,8 +56,11 @@ function make(cmd, table, items, ids) {
               }
             }
             var user = new BaseUser();
-            var result = user[cmd]().catch(function (err) {
-                console.log('Error: '+id, err);
+            var result = user[cmd](options).then(function (data) {
+                console.log('Succses ' + cmd + ': ', item, data);
+                return data;
+            },function (err) {
+                console.log('Error: ' + id, err);
                 return {item: item, id: id};
             });
             results.push(result);
@@ -62,8 +70,8 @@ function make(cmd, table, items, ids) {
             console.log('err', err);
         });
     }, Promise.resolve())
-    .then(function (res) {
-        console.log('endSuccses', res);
+    .then(function () {
+        // console.log('endSuccses', res);
         return Promise.all(results);
     }, function (err) {
         console.log('errInTheEnd', err);
@@ -71,12 +79,6 @@ function make(cmd, table, items, ids) {
     });
 }
 
-var method = {
-    "create": "save",
-    "read": "reload",
-    "update": "",
-    "delete": "destroy",
-}
 
 function toArray(items) {
     return items instanceof Array ? items : items === undefined ? undefined : [items];
@@ -84,7 +86,6 @@ function toArray(items) {
 
 
 module.exports = {
-    addRecords: addRecords,
     create: create,
     read: read,
     update: update,

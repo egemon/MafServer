@@ -38,10 +38,12 @@ function syncService ($http, club) {
         return metadata;
     }
 
-    function pushToServer (game, force) {
+    function pushToServer (game, force, ids) {
         var body = {
             force: force,
-            games: [formatGame(game)]
+            game: formatGame(game),
+            pg: true,
+            ids: ids,
         };
         return $http.post(club.BASE_SERVER_URL + club.SYNC_URL, body)
             .then(alertErrorText);

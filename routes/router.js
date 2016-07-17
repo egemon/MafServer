@@ -1,13 +1,14 @@
 var isDev = process.argv[2] === 'dev' ? true : false;
-var CONFIG = require('../configs/serverConfig.json');
 console.log('isDev = ', isDev);
 
-var pgApi = require('../helpers/pg/myPgApi.js');
 var express = require('express');
 var router = express.Router();
+
 var LocalGameStorage = require('../model/LocalGameStorage');
 var RatingBase = require('../model/RatingBase');
 var dataBase = require('../helpers/dataBase.js');
+var pgApi = require('../helpers/pg/myPgApi.js');
+var migrator = require('../helpers/pg/migrator.js');
 
 dataBase.refreshInfoFor('all');
 dataBase.initializeWatching('all');
@@ -189,34 +190,59 @@ router.post('/load', function (req, res) {
 //saveGamesByFilter
 router.post('/sync', function (req, res) {
     console.log('psync post request taken!');
-    console.log('req.data = ', req.body.games);
+    console.log('req.data = ', req.body.game);
     var force = req.body.force;
-    var game = req.body.games[0];
+    var pg = req.body.pg;
+    var ids = req.body.ids;
+    var game = req.body.game;
     var metadata = game.metadata;
-    var gameId = LocalGameStorage.generateGameId(metadata);
-    var isGameExists = LocalGameStorage.getGamesByFilter({id:gameId});
-
     var successText = 'Игра сохарнена!';
     var errorText = 'Игра не сохарнена!';
     var confirmText = 'Игра существует. Вы действительно хотите перезатереть игру?';
-    console.log('SYNC!!!!!!!!!!!!!!!!!!!!');
-    console.log('metadata', metadata);
-    console.log('force', force);
-    console.log('game', game);
-
-    if (isGameExists && !force) {
-        res.send({
-            confirmText: confirmText
+    var isGameExists;
+    if (pg) {
+        pgApi.read('gametest', {
+            key: 'gameid',
+            // value: '2016-02-29_1_BakerStreet'
+            value: metadata.date + '_' + metadata.gameNumber + '_' + metadata.table
+        })
+        .then(function (data) {
+            if (data.length  && !force) {
+                res.send({
+                    confirmText: confirmText,
+                    ids: data.map(game => game.id)
+                });
+            } else {
+                migrator.migrateGames('gametest', [game], ids)
+                .then(function (data) {
+                    result = successText;
+                    res.send({errorText: result, ids: data});
+                });
+            }
         });
-    } else if(!isGameExists || isGameExists && force) {
-        var result = "";
-        if (LocalGameStorage.saveGameArray(req.body.games)) {
-            result = successText;
+
+    } else {
+        var gameId = LocalGameStorage.generateGameId(metadata);
+        isGameExists = LocalGameStorage.getGamesByFilter({id:gameId});
+
+
+        if (isGameExists && !force) {
+            res.send({
+                confirmText: confirmText
+            });
         } else {
-            result = errorText;
+            var result = "";
+            if (LocalGameStorage.saveGame(game)) {
+                result = successText;
+            } else {
+                result = errorText;
+            }
+            res.send({errorText: result});
         }
-        res.send({errorText: result});
     }
+
+
+
 });
 
 // ================ handlers for Login ================ //
@@ -243,7 +269,7 @@ router.post('/set', function(req, res) {
     if (player.memberLevel >= 3) {
         dataBase.setData(req.body.data, req.body.field, req.body.path);
         res.send(JSON.stringify({
-            successText: 'Данные по регистрации сохарнены!'
+            successText: 'Данные сохарнены!'
         }));
     } else {
         res.send(JSON.stringify({

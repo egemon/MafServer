@@ -55,7 +55,12 @@ module.exports = class Record extends Connection {
       this.sql = this.insertSql();
     }
 
-    return this.execQuery().then( data => this.record_id = data.rows[0].id);
+    return this.execQuery().then( data => this.record_id = data.rows[0] && data.rows[0].id);
+  }
+
+  update(){
+    this.sql = this.updateSql();
+    return this.execQuery().then( data => this.record_id = data.rows[0] && data.rows[0].id);
   }
 
   destroy(){
@@ -63,16 +68,17 @@ module.exports = class Record extends Connection {
     return this.execQuery();
   }
 
-  deleteSql(attrs){
+  deleteSql(){
     return `delete from ${this.table_name} ${this.identifierCondition()}`;
   }
 
   columns(prefix){
     return _.keys(this.attributes).map((k) => {
-      if(prefix)
-        return `${this.table_name}.${k}`;
-      else
+      if(prefix) {
+        return `${prefix}.${k}`;
+      } else {
         return k;
+      }
     });
   }
 
@@ -87,14 +93,19 @@ module.exports = class Record extends Connection {
     });
   }
 
-  insertSql(attrs){
+  insertSql(){
     let columns = this.columns().join(', ');
     return `insert into ${this.table_name}(${columns}) values(${this.values()}) returning id;`
   }
 
-  // updateSql(attrs){
-  //   return `update ${this.table_name} ${this.identifierCondition()}`
-  // };
+  updateSql(){
+    let columns = this.columns().join(', ');
+    return `update ${this.table_name} set
+    (${columns}) = (${this.values()})
+    ${this.identifierCondition()}
+    returning id;`;
+  }
+
 };
 //
 // let obj = {id: 1905, login: 'user', email: 'user@cogniance.com'};
