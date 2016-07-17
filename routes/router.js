@@ -9,7 +9,7 @@ var RatingBase = require('../model/RatingBase');
 var dataBase = require('../helpers/dataBase.js');
 var pgApi = require('../helpers/pg/myPgApi.js');
 var migrator = require('../helpers/pg/migrator.js');
-
+var pgHelper = require('../helpers/pg/pg.helper.js');
 dataBase.refreshInfoFor('all');
 dataBase.initializeWatching('all');
 dataBase.watchLocalStorage();
@@ -20,14 +20,14 @@ var PAGES = [{
     },{
         url: 'news',
         getData: function () {
-            return dataBase.getNews();
+            return Promise.resolve(dataBase.getNews());
         }
     },{
         url: 'rating',
         getData: function (body) {
             console.log('[router] getData(rating)', arguments);
-            if (!Object.keys(body).length) {
-                body = '';
+            if (!body.data) {
+                body.data = '';
             }
             var defaultFilter = {
                 periodType: "month",
@@ -35,28 +35,35 @@ var PAGES = [{
                 year: today.getUTCFullYear()
             };
 
-            return RatingBase.calculateRating.call(RatingBase,
-                LocalGameStorage.getGamesByFilter(body || defaultFilter));
+            if (body.pg) {
+                return pgHelper.getGamesByFilter('games', body.data || defaultFilter);
+
+            } else {
+
+                var games = LocalGameStorage.getGamesByFilter(body.data || defaultFilter);
+                return Promise.resolve(RatingBase.calculateRating.call(RatingBase, games));
+            }
+
         }
     },{
         url: 'members',
         getData:  function () {
-            return dataBase.getMembers();
+            return Promise.resolve(dataBase.getMembers());
         }
     },{
         url: 'hall_of_fame',
         getData: function () {
-            return dataBase.getHallOfFame();
+            return Promise.resolve(dataBase.getHallOfFame());
         }
     },{
         url: 'photos',
         getData: function () {
-            return dataBase.getPhotos();
+            return Promise.resolve(dataBase.getPhotos());
         }
     },{
         url: 'contacts',
         getData: function () {
-            return dataBase.getOrgs();
+            return Promise.resolve(dataBase.getOrgs());
         }
 
     },{
@@ -65,19 +72,19 @@ var PAGES = [{
     },{
         url: 'players',
         getData:  function () {
-            return {
+            return Promise.resolve( {
                 data: dataBase.getPlayers(),
                 fields: dataBase.getPlayerFields()
-            };
+            });
         },
         needMemberLevel: 3
     },{
         url: 'contents',
         getData:  function () {
-            return {
+            return Promise.resolve({
                 data: dataBase.getNews(),
                 fields: dataBase.getMeetingFields()
-            };
+            });
         },
         needMemberLevel: 3
     },{
@@ -88,10 +95,10 @@ var PAGES = [{
             if (!date) {
                 date = new Date().toISOString().split('T')[0];
             }
-            return {
+            return Promise.resolve({
                 data: dataBase.getRegister(date),
                 fields: dataBase.getRegisterFields()
-            };
+            });
         },
         needMemberLevel: 3
     }];
@@ -110,7 +117,9 @@ for (var i = 0; i < PAGES.length; i++) {
                 var player = dataBase.authentificate(JSON.parse(req.cookies['player-data']));
                 if (player.memberLevel >= PAGES[i].needMemberLevel) {
                     console.log('[router.js] body = ', req.body);
-                    res.send(PAGES[i].getData(req.body));
+                    PAGES[i].getData(req.body).then(function (result) {
+                        res.send(result);
+                    });
                 } else {
                     res.send(JSON.stringify({
                        errorText: 'Эта страничка доступна только для администраторов!'
@@ -118,7 +127,9 @@ for (var i = 0; i < PAGES.length; i++) {
                 }
             } else {
                 console.log('[router.js] body = ', req.body);
-                res.send(PAGES[i].getData(req.body));
+                PAGES[i].getData(req.body).then(function (result) {
+                    res.send(result);
+                });
             }
         });
     })(i);

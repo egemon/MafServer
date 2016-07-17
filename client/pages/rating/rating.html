@@ -24,9 +24,8 @@
     <tr>
       <th>Фото</th>
       <th>Ник</th>
-      <th>Сумма</th>
-      <th>Игр</th>
       <th>Среднее</th>
+      <th>Игр</th>
       <th>Лучшие от игроков</th>
       <th>Лучшие от Судей</th>
     </tr>
@@ -36,7 +35,7 @@
         class="rating-row"
         id="{{::player.nick}}"
         ng-repeat="(i, player) in rating"
-        ng-show="player.gameNumber >= gameEdge"
+        ng-show="player.gamenumber >= gameEdge"
     >
       <td id="{{::player.avatar}}">
         <img class="playerAvatarInRating"
@@ -45,11 +44,10 @@
         alt="">
       </td>
       <td>{{::player.nick}}</td>
-      <td>{{::player.sum}}</td>
-      <td>{{::player.gameNumber}}</td>
-      <td>{{::player.sum / player.gameNumber | number:2}}</td>
-      <td>{{::player.BP}}</td>
-      <td>{{::player.BR}}</td>
+      <td>{{::player.score}}</td>
+      <td>{{::player.gamenumber}}</td>
+      <td>{{::player.bp}}</td>
+      <td>{{::player.br}}</td>
     </tr>
   </tbody>
 </table>

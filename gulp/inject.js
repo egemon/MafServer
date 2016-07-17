@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     add = require('gulp-add-src'),
     inject = require('gulp-inject');
 
-gulp.task('dev-link', shell.task(['rm -f public/client', 'ln -s ../client public/client']));
+gulp.task('dev-link', shell.task(['rm -f public/client', 'ln -sf ../client public/client']));
 
 gulp.task('inject-css', function() {
     var styles = gulp.src([

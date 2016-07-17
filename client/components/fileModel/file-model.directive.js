@@ -5,11 +5,8 @@ angular.module('base')
             fileModel: "="
         },
         link: function (scope, element) {
-            console.log('[file-model] link:()', arguments);
             element.bind("change", function (changeEvent) {
-                console.log('[file-model] element.bind()', arguments);
                 if (changeEvent.target.files.length === 0) {
-                    console.log('[cancel]', arguments);
                     scope.$apply(function () {
                         scope.fileModel = '';
                     });

@@ -9,7 +9,7 @@ function($scope){
     function getRating () {
         $scope.fetchDataFor($scope.page, 0, {
             periodType: this.periodType,
-            period: this.period.value,
+            period: this.period.value || this.year.value,
             year: this.year.value
         });
     }

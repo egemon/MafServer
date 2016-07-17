@@ -20,7 +20,12 @@ angular.module('server')
     serverService.prototype.$_fetchData = function(page, needMemberLevel, data) {
         console.log('[server.service] $_fetchData()', arguments);
 
-        return $http.post(CONFIG.BASE_SERVER_URL + page.url, data)
+        // TODO remove after PG
+        var body = {
+            pg:true,
+            data: data
+        };
+        return $http.post(CONFIG.BASE_SERVER_URL + page.url, body)
         .catch(failCallback.bind(this, needMemberLevel))
         .then(handleData.bind(this, page));
     };
