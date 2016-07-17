@@ -16,7 +16,9 @@ gulp.task('inject-css', function() {
       ]));
 
     return gulp.src('client/dev.html')
-    .pipe(inject(styles))
+    .pipe(inject(styles, {
+      relative: true,
+    }))
     .pipe(gulp.dest('client'));
 });
 
@@ -34,7 +36,9 @@ gulp.task('inject-js', function() {
   ], {read:false}));
 
   return gulp.src('client/dev.html')
-  .pipe(inject(scripts))
+  .pipe(inject(scripts, {
+    relative: true
+  }))
   .pipe(gulp.dest('client'));
 });
 

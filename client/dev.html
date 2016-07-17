@@ -5,75 +5,92 @@
         <title>BakerStreet 221b Mafia Club</title>
 
         <!-- inject:css -->
-        <link rel="stylesheet" href="/client/lib/bootstrap-css/css/bootstrap.css">
-        <link rel="stylesheet" href="/client/lib/angular-autocomplete/style/autocomplete.css">
-        <link rel="stylesheet" href="/client/app.css">
-        <link rel="stylesheet" href="/client/components/base/base.css">
-        <link rel="stylesheet" href="/client/pages/hall_of_fame/hall_of_fame.css">
-        <link rel="stylesheet" href="/client/pages/news/news.css">
-        <link rel="stylesheet" href="/client/pages/photos/photos.css">
-        <link rel="stylesheet" href="/client/pages/players/players.css">
-        <link rel="stylesheet" href="/client/pages/protocol/protocol.css">
-        <link rel="stylesheet" href="/client/pages/rating/rating.css">
-        <link rel="stylesheet" href="/client/pages/register/registration.css">
-        <link rel="stylesheet" href="/client/components/base/loginForm/loginForm.css">
-        <link rel="stylesheet" href="/client/pages/protocol/days/days.css">
-        <link rel="stylesheet" href="/client/pages/protocol/metadata/metadata.css">
-        <link rel="stylesheet" href="/client/pages/protocol/player/player.css">
-        <link rel="stylesheet" href="/client/pages/protocol/timer/timer.css">
+
+        <link rel="stylesheet" href="lib/bootstrap-css/css/bootstrap.css">
+
+        <link rel="stylesheet" href="lib/angular-autocomplete/style/autocomplete.css">
+
+        <link rel="stylesheet" href="app.css">
+
+        <link rel="stylesheet" href="components/base/base.css">
+
+        <link rel="stylesheet" href="pages/hall_of_fame/hall_of_fame.css">
+
+        <link rel="stylesheet" href="pages/news/news.css">
+
+        <link rel="stylesheet" href="pages/photos/photos.css">
+
+        <link rel="stylesheet" href="pages/players/players.css">
+
+        <link rel="stylesheet" href="pages/protocol/protocol.css">
+
+        <link rel="stylesheet" href="pages/rating/rating.css">
+
+        <link rel="stylesheet" href="pages/register/registration.css">
+
+        <link rel="stylesheet" href="components/base/loginForm/loginForm.css">
+
+        <link rel="stylesheet" href="pages/protocol/days/days.css">
+
+        <link rel="stylesheet" href="pages/protocol/metadata/metadata.css">
+
+        <link rel="stylesheet" href="pages/protocol/player/player.css">
+
+        <link rel="stylesheet" href="pages/protocol/timer/timer.css">
+
         <!-- endinject -->
     </head>
     <body id="page-container">
         <div base></div>
 
-        <script src="client/lib/angular/angular.js" type="text/javascript" charset="utf-8"></script>
-        <script src="client/lib/angular-animate/angular-animate.js" type="text/javascript" charset="utf-8"></script>
-        <script src="client/lib/angular-autocomplete/script/autocomplete.js" type="text/javascript" charset="utf-8"></script>
-        <script src="client/lib/angular-cookies/angular-cookies.js" type="text/javascript" charset="utf-8"></script>
-        <script src="client/lib/angular-ui-router/release/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/angular-animate/angular-animate.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/angular-autocomplete/script/autocomplete.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/angular-cookies/angular-cookies.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/angular-ui-router/release/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- inject:js -->
-        <script src="/client/configs/club.module.js"></script>
-        <script src="/client/configs/config.module.js"></script>
-        <script src="/client/configs/templates.module.js"></script>
-        <script src="/client/services/server.module.js"></script>
-        <script src="/client/components/base/base.module.js"></script>
-        <script src="/client/pages/protocol/protocol/protocol.module.js"></script>
-        <script src="/client/pages/protocol/services/sync.module.js"></script>
-        <script src="/client/pages/protocol/timer/timer.module.js"></script>
-        <script src="/client/configs/club.constant.js"></script>
-        <script src="/client/configs/config.constant.js"></script>
-        <script src="/client/configs/index.router.js"></script>
-        <script src="/client/configs/index.run.js"></script>
-        <script src="/client/configs/pages.constant.js"></script>
-        <script src="/client/configs/templates.js"></script>
-        <script src="/client/services/edit.service.js"></script>
-        <script src="/client/services/server.service.js"></script>
-        <script src="/client/components/base/base.controller.js"></script>
-        <script src="/client/components/base/base.directive.js"></script>
-        <script src="/client/components/fileModel/file-model.directive.js"></script>
-        <script src="/client/components/newPlayer/new-player.directive.js"></script>
-        <script src="/client/components/newPlayer/newPlayer.controller.js"></script>
-        <script src="/client/components/periodSelector/periodSelector.controller.js"></script>
-        <script src="/client/components/periodSelector/periodSelector.directive.js"></script>
-        <script src="/client/pages/contents/contents.controller.js"></script>
-        <script src="/client/pages/photos/photos.controller.js"></script>
-        <script src="/client/pages/players/players.controller.js"></script>
-        <script src="/client/pages/rating/rating.controller.js"></script>
-        <script src="/client/pages/register/register.controller.js"></script>
-        <script src="/client/pages/protocol/days/days.controller.js"></script>
-        <script src="/client/pages/protocol/days/days.directive.js"></script>
-        <script src="/client/pages/protocol/filters/translate.filter.js"></script>
-        <script src="/client/pages/protocol/metadata/metadata.controller.js"></script>
-        <script src="/client/pages/protocol/metadata/metadata.directive.js"></script>
-        <script src="/client/pages/protocol/player/player.controller.js"></script>
-        <script src="/client/pages/protocol/player/player.directive.js"></script>
-        <script src="/client/pages/protocol/protocol/protocol.controller.js"></script>
-        <script src="/client/pages/protocol/protocol/protocol.directive.js"></script>
-        <script src="/client/pages/protocol/services/game.factory.js"></script>
-        <script src="/client/pages/protocol/services/sync.factory.js"></script>
-        <script src="/client/pages/protocol/timer/timer.controller.js"></script>
-        <script src="/client/pages/protocol/timer/timer.directive.js"></script>
+        <script src="configs/club.module.js"></script>
+        <script src="configs/config.module.js"></script>
+        <script src="configs/templates.module.js"></script>
+        <script src="services/server.module.js"></script>
+        <script src="components/base/base.module.js"></script>
+        <script src="pages/protocol/protocol/protocol.module.js"></script>
+        <script src="pages/protocol/services/sync.module.js"></script>
+        <script src="pages/protocol/timer/timer.module.js"></script>
+        <script src="configs/club.constant.js"></script>
+        <script src="configs/config.constant.js"></script>
+        <script src="configs/index.router.js"></script>
+        <script src="configs/index.run.js"></script>
+        <script src="configs/pages.constant.js"></script>
+        <script src="configs/templates.js"></script>
+        <script src="services/edit.service.js"></script>
+        <script src="services/server.service.js"></script>
+        <script src="components/base/base.controller.js"></script>
+        <script src="components/base/base.directive.js"></script>
+        <script src="components/fileModel/file-model.directive.js"></script>
+        <script src="components/newPlayer/new-player.directive.js"></script>
+        <script src="components/newPlayer/newPlayer.controller.js"></script>
+        <script src="components/periodSelector/periodSelector.controller.js"></script>
+        <script src="components/periodSelector/periodSelector.directive.js"></script>
+        <script src="pages/contents/contents.controller.js"></script>
+        <script src="pages/photos/photos.controller.js"></script>
+        <script src="pages/players/players.controller.js"></script>
+        <script src="pages/rating/rating.controller.js"></script>
+        <script src="pages/register/register.controller.js"></script>
+        <script src="pages/protocol/days/days.controller.js"></script>
+        <script src="pages/protocol/days/days.directive.js"></script>
+        <script src="pages/protocol/filters/translate.filter.js"></script>
+        <script src="pages/protocol/metadata/metadata.controller.js"></script>
+        <script src="pages/protocol/metadata/metadata.directive.js"></script>
+        <script src="pages/protocol/player/player.controller.js"></script>
+        <script src="pages/protocol/player/player.directive.js"></script>
+        <script src="pages/protocol/protocol/protocol.controller.js"></script>
+        <script src="pages/protocol/protocol/protocol.directive.js"></script>
+        <script src="pages/protocol/services/game.factory.js"></script>
+        <script src="pages/protocol/services/sync.factory.js"></script>
+        <script src="pages/protocol/timer/timer.controller.js"></script>
+        <script src="pages/protocol/timer/timer.directive.js"></script>
         <!-- endinject -->
     </body>
 </html>

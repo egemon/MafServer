@@ -24,7 +24,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json({limit: '1mb'}));
 app.use(bodyParser.urlencoded({ extended: false, limit: '5mb' }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, (isDev ? '': '/public'))));
+app.use(express.static(path.join(__dirname, (isDev ? '/client': '/public'))));
 
 app.use('/', router);
 // app.use('/users', users);

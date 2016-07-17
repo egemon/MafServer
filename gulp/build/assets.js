@@ -9,13 +9,13 @@ var gulp = require('gulp'),
 // ============ ASSESTS TASK ============
 // copies fonts from src to dest
 gulp.task('font', function () {
-    return gulp.src(['client/assets/fonts/**'])
+    return gulp.src(['client/fonts/**'])
     .pipe(gulp.dest('public/fonts'));
 });
 
 // this task minify images
 gulp.task('img', function() {
-  return gulp.src('client/assets/img/**/*')
+  return gulp.src('client/img/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
     .pipe(gulp.dest('public/img'));
 });
