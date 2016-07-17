@@ -32,4 +32,4 @@ gulp.task('favicon', function() {
       .pipe(gulp.dest('public/'));
 });
 
-gulp.task('avatars', shell.task('ln -fs data-base/players/img/ public/img/avatars'));
+gulp.task('avatars', shell.task('ln -s ../../data-base/players/img/ public/img/avatars'));

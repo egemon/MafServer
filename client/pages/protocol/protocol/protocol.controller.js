@@ -56,10 +56,8 @@ function ProtocolCtrl ($scope, $http, sync, club, game) {
         vm.ids = data.ids;
         if (data.confirmText) {
             if (window.confirm(data.confirmText)) {
-                var promise = sync[cmd](vm.game, true, vm.ids);
-                if (cmd === 'push') {
-                    promise.then(restoreDefaults);
-                }
+                sync[cmd](vm.game, true, vm.ids)
+                .then(restoreDefaults);
             }
         }
     }

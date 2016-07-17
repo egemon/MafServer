@@ -156,7 +156,7 @@ router.post('/delete', function (req, res) {
     var confirmText = 'Вы действительно хотите удалиь игру?';
 
     if (req.body.pg) {
-        pgApi.read('gametest', {
+        pgApi.read('games', {
             key: 'gameid',
             value: metadata.date + '_' + metadata.gameNumber + '_' + metadata.table
         })
@@ -166,7 +166,7 @@ router.post('/delete', function (req, res) {
                     confirmText: confirmText
                 });
             } else {
-                pgApi.delete('gametest', data.map(el => el.id)).then(function (data) {
+                pgApi.delete('games', data.map(el => el.id)).then(function (data) {
                     console.log('data', data);
                     res.send({
                         errorText: successText
@@ -218,7 +218,7 @@ router.post('/load', function (req, res) {
     console.log('[router] getGames / load', metadata);
 
     if (metadata.pg) {
-        pgApi.read('gametest', {
+        pgApi.read('games', {
             key: 'gameid',
             value: metadata.date + '_' + metadata.gameNumber + '_' + metadata.table
         })
@@ -264,7 +264,7 @@ router.post('/sync', function (req, res) {
     var confirmText = 'Игра существует. Вы действительно хотите перезатереть игру?';
     var isGameExists;
     if (pg) {
-        pgApi.read('gametest', {
+        pgApi.read('games', {
             key: 'gameid',
             // value: '2016-02-29_1_BakerStreet'
             value: metadata.date + '_' + metadata.gameNumber + '_' + metadata.table
@@ -276,7 +276,7 @@ router.post('/sync', function (req, res) {
                     ids: data.map(game => game.id)
                 });
             } else {
-                migrator.migrateGames('gametest', [game], ids)
+                migrator.migrateGames('games', [game], ids)
                 .then(function (data) {
                     result = successText;
                     res.send({errorText: result, ids: data});
