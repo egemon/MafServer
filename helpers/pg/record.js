@@ -4,6 +4,7 @@ var Connection = require('./connection.js');
 
 module.exports = class Record extends Connection {
   constructor(table_name, attrs, record_id){
+
     super();
 
     this.attributes = attrs;
@@ -33,7 +34,7 @@ module.exports = class Record extends Connection {
 
   reload(){
     this.sql = `${this.sql_fetcher} ${this.identifierCondition()} limit 1`;
-    return this.execQuery();
+    return this.execQuery().then( data => data.rows[0]);
   };
 
   save(){

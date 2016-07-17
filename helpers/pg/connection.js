@@ -3,7 +3,6 @@ var pg = require('pg');
 pg.defaults.ssl = true;
 module.exports = class Connection {
   constructor(sql){
-
     this.sql = sql;
 
     let dbName = process.env.DB_NAME || 'imap_e2e';
