@@ -612,9 +612,9 @@
         "honours": []
     },
     {
-        "nick": "Skarlet",
-        "password": "Skarlet",
-        "name": "Skarlet",
+        "nick": "Skarlett",
+        "password": "Skarlett",
+        "name": "Skarlett",
         "presents": [],
         "memberLevel": 0,
         "honours": []
@@ -2313,6 +2313,14 @@
         "nick": "Ник",
         "password": "Ник",
         "name": "Ник",
+        "presents": [],
+        "memberLevel": 0,
+        "honours": []
+    },
+    {
+        "nick": "О''Доннел",
+        "password": "О''Доннел",
+        "name": "О''Доннел",
         "presents": [],
         "memberLevel": 0,
         "honours": []

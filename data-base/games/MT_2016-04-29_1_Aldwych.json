@@ -1,7 +1,7 @@
 {
     "playerLines": [
         {
-            "nick": "Skarlet",
+            "nick": "Skarlett",
             "role": "Мирный"
         },
         {
@@ -168,7 +168,7 @@
                 },
                 {
                     "who": {
-                        "nick": "Skarlet",
+                        "nick": "Skarlett",
                         "falls": 0,
                         "role": "Мирный",
                         "BP": false,

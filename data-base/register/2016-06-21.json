@@ -130,7 +130,7 @@
         "debt": 0
     },
     {
-        "nick": "Skarlet",
+        "nick": "Skarlett",
         "sum": 0,
         "debt": 0
     },
@@ -170,7 +170,7 @@
         "debt": 0
     },
     {
-        "nick": "Skarlet",
+        "nick": "Skarlett",
         "sum": 0,
         "debt": 0
     },
@@ -196,6 +196,11 @@
     },
     {
         "nick": "Пик",
+        "sum": 0,
+        "debt": 0
+    },
+    {
+        "nick": "О''Доннел",
         "sum": 0,
         "debt": 0
     }
