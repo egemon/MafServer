@@ -65,11 +65,11 @@ module.exports = class Record extends Connection {
 
   destroy(){
     this.sql = this.deleteSql();
-    return this.execQuery();
+    return this.execQuery().then( data => this.record_id = data.rows[0] && data.rows[0].id);
   }
 
   deleteSql(){
-    return `delete from ${this.table_name} ${this.identifierCondition()}`;
+    return `delete from ${this.table_name} ${this.identifierCondition()} returning id`;
   }
 
   columns(prefix){

@@ -45,6 +45,8 @@ function syncService ($http, club) {
         var body = {
             force: force,
             game: formatGame(game),
+
+            // TODO remove after PG
             pg: true,
             ids: ids,
         };
@@ -62,7 +64,10 @@ function syncService ($http, club) {
         var metadata = formatDate(angular.copy(game.metadata));
         return $http.post(club.BASE_SERVER_URL + club.DELETE_URL, {
                 metadata: metadata,
-                force: force
+                force: force,
+
+                // TODO remove after PG
+                pg: true
             })
             .then(alertErrorText);
     }

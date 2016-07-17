@@ -29,7 +29,8 @@ function ProtocolCtrl ($scope, $http, sync, club, game) {
     function saveGame () {
         console.log('PROTOCOL saveGame()', vm.game);
         sync.push(vm.game)
-            .then(handlePrompt.bind(this, 'push'));
+            .then(handlePrompt.bind(this, 'push'))
+            .then(restoreDefaults);
     }
 
     function loadGame() {
@@ -84,10 +85,7 @@ function ProtocolCtrl ($scope, $http, sync, club, game) {
     function loadPlayerLines (oldPlayers, newPlayers) {
         newPlayers.forEach(function(newPlayer, i) {
             var oldPlayer = oldPlayers[i];
-            console.log('[protocol.controller.js] loadPlayerLines() oldPlayer = ', oldPlayer);
-            console.log('[protocol.controller.js] loadPlayerLines() newPlayer = ', newPlayer);
             for(var key in oldPlayer) {
-                console.log('[protocol.controller.js] loadPlayerLines() key = ', key);
                 oldPlayer[key] = newPlayer[key] || club.defaultPlayer[key];
             }
         });

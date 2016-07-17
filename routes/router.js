@@ -140,33 +140,64 @@ router.post('/delete', function (req, res) {
     console.log('[router] getGames / delete', req.body);
     var metadata = req.body.metadata;
     var force = req.body.force;
-    var gameId = LocalGameStorage.generateGameId(metadata);
-    var game = LocalGameStorage.getGamesByFilter({id:gameId});
     var successText = 'Игра удалена!';
     var errorText = 'Игра не удалена!';
     var confirmText = 'Вы действительно хотите удалиь игру?';
 
-    if (game && !force) {
-        res.send({
-            confirmText: confirmText
-        });
-    } else if(game && force) {
-        LocalGameStorage.deleteGame(gameId).when(function(isDeleted){
-            if (isDeleted) {
+    if (req.body.pg) {
+        pgApi.read('gametest', {
+            key: 'gameid',
+            value: metadata.date + '_' + metadata.gameNumber + '_' + metadata.table
+        })
+        .then(function (data) {
+            if (data.length && !force) {
                 res.send({
-                    errorText: successText
+                    confirmText: confirmText
                 });
             } else {
-                res.send({
-                    errorText: errorText
+                pgApi.delete('gametest', data.map(el => el.id)).then(function (data) {
+                    console.log('data', data);
+                    res.send({
+                        errorText: successText
+                    });
+                }, function (err) {
+                    console.log('err', err);
+                    res.send({
+                        errorText: errorText
+                    });
                 });
             }
         });
     } else {
-        res.send({
-            errorText: errorText
-        });
+        var gameId = LocalGameStorage.generateGameId(metadata);
+        var game = LocalGameStorage.getGamesByFilter({id:gameId});
+        if (game && !force) {
+            res.send({
+                confirmText: confirmText
+            });
+        } else if(game && force) {
+            LocalGameStorage.deleteGame(gameId).when(function(isDeleted){
+                if (isDeleted) {
+                    res.send({
+                        errorText: successText
+                    });
+                } else {
+                    res.send({
+                        errorText: errorText
+                    });
+                }
+            });
+        } else {
+            res.send({
+                errorText: errorText
+            });
+        }
     }
+
+
+
+
+
 
 });
 

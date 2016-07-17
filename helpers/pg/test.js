@@ -1,11 +1,6 @@
 var pgApi = require('./myPgApi');
 
-pgApi.update('gametest', [
-    {nick: 'data', date: '2016-01-01'},
-    {nick: 'data', date: '2016-01-01'},
-    {nick: 'data', date: '2016-01-01'},
-    {nick: 'datadatadatadatadata', date: '2016-01-01'},
-    ], [1,2,300,4]).then(function (results) {
+pgApi.delete('gametest', [4,5,6,7,8,14,9,10]).then(function (results) {
 	console.log('results', results);
 });
 
