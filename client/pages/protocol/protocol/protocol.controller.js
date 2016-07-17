@@ -67,7 +67,9 @@ function ProtocolCtrl ($scope, $http, sync, club, game) {
         console.log('[protocol.controller] handleLoadedGame() ', oldGame, newGame);
         loadMetadata(oldGame.metadata, newGame.metadata);
         loadPlayerLines(oldGame.playerLines, newGame.playerLines);
-        loadDays(oldGame.days, newGame.days);
+        if (newGame.days) {
+            loadDays(oldGame.days, newGame.days);
+        }
     }
 
     function loadMetadata(oldMetadata, newMetadata) {

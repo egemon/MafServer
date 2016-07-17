@@ -113,6 +113,31 @@ function migrateGames(tableName, games, ids) {
  }
 }
 
+function gameSQLtoJSON(gameLines) {
+    return {
+        metadata: {
+            date: gameLines[0].date,
+            table: gameLines[0].board,
+            gameNumber: gameLines[0].gamenumber,
+            ref: gameLines[0].referee,
+            win: gameLines[0].win,
+        },
+        playerLines: gameLines
+        .sort(function (a, b) {
+            return a.playernumber < b.playernumber ? -1 : 1;
+        }).map(function(gameLine) {
+            return {
+                nick: gameLine.nick ,
+                role: gameLine.role ,
+                BP: gameLine.bp  ? true : false,
+                BR: gameLine.br  ? true : false,
+                falls: gameLine.falls,
+            };
+        })
+    };
+
+}
+
 
 function migrateNews(tableName, news, ids) {
     news = news.map(function (item) {
@@ -185,4 +210,5 @@ module.exports = {
     migrateGames,
     migrateNews,
     migrateHonours,
+    gameSQLtoJSON
 };

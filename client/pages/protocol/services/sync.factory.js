@@ -35,6 +35,9 @@ function syncService ($http, club) {
 
     function formatDate (metadata) {
         metadata.date = metadata.date.toISOString().split('T')[0];
+
+        // TODO remove after PG
+        metadata.pg = true;
         return metadata;
     }
 

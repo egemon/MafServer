@@ -172,19 +172,40 @@ router.post('/delete', function (req, res) {
 
 //getGamesByFilter
 router.post('/load', function (req, res) {
-    console.log('sync get request taken!');
-    console.log('[router] getGames / load', req.body);
-    var games = LocalGameStorage.getGamesByFilter({
-        gameId: LocalGameStorage.generateGameId(req.body)
-    });
-    console.log('[router] getGames /load games = ', games);
-    if (games) {
-        res.send(games);
-    } else {
-        res.send({
-            errorText: 'Игра не найдена!'
+    var metadata = req.body;
+    console.log('[router] getGames / load', metadata);
+
+    if (metadata.pg) {
+        pgApi.read('gametest', {
+            key: 'gameid',
+            value: metadata.date + '_' + metadata.gameNumber + '_' + metadata.table
+        })
+        .then(function (data) {
+            if (data.length) {
+                res.send(migrator.gameSQLtoJSON(data));
+                console.log('game = ', migrator.gameSQLtoJSON(data));
+            } else {
+                res.send({
+                    errorText: 'Игра не найдена!'
+                });
+            }
+
         });
+    } else {
+
+        var games = LocalGameStorage.getGamesByFilter({
+            gameId: LocalGameStorage.generateGameId(metadata)
+        });
+        console.log('[router] getGames /load games = ', games);
+        if (games) {
+            res.send(games);
+        } else {
+            res.send({
+                errorText: 'Игра не найдена!'
+            });
+        }
     }
+
 });
 
 //saveGamesByFilter
