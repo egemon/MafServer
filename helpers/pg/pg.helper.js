@@ -39,7 +39,7 @@ function getRatingByFilter(table, filterObject) {
 function getGamesByFilter(table, filterObject) {
     "use strict";
     let query = new QRunner(`
-    select date, nick, board, gamenumber, referee, playernumber, nick, role, win, bp, br from ${table}
+    select date, board, gamenumber, referee, playernumber, nick, role, win, bp, br from ${table}
     ${_transformFilterObjToWhere(filterObject)}
     order by date, board, gamenumber, playernumber asc
     `);

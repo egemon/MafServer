@@ -64,5 +64,5 @@ angular.module('base')
     name: 'Игры',
     controller: 'GamesCtrl as gamesCtrl',
     needData: true,
-    needMemberLevel: 3
+    needMemberLevel: 0
 }]);
