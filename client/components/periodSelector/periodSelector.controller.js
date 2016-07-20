@@ -39,7 +39,7 @@ function($scope, CONFIG) {
         }
 
         if (periodType === 'year') {
-            $scope.period.value = '';
+            $scope.period.value = $scope.year.value ;
             return;
         }
 

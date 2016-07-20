@@ -59,4 +59,10 @@ angular.module('base')
     controller: 'registerCtrl as registerCtrl',
     needData: true,
     needMemberLevel: 3
+},{
+    url: 'games',
+    name: 'Игры',
+    controller: 'GamesCtrl as gamesCtrl',
+    needData: true,
+    needMemberLevel: 3
 }]);

@@ -1,3 +1,4 @@
 node_modules
 public
 client/configs/templates.js
+client/lib/

@@ -1,5 +1,6 @@
 #!/bin/env node
-var isDev = process.argv[2] === 'dev' ? true : false;
+console.log('process.env.NODE_ENV', process.env.NODE_ENV);
+var isDev = process.env.NODE_ENV ? false : true;
 var CONFIG = require('./configs/serverConfig.json');
 var express = require('express'),
     app = express();

@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     shell = require('gulp-shell'),
     add = require('gulp-add-src'),
+    runSequence = require('run-sequence'),
     inject = require('gulp-inject');
 
 gulp.task('dev-link', shell.task(['rm -f public/client', 'ln -sf ../client public/client']));
@@ -9,6 +10,7 @@ gulp.task('inject-css', function() {
     var styles = gulp.src([
         'client/lib/bootstrap-css/css/bootstrap.css',
         'client/lib/angular-autocomplete/style/autocomplete.css',
+        'client/lib/angular-ui-grid/ui-grid.css',
       ], {read:false})
       .pipe(add.append([
         'client/**/*.css',
@@ -42,4 +44,6 @@ gulp.task('inject-js', function() {
   .pipe(gulp.dest('client'));
 });
 
-gulp.task('inject-all',['inject-js', 'inject-css']);
+gulp.task('inject-all',function () {
+  runSequence(['inject-js', 'inject-css']);
+});

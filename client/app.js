@@ -3,3 +3,4 @@ require('./lib/angular-animate/angular-animate.js');
 require('./lib/angular-autocomplete/script/autocomplete.js');
 require('./lib/angular-cookies/angular-cookies.js');
 require('./lib/angular-ui-router/release/angular-ui-router.js');
+require('./lib/angular-ui-grid/ui-grid.js');

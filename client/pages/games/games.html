@@ -1,0 +1,15 @@
+<div ng-controller="GamesCtrl as gamesCtrl">
+
+    <period-selector
+        period-type="gamesCtrl.filterObject.periodType"
+        period="gamesCtrl.filterObject.period"
+        year="gamesCtrl.filterObject.year"
+        on-click="gamesCtrl.getGames"
+    ></period-selector>
+
+
+    <div ui-grid="{
+    data: games,
+    enableFiltering: true
+    }" class="myGrid"></div>
+</div>

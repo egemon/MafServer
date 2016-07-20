@@ -1,4 +1,5 @@
 var QRunner = require('./connection.js');
+var pgApi = require('./myPgApi.js');
 var moment = require('moment');
 // filterObject = {
 //     id: "2015-09-21_1_Baker Street",
@@ -7,29 +8,8 @@ var moment = require('moment');
 //     playerNick: "Merlin"
 // }
 
-function getGamesByFilter(table, filterObject) {
+function getRatingByFilter(table, filterObject) {
     "use strict";
-    var m = moment();
-    var start;
-    var end;
-    switch(filterObject.periodType) {
-        case 'month':
-            start = m.set('month', filterObject.period - 1).startOf('month').format('YYYY-MM-DD');
-            end = m.endOf('month').format('YYYY-MM-DD');
-
-
-            break;
-        case 'season':
-            let periodStart = (filterObject.period - 1)*3 - 1;
-            start = m.set('month', periodStart).startOf('month').format('YYYY-MM-DD');
-            end = m.add(2, 'month').endOf('month').format('YYYY-MM-DD');
-            break;
-        case 'year':
-            start = m.set('year', filterObject.period).startOf('year').format('YYYY-MM-DD');
-            end = m.endOf('year').format('YYYY-MM-DD');
-            console.log('start-end', start, end);
-            break;
-    }
 
     let query = new QRunner(`
     select nick,
@@ -46,7 +26,7 @@ function getGamesByFilter(table, filterObject) {
         end + bp),
     2) as score, count(bp) as gameNumber, sum(bp) as bp, sum(br) as br
     from ${table}
-    where '${start}' <= date and date <='${end}'
+    ${_transformFilterObjToWhere(filterObject)}
     GROUP BY GROUPING SETS ((nick))
     order by score desc
     `);
@@ -54,6 +34,43 @@ function getGamesByFilter(table, filterObject) {
     return query.execQuery().then(function (resp) {
         return resp.rows;
     });
+}
+
+function getGamesByFilter(table, filterObject) {
+    "use strict";
+    let query = new QRunner(`
+    select date, nick, board, gamenumber, referee, playernumber, nick, role, win, bp, br from ${table}
+    ${_transformFilterObjToWhere(filterObject)}
+    order by date, board, gamenumber, playernumber asc
+    `);
+
+    return query.execQuery().then(function (resp) {
+        return resp.rows;
+    });
+}
+
+function _transformFilterObjToWhere(filterObj) {
+    "use strict";
+    var m = moment();
+    var start;
+    var end;
+    switch(filterObj.periodType) {
+        case 'month':
+            start = m.set('month', filterObj.period - 1).startOf('month').format('YYYY-MM-DD');
+            end = m.endOf('month').format('YYYY-MM-DD');
+            break;
+        case 'season':
+            let periodStart = (filterObj.period - 1)*3 - 1;
+            start = m.set('month', periodStart).startOf('month').format('YYYY-MM-DD');
+            end = m.add(2, 'month').endOf('month').format('YYYY-MM-DD');
+            break;
+        case 'year':
+            start = m.set('year', filterObj.period).startOf('year').format('YYYY-MM-DD');
+            end = m.endOf('year').format('YYYY-MM-DD');
+            console.log('start-end', start, end);
+            break;
+    }
+    return `where '${start}' <= date and date <='${end}'`;
 }
 
 
@@ -67,5 +84,6 @@ function getGamesByFilter(table, filterObject) {
 // });
 
 module.exports = {
+    getRatingByFilter,
     getGamesByFilter
 };

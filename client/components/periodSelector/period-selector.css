@@ -1,0 +1,9 @@
+period-selector {
+    overflow: hidden;
+    display: block;
+}
+.show-button {
+    display: block;
+    float: none;
+
+}

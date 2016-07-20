@@ -3,6 +3,13 @@ angular.module('sync')
 
 function syncService ($http, club) {
 
+    return {
+        push: pushToServer,
+        pull: pullFromServer,
+        delete: deleteFromServer,
+        getNicks: getNicks
+    };
+
     function alertErrorText(response) {
         console.log('[syncService] alertErrorText()', arguments);
         if (response.data.errorText) {
@@ -84,10 +91,4 @@ function syncService ($http, club) {
         });
     }
 
-    return {
-        push: pushToServer,
-        pull: pullFromServer,
-        delete: deleteFromServer,
-        getNicks: getNicks
-    };
 }

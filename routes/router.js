@@ -1,4 +1,4 @@
-var isDev = process.argv[2] === 'dev' ? true : false;
+var isDev = process.env.NODE_ENV ? false : true;
 console.log('isDev = ', isDev);
 
 var express = require('express');
@@ -36,10 +36,8 @@ var PAGES = [{
             };
 
             if (body.pg) {
-                return pgHelper.getGamesByFilter('games', body.data || defaultFilter);
-
+                return pgHelper.getRatingByFilter('games', body.data || defaultFilter);
             } else {
-
                 var games = LocalGameStorage.getGamesByFilter(body.data || defaultFilter);
                 return Promise.resolve(RatingBase.calculateRating.call(RatingBase, games));
             }
@@ -101,6 +99,24 @@ var PAGES = [{
             });
         },
         needMemberLevel: 3
+    },{
+        url: 'games',
+        getData: function (body) {
+            console.log('data', body);
+
+            if (!body.data) {
+                body.data = '';
+            }
+
+            var defaultFilter = {
+                periodType: "month",
+                period: +today.toISOString().split('T')[0].split('-')[1],
+                year: today.getUTCFullYear()
+            };
+
+            return pgHelper.getGamesByFilter('games', body.data || defaultFilter);
+        }
+
     }];
 
 

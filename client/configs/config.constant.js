@@ -1,7 +1,6 @@
 angular.module('config')
 .constant('CONFIG', {
     TEMPLATES_URL: '',
-    BASE_SERVER_URL: 'http://bs-mafiaclub.rhcloud.com/', //http://bs-mafiaclub.rhcloud.com/
     LOGIN_URL: 'login',
     SET_URL: 'set',
     inputTypes: {

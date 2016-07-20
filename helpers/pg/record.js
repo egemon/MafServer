@@ -38,8 +38,14 @@ module.exports = class Record extends Connection {
   }
 
   getBy(options) {
-    this.sql = `${this.sql_fetcher} where ${options.key} = '${options.value}'`;
-    return this.execQuery().then( data => data.rows);
+    var self = this;
+    self.sql = `${self.sql_fetcher} where `;
+    _.each(options, function (val, key) {
+      self.sql += `${key} = '${val}' and `;
+    });
+    self.sql = self.sql.slice(0, self.sql.lastIndexOf('and')) +
+    self.sql.slice(self.sql.lastIndexOf('and')).replace('and', '');
+    return self.execQuery().then( data => data.rows);
   }
 
   getAll(){
