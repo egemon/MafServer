@@ -159,7 +159,7 @@ function saveImg(base64text, fileName, format) {
     };
     if (format in FORMATS) {
         var base64Data = base64text.replace(/^.*;base64,/, "");
-        fs.writeFile("./data-base/players/img/"+ fileName, base64Data, 'base64', function(err) {
+        fs.writeFile("./client/img/avatars"+ fileName, base64Data, 'base64', function(err) {
             console.log('[dataBase] wirteImage error = ', err);
         });
     } else {

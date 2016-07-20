@@ -1,0 +1,21 @@
+#gamesGrid .ui-grid-cell,
+#gamesGrid,
+#gamesGrid .ui-grid-header-canvas,
+#gamesGrid  .ui-grid-header-viewport,
+#gamesGrid  .ui-grid-top-panel,
+#gamesGrid  .ui-grid-header,
+#gamesGrid  .ui-grid-render-container,
+#gamesGrid  .ui-grid-header-cell-wrapper,
+#gamesGrid  .ui-grid-header-cell-row,
+#gamesGrid  .ui-grid-header-cell,
+#gamesGrid  [role=columnheader],
+#gamesGrid  .ui-grid-cell-contents,
+#gamesGrid  .ui-grid-contents-wrapper {
+    /*background-color: rgba(150,150,150,0.25)*/
+    background: transparent;
+}
+
+::-webkit-scrollbar {
+    /*color: red;*/
+
+}
