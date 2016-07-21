@@ -1,10 +1,7 @@
 var gulp = require('gulp'),
-    shell = require('gulp-shell'),
     add = require('gulp-add-src'),
     runSequence = require('run-sequence'),
     inject = require('gulp-inject');
-
-gulp.task('dev-link', shell.task(['rm -f public/client', 'ln -sf ../client public/client']));
 
 gulp.task('inject-css', function() {
     var styles = gulp.src([

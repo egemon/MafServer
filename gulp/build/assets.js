@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     _if = require('gulp-if'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
-    shell = require('gulp-shell'),
     htmlmin = require('gulp-htmlmin');
 
 // ============ ASSESTS TASK ============
@@ -31,5 +30,3 @@ gulp.task('favicon', function() {
     return gulp.src('client/favicon.ico')
       .pipe(gulp.dest('public/'));
 });
-
-gulp.task('avatars', shell.task('ln -s ../../data-base/players/img/ public/img/avatars'));
