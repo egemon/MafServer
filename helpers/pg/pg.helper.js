@@ -49,6 +49,19 @@ function getGamesByFilter(table, filterObject) {
     });
 }
 
+function getAll(table) {
+    "use strict";
+    let query = new QRunner(`
+    select * from ${table}
+    order by date asc
+    `);
+
+    return query.execQuery().then(function (resp) {
+        return resp.rows;
+    });
+}
+
+
 function _transformFilterObjToWhere(filterObj) {
     "use strict";
     var m = moment();
@@ -85,5 +98,6 @@ function _transformFilterObjToWhere(filterObj) {
 
 module.exports = {
     getRatingByFilter,
-    getGamesByFilter
+    getGamesByFilter,
+    getAll
 };

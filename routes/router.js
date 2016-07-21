@@ -19,8 +19,14 @@ var PAGES = [{
         url: 'home',
     },{
         url: 'news',
-        getData: function () {
-            return Promise.resolve(dataBase.getNews());
+        getData: function (body) {
+            if (body.pg) {
+                return pgHelper.getAll('news');
+            } else {
+                return Promise.resolve(dataBase.getNews());
+
+            }
+
         }
     },{
         url: 'rating',
