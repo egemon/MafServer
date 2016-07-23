@@ -38,8 +38,8 @@ function generalRun ($rootScope, $timeout, serverService) {
             var item = angular.copy(items[0]);
             delete item.id;
             serverService.create(table, item)
-            .then(function (idArr) {
-                item.id = idArr[0];
+            .then(function (id) {
+                item.id = id;
                 items.unshift(item);
             });
         };

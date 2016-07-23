@@ -3,8 +3,8 @@ function($scope) {
     var vm = this;
     vm.onRegisterApi = $scope.onRegisterApi;
 
-    $scope.$on('data-fetched', function(event, responseContent){
-        vm.columnDefs = _.map(_.keys(responseContent.data[0]), function (key) {
+    $scope.$on('data-fetched', function(event, data){
+        vm.columnDefs = _.map(_.keys(data[0]), function (key) {
             return {
                 field: key
             };

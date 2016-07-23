@@ -136,7 +136,7 @@ angular.module('server')
             throw response;
         }
 
-        $rootScope.$broadcast('data-fetched', response.data);
+        
 
 
 
@@ -197,7 +197,11 @@ angular.module('server')
             headers: {'Content-Type': 'application/json;charset=utf-8'}
         })
         .catch(failCallback.bind(this, 0))
-        .then(handleData.bind(this, table));
+        .then(handleData.bind(this, table))
+        .then(function (data) {
+            $rootScope.$broadcast('data-fetched', data);
+            return data;
+        });
     };
 
     serverService.prototype.update = function(table, items, ids) {

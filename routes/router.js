@@ -427,6 +427,10 @@ router.delete('/data', function (req, res) {
 });
 
 router.post('/data', function (req, res) {
+    if (req.body.table === 'players') {
+        req.body.items = dataBase.handleImages([req.body.items])[0];
+    }
+
     pgApi.create(req.body.table, req.body.items)
     .then(handleQueryResult.bind(null, res), function (err) {
        res.status(400).send(err);
