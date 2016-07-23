@@ -1,3 +1,12 @@
 1. [FE] add functionality for adding and deleting albums for admins
-2. [FE] fix img in player. Renew delete and add image button (broadcast data-fetched)
-3. 
+7. [BE] fix login by password, add passwords to DB
+10. [BE] Get players from games 
+11. [FE] Change request for autofilliing
+12. [BE] Implement cache stratage
+4. [BE] Remove all succses fields - use status, statusText instead
+5. [BE] remove old listeners
+6. [FE] remove old services
+3. [BE] make size of image optimal before saving
+2. [BE] store image as base64 in DB and remove all fucking image code
+8. [FE] hide or not send days field
+9. [FE][BE] Resfactore registration
