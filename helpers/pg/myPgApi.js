@@ -16,7 +16,7 @@ var method = {
 function read(table, ids) {
     var options;
     var all = ids === 'all';
-    var getBy = !(ids instanceof Array) && ids instanceof Object;
+    var getBy = _.isPlainObject(ids);
     var name = all ? 'getAll' : 'read';
     if (getBy) {
         options = ids;
@@ -59,7 +59,7 @@ function make(cmd, table, items, ids, options) {
             var user = new BaseUser();
             var result = user[cmd](options).then(function (data) {
                 console.log('Succses ' + cmd + ': ', item, data);
-                return {status: 1, data: data, item: item};
+                return {success: 1, data: data, item: item};
             },function (err) {
                 console.log('Error: ' + id, err);
                 return {item: item, id: id};

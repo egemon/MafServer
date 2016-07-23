@@ -34,9 +34,9 @@ angular.module('server')
             return this.read('news', 'all');
         }
 
-        // if (page.url === 'members') {
-        //     return this.read('players', {memberLevel:1});
-        // }
+        if (page.url === 'members') {
+            return this.read('players', {memberLevel: ' >= 1'});
+        }
 
         // TODO remove after PG
         var body = {

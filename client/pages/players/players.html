@@ -1,5 +1,5 @@
 <div id="customGrid" ui-grid="{
-    data: players.data,
+    data: players,
     enableFiltering: true,
     onRegisterApi: playersCtrl.onRegisterApi,
     columnDefs: playersCtrl.columnDefs }"
@@ -11,4 +11,4 @@
     ui-grid-auto-resize
     ui-grid-move-columns>
 </div>
-<button class="remove-button" ng-click="addItem(page.url, players.data)">Добавить игрока</button>
+<button class="remove-button" ng-click="addItem(page.url, players)">Добавить игрока</button>

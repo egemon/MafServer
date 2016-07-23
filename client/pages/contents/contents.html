@@ -1,5 +1,5 @@
 <div id="customGrid" ui-grid="{
-    data: contents.data,
+    data: contents,
     enableFiltering: true,
     onRegisterApi: contentsCtrl.onRegisterApi,
     columnDefs: contentsCtrl.columnDefs }"
@@ -11,4 +11,4 @@
     ui-grid-auto-resize
     ui-grid-move-columns>
 </div>
-<button class="remove-button" ng-click="addItem(page.url, contents.data)">Добавить событие</button>
+<button class="remove-button" ng-click="addItem(page.url, contents)">Добавить событие</button>

@@ -145,6 +145,8 @@ function handleImages(players) {
             saveImg(player.imglink, player.img, format);
             player.imglink = player.img;
             delete player.img;
+        } else {
+            delete player.img;
         }
         return player;
     });
@@ -239,6 +241,7 @@ module.exports = {
     watchLocalStorage: watchLocalStorage,
     getRegister: registerHelper.getRegister,
     getRegisterFields: getRegisterFields,
-    handleImages: handleImages
+    handleImages: handleImages,
+    addImgSrc: addImgSrc
 };
 

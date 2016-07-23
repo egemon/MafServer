@@ -367,7 +367,7 @@ router.post('/set', function(req, res) {
             delete req.body.pg;
             pgApi.update(field, [req.body.data], [req.body.data.id]).then(function (data) {
                 console.log('/set Log', data);
-                if (data[0].status) {
+                if (data[0].success) {
                    res.send(JSON.stringify({
                         successText: 'Данные сохарнены!'
                     }));
@@ -395,17 +395,18 @@ router.post('/set', function(req, res) {
 
 function handleQueryResult(res, dataArray) {
     console.log('dataArray', dataArray);
-    var result = _.reduce(dataArray, function (prev, cur) {
-        return {
-            success: prev.success && cur.status,
-            data: _.concat(prev.data, cur.data)
-        };
-    },{
-        success: 1,
-        data: []
-    });
-    console.log('result', result);
+    // var result = _.reduce(dataArray, function (prev, cur) {
+    //     return {
+    //         success: prev.success && cur.success,
+    //         data: _.concat(prev.data, cur.data)
+    //     };
+    // },{
+    //     success: 1,
+    //     data: []
+    // });
+    // console.log('result', result);
 
+    result = dataArray[0];
     if (result.success) {
         res.send(result);
     } else {
@@ -435,12 +436,20 @@ router.post('/data', function (req, res) {
 
 router.get('/data', function (req, res) {
     console.log('req.params', req.query);
+    try {
+        req.query.ids = JSON.parse(req.query.ids);
+    } catch(e){}
     pgApi.read(req.query.table, req.query.ids)
     .then(function (resp) {
-        if (resp.status) {
+        if (resp.success) {
+            if (req.query.table === 'players') {
+                resp.data = _.map(resp.data, function (player) {
+                    return dataBase.addImgSrc('', player);
+                });
+            }
+
             res.send(resp);
         }
-        console.log('data', resp);
     }, function (err) {
        res.status(400).send(err);
     });
@@ -449,6 +458,7 @@ router.get('/data', function (req, res) {
 
 router.patch('/data', function (req, res) {
     console.log('patch set', req.body);
+
     if (req.body.table === 'players') {
         req.body.items = dataBase.handleImages([req.body.items])[0];
     }

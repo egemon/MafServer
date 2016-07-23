@@ -8,12 +8,12 @@
 >
 <div class="player-text-container">
     <p class="player-nick">{{::player.nick}}</p>
-    <p class="player-faculty">{{::player.name}}</p>
+    <p class="player-faculty">{{::player.firstname}} {{::player.lastname}}</p>
     <p class="player-results" ng-show="player.avr">{{::player.avr + ' средний бал '}}{{::'(' + player.gameNumber + ' игр)'}}</p>
-    <p class="player-faculty" ng-show="player.memberLevel > 2">{{::player.position}}</p>
+    <p class="player-faculty" ng-show="player.memberlevel > 2">{{::player.position}}</p>
     <p class="player-faculty">{{::player.faculty}}</p>
-    <p class="player-exp">{{::player.experiance}}</p>
-    <p class="player-faculty" ng-show="player.memberLevel > 2">{{::player.phone}}</p>
+    <p ng-if="player.startdate" class="player-exp">Играет с {{::player.startdate | date}}</p>
+    <p class="player-faculty" ng-show="player.memberlevel > 2">{{::player.phone}}</p>
     <div class="honours">
         <div
         ng-repeat="(j, honour) in player.honours"
