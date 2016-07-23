@@ -10,7 +10,8 @@ var pgApi = require('./myPgApi.js');
 // migrateNews('news', news);
 // var periods = db.getHallOfFame();
 // migrateHonours(periods);
-
+// var photos = db.getPhotos();
+// migratePhotos('photos', photos);
 function migratePlayers(tableName, players, ids) {
     players = players.map(function(player) {
         var newPlayer = {};
@@ -213,6 +214,24 @@ function migrateHonours(tableName, periods, ids) {
  // notes
 
 }
+
+function migratePhotos(tableName, photos, ids) {
+    if (ids) {
+ return pgApi.update(tableName, photos, ids);
+    } else {
+ return pgApi.create(tableName, photos);
+    }
+ // id,
+ // nick,
+ // year,
+ // periodtype,
+ // period,
+ // score,
+ // place,
+ // notes
+
+}
+
 
 module.exports = {
     migratePlayers,

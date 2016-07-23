@@ -42,6 +42,9 @@ angular.module('server')
             return this.read('players',  {memberLevel: ' = 3'});
         }
 
+        if (page.url === 'photos') {
+            return this.read('photos', 'all');
+        }
         // TODO remove after PG
         var body = {
             pg:true,
