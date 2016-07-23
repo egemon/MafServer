@@ -1,4 +1,4 @@
-<article class="article" ng-repeat="(i, new) in news">
+<article class="article" ng-repeat="(i, new) in news.data">
     <title class="article-title">
       {{::new.type === 'встреча' ? new.number + new.title : new.title}}
     </title>

@@ -40,8 +40,8 @@ module.exports = class Record extends Connection {
   getBy(options) {
     var self = this;
     self.sql = `${self.sql_fetcher} where `;
-    _.each(options, function (val, key) {
-      self.sql += `${key} = '${val}' and `;
+    _.each(options, function (checker, key) {
+      self.sql += `${key} ${checker} and `;
     });
     self.sql = self.sql.slice(0, self.sql.lastIndexOf('and')) +
     self.sql.slice(self.sql.lastIndexOf('and')).replace('and', '');

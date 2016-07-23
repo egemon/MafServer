@@ -31,7 +31,7 @@ function read(table, ids) {
 }
 
 function create(table, items) {
-    return make(method.create, table, _.mapValues(items, _.escape));
+    return make(method.create, table, items);
 }
 
 function del(table, ids) {
@@ -40,7 +40,7 @@ function del(table, ids) {
 
 function update(table, items, ids) {
     console.log('ids', ids);
-    return make(method.update, table, _.mapValues(items, _.escape), ids);
+    return make(method.update, table, items, ids);
 }
 
 function make(cmd, table, items, ids, options) {

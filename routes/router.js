@@ -185,10 +185,10 @@ router.post('/delete', function (req, res) {
 
     if (req.body.pg) {
         pgApi.read('games', {
-            key: 'gameid',
-            value: metadata.date + '_' + metadata.gameNumber + '_' + metadata.table
+            gameid: " = '" + metadata.date + '_' + metadata.gameNumber + '_' + metadata.table + "'"
         })
         .then(function (data) {
+            data = data.data;
             if (data.length && !force) {
                 res.send({
                     confirmText: confirmText
@@ -247,13 +247,13 @@ router.post('/load', function (req, res) {
 
     if (metadata.pg) {
         pgApi.read('games', {
-            key: 'gameid',
-            value: metadata.date + '_' + metadata.gameNumber + '_' + metadata.table
+            // key: 'gameid',
+            gameid: " = '" + metadata.date + '_' + metadata.gameNumber + '_' + metadata.table + "'"
         })
         .then(function (data) {
-            if (data.length) {
-                res.send(migrator.gameSQLtoJSON(data));
-                console.log('game = ', migrator.gameSQLtoJSON(data));
+            console.log('data',data);
+            if (data.data.length) {
+                res.send(migrator.gameSQLtoJSON(data.data));
             } else {
                 res.send({
                     errorText: 'Игра не найдена!'
@@ -293,9 +293,8 @@ router.post('/sync', function (req, res) {
     var isGameExists;
     if (pg) {
         pgApi.read('games', {
-            key: 'gameid',
             // value: '2016-02-29_1_BakerStreet'
-            value: metadata.date + '_' + metadata.gameNumber + '_' + metadata.table
+            gameid: " = '" + metadata.date + '_' + metadata.gameNumber + '_' + metadata.table + "'"
         })
         .then(function (data) {
             if (data.length  && !force) {
