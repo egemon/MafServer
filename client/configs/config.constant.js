@@ -3,6 +3,7 @@ angular.module('config')
     TEMPLATES_URL: '',
     LOGIN_URL: 'login',
     SET_URL: 'set',
+    DATA_URL: 'data',
     inputTypes: {
         nick: 'text',
         password: 'password',

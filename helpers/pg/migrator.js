@@ -1,4 +1,5 @@
 var pgApi = require('./myPgApi.js');
+// var _ = require('lodash');
 // var db = require('../dataBase.js');
 // var LGS = require('../../model/LocalGameStorage.js');
 // var players = db.getPlayers();
@@ -6,14 +7,13 @@ var pgApi = require('./myPgApi.js');
 // var games = LGS.getAllGames();
 // migrateGames(games);
 // var news = db.getNews();
-// migrateNews(news);
+// migrateNews('news', news);
 // var periods = db.getHallOfFame();
 // migrateHonours(periods);
 
 function migratePlayers(tableName, players, ids) {
     players = players.map(function(player) {
         var newPlayer = {};
-        console.log('player', player);
 
         newPlayer.nick = player.nick || '';
         newPlayer.phone = player.phone || '';
@@ -71,7 +71,6 @@ function migrateGames(tableName, games, ids) {
         var metadata = game.metadata;
 
         game.playerLines.forEach(function (player, i) {
-            console.log('player', player);
 
             gameLines.push({
                 date: metadata.date,
@@ -141,15 +140,25 @@ function gameSQLtoJSON(gameLines) {
 
 function migrateNews(tableName, news, ids) {
     news = news.map(function (item) {
-        var type = item.type;
-        delete item.type;
-        var img = item.img;
-        delete item.img;
-        return {
-            imglink: img || '',
-            type: type,
-            data: JSON.stringify(item),
-        };
+        // var type = item.type;
+        // delete item.type;
+        // var img = item.img;
+        // delete item.img;
+        // var el = {
+        //     imglink: img || '',
+        //     type: type,
+        //     data: JSON.stringify(item),
+        // };
+        // _.extend(el, item);
+        item.place = item.where;
+        delete item.where;
+        item.date = item.when;
+        delete item.when;
+        item.description = item.what;
+        delete item.what;
+
+
+        return item;
     });
 
 

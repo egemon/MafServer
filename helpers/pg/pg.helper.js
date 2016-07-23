@@ -49,11 +49,12 @@ function getGamesByFilter(table, filterObject) {
     });
 }
 
-function getAll(table) {
+function getAll(table, sorting) {
     "use strict";
+    sorting = sorting || 'asc';
     let query = new QRunner(`
     select * from ${table}
-    order by date asc
+    order by date ${sorting}
     `);
 
     return query.execQuery().then(function (resp) {

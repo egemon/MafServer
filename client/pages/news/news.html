@@ -1,32 +1,32 @@
 <article class="article" ng-repeat="(i, new) in news">
     <title class="article-title">
-      {{::new.type === 'встреча' ? new.data.number + new.data.title : new.data.title}}
+      {{::new.type === 'встреча' ? new.number + new.title : new.title}}
     </title>
     <img class="player-logo"
-      ng-src="avatars/{{::new.data.img}}"
+      ng-src="avatars/{{::new.img}}"
       src="img/main_logo.png"
       onerror="this.src = 'img/main_logo.png'; this.onerror=''"
     >
     <p class="entry">
-        {{::new.data.entry}}
-      <a ng-if="new.data.vk"  href='{{:: new.data.vk || "https://vk.com/bs_vstrecha_" + new.data.number}}' target='_blank'>
+        {{::new.entry}}
+      <a ng-if="new.vk"  href='{{:: new.vk || "https://vk.com/bs_vstrecha_" + new.number}}' target='_blank'>
           глянуть вк...
       </a>
     </p>
-    <p ng-if="new.data.what">
-      Что? - {{::new.data.what}}
+    <p ng-if="new.description">
+      Что? - {{::new.description}}
     </p>
-    <p ng-if="new.data.where">
+    <p ng-if="new.place">
       Где? -
       <a href="https://goo.gl/oFev5u">
-       {{::new.data.where}}
+       {{::new.place}}
       </a>
     </p>
-    <p ng-if="new.data.when">
-       Когда? - {{::new.data.when | date: 'medium'}}
+    <p ng-if="new.date">
+       Когда? - {{::new.date | date: 'medium'}}
     </p>
-    <p ng-if="new.data.price">
-       Сколько? - {{::new.data.price}} за вечер игр
+    <p ng-if="new.price">
+       Сколько? - {{::new.price}} за вечер игр
     </p>
     <p>
       С уважением, команда организаторов.

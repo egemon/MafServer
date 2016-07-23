@@ -1,32 +1,14 @@
-<button class="set-data-button" ng-click="setMeetings(contents.data)">Внести данные</button>
-<table>
-    <thead>
-        <tr>
-            <th ng-repeat="(i, key) in contents.fields">{{::key}}</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="(j, meeting) in contents.data">
-            <td ng-repeat="(k, key) in contents.fields">
-                <div
-                ng-click="startEdit($event, meeting)"
-                class="content-block"
-                key="{{::key}}"
-                >
-                {{::meeting[key]}}
-                </div>
-            </td>
-            <td>
-                <button class="remove-button" ng-click="removeItem(contents.data, meeting)">-</button>
-            </td>
-        </tr>
-        <tr>
-           <td ng-repeat="(k, key) in contents.fields">
-                <input type="text" ng-model="newEvent[key]">
-            </td>
-            <td>
-                <button class="remove-button" ng-click="addItem(contents.data, newEvent); newEvent={};">+</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div id="gamesGrid" ui-grid="{
+    data: contents,
+    enableFiltering: true,
+    onRegisterApi: contentsCtrl.onRegisterApi,
+    columnDefs: contentsCtrl.columnDefs }"
+    ui-grid-edit
+    ui-grid-resize-columns
+    ui-grid-cellnav
+    ui-grid-pinning
+    ui-grid-save-state
+    ui-grid-auto-resize
+    ui-grid-move-columns>
+</div>
+<button class="remove-button" ng-click="contentsCtrl.addEvent(contents)">Добавить событие</button>

@@ -1,1 +1,1 @@
-angular.module('base', ['ui.router', 'server', 'ngAnimate', 'templates', 'ProtocolApp','ngCookies', 'autocomplete', 'ui.grid']);
+angular.module('base', ['ui.router', 'server', 'ngAnimate', 'templates', 'ProtocolApp','ngCookies', 'autocomplete', 'ui.grid', 'ui.grid.edit']);

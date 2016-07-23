@@ -58,7 +58,7 @@ function make(cmd, table, items, ids, options) {
             var user = new BaseUser();
             var result = user[cmd](options).then(function (data) {
                 console.log('Succses ' + cmd + ': ', item, data);
-                return data;
+                return {status: 1, data: data, item: item};
             },function (err) {
                 console.log('Error: ' + id, err);
                 return {item: item, id: id};

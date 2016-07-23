@@ -1,6 +1,6 @@
 angular.module('server')
-.service('serverService', ['$http', 'CONFIG', '$cookies',
-    function serverService ($http, CONFIG, $cookies) {
+.service('serverService', ['$http', 'CONFIG', '$cookies', '$rootScope',
+    function serverService ($http, CONFIG, $cookies, $rootScope) {
 
     this.player = {
         data: {
@@ -46,7 +46,9 @@ angular.module('server')
 
     serverService.prototype.setItems = function(items, field, path) {
         console.log('[server.service] setPlayers()', items);
+
         var data = {
+            pg: true,
             field: field,
             data: items,
             path: path || '',
@@ -56,6 +58,9 @@ angular.module('server')
             .catch(failCallback.bind(this, 0))
             .then(handleData.bind(this, field));
     };
+
+
+
 
     // ========== PRIVATE METHODS
     function failCallback (needMemberLevel, err) {
@@ -87,6 +92,20 @@ angular.module('server')
     function handleData (page, response) {
         console.log('[base.controller] handleData()', arguments);
 
+
+        // PG CHECK
+        if (response.data.success) {
+            alert('Succsess');
+            return response.data.data;
+        } else if (response.data.success === 0){
+            alert('Fail!');
+            throw response;
+        }
+
+        $rootScope.$broadcast('data-fetched', response);
+
+
+
         if (!response) {
             return;
         }
@@ -99,11 +118,51 @@ angular.module('server')
             };
         } else if(response.data.successText) {
             alert(response.data.successText);
+            return response.data;
         } else {
             angular.element(document.getElementById('view'))
                 .css('visibility', 'visible');
             return response.data;
         }
     }
+
+
+    // =============== PG ONLY ====================
+    serverService.prototype.delete = function(table, ids) {
+        console.log('[server.service] delete()', ids);
+
+        var data = {
+            table: table,
+            ids: ids
+        };
+
+        return $http({
+            method: 'DELETE',
+            url: CONFIG.BASE_SERVER_URL + CONFIG.DATA_URL,
+            data: data,
+            headers: {'Content-Type': 'application/json;charset=utf-8'}
+        })
+        .catch(failCallback.bind(this, 0))
+        .then(handleData.bind(this, table));
+    };
+
+    serverService.prototype.create = function(table, items) {
+        console.log('[server.service] create()', arguments);
+
+        var data = {
+            table: table,
+            items: items,
+        };
+
+        return $http({
+            method: 'POST',
+            url: CONFIG.BASE_SERVER_URL + CONFIG.DATA_URL,
+            data: data,
+            headers: {'Content-Type': 'application/json;charset=utf-8'}
+        })
+        .catch(failCallback.bind(this, 0))
+        .then(handleData.bind(this, table));
+    };
+
 }]);
 

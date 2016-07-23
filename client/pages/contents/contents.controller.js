@@ -1,13 +1,63 @@
-angular.module('base').controller('contentsCtrl', ['$scope', 'editService', 'serverService',
-function($scope, editService, serverService) {
-    $scope.startEdit = editService.startEdit;
-    $scope.removeItem = editService.removeItem;
-    $scope.addItem = editService.addItem;
-    $scope.newEvent = {};
+angular.module('base').controller('contentsCtrl', ['$scope', 'serverService',
+function($scope, serverService) {
+    var vm = this;
 
-    $scope.setMeetings = setMeetings;
+    vm.onRegisterApi = onRegisterApi;
+    vm.addEvent = addEvent;
+    vm.deleteRow = deleteRow;
+    vm.data = $scope.contents;
 
-    function setMeetings(data) {
-        serverService.setItems(data, 'contents');
+    vm.columnDefs = [
+    {
+        field: 'vk',
+    },{
+        field: 'price',
+    },{
+        field: 'place',
+    },{
+        field: 'description',
+    },{
+        field: 'entry',
+    },{
+        field: 'date',
+    },{
+        field: 'number',
+    },{
+        field: 'type',
+    },{
+        field: 'title',
+    },{
+        field: 'id',
+    },{
+        field: 'deleteItem',
+        cellTemplate: 'grid/cell-templates/grid-controls.html'
     }
+    ];
+
+
+    function onRegisterApi(gridApi) {
+        gridApi.edit.on.afterCellEdit($scope, cellValueChanged);
+    }
+
+    function cellValueChanged(rowEntity) {
+        serverService.setItems(rowEntity, 'contents');
+    }
+
+    function addEvent(news) {
+        var item = angular.copy(news[0]);
+        delete item.id;
+        serverService.create('news', item)
+        .then(function () {
+            news.unshift(item);
+        });
+
+    }
+
+    function deleteRow(news, item) {
+        serverService.delete('news', item.id)
+        .then(function () {
+            news = news.splice(_.findIndex(news, item), 1);
+        });
+    }
+
 }]);

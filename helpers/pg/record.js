@@ -101,7 +101,7 @@ module.exports = class Record extends Connection {
 
   insertSql(){
     let columns = this.columns().join(', ');
-    return `insert into ${this.table_name}(${columns}) values(${this.values()}) returning id;`
+    return `insert into ${this.table_name} (${columns}) values(${this.values()}) returning id;`
   }
 
   updateSql(){

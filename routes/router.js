@@ -3,7 +3,7 @@ console.log('isDev = ', isDev);
 
 var express = require('express');
 var router = express.Router();
-
+var _ = require('lodash');
 var LocalGameStorage = require('../model/LocalGameStorage');
 var RatingBase = require('../model/RatingBase');
 var dataBase = require('../helpers/dataBase.js');
@@ -21,7 +21,7 @@ var PAGES = [{
         url: 'news',
         getData: function (body) {
             if (body.pg) {
-                return pgHelper.getAll('news');
+                return pgHelper.getAll('news', 'desc');
             } else {
                 return Promise.resolve(dataBase.getNews());
 
@@ -84,11 +84,17 @@ var PAGES = [{
         needMemberLevel: 3
     },{
         url: 'contents',
-        getData:  function () {
-            return Promise.resolve({
-                data: dataBase.getNews(),
-                fields: dataBase.getMeetingFields()
-            });
+        getData:  function (body) {
+
+            if (body.pg) {
+                return pgHelper.getAll('news', 'desc');
+            } else {
+                return Promise.resolve({
+                    data: dataBase.getNews(),
+                    fields: dataBase.getMeetingFields()
+                });
+            }
+
         },
         needMemberLevel: 3
     },{
@@ -351,16 +357,83 @@ router.post('/login', function (req, res) {
 router.post('/set', function(req, res) {
     console.log('[router] /set ');
     var player = dataBase.authentificate(JSON.parse(req.cookies['player-data']));
+    var field = req.body.field;
     if (player.memberLevel >= 3) {
-        dataBase.setData(req.body.data, req.body.field, req.body.path);
-        res.send(JSON.stringify({
-            successText: 'Данные сохарнены!'
-        }));
+        if (field === 'contents') {
+            field = 'news';
+        }
+
+
+        if (req.body.pg) {
+            delete req.body.pg;
+            pgApi.update(field, [req.body.data], [req.body.data.id]).then(function (data) {
+                console.log('/set Log', data);
+                if (data[0].status) {
+                   res.send(JSON.stringify({
+                        successText: 'Данные сохарнены!'
+                    }));
+                } else {
+                    res.status(403).send(JSON.stringify({
+                        errorText: 'Ошибка! Сохарнения не произошло, проверьте данные!'
+                    }));
+                }
+            });
+        } else {
+            dataBase.setData(req.body.data, req.body.field, req.body.path);
+            res.send(JSON.stringify({
+                successText: 'Данные сохарнены!'
+            }));
+        }
     } else {
         res.send(JSON.stringify({
             errorText: 'Недостаточно прав для этого действия!'
         }));
     }
 });
+
+
+// =============== PG ONLY ====================
+
+function handleQueryResult(res, dataArray) {
+    var result = _.reduce(dataArray, function (prev, cur) {
+        return {
+            success: prev.success && cur.status,
+            data: _.concat(prev.data, cur.data)
+        };
+    },{
+        success: 1,
+        data: []
+    });
+    console.log('result', result);
+
+    if (result.success) {
+        res.send(result);
+    } else {
+        res.status(400).send({
+            errorText: 'Data wasn"t deleted'
+        });
+    }
+}
+
+
+router.delete('/data', function (req, res) {
+    console.log('delete set', req.body);
+    pgApi.delete(req.body.table, req.body.ids)
+    .then(handleQueryResult.bind(null, res), function (err) {
+       res.status(400).send(err);
+    });
+
+});
+
+router.post('/data', function (req, res) {
+    pgApi.create(req.body.table, req.body.items)
+    .then(handleQueryResult.bind(null, res), function (err) {
+       res.status(400).send(err);
+    });
+
+});
+
+
+
 
 module.exports = router;

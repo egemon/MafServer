@@ -17,6 +17,7 @@
         "require": true,
         "angular": true,
         "module": true,
-        "process": true
+        "process": true,
+        "_": true
     }
 }
