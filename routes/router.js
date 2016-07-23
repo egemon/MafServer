@@ -445,7 +445,7 @@ router.get('/data', function (req, res) {
     .then(function (resp) {
         if (resp.success) {
 
-
+            // TODO: Move imgSRc to database
             if (req.query.table === 'players' || req.query.table === 'honours') {
                 resp.data = _.map(resp.data, function (player) {
                     return dataBase.addImgSrc('', player);

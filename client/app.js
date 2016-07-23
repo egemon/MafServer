@@ -1,4 +1,5 @@
 require('./lib/lodash/lodash.js');
+require('./lib/moment/moment.js');
 require('./lib/angular/angular.js');
 require('./lib/angular-animate/angular-animate.js');
 require('./lib/angular-autocomplete/script/autocomplete.js');

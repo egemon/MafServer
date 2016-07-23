@@ -54,7 +54,6 @@ angular.module('server')
             });
         }
 
-        serverHelper
         // TODO remove after PG
         var body = {
             pg:true,
