@@ -38,6 +38,10 @@ angular.module('server')
             return this.read('players', {memberLevel: ' >= 1'});
         }
 
+        if (page.url === 'contacts') {
+            return this.read('players',  {memberLevel: ' = 3'});
+        }
+
         // TODO remove after PG
         var body = {
             pg:true,
