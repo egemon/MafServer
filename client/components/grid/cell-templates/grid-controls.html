@@ -1,1 +1,12 @@
-<button ng-click="grid.appScope.contentsCtrl.deleteRow(grid.appScope.contents, row.entity)">Удалить</button>
+<button
+    class="grid__controls--button"
+ ng-click="grid.appScope.deleteItem(grid.appScope.page.url, grid.appScope[grid.appScope.page.url].data, row.entity)">Удалить</button>
+
+<input
+    class="grid__controls--button"
+    type = "file"
+    file-model="row.entity.imglink"
+    on-ready="grid.appScope.cellValueChanged"
+    grid="grid"
+    row="row"
+    >

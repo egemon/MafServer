@@ -15,8 +15,8 @@ function(PAGES, $scope, serverService, $timeout, $window, $location, editService
     $scope.setPage = setPage;
     $scope.openNewTab =  openNewTab;
     $scope.fetchDataFor = fetchDataFor;
-    $scope.addItem = editService.addItem;
-    $scope.removeItem = editService.removeItem;
+    // $scope.addItem = editService.addItem;
+    // $scope.removeItem = editService.removeItem;
 
     // ===== public methods
     function login (user) {

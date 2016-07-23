@@ -1,16 +1,16 @@
-#gamesGrid .ui-grid-cell,
-#gamesGrid,
-#gamesGrid .ui-grid-header-canvas,
-#gamesGrid  .ui-grid-header-viewport,
-#gamesGrid  .ui-grid-top-panel,
-#gamesGrid  .ui-grid-header,
-#gamesGrid  .ui-grid-render-container,
-#gamesGrid  .ui-grid-header-cell-wrapper,
-#gamesGrid  .ui-grid-header-cell-row,
-#gamesGrid  .ui-grid-header-cell,
-#gamesGrid  [role=columnheader],
-#gamesGrid  .ui-grid-cell-contents,
-#gamesGrid  .ui-grid-contents-wrapper {
+#customGrid .ui-grid-cell,
+#customGrid,
+#customGrid .ui-grid-header-canvas,
+#customGrid  .ui-grid-header-viewport,
+#customGrid  .ui-grid-top-panel,
+#customGrid  .ui-grid-header,
+#customGrid  .ui-grid-render-container,
+#customGrid  .ui-grid-header-cell-wrapper,
+#customGrid  .ui-grid-header-cell-row,
+#customGrid  .ui-grid-header-cell,
+#customGrid  [role=columnheader],
+#customGrid  .ui-grid-cell-contents,
+#customGrid  .ui-grid-contents-wrapper {
     /*background-color: rgba(150,150,150,0.25)*/
     background: transparent;
 }

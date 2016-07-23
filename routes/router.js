@@ -165,7 +165,7 @@ for (var i = 0; i < PAGES.length; i++) {
 
 
 // ==================== BASE for ANGULAR ==============
-router.get('/*', function(req, res) {
+router.get('/', function(req, res) {
     console.log('[ROUTER] get for', req.url);
     res.render(isDev ? 'dev.html' : 'app.html');
 });
@@ -395,6 +395,7 @@ router.post('/set', function(req, res) {
 // =============== PG ONLY ====================
 
 function handleQueryResult(res, dataArray) {
+    console.log('dataArray', dataArray);
     var result = _.reduce(dataArray, function (prev, cur) {
         return {
             success: prev.success && cur.status,
@@ -415,7 +416,7 @@ function handleQueryResult(res, dataArray) {
     }
 }
 
-
+// TODO refactor with /:table
 router.delete('/data', function (req, res) {
     console.log('delete set', req.body);
     pgApi.delete(req.body.table, req.body.ids)
@@ -433,6 +434,33 @@ router.post('/data', function (req, res) {
 
 });
 
+router.get('/data', function (req, res) {
+    console.log('req.params', req.query);
+    pgApi.read(req.query.table, req.query.ids)
+    .then(function (resp) {
+        if (resp.status) {
+            res.send(resp);
+        }
+        console.log('data', resp);
+    }, function (err) {
+       res.status(400).send(err);
+    });
+
+});
+
+router.patch('/data', function (req, res) {
+    console.log('patch set', req.body);
+    if (req.body.table === 'players') {
+        req.body.items = dataBase.handleImages([req.body.items])[0];
+    }
+
+
+    pgApi.update(req.body.table, req.body.items, req.body.ids)
+    .then(handleQueryResult.bind(null, res), function (err) {
+       res.status(400).send(err);
+    });
+
+});
 
 
 

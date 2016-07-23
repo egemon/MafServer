@@ -1,37 +1,19 @@
-angular.module('base')
-.controller('playersCtrl',
-['$scope', 'CONFIG', 'editService','serverService', 'dateFilter',
-function($scope, CONFIG, editService,  serverService, dateFilter) {
+angular.module('base').controller('playersCtrl', ['$scope',
+function($scope) {
+    var vm = this;
+    vm.onRegisterApi = $scope.onRegisterApi;
 
-    this.inputTypes = CONFIG.inputTypes;
-
-
-    $scope.setPlayers = setPlayers;
-    $scope.addNewPlayer = addNewPlayer;
-    $scope.removeItem = editService.removeItem;
-    $scope.addPresent = editService.addItem;
-    $scope.startEdit = editService.startEdit;
-
-    function setPlayers(players) {
-        serverService.setItems(players, 'players');
-    }
-
-    function addNewPlayer (user) {
-        console.log('[players.controller] addPlayer() ', arguments);
-        var newPlayerObj = angular.copy(user);
-        emptyUser(user);
-        formatDate(newPlayerObj);
-        editService.addItem($scope.players.data, newPlayerObj);
-    }
-
-    function emptyUser(user) {
-        for(var key in user){
-            user[key] = "";
-        }
-    }
-
-    function formatDate(newPlayerObj) {
-        newPlayerObj.birthday =  dateFilter(newPlayerObj.birthday, 'yyyy-MM-dd');
-    }
+    $scope.$on('data-fetched', function(event, responseContent){
+        vm.columnDefs = _.map(_.keys(responseContent.data[0]), function (key) {
+            return {
+                field: key
+            };
+        });
+        vm.columnDefs.push({
+            field: 'deleteItem',
+            cellTemplate: 'grid/cell-templates/grid-controls.html',
+            minWidth: 210
+        });
+    });
 
 }]);

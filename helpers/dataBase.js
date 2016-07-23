@@ -134,16 +134,17 @@ function setData(data, field, path, isInternal) {
 function handleImages(players) {
     console.log('[dataBase] handleImages()');
     return players.map(function (player) {
-        if (player.imgFile) {
+        if (player.imglink) {
 
             //hardcode fromat for sinplicity
             // var format = '.'+ RegExp(/\/.*;base64/).exec(player.imgFile)[0].slice(1,-7);
             var format = '.jpg';
             console.log('[dataBase handleImages()] format ', format);
-            player = playerHelper.addImgSrc(format, player);
-            console.log('[dataBase] handleImages() player.img = ', player.img);
-            saveImg(player.imgFile, player.img, format);
-            delete player.imgFile;
+            player = addImgSrc(format, player);
+            console.log('[dataBa] handleImages() player.img = ', player.img);
+            saveImg(player.imglink, player.img, format);
+            player.imglink = player.img;
+            delete player.img;
         }
         return player;
     });
@@ -159,7 +160,7 @@ function saveImg(base64text, fileName, format) {
     };
     if (format in FORMATS) {
         var base64Data = base64text.replace(/^.*;base64,/, "");
-        fs.writeFile("./client/img/avatars"+ fileName, base64Data, 'base64', function(err) {
+        fs.writeFile("./client/img/avatars/"+ fileName, base64Data, 'base64', function(err) {
             console.log('[dataBase] wirteImage error = ', err);
         });
     } else {
@@ -167,6 +168,15 @@ function saveImg(base64text, fileName, format) {
             errorText: 'Неподдерживаемый формат изображения!'
         };
     }
+}
+
+function addImgSrc (format, player) {
+    if (player.img) {
+        return player;
+    }
+    format = format || '.jpg';
+    player.img = player.nick.replace(/\s+/g, '') + format;
+    return player;
 }
 
 
@@ -229,5 +239,6 @@ module.exports = {
     watchLocalStorage: watchLocalStorage,
     getRegister: registerHelper.getRegister,
     getRegisterFields: getRegisterFields,
+    handleImages: handleImages
 };
 

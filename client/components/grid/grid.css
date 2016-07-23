@@ -1,0 +1,4 @@
+div.ui-grid-cell .grid__controls--button {
+    display: inline-block;
+    width: 90px;
+}

@@ -1,4 +1,4 @@
-
+var _ = require('lodash');
 var Record = require('./record.js');
 
 // CRUD-M
@@ -31,7 +31,7 @@ function read(table, ids) {
 }
 
 function create(table, items) {
-    return make(method.create, table, items);
+    return make(method.create, table, _.mapValues(items, _.escape));
 }
 
 function del(table, ids) {
@@ -39,7 +39,8 @@ function del(table, ids) {
 }
 
 function update(table, items, ids) {
-    return make(method.update, table, items, ids);
+    console.log('ids', ids);
+    return make(method.update, table, _.mapValues(items, _.escape), ids);
 }
 
 function make(cmd, table, items, ids, options) {
@@ -83,7 +84,6 @@ function make(cmd, table, items, ids, options) {
 function toArray(items) {
     return items instanceof Array ? items : items === undefined ? undefined : [items];
 }
-
 
 module.exports = {
     create: create,

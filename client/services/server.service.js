@@ -20,6 +20,16 @@ angular.module('server')
     serverService.prototype.$_fetchData = function(page, needMemberLevel, data) {
         console.log('[server.service] $_fetchData()', arguments);
 
+
+        // PG ONLY
+        if (page.url === 'players') {
+            return this.read('players', 'all');
+        }
+
+        if (page.url === 'contents') {
+            return this.read('news', 'all');
+        }
+
         // TODO remove after PG
         var body = {
             pg:true,
@@ -50,7 +60,7 @@ angular.module('server')
         var data = {
             pg: true,
             field: field,
-            data: items,
+            data: removeNulls(items),
             path: path || '',
         };
 
@@ -95,14 +105,14 @@ angular.module('server')
 
         // PG CHECK
         if (response.data.success) {
-            alert('Succsess');
+            // alert('Succsess');
             return response.data.data;
         } else if (response.data.success === 0){
             alert('Fail!');
             throw response;
         }
 
-        $rootScope.$broadcast('data-fetched', response);
+        $rootScope.$broadcast('data-fetched', response.data);
 
 
 
@@ -128,6 +138,63 @@ angular.module('server')
 
 
     // =============== PG ONLY ====================
+
+
+    serverService.prototype.create = function(table, items) {
+        console.log('[server.service] create()', arguments);
+
+        var data = {
+            table: table,
+            items: removeNulls(items),
+        };
+
+        return $http({
+            method: 'POST',
+            url: CONFIG.BASE_SERVER_URL + CONFIG.DATA_URL,
+            data: data,
+            headers: {'Content-Type': 'application/json;charset=utf-8'}
+        })
+        .catch(failCallback.bind(this, 0))
+        .then(handleData.bind(this, table));
+    };
+
+    serverService.prototype.read = function(table, ids) {
+        console.log('[server.service] create()', arguments);
+
+        var data = {
+            table: table,
+            ids: ids
+        };
+
+        return $http({
+            method: 'GET',
+            url: CONFIG.BASE_SERVER_URL + CONFIG.DATA_URL,
+            params: data,
+            headers: {'Content-Type': 'application/json;charset=utf-8'}
+        })
+        .catch(failCallback.bind(this, 0))
+        .then(handleData.bind(this, table));
+    };
+
+    serverService.prototype.update = function(table, items, ids) {
+        console.log('[server.service] create()', arguments);
+
+        var data = {
+            table: table,
+            items: removeNulls(items),
+            ids: ids
+        };
+
+        return $http({
+            method: 'PATCH',
+            url: CONFIG.BASE_SERVER_URL + CONFIG.DATA_URL,
+            data: data,
+            headers: {'Content-Type': 'application/json;charset=utf-8'}
+        })
+        .catch(failCallback.bind(this, 0))
+        .then(handleData.bind(this, table));
+    };
+
     serverService.prototype.delete = function(table, ids) {
         console.log('[server.service] delete()', ids);
 
@@ -146,23 +213,16 @@ angular.module('server')
         .then(handleData.bind(this, table));
     };
 
-    serverService.prototype.create = function(table, items) {
-        console.log('[server.service] create()', arguments);
 
-        var data = {
-            table: table,
-            items: items,
-        };
-
-        return $http({
-            method: 'POST',
-            url: CONFIG.BASE_SERVER_URL + CONFIG.DATA_URL,
-            data: data,
-            headers: {'Content-Type': 'application/json;charset=utf-8'}
-        })
-        .catch(failCallback.bind(this, 0))
-        .then(handleData.bind(this, table));
-    };
+    function removeNulls(item) {
+        return _.mapValues(item, function (val) {
+        if (val === 0) {
+            return val;
+        } else {
+            return val || undefined;
+        }
+        });
+    }
 
 }]);
 
