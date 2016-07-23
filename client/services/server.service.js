@@ -1,6 +1,6 @@
 angular.module('server')
-.service('serverService', ['$http', 'CONFIG', '$cookies', '$rootScope',
-    function serverService ($http, CONFIG, $cookies, $rootScope) {
+.service('serverService', ['$http', 'CONFIG', '$cookies', '$rootScope', 'serverHelper',
+    function serverService ($http, CONFIG, $cookies, $rootScope, serverHelper) {
 
     this.player = {
         data: {
@@ -45,6 +45,16 @@ angular.module('server')
         if (page.url === 'photos') {
             return this.read('photos', 'all');
         }
+        if (page.url === 'hall_of_fame') {
+            return this.read('honours', 'all').then(function (data) {
+                console.log('data = ', data);
+                data = serverHelper.getHallOfFame(data);
+                console.log('data = ', data);
+                return data;
+            });
+        }
+
+        serverHelper
         // TODO remove after PG
         var body = {
             pg:true,

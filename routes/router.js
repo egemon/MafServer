@@ -436,13 +436,17 @@ router.post('/data', function (req, res) {
 
 router.get('/data', function (req, res) {
     console.log('req.params', req.query);
+
     try {
         req.query.ids = JSON.parse(req.query.ids);
     } catch(e){}
+
     pgApi.read(req.query.table, req.query.ids)
     .then(function (resp) {
         if (resp.success) {
-            if (req.query.table === 'players') {
+
+
+            if (req.query.table === 'players' || req.query.table === 'honours') {
                 resp.data = _.map(resp.data, function (player) {
                     return dataBase.addImgSrc('', player);
                 });
