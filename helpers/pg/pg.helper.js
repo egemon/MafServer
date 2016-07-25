@@ -87,6 +87,16 @@ function _transformFilterObjToWhere(filterObj) {
     return `where '${start}' <= date and date <='${end}'`;
 }
 
+function authentificate (user) {
+    return pgApi.read('players', {nick: " = '" + user.nick + "'"})
+        .then(function (resp) {
+        console.log('pg.helper.js authentificate', resp);
+        return {
+            result: resp.data[0].password === user.password,
+            player: resp.data[0]
+        }
+    })
+}
 
 // getGamesByFilter('games', {
 //     periodType: 'year',
@@ -100,5 +110,6 @@ function _transformFilterObjToWhere(filterObj) {
 module.exports = {
     getRatingByFilter,
     getGamesByFilter,
-    getAll
+    getAll,
+    authentificate
 };

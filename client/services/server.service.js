@@ -10,7 +10,7 @@ angular.module('server')
             "birthday": "",
             "name": "",
             "phone": "",
-            "memberLevel": 0,
+            "memberlevel": 0,
             "faculty": "",
             "experiance": ""
         }
@@ -35,11 +35,11 @@ angular.module('server')
         }
 
         if (page.url === 'members') {
-            return this.read('players', {memberLevel: ' >= 1'}, {'order by': 'nick asc'});
+            return this.read('players', {memberlevel: ' >= 1'}, {'order by': 'nick asc'});
         }
 
         if (page.url === 'contacts') {
-            return this.read('players',  {memberLevel: ' = 3'}, {'order by': 'memberlevel asc'});
+            return this.read('players',  {memberlevel: ' = 3'}, {'order by': 'memberlevel asc'});
         }
 
         if (page.url === 'photos') {

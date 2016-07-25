@@ -1,18 +1,18 @@
 var fs = require('fs');
 
 function isMember(player) {
-    return player.memberLevel > 0;
+    return player.memberlevel > 0;
 }
 function isOrg (player) {
-    return player.memberLevel > 2;
+    return player.memberlevel > 2;
 }
 
 function byOrgLevel (player1, player2 ) {
-    return player1.memberLevel > player2.memberLevel;
+    return player1.memberlevel > player2.memberlevel;
 }
 
 function byHonourLevel (player1, player2) {
-    return player1.memberLevel > player2.memberLevel;
+    return player1.memberlevel > player2.memberlevel;
 }
 
 function byAlphabet (player1, player2) {
@@ -71,7 +71,7 @@ function getPlayerFields () {
         "presents",
         "phone",
         "position",
-        "memberLevel",
+        "memberlevel",
         "faculty",
         "experiance",
         "honours"

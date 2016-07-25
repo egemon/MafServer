@@ -10,7 +10,7 @@
     </div>
     <nav>
         <ul class="main-menu">
-            <li class="main-menu-item" ng-repeat="(i, thisPage) in PAGES" ng-class="{current:thisPage == page}" ng-show="user.data.memberLevel >= thisPage.needMemberLevel">
+            <li class="main-menu-item" ng-repeat="(i, thisPage) in PAGES" ng-class="{current:thisPage == page}" ng-show="user.data.memberlevel >= thisPage.needMemberLevel">
                 <a class="main-menu-ref" ui-sref="{{'/' + thisPage.url}}" ng-click="setPage(thisPage)">
                     {{thisPage.name}}
                 </a>

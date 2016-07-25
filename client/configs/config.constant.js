@@ -12,7 +12,7 @@ angular.module('config')
         name: 'text',
         phone: 'tel',
         position: 'text',
-        memberLevel: 'number',
+        memberlevel: 'number',
         faculty: 'text',
         experiance: 'text'
     },

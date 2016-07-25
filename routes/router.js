@@ -13,10 +13,10 @@ var pgHelper = require('../helpers/pg/pg.helper.js');
 dataBase.refreshInfoFor('all');
 dataBase.initializeWatching('all');
 dataBase.watchLocalStorage();
-
+dataBase.authentificate = pgHelper.authentificate;
 var today = new Date();
 var PAGES = [{
-        url: 'home',
+        url: 'home'
     },{
         url: 'news',
         getData: function (body) {
@@ -142,17 +142,22 @@ for (var i = 0; i < PAGES.length; i++) {
 
             if (PAGES[i].needMemberLevel) {
                 console.log('req.cookies[player-data]', JSON.parse(req.cookies['player-data']));
-                var player = dataBase.authentificate(JSON.parse(req.cookies['player-data']));
-                if (player.memberLevel >= PAGES[i].needMemberLevel) {
-                    console.log('[router.js] body = ', req.body);
-                    PAGES[i].getData(req.body).then(function (result) {
-                        res.send(result);
+                var player =
+                dataBase.authentificate(JSON.parse(req.cookies['player-data']))
+                    .then(function (resp) {
+                        if (resp.result && resp.player.memberlevel >= PAGES[i].needMemberLevel) {
+                            console.log('[router.js] body = ', req.body);
+                            PAGES[i].getData(req.body).then(function (result) {
+                                res.send(result);
+                            });
+                        } else {
+                            res.send(JSON.stringify({
+                               errorText: 'Эта страничка доступна только для администраторов!'
+                            }));
+                        }
                     });
-                } else {
-                    res.send(JSON.stringify({
-                       errorText: 'Эта страничка доступна только для администраторов!'
-                    }));
-                }
+
+
             } else {
                 console.log('[router.js] body = ', req.body);
                 PAGES[i].getData(req.body).then(function (result) {
@@ -339,55 +344,57 @@ router.post('/sync', function (req, res) {
 
 router.post('/login', function (req, res) {
     console.log('password = ', JSON.parse(req.cookies['player-data']).password);
-    console.log('user = ', JSON.parse(req.cookies['player-data']).user);
     console.log('user = ', JSON.parse(req.cookies['player-data']));
 
-    var player = dataBase.authentificate(JSON.parse(req.cookies['player-data']));
+    dataBase.authentificate(JSON.parse(req.cookies['player-data']))
+    .then(function (data) {
+        if (data.result) {
+            res.send(JSON.stringify(data.player));
+        } else {
+            res.send(JSON.stringify({
+                errorText: 'Вы еще не зарегистрированы или указан неправильный пароль!'
+            }));
+        }
+    });
 
-    if (player) {
-        res.send(JSON.stringify(player));
-    } else {
-        res.send(JSON.stringify({
-            errorText: 'Вы еще не зарегистрированы или указан неправильный пароль!'
-        }));
-    }
 });
 
 router.post('/set', function(req, res) {
     console.log('[router] /set ');
-    var player = dataBase.authentificate(JSON.parse(req.cookies['player-data']));
-    var field = req.body.field;
-    if (player.memberLevel >= 3) {
-        if (field === 'contents') {
-            field = 'news';
-        }
+    dataBase.authentificate(JSON.parse(req.cookies['player-data'])).then(function (resp) {
+        var player = resp.player;
+        var field = req.body.field;
+        if (resp.result && player.memberlevel >= 3) {
 
-
-        if (req.body.pg) {
-            delete req.body.pg;
-            pgApi.update(field, [req.body.data], [req.body.data.id]).then(function (data) {
-                console.log('/set Log', data);
-                if (data[0].success) {
-                   res.send(JSON.stringify({
-                        successText: 'Данные сохарнены!'
-                    }));
-                } else {
-                    res.status(403).send(JSON.stringify({
-                        errorText: 'Ошибка! Сохарнения не произошло, проверьте данные!'
-                    }));
+            if (req.body.pg) {
+                if (field === 'contents') {
+                    field = 'news';
                 }
-            });
+                delete req.body.pg;
+                pgApi.update(field, [req.body.data], [req.body.data.id]).then(function (data) {
+                    console.log('/set Log', data);
+                    if (data[0].success) {
+                       res.send(JSON.stringify({
+                            successText: 'Данные сохарнены!'
+                        }));
+                    } else {
+                        res.status(403).send(JSON.stringify({
+                            errorText: 'Ошибка! Сохарнения не произошло, проверьте данные!'
+                        }));
+                    }
+                });
+            } else {
+                dataBase.setData(req.body.data, req.body.field, req.body.path);
+                res.send(JSON.stringify({
+                    successText: 'Данные сохарнены!'
+                }));
+            }
         } else {
-            dataBase.setData(req.body.data, req.body.field, req.body.path);
             res.send(JSON.stringify({
-                successText: 'Данные сохарнены!'
+                errorText: 'Недостаточно прав для этого действия!'
             }));
         }
-    } else {
-        res.send(JSON.stringify({
-            errorText: 'Недостаточно прав для этого действия!'
-        }));
-    }
+    });
 });
 
 
