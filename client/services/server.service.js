@@ -23,27 +23,27 @@ angular.module('server')
 
         // PG ONLY
         if (page.url === 'players') {
-            return this.read('players', 'all');
+            return this.read('players', 'all', {'order by': 'nick asc'});
         }
 
         if (page.url === 'contents') {
-            return this.read('news', 'all');
+            return this.read('news', 'all', {'order by': 'date desc'});
         }
 
         if (page.url === 'news') {
-            return this.read('news', 'all');
+            return this.read('news', 'all', {'order by': 'date desc'});
         }
 
         if (page.url === 'members') {
-            return this.read('players', {memberLevel: ' >= 1'});
+            return this.read('players', {memberLevel: ' >= 1'}, {'order by': 'nick asc'});
         }
 
         if (page.url === 'contacts') {
-            return this.read('players',  {memberLevel: ' = 3'});
+            return this.read('players',  {memberLevel: ' = 3'}, {'order by': 'memberlevel asc'});
         }
 
         if (page.url === 'photos') {
-            return this.read('photos', 'all');
+            return this.read('photos', 'all', {'order by': 'date desc'});
         }
         if (page.url === 'hall_of_fame') {
             return this.read('honours', 'all').then(function (data) {
@@ -182,12 +182,13 @@ angular.module('server')
         .then(handleData.bind(this, table));
     };
 
-    serverService.prototype.read = function(table, ids) {
+    serverService.prototype.read = function(table, ids, params) {
         console.log('[server.service] create()', arguments);
 
         var data = {
             table: table,
-            ids: ids
+            ids: ids,
+            options: params
         };
 
         return $http({

@@ -1,4 +1,4 @@
-var isDev = process.env.NODE_ENV ? false : true;
+var isDev = process.env.NODE_ENV !== 'production';
 console.log('isDev = ', isDev);
 
 var express = require('express');
@@ -444,8 +444,11 @@ router.get('/data', function (req, res) {
     try {
         req.query.ids = JSON.parse(req.query.ids);
     } catch(e){}
+    try {
+        req.query.options = JSON.parse(req.query.options);
+    } catch(e){}
 
-    pgApi.read(req.query.table, req.query.ids)
+    pgApi.read(req.query.table, req.query.ids, req.query.options)
     .then(function (resp) {
         if (resp.success) {
 

@@ -37,20 +37,27 @@ module.exports = class Record extends Connection {
     return this.execQuery().then( data => data.rows[0]);
   }
 
-  getBy(options) {
+  getBy(filters, params) {
     var self = this;
     self.sql = `${self.sql_fetcher} where `;
-    _.each(options, function (checker, key) {
+    _.each(filters, function (checker, key) {
       self.sql += `${key} ${checker} and `;
     });
     self.sql = self.sql.slice(0, self.sql.lastIndexOf('and')) +
     self.sql.slice(self.sql.lastIndexOf('and')).replace('and', '');
+    _.each(params, function (val, key) {
+	   self.sql += `${key} ${val} `
+    });
+
     return self.execQuery().then( data => data.rows);
   }
 
-  getAll(){
-    this.sql = `${this.sql_fetcher}`;
-    return this.execQuery().then( data => data.rows);
+  getAll(filters, params){
+	this.sql = `${this.sql_fetcher}`;
+	_.each(params, (val, key)=> {
+		this.sql += `${key} ${val} `
+	});
+	return this.execQuery().then( data => data.rows);
   }
 
   save(){

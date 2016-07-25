@@ -1,7 +1,7 @@
 <div class="photo" ng-repeat="(i, photo) in photos">
     <button
         id="add-player-button"
-        ng-click="photosCtrl.removeItem(photos, photo)"
+        ng-click="deleteItem('photos', photos, photo)"
         ng-show="user.data.memberLevel >= 3">Удалить</button>
     <a href="{{::photo.href}}" title="{{::photo.title}}" target="_blank">
         <img class="photo-logo"
@@ -22,31 +22,27 @@
         type="text"
         ng-model="newPhoto.title"
     >
-    </input>
     </label>
     <label>
         Дата
-    <input
-        type="date"
-        ng-model="newPhoto.date"
-    >
-    </input>
+        <input
+            type="date"
+            ng-model="newPhoto.date"
+        >
     </label>
     <label>
-        Ссылка
-    <input
-        type="text"
-        ng-model="newPhoto.href"
-    >
-    </input>
+            Ссылка
+        <input
+            type="text"
+            ng-model="newPhoto.href"
+        >
     </label>
     <label>
         Картинка
-    <input
-        type="text"
-        ng-model="newPhoto.src"
-    >
-    </input>
+        <input
+            type="text"
+            ng-model="newPhoto.src"
+        >
     </label>
-    <button id="add-player-button" ng-click="photosCtrl.addItem(photos, newPhoto);newPhoto = {};">Добавить</button>
+    <button id="add-player-button" ng-click="addItem('photos', photos, newPhoto);newPhoto = {};">Добавить</button>
 </div>

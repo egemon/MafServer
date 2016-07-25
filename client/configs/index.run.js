@@ -28,15 +28,18 @@ function generalRun ($rootScope, $timeout, serverService) {
             });
         };
 
-        $scope.addItem = function addItem(table, items) {
+        $scope.addItem = function addItem(table, items, item) {
 
             // TODO: remove PG
             if (table === 'contents') {
                 table = 'news';
             }
 
-            var item = angular.copy(items[0]);
-            delete item.id;
+            if (!item) {
+                item = angular.copy(items[0]);
+                delete item.id;
+            }
+
             serverService.create(table, item)
             .then(function (id) {
                 item.id = id;

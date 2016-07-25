@@ -13,7 +13,8 @@ var method = {
     "getBy": "getBy",
 };
 
-function read(table, ids) {
+function read(table, ids, params) {
+    console.log('[pgApi]', arguments);
     var options;
     var all = ids === 'all';
     var getBy = _.isPlainObject(ids);
@@ -22,7 +23,7 @@ function read(table, ids) {
         options = ids;
         name ='getBy';
     }
-    return make(method[name], table, ids, ids, options).then(function (data) {
+    return make(method[name], table, ids, ids, options, params).then(function (data) {
         if (all || getBy) {
             return data[0];
         }
@@ -43,7 +44,7 @@ function update(table, items, ids) {
     return make(method.update, table, items, ids);
 }
 
-function make(cmd, table, items, ids, options) {
+function make(cmd, table, items, ids, filters, params) {
     "use strict";
     items = toArray(items);
     ids = toArray(ids);
@@ -57,7 +58,7 @@ function make(cmd, table, items, ids, options) {
               }
             }
             var user = new BaseUser();
-            var result = user[cmd](options).then(function (data) {
+            var result = user[cmd](filters, params).then(function (data) {
                 console.log('Succses ' + cmd + ': ', item, data);
                 return {success: 1, data: data, item: item};
             },function (err) {
