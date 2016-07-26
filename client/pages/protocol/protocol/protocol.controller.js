@@ -57,7 +57,11 @@ function ProtocolCtrl ($scope, $http, sync, club, game) {
         if (data.confirmText) {
             if (window.confirm(data.confirmText)) {
                 sync[cmd](vm.game, true, vm.ids)
-                .then(restoreDefaults);
+                .then(function () {
+                    if (cmd !== 'delete') {
+                        return restoreDefaults(cmd);
+                    }
+                });
             }
         }
     }
