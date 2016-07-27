@@ -136,7 +136,10 @@ angular.module('server')
             throw response;
         }
 
-        
+        //TODO: remove after PG games integration
+        if (page.url === 'games'){
+            $rootScope.$broadcast('data-fetched', response.data);
+        }
 
 
 

@@ -9,7 +9,17 @@
 
 
     <div id="customGrid" ui-grid="{
-    data: games,
-    enableFiltering: true
-    }" class="myGrid"></div>
+        data: games,
+        enableFiltering: true,
+        onRegisterApi: gamesCtrl.onRegisterApi,
+        columnDefs: gamesCtrl.columnDefs
+        }"
+         ui-grid-edit
+         ui-grid-resize-columns
+         ui-grid-cellnav
+         ui-grid-pinning
+         ui-grid-save-state
+         ui-grid-auto-resize
+         ui-grid-move-columns>
+    </div>
 </div>
