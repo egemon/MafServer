@@ -1,6 +1,6 @@
 angular.module('base').controller('GamesCtrl',
-    ['$scope',
-function($scope) {
+    ['$scope', '$filter',
+function($scope, $filter) {
     var vm = this;
     vm.onRegisterApi = $scope.onRegisterApi;
     var displayNames = {
@@ -27,6 +27,12 @@ function($scope) {
                 }
             };
         });
+
+
+        data = _.map(data, function (game) {
+            game.date = $filter('date')(game.date);
+        });
+
         // vm.columnDefs.push({
         //     field: 'deleteItem',
         //     displayName: 'Удалить',
