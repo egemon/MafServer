@@ -1,7 +1,7 @@
 angular.module('server')
 .service('serverService', ['$http', 'CONFIG', '$cookies', '$rootScope', 'serverHelper',
     function serverService ($http, CONFIG, $cookies, $rootScope, serverHelper) {
-
+    var self = this;
     this.player = {
         data: {
             "nick": "",
@@ -66,16 +66,16 @@ angular.module('server')
 
     serverService.prototype.$_login = function() {
         console.log('[server.service] $_login()', arguments);
-        $cookies.putObject('player-data', this.player.data);
+        $cookies.putObject('player-data', self.player.data);
 
         return $http.post(CONFIG.BASE_SERVER_URL + CONFIG.LOGIN_URL, {
                 credentials:{
-                    user: this.player.data.nick,
-                    password: this.player.data.password
+                    user: self.player.data.nick,
+                    password: self.player.data.password
                 }
             })
-            .catch(failCallback.bind(this, 0))
-            .then(handleLogin.bind(this));
+            .catch(failCallback.bind(self, 0))
+            .then(handleLogin.bind(self));
     };
 
     serverService.prototype.setItems = function(items, field, path) {
