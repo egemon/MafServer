@@ -2,7 +2,6 @@ angular.module('base').controller('periodSelectorCtrl', ['$scope', 'CONFIG',
 function($scope, CONFIG) {
     var today = new Date();
     $scope.filterFields = CONFIG.filterFields;
-
     $scope.periodType = 'month';
     $scope.period = getObjByValue(+today.toISOString().split('T')[0].split('-')[1], $scope.filterFields.month.value);
     $scope.year = getObjByValue(today.getUTCFullYear(), $scope.filterFields.year.value);
@@ -14,11 +13,7 @@ function($scope, CONFIG) {
     // ======= PRIVATE ==========
 
     function getObjByValue(value, array) {
-        for (var i = 0; i < array.length; i++) {
-            if (array[i].value == value) {
-                return array[i];
-            }
-        }
+        return _.find(array, {value: value});
     }
 
     var defaults = {
@@ -37,12 +32,10 @@ function($scope, CONFIG) {
         if (periodType === oldPeriodType) {
             return;
         }
-
         if (periodType === 'year') {
             $scope.period.value = $scope.year.value ;
             return;
         }
-
         $scope.period = $scope.filterFields[periodType].value[0];
     }
 

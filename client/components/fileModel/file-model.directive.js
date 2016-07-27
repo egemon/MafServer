@@ -5,7 +5,7 @@ angular.module('base')
             fileModel: "=",
             onReady: "=",
             grid:"=",
-            row:"=",
+            row:"="
         },
         link: function (scope, element) {
             element.bind("change", function (changeEvent) {
