@@ -7,10 +7,17 @@ var gulp = require('gulp'),
 
 // ============ ASSESTS TASK ============
 // copies fonts from src to dest
-gulp.task('font', function () {
+gulp.task('grid-font', function () {
+    return gulp.src(['client/fonts/ui-grid.woff',
+        'client/fonts/ui-grid.ttf'])
+        .pipe(gulp.dest('public/css'));
+});
+
+gulp.task('font', ['grid-font'], function () {
     return gulp.src(['client/fonts/**'])
     .pipe(gulp.dest('public/fonts'));
 });
+
 
 // this task minify images
 gulp.task('img', function() {
