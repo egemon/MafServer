@@ -2,7 +2,7 @@
     <button
         id="add-player-button"
         ng-click="deleteItem('photos', photos, photo)"
-        ng-show="user.data.memberLevel >= 3">Удалить</button>
+        ng-show="user.data.memberlevel >= 3">Удалить</button>
     <a href="{{::photo.href}}" title="{{::photo.title}}" target="_blank">
         <img class="photo-logo"
         onerror="this.src='../img/main_logo_black2.png'; this.onerror=''"
@@ -15,7 +15,7 @@
 </div>
 
 
-<div ng-show="user.data.memberLevel >= 3">
+<div ng-show="user.data.memberlevel >= 3">
     <label>
         Название
     <input
