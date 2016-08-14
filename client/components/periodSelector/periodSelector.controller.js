@@ -2,7 +2,6 @@ angular.module('base').controller('periodSelectorCtrl', ['$scope', 'CONFIG',
 function($scope, CONFIG) {
     var today = new Date();
     $scope.filterFields = CONFIG.filterFields;
-    var m = moment();
     $scope.periodType = 'month';
     $scope.period = getObjByValue(+today.toISOString().split('T')[0].split('-')[1], $scope.filterFields.month.value);
     $scope.year = getObjByValue(today.getUTCFullYear(), $scope.filterFields.year.value);
