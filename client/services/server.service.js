@@ -47,9 +47,7 @@ angular.module('server')
         }
         if (page.url === 'hall_of_fame') {
             return this.read('honours', 'all').then(function (data) {
-                console.log('data = ', data);
                 data = serverHelper.getHallOfFame(data);
-                console.log('data = ', data);
                 return data;
             });
         }
