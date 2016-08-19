@@ -1,8 +1,8 @@
 (function () {
 
-angular.module('base').run(['$rootScope', '$timeout', 'serverService', generalRun]);
+angular.module('base').run(['$rootScope', '$timeout', 'serverService', 'CONFIG', generalRun]);
 
-function generalRun ($rootScope, $timeout, serverService) {
+function generalRun ($rootScope, $timeout, serverService, CONFIG) {
     animateLogo($rootScope);
     injectHelpers($rootScope);
     function animateLogo ($scope) {
@@ -13,6 +13,7 @@ function generalRun ($rootScope, $timeout, serverService) {
     }
 
     function injectHelpers($scope) {
+        $scope.staticUrl = CONFIG.STATIC_URL;
 
         // helper to workl with DB tables
         $scope.deleteItem = function deleteItem(table, items, item) {

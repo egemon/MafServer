@@ -460,7 +460,7 @@ router.get('/data', function (req, res) {
         if (resp.success) {
 
             // TODO: Move imgSRc to database
-            if (req.query.table === 'players' || req.query.table === 'honours') {
+            if (req.query.table === 'honours') {
                 resp.data = _.map(resp.data, function (player) {
                     return dataBase.addImgSrc('', player);
                 });
@@ -477,9 +477,9 @@ router.get('/data', function (req, res) {
 router.patch('/data', function (req, res) {
     console.log('patch set', req.body);
 
-    if (req.body.table === 'players') {
-        req.body.items = dataBase.handleImages([req.body.items])[0];
-    }
+    // if (req.body.table === 'players') {
+    //     req.body.items = dataBase.handleImages([req.body.items])[0];
+    // }
 
 
     pgApi.update(req.body.table, req.body.items, req.body.ids)

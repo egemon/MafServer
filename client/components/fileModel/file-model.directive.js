@@ -1,5 +1,5 @@
 angular.module('base')
-.directive("fileModel", [function () {
+.directive("fileModel", ['serverService', function (serverService) {
     return {
         scope: {
             fileModel: "=",
@@ -19,8 +19,7 @@ angular.module('base')
                 reader.onload = function (loadEvent) {
                     scope.$apply(function () {
                         scope.fileModel = loadEvent.target.result;
-                        scope.row.entity.imglink = loadEvent.target.result;
-                        scope.onReady(scope.grid.appScope.page.url, scope.row.entity);
+                        serverService.savePlayerImage(scope.row.entity.id, scope.row.entity.nick, loadEvent.target.result);
                     });
                 };
                 reader.readAsDataURL(changeEvent.target.files[0]);

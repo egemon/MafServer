@@ -245,6 +245,23 @@ angular.module('server')
         .then(handleData.bind(this, table));
     };
 
+    serverService.prototype.savePlayerImage = function(id, nick, base64) {
+        console.log('[server.service] savePlayerImage()', nick);
+
+        var data = {
+            id: id,
+            nick: nick,
+            base64: base64
+        };
+
+        return $http({
+            method: 'POST',
+            url: CONFIG.STATIC_URL,
+            data: data,
+            headers: {'Content-Type': 'application/json;charset=utf-8'}
+        })
+            .catch(failCallback.bind(this, 0));
+    };
 
     function removeNulls(item) {
         return _.mapValues(item, function (val) {
