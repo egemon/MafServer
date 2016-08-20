@@ -476,12 +476,6 @@ router.get('/data', function (req, res) {
 
 router.patch('/data', function (req, res) {
     console.log('patch set', req.body);
-
-    // if (req.body.table === 'players') {
-    //     req.body.items = dataBase.handleImages([req.body.items])[0];
-    // }
-
-
     pgApi.update(req.body.table, req.body.items, req.body.ids)
     .then(handleQueryResult.bind(null, res), function (err) {
        res.status(400).send(err);

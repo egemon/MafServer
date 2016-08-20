@@ -13,7 +13,6 @@ function generalRun ($rootScope, $timeout, serverService, CONFIG) {
     }
 
     function injectHelpers($scope) {
-        $scope.staticUrl = CONFIG.STATIC_URL;
 
         // helper to workl with DB tables
         $scope.deleteItem = function deleteItem(table, items, item) {

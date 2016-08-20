@@ -1,8 +1,8 @@
 angular.module('config')
 .constant('CONFIG', {
     TEMPLATES_URL: '',
-    STATIC_URL: 'http://localhost:3000/data',
-    // STATIC_URL: 'http://bs-static.herokuapp.com/data',
+    // STATIC_URL: 'http://localhost:3000/data',
+    STATIC_URL: 'http://bs-static.herokuapp.com/data',
     LOGIN_URL: 'login',
     SET_URL: 'set',
     DATA_URL: 'data',
