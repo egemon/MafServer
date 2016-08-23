@@ -26,6 +26,11 @@ gulp.task('img', function() {
     .pipe(gulp.dest('public/img'));
 });
 
+gulp.task('media', function() {
+    return gulp.src('client/media/**/*')
+        .pipe(gulp.dest('public/media/'));
+});
+
 // minifies html
 gulp.task('html', function () {
     return gulp.src(['client/app.html'])
