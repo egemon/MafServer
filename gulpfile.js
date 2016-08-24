@@ -10,7 +10,7 @@ gulp.task('clean', function() {
     return del(['public']);
 });
 gulp.task('dev-build', ['inject-all']);
-gulp.task('build',['js', 'css', 'img', 'favicon', 'html', 'font']);
+gulp.task('build',['js', 'css', 'media', 'img', 'favicon', 'html', 'font']);
 gulp.task('serve', ['dev-build'] ,function () {
     runSequence('watch', 'init-browser');
 });

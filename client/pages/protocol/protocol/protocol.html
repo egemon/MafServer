@@ -13,12 +13,40 @@
       <button class= "btn btn-primary" id="control-btn" ng-disabled="ProtocolForm.$invalid" ng-click="protocol.saveGame()">Сохранить игру</button>
       <button class= "btn btn-primary" id="control-btn" ng-disabled="!protocol.game.metadata.gameNumber || !protocol.game.metadata.date || !protocol.game.metadata.table" ng-click="protocol.loadGame()">Загрузить игру</button>
       <button class= "btn btn-primary" id="control-btn" ng-disabled="!protocol.game.metadata.gameNumber || !protocol.game.metadata.date || !protocol.game.metadata.table" ng-click="protocol.deleteGame()">Удалить игру</button>
+
     </div>
     <div class="player-hint" ng-show="ProtocolForm.$invalid">
       Пожалуйста заполните все игровые ники и необходимые поля!
     </div>
   </div>
+      <audio controls  title="doIWannaKnow">
+        <source src="./../../media/doIWannaKnow.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+      <audio controls  title="radioactive">
+        <source src="./../../media/radioactive.mp3" type="audio/mp3">
+      </audio>
+      <audio controls  title="bootySwing">
+        <source src="./../../media/bootySwing.mp3" type="audio/mp3">
+      </audio>
+      <audio controls  title="fellInLovaWithAGirl">
+        <source src="./../../media/fellInLovaWithAGirl.mp3" type="audio/mp3">
+      </audio>
+      <audio controls  title="irresistible">
+        <source src="./../../media/irresistible.mp3" type="audio/mp3">
+      </audio>
+      <audio controls  title="takeMeToChurch">
+        <source src="./../../media/takeMeToChurch.mp3" type="audio/mp3">
+      </audio>
+      <audio controls  title="mayhem">
+        <source src="./../../media/mayhem.mp3" type="audio/mp3">
+      </audio>
+      <audio controls  title="BlackBlackHeart">
+        <source src="./../../media/BlackBlackHeart.mp3" type="audio/mp3">
+      </audio>
+  <div>
 
+  </div>
   <div class="protocol-container">
     <table class="table table-bordered table-hover clearfix">
       <caption>Бланк</caption>

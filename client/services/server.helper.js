@@ -25,7 +25,7 @@ function serverHelper () {
 	                year: honour.year,
 	                periodType: honour.periodtype,
 	                period: honour.period,
-	                priority: getPeriodPriority(honour.periodtype, honour.period)
+	                priority: getPeriodPriority(honour.periodtype, honour.period, honour.year)
 	            };
 	        }
 	        period.honours[honour.place - 1] = honour;
@@ -35,7 +35,11 @@ function serverHelper () {
 	        periods[title].title = title;
 	        periodsArray.push(periods[title]);
 	    }
-	    return periodsArray;
+	    console.log(_.map(periodsArray, 'priority'));
+	    return _.chain(periodsArray)
+	    	.sortBy('priority')
+	    	.reverse()
+	    	.value();
 	}
 
 	function createPeriodTitle (honour) {
@@ -50,8 +54,20 @@ function serverHelper () {
 	}
 
 
-	function getPeriodPriority (periodType, period) {
-	    return periodType === "season" ? period * 3 - 3 / 2 : period ;
+	function getPeriodPriority (periodType, period, year) {
+		var priorInYear = 0;
+		switch (periodType) {
+			case 'month':
+				priorInYear = period;
+			break;
+			case 'season':
+				priorInYear = period * 3 - 3 / 2;
+			break;
+			case 'year':
+				priorInYear = 11.5;
+			break;
+		}
+	    return year + priorInYear / 100;
 	}
 }]);
 })();
