@@ -262,7 +262,7 @@ angular.module('server')
 
         return $http({
             method: 'POST',
-            url: CONFIG.STATIC_URL,
+            url: CONFIG.STATIC_URL + '/data',
             data: data,
             headers: {'Content-Type': 'application/json;charset=utf-8'}
         })
@@ -270,12 +270,18 @@ angular.module('server')
     };
 
     function removeNulls(item) {
-        return _.mapValues(item, function (val) {
+        return _.mapValues(item, function (val, key) {
+
+        if (!val && _.includes(key, 'date')) {
+            return '01/01/01';
+        }
+
         if (val === 0) {
             return val;
         } else {
             return val || undefined;
         }
+
         });
     }
 

@@ -12,22 +12,23 @@ function getRatingByFilter(table, filterObject) {
     "use strict";
 
     let query = new QRunner(`
-    select nick,
+    select ${table}.nick,
     round(
         avg(case
-             when role='Мирный' and win='Мирные' then 3
-             when role='Мирный' and win='Мафия' then 0
-             when role='Мафия' and win='Мирные' then 0
-             when role='Мафия' and win='Мафия' then 4
-             when role='Шериф' and win='Мирные' then 4
-             when role='Шериф' and win='Мафия' then -1
-             when role='Дон' and win='Мирные' then -1
-             when role='Дон' and win='Мафия' then 5
-        end + bp),
-    2) as score, count(bp) as gameNumber, sum(bp) as bp, sum(br) as br
+             when ${table}.role='Мирный' and ${table}.win='Мирные' then 3
+             when ${table}.role='Мирный' and ${table}.win='Мафия' then 0
+             when ${table}.role='Мафия' and ${table}.win='Мирные' then 0
+             when ${table}.role='Мафия' and ${table}.win='Мафия' then 4
+             when ${table}.role='Шериф' and ${table}.win='Мирные' then 4
+             when ${table}.role='Шериф' and ${table}.win='Мафия' then -1
+             when ${table}.role='Дон' and ${table}.win='Мирные' then -1
+             when ${table}.role='Дон' and ${table}.win='Мафия' then 5
+        end + ${table}.bp),
+    2) as score, count(${table}.bp) as gameNumber, sum(${table}.bp) as bp, sum(${table}.br) as br, players.imglink
     from ${table}
-    ${_transformFilterObjToWhere(filterObject)}
-    GROUP BY GROUPING SETS ((nick))
+    left join players on games.nick = players.nick
+    ${_transformFilterObjToWhere(filterObject, table)}
+    GROUP BY GROUPING SETS ((${table}.nick, players.imglink))
     order by score desc
     `);
 
@@ -40,7 +41,7 @@ function getGamesByFilter(table, filterObject) {
     "use strict";
     let query = new QRunner(`
     select date, board, gamenumber, referee, playernumber, nick, role, win, bp, br from ${table}
-    ${_transformFilterObjToWhere(filterObject)}
+    ${_transformFilterObjToWhere(filterObject, table)}
     order by date, board, gamenumber, playernumber asc
     `);
 
@@ -63,7 +64,7 @@ function getAll(table, sorting) {
 }
 
 
-function _transformFilterObjToWhere(filterObj) {
+function _transformFilterObjToWhere(filterObj, table) {
     "use strict";
     var m = moment();
     var start;
@@ -84,7 +85,7 @@ function _transformFilterObjToWhere(filterObj) {
             console.log('start-end', start, end);
             break;
     }
-    return `where '${start}' <= date and date <='${end}'`;
+    return `where '${start}' <= ${table}.date and ${table}.date <='${end}'`;
 }
 
 function authentificate (user) {

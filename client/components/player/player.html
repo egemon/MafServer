@@ -1,6 +1,6 @@
-<img
+<img ng-init="imgurl = player.nick.replace(' ', '')"
     class="player-logo"
-    ng-src="{{::player.imglink}}"
+    ng-src="{{::player.imglink || STATIC_URL + '/img/players/' + imgurl + '.jpg'}}"
     alt="{{::player.nick}}"
     ng-click="openNewTab(player.vk)"
     vk={{::player.vk}}

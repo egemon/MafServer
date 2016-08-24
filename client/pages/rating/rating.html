@@ -40,7 +40,7 @@
       <td id="{{::player.avatar}}">
         <img class="playerAvatarInRating"
         onerror="this.src='img/main_logo.png'; this.onerror=''"
-        ng-src="avatars/{{::player.nick.split(' ').join('')}}.jpg"
+        ng-src="{{::player.imglink}}"
         alt="">
       </td>
       <td>{{::player.nick}}</td>

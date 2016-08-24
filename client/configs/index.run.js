@@ -5,6 +5,7 @@ angular.module('base').run(['$rootScope', '$timeout', 'serverService', 'CONFIG',
 function generalRun ($rootScope, $timeout, serverService, CONFIG) {
     animateLogo($rootScope);
     injectHelpers($rootScope);
+    $rootScope.STATIC_URL = CONFIG.STATIC_URL;
     function animateLogo ($scope) {
         $scope.logoClass = 'animating-started';
         $timeout(function () {
@@ -37,6 +38,15 @@ function generalRun ($rootScope, $timeout, serverService, CONFIG) {
 
             if (!item) {
                 item = angular.copy(items[0]);
+
+                _.each(item, function (val, key, obj) {
+                    if (_.includes(key, 'date')) {
+                        obj[key] = '01/01/01';
+                    } else {
+                        obj[key] = '';
+                    }
+                });
+
                 delete item.id;
             }
 
