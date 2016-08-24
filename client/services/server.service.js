@@ -31,7 +31,7 @@ angular.module('server')
         }
 
         if (page.url === 'news') {
-            return this.read('news', 'all', {'order by': 'date desc'});
+            return this.read('news', 'all', data);
         }
 
         if (page.url === 'members') {
@@ -45,6 +45,10 @@ angular.module('server')
         if (page.url === 'photos') {
             return this.read('photos', 'all', {'order by': 'date desc'});
         }
+        if (page.url === 'rating') {
+            return this.read('rating', 'all', data);
+        }
+
         if (page.url === 'hall_of_fame') {
             return this.read('honours', 'all').then(function (data) {
                 data = serverHelper.getHallOfFame(data);
@@ -249,7 +253,11 @@ angular.module('server')
         var data = {
             id: id,
             nick: nick,
-            base64: base64
+            base64: base64,
+            credentials:{
+                user: self.player.data.nick,
+                password: self.player.data.password
+            }
         };
 
         return $http({

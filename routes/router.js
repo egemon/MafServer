@@ -454,9 +454,21 @@ router.get('/data', function (req, res) {
     try {
         req.query.options = JSON.parse(req.query.options);
     } catch(e){}
+    if (req.query.table === 'rating') {
 
-    pgApi.read(req.query.table, req.query.ids, req.query.options)
-    .then(function (resp) {
+        var defaultFilter = {
+            periodType: "month",
+            period: +today.toISOString().split('T')[0].split('-')[1],
+            year: today.getUTCFullYear()
+        };
+        pgHelper.getRatingByFilter('games', req.query.options || defaultFilter).then(function (data) {
+           res.send(data);
+        });
+        return;
+    }
+
+
+    pgApi.read(req.query.table, req.query.ids, req.query.options).then(function (resp) {
         if (resp.success) {
 
             // TODO: Move imgSRc to database
