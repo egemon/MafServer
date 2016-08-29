@@ -56,7 +56,7 @@ function($scope, $filter) {
             year: vm.filterObject.year.value
         };
 
-        $scope.fetchDataFor({url:'games'}, 3, req);
+        $scope.fetchDataFor({url:'games'}, req);
     }
 
 }]);

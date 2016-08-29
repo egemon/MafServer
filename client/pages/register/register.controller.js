@@ -12,7 +12,7 @@
             if (newValue === oldValue) {
                 return;
             }
-            $scope.fetchDataFor(null, 3, {
+            $scope.fetchDataFor(null, {
                 date: dateToStr($scope.date)
             });
         });
@@ -37,7 +37,8 @@
                 }
 
             }
-            serverService.setItems(register, 'register', '/' + dateToStr(date) + '.json');
+
+         //TODO: implement registation
         }
 
         function getSum() {
@@ -65,7 +66,7 @@
 
         function restoreDefaults() {
             $scope.date = new Date();
-            serverService.$_fetchData({url:'players'}, 3).then(updateAutocomplete);
+            serverService.$_fetchData({url:'players'}).then(updateAutocomplete);
         }
 
         function updateAutocomplete(data) {

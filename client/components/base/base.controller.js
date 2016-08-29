@@ -1,7 +1,7 @@
 angular.module('base')
 .controller('baseCtrl',
-['PAGES', '$scope', 'serverService', '$timeout', '$window', '$location', 'editService',
-function(PAGES, $scope, serverService, $timeout, $window, $location, editService) {
+['PAGES', '$scope', 'serverService', '$timeout', '$window', '$location',
+function(PAGES, $scope, serverService, $timeout, $window, $location) {
 
     var pageUrl = $location.path().slice(1);
     var firstPage = _.find(PAGES, {url: pageUrl}) || PAGES[0];
@@ -31,7 +31,7 @@ function(PAGES, $scope, serverService, $timeout, $window, $location, editService
                 $scope.$broadcast('register-request');
             }
 
-            fetchDataFor(page, page.needMemberLevel, page.data);
+            fetchDataFor(page, page.data);
         }
     }
 
@@ -42,10 +42,10 @@ function(PAGES, $scope, serverService, $timeout, $window, $location, editService
         }
     }
 
-    function fetchDataFor (page, needMemberLevel, data) {
+    function fetchDataFor (page, data) {
         page = page || $scope.page;
         console.log('[base.controller] fetchDataFor()', arguments);
-        return serverService.$_fetchData(page, needMemberLevel, data)
+        return serverService.$_fetchData(page, data)
             .then(attchDataToScope.bind(this, $scope, page));
     }
 

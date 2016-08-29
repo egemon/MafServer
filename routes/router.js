@@ -8,8 +8,8 @@ var LocalGameStorage = require('../model/LocalGameStorage');
 var RatingBase = require('../model/RatingBase');
 var dataBase = require('../helpers/dataBase.js');
 var pgApi = require('../helpers/pg/myPgApi.js');
-var migrator = require('../helpers/pg/migrator.js');
 var pgHelper = require('../helpers/pg/pg.helper.js');
+var moment = require('moment');
 dataBase.refreshInfoFor('all');
 dataBase.initializeWatching('all');
 dataBase.watchLocalStorage();
@@ -447,6 +447,12 @@ router.post('/data', function (req, res) {
 
 router.get('/data', function (req, res) {
     console.log('req.params', req.query);
+    var now = moment();
+    var defaultFilter = {
+        periodType: "month",
+        period: now.get('month') + 1,
+        year: now.get('year'),
+    };
 
     try {
         req.query.ids = JSON.parse(req.query.ids);
@@ -456,17 +462,17 @@ router.get('/data', function (req, res) {
     } catch(e){}
     if (req.query.table === 'rating') {
 
-        var defaultFilter = {
-            periodType: "month",
-            period: +today.toISOString().split('T')[0].split('-')[1],
-            year: today.getUTCFullYear()
-        };
         pgHelper.getRatingByFilter('games', req.query.options || defaultFilter).then(function (data) {
            res.send(data);
         });
         return;
     }
 
+    if (req.query.table === 'games') {
+        return pgHelper.getGamesByFilter('games', req.query.options || defaultFilter).then(function (data) {
+            res.send(data);
+        });
+    }
 
     pgApi.read(req.query.table, req.query.ids, req.query.options).then(function (resp) {
         if (resp.success) {

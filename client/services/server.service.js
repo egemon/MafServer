@@ -1,8 +1,7 @@
 angular.module('server')
 .service('serverService', ['$http', 'CONFIG', '$cookies', '$rootScope', 'serverHelper',
     function serverService ($http, CONFIG, $cookies, $rootScope, serverHelper) {
-    var self = this;
-    this.player = {
+    var player = {
         data: {
             "nick": "",
             "password": "",
@@ -15,88 +14,79 @@ angular.module('server')
             "experiance": ""
         }
     };
-    this.player.data = $cookies.getObject('player-data') || this.player.data;
+    player.data = $cookies.getObject('player-data') || player.data;
+    return {
+        $_fetchData: $_fetchData,
+        $_login: $_login,
 
-    serverService.prototype.$_fetchData = function(page, needMemberLevel, data) {
+        create: create,
+        read: read,
+        update: update,
+        delete: remove,
+
+        savePlayerImage: savePlayerImage,
+        player: player
+    };
+
+    function $_fetchData(page, data) {
         console.log('[server.service] $_fetchData()', arguments);
 
 
         // PG ONLY
         if (page.url === 'players') {
-            return this.read('players', 'all', {'order by': 'nick asc'});
+            return read('players', 'all', {'order by': 'nick asc'});
         }
 
         if (page.url === 'contents') {
-            return this.read('news', 'all', {'order by': 'date desc'});
+            return read('news', 'all', {'order by': 'date desc'});
         }
 
         if (page.url === 'news') {
-            return this.read('news', 'all', data);
+            return read('news', 'all', {'order by': 'date desc'});
         }
 
         if (page.url === 'members') {
-            return this.read('players', {memberlevel: ' >= 1'}, {'order by': 'nick asc'});
+            return read('players', {memberlevel: ' >= 1'}, {'order by': 'nick asc'});
         }
 
         if (page.url === 'contacts') {
-            return this.read('players',  {memberlevel: ' = 3'}, {'order by': 'memberlevel asc'});
+            return read('players',  {memberlevel: ' = 3'}, {'order by': 'memberlevel asc'});
         }
 
         if (page.url === 'photos') {
-            return this.read('photos', 'all', {'order by': 'date desc'});
+            return read('photos', 'all', {'order by': 'date desc'});
         }
         if (page.url === 'rating') {
-            return this.read('rating', 'all', data);
+            return read('rating', 'all', data);
+        }
+        if (page.url === 'games') {
+            return read('games', 'all', data);
         }
 
+
         if (page.url === 'hall_of_fame') {
-            return this.read('honours', 'all').then(function (data) {
+            return read('honours', 'all').then(function (data) {
                 data = serverHelper.getHallOfFame(data);
                 return data;
             });
         }
 
-        // TODO remove after PG
-        var body = {
-            pg:true,
-            data: data
-        };
-        return $http.post(CONFIG.BASE_SERVER_URL + page.url, body)
-        .catch(failCallback.bind(this, needMemberLevel))
-        .then(handleData.bind(this, page));
+        alert('Client issue! Please contact admin');
     };
 
-    serverService.prototype.$_login = function() {
+    function $_login() {
         console.log('[server.service] $_login()', arguments);
-        $cookies.putObject('player-data', self.player.data);
+        $cookies.putObject('player-data', player.data);
 
         return $http.post(CONFIG.BASE_SERVER_URL + CONFIG.LOGIN_URL, {
                 credentials:{
-                    user: self.player.data.nick,
-                    password: self.player.data.password
+                    user: player.data.nick,
+                    password: player.data.password
                 }
             })
             .catch(failCallback.bind(self, 0))
             .then(handleLogin.bind(self));
     };
-
-    serverService.prototype.setItems = function(items, field, path) {
-        console.log('[server.service] setPlayers()', items);
-
-        var data = {
-            pg: true,
-            field: field,
-            data: removeNulls(items),
-            path: path || '',
-        };
-
-        return $http.post(CONFIG.BASE_SERVER_URL + CONFIG.SET_URL, data)
-            .catch(failCallback.bind(this, 0))
-            .then(handleData.bind(this, field));
-    };
-
-
-
 
     // ========== PRIVATE METHODS
     function failCallback (needMemberLevel, err) {
@@ -120,8 +110,8 @@ angular.module('server')
         if (data.errorText) {
             alert(data.errorText);
         } else {
-            this.player.data = data;
-            $cookies.putObject('player-data', this.player.data);
+            player.data = data;
+            $cookies.putObject('player-data', player.data);
         }
     }
 
@@ -169,7 +159,7 @@ angular.module('server')
     // =============== PG ONLY ====================
 
 
-    serverService.prototype.create = function(table, items) {
+    function create(table, items) {
         console.log('[server.service] create()', arguments);
 
         var data = {
@@ -187,13 +177,14 @@ angular.module('server')
         .then(handleData.bind(this, table));
     };
 
-    serverService.prototype.read = function(table, ids, params) {
+    function read(table, ids, params, credentials) {
         console.log('[server.service] create()', arguments);
 
         var data = {
             table: table,
             ids: ids,
-            options: params
+            options: params,
+            credentials: getCredentials(player.data)
         };
 
         return $http({
@@ -210,7 +201,7 @@ angular.module('server')
         });
     };
 
-    serverService.prototype.update = function(table, items, ids) {
+    function update(table, items, ids) {
         console.log('[server.service] create()', arguments);
 
         var data = {
@@ -229,8 +220,8 @@ angular.module('server')
         .then(handleData.bind(this, table));
     };
 
-    serverService.prototype.delete = function(table, ids) {
-        console.log('[server.service] delete()', ids);
+    function remove(table, ids) {
+        console.log('[server.service] remove()', ids);
 
         var data = {
             table: table,
@@ -247,17 +238,14 @@ angular.module('server')
         .then(handleData.bind(this, table));
     };
 
-    serverService.prototype.savePlayerImage = function(id, nick, base64) {
+    function savePlayerImage(id, nick, base64) {
         console.log('[server.service] savePlayerImage()', nick);
 
         var data = {
             id: id,
             nick: nick,
             base64: base64,
-            credentials:{
-                user: self.player.data.nick,
-                password: self.player.data.password
-            }
+            credentials: getCredentials(player.data)
         };
 
         return $http({
@@ -283,6 +271,13 @@ angular.module('server')
         }
 
         });
+    }
+
+    function getCredentials (player) {
+        return {
+            nick: player.nick,
+            password: player.password,
+        }
     }
 
 }]);

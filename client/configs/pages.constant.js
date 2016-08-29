@@ -29,7 +29,8 @@ angular.module('base')
 },{
     url: 'photos',
     name: 'Фото',
-    controller: 'photosCtrl as photosCtrl',
+    //TODO integrate controller if needed
+    // controller: 'photosCtrl as photosCtrl',
     needData: true,
     needMemberLevel: 0
 },{
@@ -54,12 +55,12 @@ angular.module('base')
     needData: true,
     needMemberLevel: 3
 },{
-    url: 'register',
-    name: 'Регистрация',
-    controller: 'registerCtrl as registerCtrl',
-    needData: true,
-    needMemberLevel: 3
-},{
+//     url: 'register',
+//     name: 'Регистрация',
+//     controller: 'registerCtrl as registerCtrl',
+//     needData: true,
+//     needMemberLevel: 3
+// },{
     url: 'games',
     name: 'Игры',
     controller: 'GamesCtrl as gamesCtrl',
