@@ -9,6 +9,7 @@ var RatingBase = require('../model/RatingBase');
 var dataBase = require('../helpers/dataBase.js');
 var pgApi = require('../helpers/pg/myPgApi.js');
 var pgHelper = require('../helpers/pg/pg.helper.js');
+var migrator = require('../helpers/pg/migrator');
 var moment = require('moment');
 dataBase.refreshInfoFor('all');
 dataBase.initializeWatching('all');
@@ -149,7 +150,7 @@ router.post('/sync', function (req, res) {
             gameid: " = '" + metadata.date + '_' + metadata.gameNumber + '_' + metadata.table + "'"
         })
         .then(function (data) {
-            if (data.length  && !force) {
+            if (data.length && !force) {
                 res.send({
                     confirmText: confirmText,
                     ids: data.map(game => game.id)

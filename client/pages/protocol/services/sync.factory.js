@@ -14,6 +14,7 @@ function syncService ($http, club) {
         console.log('[syncService] alertErrorText()', arguments);
         if (response.data.errorText) {
             alert(response.data.errorText);
+            return club.defaultGame;
         }
         return response.data;
     }
