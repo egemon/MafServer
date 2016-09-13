@@ -6,8 +6,13 @@
     <input class="best-checkbox" type="checkbox" name="best" value="" ng-model="player.data.BR">
 </td>
 <td>
-    <autocomplete class="" required ng-model="player.data.nick" data="playerNicks"></autocomplete>
-    <!-- <input required class="player-nick-input form-control" type="text" ng-model="player.data.nick"> -->
+    <input class="metadata-input"
+           type="text"
+           required
+           ng-model="selected"
+           typeahead-min-length="0"
+           typeahead-select-on-exact="true"
+           uib-typeahead="nick for nick in playerNicks | filter:$viewValue | limitTo:8">
 </td>
 <td>
     <select required class="player-role metadata-input" name="" id="" ng-model="player.data.role">

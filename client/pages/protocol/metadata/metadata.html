@@ -3,9 +3,7 @@
     <tr>
         <td>Стол</td>
         <td>
-            <select class="metadata-input" required ng-model="metadata.data.table" name="" id="">
-                <option ng-repeat="table in tables">{{table}}</option>
-            </select>
+            <select class="metadata-input" required ng-model="metadata.data.table" ng-options=":: table for table in tables"></select>
         </td>
     </tr>
     <tr>
@@ -17,15 +15,19 @@
     <tr>
         <td>Ведущий</td>
         <td>
-            <autocomplete class="metadata-input" required ng-model="metadata.data.ref" data="playerNicks"></autocomplete>
+            <input class="metadata-input"
+                   type="text"
+                   required
+                   ng-model="selected"
+                   typeahead-min-length="0"
+                   typeahead-select-on-exact="true"
+                   uib-typeahead="nick for nick in playerNicks | filter:$viewValue | limitTo:8">
         </td>
     </tr>
     <tr>
         <td>Победа</td>
         <td>
-            <select  class="metadata-input" required ng-model="metadata.data.win" name="" id="">
-                <option ng-repeat="win in wins">{{win}}</option>
-            </select>
+            <select  class="metadata-input" required ng-model="metadata.data.win" ng-options=":: win for win in wins"></select>
         </td>
     </tr>
     <tr>

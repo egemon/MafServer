@@ -43,4 +43,8 @@ protocol button {
 .metadata-input {
     width: 100%;
     font-size: 13px;
+    font-family: "Comic Sans MS", cursive;
+}
+.metadata-input ~ * {
+    font-family: "Comic Sans MS", cursive;
 }
