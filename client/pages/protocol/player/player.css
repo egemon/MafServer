@@ -25,9 +25,6 @@ player .player-role {
     font-family: cursive;
     font-size: 13px;
 }
-autocomplete {
-    font-family: 'Monotype Corsiva', 'Comic Sans MS', cursive;
-}
 td, th {
     padding: 10px;
 }

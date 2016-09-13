@@ -9,7 +9,7 @@
     <input class="metadata-input"
            type="text"
            required
-           ng-model="selected"
+           ng-model="player.data.nick"
            typeahead-min-length="0"
            typeahead-select-on-exact="true"
            uib-typeahead="nick for nick in playerNicks | filter:$viewValue | limitTo:8">

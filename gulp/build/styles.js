@@ -13,7 +13,6 @@ var gulp = require('gulp'),
 gulp.task('css-lib', function() {
   return gulp.src([
       'client/lib/bootstrap-css/css/bootstrap.css',
-      'client/lib/angular-autocomplete/style/autocomplete.css',
       'client/lib/angular-ui-grid/ui-grid.css',
     ])
     .pipe(concat('lib.css'))

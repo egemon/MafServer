@@ -6,7 +6,6 @@ var gulp = require('gulp'),
 gulp.task('inject-css', function() {
     var styles = gulp.src([
         'client/lib/bootstrap-css/css/bootstrap.css',
-        'client/lib/angular-autocomplete/style/autocomplete.css',
         'client/lib/angular-ui-grid/ui-grid.css',
       ], {read:false})
       .pipe(add.append([

@@ -86,11 +86,6 @@ router.post('/delete', function (req, res) {
         }
     }
 
-
-
-
-
-
 });
 
 //getGamesByFilter
@@ -104,8 +99,8 @@ router.post('/load', function (req, res) {
             gameid: " = '" + metadata.date + '_' + metadata.gameNumber + '_' + metadata.table + "'"
         })
         .then(function (data) {
-            console.log('data',data);
-            if (data.data.length) {
+            data = data.data;
+            if (data.length) {
                 res.send(migrator.gameSQLtoJSON(data.data));
             } else {
                 res.send({
@@ -150,6 +145,8 @@ router.post('/sync', function (req, res) {
             gameid: " = '" + metadata.date + '_' + metadata.gameNumber + '_' + metadata.table + "'"
         })
         .then(function (data) {
+            data = data.data;
+            console.log('saveGame() if exist data', data, force);
             if (data.length && !force) {
                 res.send({
                     confirmText: confirmText,
