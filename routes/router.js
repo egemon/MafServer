@@ -304,6 +304,7 @@ router.get('/data', function (req, res) {
     try {
         req.query.ids = JSON.parse(req.query.ids);
     } catch(e){}
+    req.query.ids = req.query.ids || 'all';
     try {
         req.query.options = JSON.parse(req.query.options);
     } catch(e){}
