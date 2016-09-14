@@ -8,6 +8,7 @@
 <td>
     <input class="metadata-input"
            type="text"
+           tabindex="{{::number + 6}}" 
            required
            ng-model="player.data.nick"
            typeahead-min-length="0"
@@ -15,7 +16,11 @@
            uib-typeahead="nick for nick in playerNicks | filter:$viewValue | limitTo:8">
 </td>
 <td>
-    <select required class="player-role metadata-input" name="" id="" ng-model="player.data.role">
+    <select 
+    required 
+    tabindex="{{::number + 6}}"
+    class="player-role metadata-input" 
+    ng-model="player.data.role">
         <option ng-repeat= "role in roles">{{role}}</option>
     </select>
 </td>

@@ -100,8 +100,12 @@ router.post('/load', function (req, res) {
         })
         .then(function (data) {
             data = data.data;
+
+            console.log('[router] getGames / load data.length', data.length);
             if (data.length) {
-                res.send(migrator.gameSQLtoJSON(data.data));
+                var game = migrator.gameSQLtoJSON(data);
+                console.log('[router] getGames / load game', game);
+                res.send(game);
             } else {
                 res.send({
                     errorText: 'Игра не найдена!'
