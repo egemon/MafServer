@@ -42,10 +42,7 @@ function syncService ($http, club) {
     }
 
     function formatDate (metadata) {
-        metadata.date = metadata.date.toISOString().split('T')[0];
-
-        // TODO remove after PG
-        metadata.pg = true;
+        metadata.date = moment(metadata.date).format('YYYY-MM-DD');
         return metadata;
     }
 
@@ -53,9 +50,6 @@ function syncService ($http, club) {
         var body = {
             force: force,
             game: formatGame(game),
-
-            // TODO remove after PG
-            pg: true,
             ids: ids,
         };
         return $http.post(club.BASE_SERVER_URL + club.SYNC_URL, body)
@@ -73,9 +67,6 @@ function syncService ($http, club) {
         return $http.post(club.BASE_SERVER_URL + club.DELETE_URL, {
                 metadata: metadata,
                 force: force,
-
-                // TODO remove after PG
-                pg: true
             })
             .then(alertErrorText);
     }

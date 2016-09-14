@@ -3,7 +3,9 @@
     width: 30px;
     height: 40px;
     border-radius: 25px;
-    margin: 3x 0px;
+    margin: 3px 0px;
+    background-image: url('../../img/main_logo.png');
+    background-size: cover;
 }
 
 #ratingTable td,
