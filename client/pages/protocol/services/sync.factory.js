@@ -81,7 +81,7 @@ function syncService ($http, club) {
     }
 
     function getNicks() {
-        return $http.get(club.BASE_SERVER_URL + '/data', {params: {table:'players'}}).then(function (data) {
+        return $http.get(club.BASE_SERVER_URL + 'data', {params: {table:'players'}}).then(function (data) {
             console.log('[sync.factory] getNicks() data ', arguments);
             var players =  data.data.data;
             return players.map(function(el) {
