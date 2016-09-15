@@ -18,31 +18,19 @@
 <div ng-show="user.data.memberlevel >= 3">
     <label>
         Название
-    <input
-        type="text"
-        ng-model="newPhoto.title"
-    >
+        <input type="text" ng-model="newPhoto.title">
     </label>
     <label>
         Дата
-        <input
-            type="date"
-            ng-model="newPhoto.date"
-        >
+        <input type="date" ng-model="newPhoto.date">
     </label>
     <label>
             Ссылка
-        <input
-            type="text"
-            ng-model="newPhoto.href"
-        >
+        <input type="text" ng-model="newPhoto.href">
     </label>
     <label>
         Картинка
-        <input
-            type="text"
-            ng-model="newPhoto.src"
-        >
+        <input type="text" ng-model="newPhoto.src">
     </label>
     <button id="add-player-button" ng-click="addItem('photos', photos, newPhoto);newPhoto = {};">Добавить</button>
 </div>

@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     browserify = require('gulp-browserify'),
     rename = require('gulp-rename'),
+    ngAnnotate = require('gulp-ng-annotate'),
     jshint = require('gulp-jshint'),
     templateCache = require('gulp-angular-templatecache');
 
@@ -33,6 +34,7 @@ gulp.task('js-ng-app', ['tmpls'], function () {
     return gulp.src(['client/**/*module.js', '!client/lib/**', '!client/app.js'])
     .pipe(add.append(['client/**/*.js', '!client/**/*module.js', '!client/lib/**', '!client/app.js']))
     .pipe(concat('ng.js'))
+    .pipe(ngAnnotate())
     .pipe(_if(isProd, uglify(), beautify()))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('public/js'));

@@ -220,7 +220,7 @@ function handleQueryResult(res, dataArray) {
 		res.send(result);
 	} else {
 		res.status(400).send({
-			errorText: 'Data wasn"t deleted'
+			errorText: 'Issue with SQL'
 		});
 	}
 }

@@ -25,7 +25,8 @@ angular.module('base')
     url: 'hall_of_fame',
     name: 'Зал Славы',
     needData: true,
-    needMemberLevel: 0
+    needMemberLevel: 0,
+    controller: 'honoursCtrl as honoursCtrl',
 },{
     url: 'photos',
     name: 'Фото',
