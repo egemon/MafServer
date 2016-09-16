@@ -1,4 +1,4 @@
-<form class="clearfix" novalidate accept-charset="utf-8" name="ProtocolForm" ng-submit="">
+<form class="protocol-form clearfix" novalidate accept-charset="utf-8" name="ProtocolForm" ng-submit="">
 
   <div class="metadata-container">
     <table metadata
@@ -19,6 +19,8 @@
       Пожалуйста заполните все игровые ники и необходимые поля!
     </div>
   </div>
+
+  <div class="audio">
       <audio controls  title="doIWannaKnow">
         <source src="./../../media/doIWannaKnow.mp3" type="audio/mp3">
         Your browser does not support the audio element.
@@ -44,10 +46,10 @@
       <audio controls  title="BlackBlackHeart">
         <source src="./../../media/BlackBlackHeart.mp3" type="audio/mp3">
       </audio>
-  <div>
-
   </div>
-  <div class="protocol-container">
+  <div class="protocol-container"
+       ng-class="{'hidden-roles':hiddenRoles}">
+    <button ng-click="hiddenRoles = !hiddenRoles">Роли</button>
     <table class="table table-bordered table-hover clearfix">
       <caption>Бланк</caption>
       <thead>

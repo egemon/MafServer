@@ -8,7 +8,7 @@ angular.module('ProtocolApp')
             number: '=',
             maxFalls: '=',
             roles: '=',
-            playerNicks: "="
+            playerNicks: '=',
         }
     };
 });

@@ -49,3 +49,11 @@ audio {
     display: block;
     margin: 10px;
 }
+
+.protocol-form {
+    /*display: flex;*/
+}
+
+.protocol-container.hidden-roles .player-role {
+    opacity: 0;
+}
