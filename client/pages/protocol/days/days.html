@@ -9,7 +9,7 @@
             <select
                 class="days-input"
                 ng-model="details.who"
-                ng-options="player.nick for player in players track by player.nick">
+                ng-options="players.indexOf(player)+1 for player in players track by player.nick">
             </select>
         </span>
         <span>
@@ -17,7 +17,7 @@
             <select
                 class="days-input"
                 ng-model="details.whom"
-                ng-options="player.nick for player in players track by player.nick">
+                ng-options="players.indexOf(player)+1 for player in players track by player.nick">
             </select>
         </span>
         <div>
@@ -33,14 +33,12 @@
     <div class="results">
             <span
                 ng-repeat="(key, value) in day.results"
-                class="{{::key}}-container"
-            >
+                class="{{::key}}-container">
                 {{::key | translate}}
                 <select
                     class="days-input"
                     ng-model="day.results[key]"
-                    ng-options="player.nick for player in players track by player.nick"
-                >
+                    ng-options="players.indexOf(player)+1 for player in players track by player.nick">
                 </select>
             </span>
     </div>
