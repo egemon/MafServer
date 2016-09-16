@@ -1,7 +1,10 @@
 angular.module('sync')
-.factory('sync', ['$http', 'club', syncService]);
+.factory('sync', syncService);
 
-function syncService ($http, club) {
+function syncService ($http, $q, club) {
+
+    //TODO: make it global value
+    var players = [];
 
     return {
         push: pushToServer,
@@ -47,13 +50,29 @@ function syncService ($http, club) {
     }
 
     function pushToServer (game, force, ids) {
+        var formattedGame = formatGame(game);
         var body = {
             force: force,
-            game: formatGame(game),
+            game: formattedGame,
             ids: ids,
         };
-        return $http.post(club.BASE_SERVER_URL + club.SYNC_URL, body)
+        var newPlayers =
+            _.chain(formattedGame.playerLines)
+                .differenceBy(players, 'nick')
+                .map(function (player) {
+                    return _.pick(player, 'nick');
+                })
+                .value();
+
+        var gamePromise = $http.post(club.BASE_SERVER_URL + club.SYNC_URL, body)
             .then(alertErrorText);
+        var playersPromise = $http.post(club.BASE_SERVER_URL + 'data', {
+            table: 'players',
+            items: newPlayers,
+        })
+            .then(alertErrorText);
+        return $q.all(gamePromise, playersPromise);
+
     }
 
     function pullFromServer(metadata) {
@@ -74,7 +93,7 @@ function syncService ($http, club) {
     function getNicks() {
         return $http.get(club.BASE_SERVER_URL + 'data', {params: {table:'players'}}).then(function (data) {
             console.log('[sync.factory] getNicks() data ', arguments);
-            var players =  data.data.data;
+            players =  data.data.data;
             return players.map(function(el) {
                 return el.nick;
             });
