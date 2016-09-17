@@ -1,7 +1,7 @@
 angular.module('ProtocolApp')
-.factory('sync', syncService);
+.factory('gameService', gameService);
 
-function syncService ($http, $q, club) {
+function gameService ($http, $q, club, serverService) {
 
     //TODO: make it global value
     var players = [];
@@ -14,7 +14,7 @@ function syncService ($http, $q, club) {
     };
 
     function alertErrorText(response) {
-        console.log('[syncService] alertErrorText()', arguments);
+        console.log('[gameService] alertErrorText()', arguments);
         if (response.data.errorText) {
             alert(response.data.errorText);
             return club.defaultGame;
@@ -91,14 +91,11 @@ function syncService ($http, $q, club) {
     }
 
     function getNicks() {
-        return $http.get(club.BASE_SERVER_URL + 'data', {params: {table:'players'}}).then(function (data) {
+        return serverService.read('players', 'all').then(function (players) {
             console.log('[sync.factory] getNicks() data ', arguments);
-            players =  data.data.data;
             return players.map(function(el) {
                 return el.nick;
             });
-        }, function (err) {
-            alert(err);
         });
     }
 

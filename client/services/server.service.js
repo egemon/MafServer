@@ -1,6 +1,5 @@
 angular.module('base')
-.service('serverService', ['$http', 'CONFIG', '$cookies', '$rootScope', 'serverHelper',
-    function serverService ($http, CONFIG, $cookies, $rootScope, serverHelper) {
+.service('serverService', function serverService ($http, CONFIG, $cookies, $rootScope, serverHelper) {
     var player = {
         data: {
             "nick": "",
@@ -25,7 +24,7 @@ angular.module('base')
         delete: remove,
 
         savePlayerImage: savePlayerImage,
-        player: player
+        player: player,
     };
 
     function $_fetchData(page, data) {
@@ -115,43 +114,13 @@ angular.module('base')
         }
     }
 
-    function handleData (page, response) {
+    function handleData (config, response) {
         console.log('[base.controller] handleData()', arguments);
-
-
-        // PG CHECK
         if (response.data.success) {
-            // alert('Succsess');
             return response.data.data;
         } else if (response.data.success === 0){
             alert('Fail!');
             throw response;
-        }
-
-        //TODO: remove after PG games integration
-        if (page.url === 'games'){
-            $rootScope.$broadcast('data-fetched', response.data);
-        }
-
-
-
-        if (!response) {
-            return;
-        }
-        if (response.data.errorText) {
-            angular.element(document.getElementById('view'))
-                .css('visibility', 'hidden');
-            alert(response.data.errorText);
-            return {
-                errorText: response.data.errorText
-            };
-        } else if(response.data.successText) {
-            alert(response.data.successText);
-            return response.data;
-        } else {
-            angular.element(document.getElementById('view'))
-                .css('visibility', 'visible');
-            return response.data;
         }
     }
 
@@ -194,7 +163,7 @@ angular.module('base')
             headers: {'Content-Type': 'application/json;charset=utf-8'}
         })
         .catch(failCallback.bind(this, 0))
-        .then(handleData.bind(this, table))
+        .then(handleData.bind(this, data))
         .then(function (data) {
             $rootScope.$broadcast('data-fetched', data);
             return data;
@@ -280,5 +249,5 @@ angular.module('base')
         }
     }
 
-}]);
+});
 

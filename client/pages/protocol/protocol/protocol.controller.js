@@ -1,12 +1,12 @@
 angular.module('ProtocolApp')
 .controller('ProtocolCtrl', ProtocolCtrl);
 
-function ProtocolCtrl ($scope, $http, sync, club, game) {
+function ProtocolCtrl ($scope, $http, gameService, club, game) {
     console.log('ProtocolCtrl init');
 
     // ========== INIT BLOCK ===========
     var vm = this;
-    sync.getNicks().then(function (nicks) {
+    gameService.getNicks().then(function (nicks) {
         vm.playerNicks = nicks;
     });
 
@@ -28,18 +28,18 @@ function ProtocolCtrl ($scope, $http, sync, club, game) {
     // ============ PUBLIC FUNCTIONS ========
     function saveGame () {
         console.log('PROTOCOL saveGame()', vm.game);
-        sync.push(vm.game)
+        gameService.push(vm.game)
             .then(handlePrompt.bind(this, 'push'))
             .then(restoreDefaults);
     }
 
     function loadGame() {
-        sync.pull(vm.game.metadata).then(handleLoadedGame.bind(this, vm.game));
+        gameService.pull(vm.game.metadata).then(handleLoadedGame.bind(this, vm.game));
     }
 
     function deleteGame () {
         console.log('PROTOCOL deleteGame()', vm.game);
-        sync.delete(vm.game)
+        gameService.delete(vm.game)
             .then(handlePrompt.bind(this, 'delete'));
     }
 
@@ -56,7 +56,7 @@ function ProtocolCtrl ($scope, $http, sync, club, game) {
         vm.ids = data.ids;
         if (data.confirmText) {
             if (window.confirm(data.confirmText)) {
-                sync[cmd](vm.game, true, vm.ids)
+                gameService[cmd](vm.game, true, vm.ids)
                 .then(function () {
                     if (cmd !== 'delete') {
                         return restoreDefaults(cmd);
