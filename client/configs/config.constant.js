@@ -1,4 +1,4 @@
-angular.module('config')
+angular.module('base')
 .constant('CONFIG', {
     TEMPLATES_URL: '',
     // STATIC_URL: 'http://localhost:8090',

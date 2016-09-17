@@ -1,4 +1,4 @@
-angular.module('server')
+angular.module('base')
 .service('serverService', ['$http', 'CONFIG', '$cookies', '$rootScope', 'serverHelper',
     function serverService ($http, CONFIG, $cookies, $rootScope, serverHelper) {
     var player = {

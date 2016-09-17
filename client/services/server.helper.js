@@ -1,5 +1,5 @@
 (function () {
-angular.module('server')
+angular.module('base')
 .service('serverHelper', [
 function serverHelper () {
 	var honourTitle = "Лучшие игроки";
