@@ -6,10 +6,10 @@ var router = express.Router();
 var _ = require('lodash');
 
 //TODO: move out handleImages, addImgSrc metod from DataBase helper
-var imageHelper = require('../helpers/dataBase.js');
-var pgApi = require('../helpers/pg/myPgApi.js');
-var pgHelper = require('../helpers/pg/pg.helper.js');
-var migrator = require('../helpers/pg/migrator');
+var imageHelper = require('../helpers/imageHelper.js');
+var pgApi = require('../helpers/myPgApi.js');
+var pgHelper = require('../helpers/pg.helper.js');
+var migrator = require('../helpers/migrator');
 var moment = require('moment');
 
 // ==================== BASE for ANGULAR ==============

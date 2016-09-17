@@ -8,7 +8,7 @@ var router = express.Router();
 
 // =============== handlers for DB changes
 
-
+//TODO: totally change this or delete, it is not working
 router.post('/api/v1/games', function (req, res) {
    var results = [];
 

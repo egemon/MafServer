@@ -1,17 +1,5 @@
 var pgApi = require('./myPgApi.js');
-// var _ = require('lodash');
-// var db = require('../dataBase.js');
-// var LGS = require('../../model/LocalGameStorage.js');
-// var players = db.getPlayers();
-// migratePlayers(players);
-// var games = LGS.getAllGames();
-// migrateGames(games);
-// var news = db.getNews();
-// migrateNews('news', news);
-// var periods = db.getHallOfFame();
-// migrateHonours(periods);
-// var photos = db.getPhotos();
-// migratePhotos('photos', photos);
+
 function migratePlayers(tableName, players, ids) {
     players = players.map(function(player) {
         var newPlayer = {};
