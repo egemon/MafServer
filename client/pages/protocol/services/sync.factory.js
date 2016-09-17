@@ -1,4 +1,4 @@
-angular.module('sync')
+angular.module('ProtocolApp')
 .factory('sync', syncService);
 
 function syncService ($http, $q, club) {

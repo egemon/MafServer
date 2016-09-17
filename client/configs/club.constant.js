@@ -1,4 +1,4 @@
-angular.module('club').constant('club', {
+angular.module('ProtocolApp').constant('club', {
     ROLES: ['Мирный', "Мафия", "Дон", "Шериф"],
     WIN: ['Мирные', "Мафия"],
     TABLES: ['BakerStreet', 'FleetStreet', 'DowningStreet', 'AbbeyRoad', 'Aldwych'],

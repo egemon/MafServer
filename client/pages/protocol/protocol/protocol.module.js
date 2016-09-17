@@ -1,1 +1,1 @@
-angular.module('ProtocolApp', ['timer', 'sync', 'templates', 'ui.bootstrap']);
+angular.module('ProtocolApp', ['timer', 'templates', 'ui.bootstrap']);

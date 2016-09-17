@@ -1,5 +1,5 @@
 angular.module('ProtocolApp')
-.factory('game',['club', game]);
+.factory('game',game);
 function game (club) {
 
     club.defaultPlayer = {

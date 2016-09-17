@@ -1,5 +1,5 @@
 angular.module('ProtocolApp')
-.controller('DaysCtrl', ['$scope', 'club', DaysCtrl]);
+.controller('DaysCtrl', DaysCtrl);
 
 function DaysCtrl ($scope, club) {
     console.log('[days.controller] init');

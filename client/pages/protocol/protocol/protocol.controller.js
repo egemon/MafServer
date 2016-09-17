@@ -1,5 +1,5 @@
 angular.module('ProtocolApp')
-.controller('ProtocolCtrl', ['$scope', '$http', 'sync','club', 'game', ProtocolCtrl]);
+.controller('ProtocolCtrl', ProtocolCtrl);
 
 function ProtocolCtrl ($scope, $http, sync, club, game) {
     console.log('ProtocolCtrl init');
