@@ -1,7 +1,7 @@
 (function () {
 
 angular.module('base')
-.controller('photosCtrl', ['$scope', 'editService', 'serverService', photosCtrl]);
+.controller('photosCtrl', photosCtrl);
 
 function photosCtrl() {
     //TODO: inject here remove edit functionality
