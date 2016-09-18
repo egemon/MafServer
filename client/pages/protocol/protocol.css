@@ -45,15 +45,33 @@ a:focus, a:hover {
     text-decoration: none;
 }
 
+.audio {
+    height: 90px;
+    width: 350px;
+    overflow: auto;
+}
+.table-hover > tbody > tr.audio-tr:hover {
+    background-color: transparent;
+}
 audio {
     display: block;
     margin: 10px;
 }
 
 .protocol-form {
-    /*display: flex;*/
+    width: 1300px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
+.button-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 210px;
+}
 .protocol-container.hidden-roles .player-role {
     opacity: 0;
 }

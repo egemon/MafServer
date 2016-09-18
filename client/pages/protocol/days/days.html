@@ -2,6 +2,7 @@
     <div class="day-title">
         День {{::i}}
         <button class="btn btn-primary" ng-click="DaysCtrl.removeItem(day, days)">-</button>
+        <button class="btn btn-primary" ng-click="DaysCtrl.addDay()">+</button>
     </div>
     <div class="votes" ng-repeat="(j, details) in day.votes">
         <span>
@@ -26,21 +27,21 @@
                 <input class="votes-number-input" type="number" ng-model="details.sum">
             </span>
             <button class="btn btn-primary" ng-click="DaysCtrl.removeItem(details, day.votes)">-</button>
+            <button class="btn btn-primary" ng-click="DaysCtrl.addVote(day.votes)">+</button>
         </div>
     </div>
 
-    <button class="btn btn-primary" ng-click="DaysCtrl.addVote(day.votes)">Добавить выставление</button>
     <div class="results">
-            <span
-                ng-repeat="(key, value) in day.results"
-                class="{{::key}}-container">
-                {{::key | translate}}
-                <select
-                    class="days-input"
-                    ng-model="day.results[key]"
-                    ng-options="players.indexOf(player)+1 for player in players track by player.nick">
-                </select>
-            </span>
+        <span
+            ng-repeat="(key, value) in day.results"
+            class="{{::key}}-container">
+            {{::key | translate}}
+            <select
+                class="days-input"
+                ng-model="day.results[key]"
+                ng-options="players.indexOf(player)+1 for player in players track by player.nick">
+            </select>
+        </span>
     </div>
 </div>
-<button class="btn btn-primary" ng-click="DaysCtrl.addDay()">Следующий день</button>
+<button class="btn btn-primary" ng-click="DaysCtrl.addDay()">+</button>
