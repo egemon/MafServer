@@ -22,7 +22,7 @@ gulp.task('css-lib', function() {
 
 //collects custom css files and concat them
 gulp.task('css-custom', function() {
-  return gulp.src(['client/**/*.css','!client/lib/**/*'])
+  return gulp.src(['client/**/*.css','!client/lib/**/*', '!client/app.css'])
     .pipe(concat('custom.css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(_if(isDev, cssbeautify(),cssnano()))

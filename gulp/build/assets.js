@@ -2,6 +2,7 @@ var isDev = process.env.NODE_ENV !== 'production';
 console.log('isDev', isDev);
 var gulp = require('gulp'),
     _if = require('gulp-if'),
+    inlinesource = require('gulp-inline-source'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
     htmlmin = require('gulp-htmlmin');
@@ -35,6 +36,7 @@ gulp.task('media', function() {
 // minifies html
 gulp.task('html', function () {
     return gulp.src(['client/app.html'])
+    .pipe(inlinesource())
     .pipe(_if(!isDev, htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('public'));
 });
