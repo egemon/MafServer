@@ -100,6 +100,7 @@ angular.module('base')
             default:
             alert('Cообщие администратору об ошибке: ' + err.statusText);
         }
+        return {data:[]};
     }
 
     function handleLogin (response) {

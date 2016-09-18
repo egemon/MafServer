@@ -51,8 +51,8 @@ function generalRun ($rootScope, $timeout, serverService, CONFIG) {
             }
 
             serverService.create(table, item)
-            .then(function (id) {
-                item.id = id;
+            .then(function (response) {
+                item.id = response.data;
                 items.unshift(item);
             });
         };
