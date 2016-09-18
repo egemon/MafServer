@@ -32,10 +32,6 @@ function($scope, CONFIG) {
         if (periodType === oldPeriodType) {
             return;
         }
-        if (periodType === 'year') {
-            $scope.period.value = $scope.year.value ;
-            return;
-        }
         $scope.period = $scope.filterFields[periodType].value[0];
     }
 

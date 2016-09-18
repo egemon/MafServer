@@ -80,7 +80,7 @@ function _transformFilterObjToWhere(filterObj, table) {
             end = m.add(2, 'month').endOf('month').format('YYYY-MM-DD');
             break;
         case 'year':
-            start = m.set('year', filterObj.period).startOf('year').format('YYYY-MM-DD');
+            start = m.set('year', filterObj.year).startOf('year').format('YYYY-MM-DD');
             end = m.endOf('year').format('YYYY-MM-DD');
             console.log('start-end', start, end);
             break;
