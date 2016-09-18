@@ -241,6 +241,9 @@ angular.module('base')
     function getCredentials (player) {
         return {
             nick: player.nick,
+
+            //TODO: remove after static fix
+            user: player.nick,
             password: player.password,
         }
     }
