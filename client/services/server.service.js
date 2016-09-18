@@ -116,12 +116,7 @@ angular.module('base')
 
     function handleData (config, response) {
         console.log('[base.controller] handleData()', arguments);
-        if (response.data.success) {
-            return response.data.data;
-        } else if (response.data.success === 0){
-            alert('Fail!');
-            throw response;
-        }
+        return response.data;
     }
 
 

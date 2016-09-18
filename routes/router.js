@@ -184,8 +184,9 @@ router.get('/data', function (req, res) {
     } catch(e){}
     if (req.query.table === 'rating') {
 
-        pgHelper.getRatingByFilter('games', req.query.options || defaultFilter).then(function (data) {
-           res.send(data);
+        pgHelper.getRatingByFilter('games', req.query.options || defaultFilter).then(function (rating) {
+            console.log('getDataRating', rating);
+           res.send(rating);
         });
         return;
     }
@@ -206,7 +207,7 @@ router.get('/data', function (req, res) {
                 });
             }
 
-            res.send(resp);
+            res.send(resp.data);
         }
     }, function (err) {
        res.status(400).send(err);
