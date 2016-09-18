@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    config = require('./../package').config,
     add = require('gulp-add-src'),
     runSequence = require('run-sequence'),
     inject = require('gulp-inject');
@@ -21,16 +22,14 @@ gulp.task('inject-css', function() {
 });
 
 gulp.task('inject-js', function() {
-  var scripts = gulp.src([
-    'client/**/*module.js',
-    '!client/app.js',
-    '!client/lib/**'
-  ], {read:false})
-  .pipe(add.append([
+  var scripts = gulp.src(config.libs.js, {read:false})
+    .pipe(add.append([
+        'client/**/*module.js',
+    ], {read:false}))
+    .pipe(add.append([
     'client/**/*.js',
     '!client/**/*module.js',
     '!client/lib/**',
-    '!client/app.js'
   ], {read:false}));
 
   return gulp.src('client/dev.html')
@@ -40,6 +39,6 @@ gulp.task('inject-js', function() {
   .pipe(gulp.dest('client'));
 });
 
-gulp.task('inject-all',function () {
-  runSequence(['inject-js', 'inject-css']);
+gulp.task('inject',['inject-js'] ,function () {
+  runSequence('inject-css');
 });

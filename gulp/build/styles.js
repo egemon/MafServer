@@ -1,5 +1,7 @@
-var isProd = require('../conf.js').isProd;
+var isDev = process.env.NODE_ENV !== 'production';
+console.log('isDev', isDev);
 var gulp = require('gulp'),
+    config = require('./../../package').config,
     cssnano = require('gulp-cssnano'),
     _if = require('gulp-if'),
     add = require('gulp-add-src'),
@@ -11,13 +13,10 @@ var gulp = require('gulp'),
 
 //collects lib css files and concat them
 gulp.task('css-lib', function() {
-  return gulp.src([
-      'client/lib/bootstrap-css/css/bootstrap.css',
-      'client/lib/angular-ui-grid/ui-grid.css',
-    ])
+  return gulp.src(config.libs.css)
     .pipe(concat('lib.css'))
     .pipe(rename({suffix: '.min'}))
-    .pipe(_if(isProd, cssnano(), cssbeautify()))
+    .pipe(_if(isDev, cssbeautify(),cssnano()))
     .pipe(gulp.dest('public/css'));
 });
 
@@ -26,7 +25,7 @@ gulp.task('css-custom', function() {
   return gulp.src(['client/**/*.css','!client/lib/**/*'])
     .pipe(concat('custom.css'))
     .pipe(rename({suffix: '.min'}))
-    .pipe(_if(isProd, cssnano(), cssbeautify()))
+    .pipe(_if(isDev, cssbeautify(),cssnano()))
     .pipe(gulp.dest('public/css'));
 });
 

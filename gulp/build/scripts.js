@@ -1,5 +1,8 @@
-var isProd = require('../conf.js').isProd;
+var isDev = process.env.NODE_ENV !== 'production';
+console.log('isDev', isDev);
+
 var gulp = require('gulp'),
+    config = require('./../../package').config,
     _if = require('gulp-if'),
     concat = require('gulp-concat'),
     add = require('gulp-add-src'),
@@ -31,24 +34,19 @@ gulp.task('tmpls', function () {
 
 // this task build all angular modules to ng.min,js
 gulp.task('js-ng-app', ['tmpls'], function () {
-    return gulp.src(['client/**/*module.js', '!client/lib/**', '!client/app.js'])
-    .pipe(add.append(['client/**/*.js', '!client/**/*module.js', '!client/lib/**', '!client/app.js']))
+    return gulp.src(['client/**/*module.js', '!client/lib/**'])
+    .pipe(add.append(['client/**/*.js', '!client/**/*module.js', '!client/lib/**']))
     .pipe(concat('ng.js'))
     .pipe(ngAnnotate())
-    .pipe(_if(isProd, uglify(), beautify()))
+    .pipe(_if(isDev,beautify() ,uglify()))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('public/js'));
 });
 
-//this task collect all libs
 gulp.task('js-lib', function () {
-  return gulp.src(['client/app.js'])
-    .pipe(browserify({
-        debug: true,
-        insertGlobals: true
-    }))
-    .pipe(_if(isProd, uglify(), beautify()))
-    .pipe(rename('libs.min.js'))
+    return gulp.src(config.libs.js)
+    .pipe(concat('lib.min.js'))
+    .pipe(_if(isDev,beautify() ,uglify()))
     .pipe(gulp.dest('public/js'));
 });
 

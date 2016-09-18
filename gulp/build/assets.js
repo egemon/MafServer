@@ -1,4 +1,5 @@
-var isProd = require('../conf.js').isProd;
+var isDev = process.env.NODE_ENV !== 'production';
+console.log('isDev', isDev);
 var gulp = require('gulp'),
     _if = require('gulp-if'),
     imagemin = require('gulp-imagemin'),
@@ -34,7 +35,7 @@ gulp.task('media', function() {
 // minifies html
 gulp.task('html', function () {
     return gulp.src(['client/app.html'])
-    .pipe(_if(isProd, htmlmin({collapseWhitespace: true})))
+    .pipe(_if(!isDev, htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('public'));
 });
 

@@ -9,7 +9,7 @@ var tasks = requireDir('./gulp', {recurse: true});
 gulp.task('clean', function() {
     return del(['public']);
 });
-gulp.task('dev-build', ['inject-all']);
+gulp.task('dev-build', ['inject']);
 gulp.task('build',['js', 'css', 'media', 'img', 'favicon', 'html', 'font']);
 gulp.task('serve', ['dev-build'] ,function () {
     runSequence('watch', 'init-browser');
