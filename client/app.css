@@ -23,14 +23,3 @@ html {
     background-size: cover;
     height: 100%;
 }
-body {
-    height: 100%;
-    color: #000;
-    font-family: "Comic Sans MS", cursive;
-}
-#page-container {
-    height: 100%;
-    margin: 0 auto;
-    width: 90%;
-    background-color: transparent;
-}

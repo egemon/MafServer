@@ -48,7 +48,7 @@ nav {
     margin: 2px;
     border-radius: 12px;
     float: left;
-    text-align: center;
+    text-align: Fenter;
     list-style: none;
     background-color: #f0dab4;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) ;
@@ -75,6 +75,19 @@ nav {
 }
 
 /* ==========  MAIN ==========*/
+
+body {
+    height: 100%;
+    color: #000;
+}
+
+#page-container {
+    height: 100%;
+    margin: 0 auto;
+    width: 90%;
+    background-color: transparent;
+}
+
 main {
     margin: 10px auto;
 }
