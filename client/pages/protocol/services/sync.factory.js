@@ -66,12 +66,13 @@ function gameService ($http, $q, club, serverService) {
 
         var gamePromise = $http.post(club.BASE_SERVER_URL + club.SYNC_URL, body)
             .then(alertErrorText);
-        var playersPromise = $http.post(club.BASE_SERVER_URL + 'data', {
-            table: 'players',
-            items: newPlayers,
-        })
-            .then(alertErrorText);
-        return $q.all(gamePromise, playersPromise);
+        if(!_.isEmpty(newPlayers)) {
+            var playersPromise = $http.post(club.BASE_SERVER_URL + 'data', {
+                table: 'players',
+                items: newPlayers,
+            }).then(alertErrorText);
+        }
+        return gamePromise;
 
     }
 
@@ -91,9 +92,10 @@ function gameService ($http, $q, club, serverService) {
     }
 
     function getNicks() {
-        return serverService.read('players', 'all').then(function (players) {
+        return serverService.read('players', 'all').then(function (playerList) {
             console.log('[sync.factory] getNicks() data ', arguments);
-            return players.map(function(el) {
+            players = playerList;
+            return playerList.map(function(el) {
                 return el.nick;
             });
         });
