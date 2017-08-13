@@ -69,6 +69,9 @@ angular.module('base')
                 },{
                     value: 2016,
                     name: "2016 год"
+                },{
+		        value: 2017,
+		        name: "2017 год"
                 }
             ]
         },
